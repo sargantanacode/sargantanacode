@@ -1,0 +1,21 @@
+es:
+  activerecord:
+    attributes:
+      user:
+        email: "Correo electrónico"
+        password: "Contraseña"
+        password_confirmation: "Confirmar contraseña"
+        current_password: "Contraseña actual"
+        remember_me: "Recuérdame"
+        name: "Nombre"
+        bio: "Bio"
+        job_l: "Cargo"
+        job_list:
+          translator: "Traductor"
+          graphic_designer: "Diseñador gráfico"
+          editor: "Editor"
+          developer: "Programador"
+        role_l: "Permisos"
+        role_list:
+          user: "Usuario"
+          admin: "Administrador"

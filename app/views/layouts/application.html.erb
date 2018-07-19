@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SargantanaCode</title>
+    <title><%= "#{content_for(:title)} – " if content_for?(:title) %>SargantanaCode</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,6 +13,13 @@
   </head>
 
   <body>
+    <% if notice.present? %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+    
+    <% if alert.present? %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
