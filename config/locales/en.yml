@@ -1,2 +1,9 @@
 en:
-  hello: "Hello world"
+  layouts:
+    menu:
+      login: "Log In"
+      logout: "Log Out"
+      signup: "Sign Up"
+      languages: "Languages"
+      english: "English"
+      spanish: "Spanish"
