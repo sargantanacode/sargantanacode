@@ -39,6 +39,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url, autocomplete: "url" %>
+  </div>
+
+  <div class="field">
     <%= f.label :github %><br />
     <%= f.text_field :github, autocomplete: "github" %>
   </div>
