@@ -1,39 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-custom py-0 menu">
-  <button class="navbar-toggler" type="button"
-          data-toggle="collapse" data-target="#navbarDropdown"
-          aria-controls="navbarDropdown" aria-expanded="false"
-          aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarDropdown">
-    <ul class="navbar-nav mr-auto">
-      <% unless user_signed_in? %>
-        <li class="nav-item <%= active?(new_user_session_path) %>">
-          <%= link_to t('.login'), new_user_session_path, :class => 'nav-link' %>
+<div class="menu-placeholder">
+  <nav class="navbar navbar-expand-lg navbar-custom py-0 menu">
+    <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#navbarDropdown"
+            aria-controls="navbarDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarDropdown">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item <%= active?(homepage_path) %>">
+          <%= link_to t('.home'), homepage_path, :class => 'nav-link' %>
         </li>
-        <li class="nav-item <%= active?(new_user_registration_path) %>">
-          <%= link_to t('.signup'), new_user_registration_path, :class => 'nav-link' %>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="langDropdown"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= t('.languages') %>
+          </a>
+          <div class="dropdown-menu m-0 rounded-0" aria-labelledby="langDropdown">
+            <%= link_to t('.english'), change_lang_path(:en, path: request.original_url),
+                :method => :post, :class => "dropdown-item #{current_locale?(:en)}" %>
+            <%= link_to t('.spanish'), change_lang_path(:es, path: request.original_url),
+                :method => :post, :class => "dropdown-item #{current_locale?(:es)}" %>
+          </div>
         </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to t('.logout'), destroy_user_session_path,
-              :method => :delete, :class => 'nav-link' %>
-        </li>
-      <% end %>
-    </ul>
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="langDropdown"
-           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           <%= t('.languages') %>
-        </a>
-        <div class="dropdown-menu m-0 rounded-0" aria-labelledby="langDropdown">
-          <%= link_to t('.english'), change_lang_path(:en, path: request.original_url),
-              :method => :post, :class => "dropdown-item #{current_locale?(:en)}" %>
-          <%= link_to t('.spanish'), change_lang_path(:es, path: request.original_url),
-              :method => :post, :class => "dropdown-item #{current_locale?(:es)}" %>
-        </div>
-      </li>
-    </ul>
-  </div>  
-</nav>
+        <% unless user_signed_in? %>
+          <li class="nav-item <%= active?(new_user_session_path) %>">
+            <%= link_to t('.login'), new_user_session_path, :class => 'nav-link' %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to t('.logout'), destroy_user_session_path,
+                :method => :delete, :class => 'nav-link' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>  
+  </nav>
+</div>

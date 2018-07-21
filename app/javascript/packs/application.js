@@ -20,3 +20,15 @@ Turbolinks.start()
 
 require.context('../stylesheets/', true, /^\.\/[^_].*\.(css|scss|sass)$/i)
 require.context('../images/', true, /\.(gif|jpg|png|svg)$/i)
+
+$(document).ready(function () {
+  let menu = $('.menu')
+  let menuOffset = menu.offset()
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > menuOffset.top) {
+      menu.addClass('sticky')
+    } else {
+      menu.removeClass('sticky')
+    }
+  })
+})

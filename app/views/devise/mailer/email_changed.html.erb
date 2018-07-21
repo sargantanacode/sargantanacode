@@ -1,4 +1,4 @@
-<p><%= t('.hello', email: @email) %></p>
+<p><%= t('.hello', name: @resource.name) %></p>
 
 <% if @resource.try(:unconfirmed_email?) %>
   <p><%= t('.mail_being_changed', email: @resource.unconfirmed_email) %></p>

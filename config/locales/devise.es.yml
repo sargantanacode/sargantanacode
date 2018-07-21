@@ -19,30 +19,30 @@ es:
     mailer:
       confirmation_instructions:
         subject: "Instrucciones de confirmación"
-        welcome: "¡Bienvenido/a, %{email}!"
+        welcome: "¡Bienvenido/a, %{name}!"
         confirmation_message: "Puedes confirmar tu correo electrónico haciendo clic en el siguiente enlace:"
         confirmation_link: "Confirmar mi correo electrónico"
         farewell: "¡Gracias por registrarte en SargantanaCode!"
       reset_password_instructions:
         subject: "Instrucciones de cambio de contraseña"
-        hello: "¡Hola, %{email}!"
+        hello: "¡Hola, %{name}!"
         reset_message: "Alguien ha solicitado un enlace para cambiar tu contraseña. Puedes hacerlo haciendo clic en el siguiente enlace:"
         reset_link: "Cambiar mi contraseña"
         farewell: "Si no has sido tú quien lo has solicitado, por favor ignora este correo electrónico. Tu contraseña no se cambiará hasta que accedas al enlace anterior y crees una nueva."
       unlock_instructions:
         subject: "Instrucciones de desbloqueo"
-        hello: "¡Hola, %{email}!"
+        hello: "¡Hola, %{name}!"
         unlock_explanation: "Tu cuenta ha sido bloqueada debido a un excesivo número de intentos de inicio de sesión fallidos."
         unlock_message: "Puedes hacer clic en el siguiente enlace para desbloquear tu cuenta:"
         unlock_link: "Desbloquear mi cuenta"
       email_changed:
         subject: "Email modificado"
-        hello: "¡Hola, %{email}!"
+        hello: "¡Hola, %{name}!"
         mail_being_changed: "Contactamos contigo para informarte de que tu correo electrónico está siendo cambiado a %{email}."
         mail_changed: "Contactamos contigo para informarte de que tu correo electrónico ha sido cambiado a %{email}."
       password_change:
         subject: "Contraseña modificada"
-        hello: "¡Hola, %{email}!"
+        hello: "¡Hola, %{name}!"
         password_message: "Contactamos contigo para informarte de que tu contraseña ha sido cambiada."
     omniauth_callbacks:
       failure: "No pudimos autentificar tu cuenta de %{kind} por la siguiente razón: \"%{reason}\"."
@@ -75,9 +75,8 @@ es:
       edit:
         edit_account: "Editar usuario: %{user}"
         waiting_confirmation: "Esperando la confirmación de tu correo %{email}"
-        change_password: "déjala en blanco si no quieres cambiarla"
-        current_password: "necesitamos tu contraseña para confirmar tus cambios"
-        password_characters: "%{length} carácteres como mínimo"
+        current_password: "Necesitamos tu contraseña para confirmar tus cambios"
+        password_characters: "%{length} carácteres como mínimo (déjala en blanco si no quieres cambiarla)"
         cancel_account: "Eliminar mi cuenta"
         cancel_account_message: "Si no quieres que tus datos de registro permanezcan en esta página puedes eliminar tu cuenta en cualquier momento"
         cancel_account_confirm: "¿Estás seguro?"
@@ -99,7 +98,7 @@ es:
       links:
         log_in: "Iniciar sesión"
         sign_up: "Registrarse"
-        forgot_password: "¿Has olvidado tu tu contraseña?"
+        forgot_password: "¿Problemas con tu cuenta?"
         confirmation_instructions: "¿No has recibido las intrucciones de confirmación?"
         unlock_instructions: "¿No has recibido las instrucciones de desbloqueo?"
   errors:

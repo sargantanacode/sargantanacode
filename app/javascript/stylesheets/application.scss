@@ -1,5 +1,10 @@
+$fa-font-path: "~font-awesome/fonts";
 @import '~normalize.css/normalize';
 @import '~bootstrap/scss/bootstrap';
+@import '~font-awesome/scss/font-awesome.scss';
 @import '_variables';
 @import '_mixins';
 @import '_header';
+@import '_main_styles';
+@import '_content';
+@import '_footer';

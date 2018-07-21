@@ -1,0 +1,33 @@
+.footer {
+  margin-top: 1em;
+  background-color: $main-color;
+  color: $white;
+  bottom: 0;
+  padding: 20px 15px 15px 15px;
+  p {
+    text-align: center;
+    margin: 0;
+  }
+  a {
+    color: $main-color-hover;
+    transition: all .8s ease;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      transition: all .8s ease;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    text-align: center;
+    font-size: 35px;
+    margin: 5px auto 0 auto;
+    li {
+      display: inline;
+      margin-right: 3%;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
