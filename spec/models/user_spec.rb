@@ -38,6 +38,11 @@ RSpec.describe User, type: :model do
     expect(user_with_short_password).not_to be_valid
   end
 
+  it 'is not valid without a name' do
+    user_without_name = build(:user, name: nil)
+    expect(user_without_name).not_to be_valid
+  end
+
   it 'can use custom fields with devise' do
     bio = 'This is a sample bio'
     user_with_bio = build(:user, bio: bio)
