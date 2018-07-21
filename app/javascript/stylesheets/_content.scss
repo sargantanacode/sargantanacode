@@ -16,6 +16,10 @@
     background-color: $bootstrap-primary-color-hover;
     border-color: $bootstrap-primary-color-hover;
   }
+  &:active {
+    background-color: $bootstrap-primary-color !important;
+    border-color: $bootstrap-primary-color !important;
+  }
 }
 
 .bottom-links {
