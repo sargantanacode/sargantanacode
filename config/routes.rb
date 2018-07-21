@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  root to: "home#index", as: 'homepage'
-  devise_for :users
-  post "change_lang/:locale" => "application#change_lang", :as => "change_lang"
-  
-  scope "(:locale)" do
-    get "/*path" => "application#change_lang"
-  end
+  scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
+    devise_for :users
+    root to: "home#index", as: 'homepage'
+  end  
+  get "/*path" => "application#change_path", constraints: { path: /(?!(#{I18n.available_locales.join("|")})\/).*/ }
+  root to: "application#change_path"
 end

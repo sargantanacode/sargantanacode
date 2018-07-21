@@ -3,35 +3,30 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def set_locale
-    user_locale = cookies[:locale]
-    if user_locale.present? 
-      user_locale = get_locale(user_locale)
-    else
-      user_locale = extract_locale_from_browser
-    end
-    I18n.locale = valid_locale?(user_locale) ? user_locale : I18n.default_locale
+    locale = get_locale(params[:locale])
+    I18n.locale = valid_locale?(locale) ? locale : I18n.default_locale
   end
 
-  def change_lang
-    locale = get_locale(params[:locale])
+  def change_path
     path = params[:path]
-    set_cookie(:locale, locale) if valid_locale?(locale)
-    redirect_to("/#{path}")
+    user_locale = extract_locale_from_browser()
+    logger.debug "* Path: #{path} - User locale: #{user_locale}"
+    if user_locale.present?
+      redirect_to("/#{user_locale}/#{path}")
+    else
+      redirect_to("/#{I18n.default_locale}/#{path}")
+    end
   end
 
   private
 
-  def set_cookie(key, value)
-    cookies[key] = value
-  end
-
   def get_locale(locale)
-    locale.scan(/^[a-z]{2}/).first.to_sym
+    locale.scan(/^[a-z]{2}/).first.to_sym unless locale == nil
   end
 
   def extract_locale_from_browser
     locale = request.env['HTTP_ACCEPT_LANGUAGE']
-    get_locale(locale) unless locale === nil
+    get_locale(locale) unless locale == nil
   end
 
   def valid_locale?(locale)
