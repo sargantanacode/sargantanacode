@@ -8,7 +8,8 @@ class User < ApplicationRecord
 
   after_initialize :set_default_role, if: :new_record?
 
-  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :name, presence: true
 
   enum role: [:user, :admin]
   translate_enum :role
@@ -20,6 +21,6 @@ class User < ApplicationRecord
   end
 
   def to_s
-    self.name.present? ? self.name : self.email
+    self.name
   end
 end

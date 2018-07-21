@@ -6,6 +6,6 @@ class AddSomeOptionsToUsers < ActiveRecord::Migration[5.2]
     add_column :users, :twitter, :string
     add_column :users, :facebook, :string
     add_column :users, :job, :integer
-    add_column :users, :name, :string
+    add_column :users, :name, :string, null: false
   end
 end

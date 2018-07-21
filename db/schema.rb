@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2018_07_20_191120) do
     t.string "twitter"
     t.string "facebook"
     t.integer "job"
-    t.string "name"
+    t.string "name", null: false
     t.string "url"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
