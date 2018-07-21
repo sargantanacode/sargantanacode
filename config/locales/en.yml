@@ -1,2 +1,12 @@
 en:
-  hello: "Hello world"
+  layouts:
+    menu:
+      home: "Home"
+      login: "Log In"
+      logout: "Log Out"
+      languages: "Languages"
+      english: "English"
+      spanish: "Spanish"
+    footer:
+      github_repo: "This project is open source, you can find it on <a href=\"%{link}\">our GitHub repository</a>"
+      content_license: "The content of this page has a <a href=\"%{link}\">CC BY-SA</a> license"

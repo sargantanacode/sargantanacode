@@ -1,0 +1,30 @@
+.content {
+  @include breakpoint-up(md) {
+    background-color: $entry-background;
+    border: 1px solid $entry-border;
+    padding: 1.3vw;
+    font-size: 17px;
+    color: $font-color;
+  }
+}
+
+.btn-primary {
+  background-color: $bootstrap-primary-color;
+  border-color: $bootstrap-primary-color;
+  white-space: normal;
+  &:hover {
+    background-color: $bootstrap-primary-color-hover;
+    border-color: $bootstrap-primary-color-hover;
+  }
+}
+
+.bottom-links {
+  margin-top: 6vh;
+  a {
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}

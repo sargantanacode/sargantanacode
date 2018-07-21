@@ -8,7 +8,7 @@ es:
         current_password: "Contraseña actual"
         remember_me: "Recuérdame"
         name: "Nombre"
-        bio: "Bio"
+        bio: "Acerca de mí"
         job_l: "Cargo"
         job_list:
           translator: "Traductor"

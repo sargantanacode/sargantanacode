@@ -1,0 +1,103 @@
+.header {
+  background-color: $main-color;
+  color: $white;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-align: center;
+    .logo {
+      margin: 2vh auto 0 auto;
+      width: 90vw;
+      @include breakpoint-up(sm) {
+        width: 80vw;
+      }
+      @include breakpoint-up(md) {
+        width: 70vw;
+      }
+      @include breakpoint-up(lg) {
+        width: 60vw;
+      }
+      @include breakpoint-up(xl) {
+        width: 50vw;
+      }
+      fill: $white;
+      transition: fill .8s ease;
+      &:hover {
+        fill: $main-color-hover;
+        transition: fill .8s ease;
+      }
+    }
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+}
+
+.menu-placeholder {
+  height: 40px;
+}
+
+.navbar {
+  background: $main-color;
+  min-height: 40px;
+  z-index: 999;
+  .active {
+    background-color: $main-color-highlight;
+    .nav-link {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  .nav-link {
+    color: $white;
+    &:hover {
+      color: $main-color-hover;
+    }
+  }
+  .dropdown-menu {
+    background-color: $main-color;
+    border: 0;
+    a {
+      color: $white;
+      &:hover {
+        color: $main-color-hover;
+        background-color: $main-color;
+      }
+    }
+    .active {
+      background-color: $main-color-highlight;
+      &:hover {
+        color: $white;
+        background-color: $main-color-highlight;
+      }
+    }
+  }
+}
+
+.navbar-nav .nav-item {
+  color: $white;
+}
+
+.navbar-nav .nav-item {
+  @include breakpoint-up(md) {
+    margin-left: 1vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+  }
+  padding-left: 1vw;
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  color: $white;
+}
