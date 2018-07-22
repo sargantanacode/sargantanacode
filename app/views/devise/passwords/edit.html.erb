@@ -10,7 +10,7 @@
 
         <div class="form-group">
           <%= f.label :password, t('.new_password') %>
-          <%= f.password_field :password, autofocus: true, autocomplete: "off", :class => "form-control" %>
+          <%= f.password_field :password, autofocus: true, autocomplete: "off", :class => "form-control", :required => true %>
           <% if @minimum_password_length %>
             <small id="passwordHelp" class="form-text text-muted"><%= t('.password_characters', length: @minimum_password_length) %></small>
           <% end %>
@@ -18,7 +18,7 @@
 
         <div class="form-group">
           <%= f.label :password_confirmation, t('.confirm_new_password') %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", :required => true %>
         </div>
 
         <div class="actions">

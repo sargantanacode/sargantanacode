@@ -9,7 +9,7 @@
 
         <div class="form-group">
           <%= f.label :email %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control",
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control", :required => true,
               value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
         </div>
 
