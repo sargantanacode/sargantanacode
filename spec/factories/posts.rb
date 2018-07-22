@@ -21,6 +21,6 @@ FactoryBot.define do
   end
 
   trait :with_image do
-    image Faker::Lorem.sentence
+    image Faker::Lorem.characters(20)
   end
 end

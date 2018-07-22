@@ -44,10 +44,12 @@ RSpec.describe Post, type: :model do
   it 'can have an image' do
     post_with_image = build(:post, :with_image)
     expect(post_with_image).to be_valid
+    expect(post_with_image.image).not_to eq(post_with_image.category.cover_image)
   end
 
   it 'has the image of its category by default' do
     post_without_image = create(:post, image: nil)
+    expect(post_without_image).to be_valid
     expect(post_without_image.image).to eq(post_without_image.category.cover_image)
   end
 end
