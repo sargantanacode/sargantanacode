@@ -3,6 +3,8 @@ class Course < ApplicationRecord
   
   before_create :set_slug, prepend: true
 
+  has_many :posts
+
   translates :name, :string
   translates :description, :text
   friendly_id :name, use: :slugged

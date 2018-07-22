@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_22_163037) do
+ActiveRecord::Schema.define(version: 2018_07_22_164747) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
@@ -61,6 +61,34 @@ ActiveRecord::Schema.define(version: 2018_07_22_163037) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
+  create_table "post_translations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title", null: false
+    t.text "content", null: false
+    t.text "excerpt", null: false
+    t.index ["locale"], name: "index_post_translations_on_locale"
+    t.index ["post_id"], name: "index_post_translations_on_post_id"
+  end
+
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "category_id", null: false
+    t.bigint "course_id"
+    t.integer "type", null: false
+    t.integer "status", null: false
+    t.string "slug", null: false
+    t.string "image"
+    t.bigint "visit_count", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_posts_on_category_id"
+    t.index ["course_id"], name: "index_posts_on_course_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -96,4 +124,7 @@ ActiveRecord::Schema.define(version: 2018_07_22_163037) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "posts", "categories"
+  add_foreign_key "posts", "courses"
+  add_foreign_key "posts", "users"
 end
