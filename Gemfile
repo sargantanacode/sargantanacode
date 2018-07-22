@@ -6,10 +6,11 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.0'
 gem 'rails-i18n', '~> 5.1', '>= 5.1.1'
 gem 'translate_enum'
+gem 'friendly_id'
+gem 'globalize', git: 'https://github.com/globalize/globalize'
 gem 'dotenv-rails'
 gem 'mysql2'
 gem 'devise'
-gem 'faker'
 gem 'puma', '~> 3.11'
 gem 'webpacker'
 gem 'jbuilder', '~> 2.5'
@@ -29,6 +30,7 @@ end
 group :test do
   gem 'factory_bot_rails'
   gem 'capybara'
+  gem 'faker'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
