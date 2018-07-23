@@ -20,6 +20,8 @@ class Post < ApplicationRecord
   enum status: [:draft, :published]
   translate_enum :status
 
+  mount_uploader :image, ImageUploader
+
   def update_visits_count
     self.visits_count = self.visits_count + 1 unless current_user.admin?
   end

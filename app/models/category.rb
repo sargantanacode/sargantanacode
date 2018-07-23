@@ -11,6 +11,9 @@ class Category < ApplicationRecord
 
   validates :name, :description, :image, :cover_image, presence: true
 
+  mount_uploader :image, ImageUploader
+  mount_uploader :cover_image, ImageUploader
+
   def to_s
     self.name
   end
