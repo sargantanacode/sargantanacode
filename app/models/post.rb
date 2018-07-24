@@ -27,7 +27,7 @@ class Post < ApplicationRecord
   end
 
   def image
-    self[:image] || self.category.cover_image
+    self[:image] || self.category.cover_image unless self.category.nil?
   end
 
   def to_s

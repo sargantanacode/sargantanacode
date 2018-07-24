@@ -21,6 +21,6 @@ FactoryBot.define do
   end
 
   trait :with_image do
-    image Faker::Lorem.characters(20)
+    image { Rack::Test::UploadedFile.new(Rails.root.join('spec/support/image.jpg'), 'image/jpeg') }
   end
 end
