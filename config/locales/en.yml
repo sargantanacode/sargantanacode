@@ -10,3 +10,6 @@ en:
     footer:
       github_repo: "This project is open source, you can find it on <a href=\"%{link}\">our GitHub repository</a>"
       content_license: "The content of this page has a <a href=\"%{link}\">CC BY-SA</a> license"
+  home:
+    index:
+      posts_list_empty: "Sorry, there are currently no posts added"
