@@ -5,11 +5,12 @@ class Course < ApplicationRecord
 
   has_many :posts
 
-  translates :name, :string
-  translates :description, :text
-  friendly_id :name, use: :slugged
+  translates :name, :description
+  globalize_accessors :locales => [:en, :es], :attributes => [:name, :description]
+  friendly_id :slug, use: :slugged
 
-  validates :name, :description, :image, presence: true
+  validates *Course.globalize_attribute_names, presence: true
+  validates :image, presence: true
 
   mount_uploader :image, ImageUploader
 

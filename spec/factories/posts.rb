@@ -2,9 +2,12 @@ require 'faker'
 
 FactoryBot.define do
   factory :post do
-    title Faker::Lorem.unique.sentence
-    content Faker::Lorem.unique.paragraph
-    excerpt Faker::Lorem.unique.paragraph
+    title_en Faker::Lorem.unique.sentence
+    content_en Faker::Lorem.unique.paragraph
+    excerpt_en Faker::Lorem.unique.paragraph
+    title_es Faker::Lorem.unique.sentence
+    content_es Faker::Lorem.unique.paragraph
+    excerpt_es Faker::Lorem.unique.paragraph
     association :user, factory: :user
     association :category, factory: :category
     association :course, factory: :course

@@ -12,8 +12,6 @@ body {
 
 .page {
   flex: 1 0 auto;
-  margin-right: 1vw;
-  margin-left: 1vw;
   h2, h3, h4, h5, h6 {
     color: $entry-link;
     em, strong {
@@ -26,5 +24,15 @@ body {
       text-decoration: none;
       color: $entry-link-hover;
     }
+  }
+}
+
+pre {
+  @include breakpoint-up(md) {
+    margin-right: -1.3vw;
+    margin-left: -1.3vw;
+  }
+  &:last-child {
+    margin-bottom: -1.3vw;
   }
 }

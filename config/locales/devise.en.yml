@@ -73,7 +73,7 @@ en:
         sign_up: "Sign Up"
         password_characters: "%{length} characters minimum"
       edit:
-        edit_account: "Edit user: %{user}"
+        edit_account: "Edit user"
         waiting_confirmation: "Currently waiting confirmation for %{email}"
         current_password: "We need your current password to confirm your changes"
         password_characters: "%{length} characters minimum (leave blank if you don't want to change it)"

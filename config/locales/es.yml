@@ -1,7 +1,24 @@
 es:
+  errors:
+    access: "¡Tú no tienes poder aquí, Gandalf el gris!"
+  admin:
+    posts:
+      new:
+        publish_post: "Publicar artículo"
+      edit:
+        edit_post: "Editar artículo"
+      show:
+        edit_post: "Editar"
+        delete_post: "Eliminar"
+        delete_confirm: "¿Estás seguro?"
+      destroy:
+        destroyed: "Artículo eliminado correctamente"
+      form-common:
+        save: "Guardar"
   layouts:
     menu:
       home: "Inicio"
+      publish_post: "Publicar artículo"
       login: "Entrar"
       logout: "Salir"
       languages: "Idiomas"
@@ -12,4 +29,4 @@ es:
       content_license: "El contenido de esta página tiene una licencia <a href=\"%{link}\">CC BY-SA</a>"
   home:
     index:
-      posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
+      posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado."

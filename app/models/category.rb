@@ -1,15 +1,16 @@
 class Category < ApplicationRecord
   extend FriendlyId
-  
-  before_create :set_slug, prepend: true
 
+  before_create :set_slug, prepend: true
+  
   has_many :posts
 
-  translates :name, :string
-  translates :description, :text
-  friendly_id :name, use: :slugged
+  translates :name, :description
+  globalize_accessors :locales => [:en, :es], :attributes => [:name, :description]
+  friendly_id :slug, use: :slugged
 
-  validates :name, :description, :image, :cover_image, presence: true
+  validates *Category.globalize_attribute_names, presence: true
+  validates :image, :cover_image, presence: true
 
   mount_uploader :image, ImageUploader
   mount_uploader :cover_image, ImageUploader

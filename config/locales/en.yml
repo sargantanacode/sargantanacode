@@ -1,7 +1,24 @@
 en:
+  errors:
+    access: "You have no Power here, Gandalf the Grey!"
+  admin:
+    posts:
+      new:
+        publish_post: "Publish Post"
+      edit:
+        edit_post: "Editing Post"
+      show:
+        edit_post: "Edit"
+        delete_post: "Delete"
+        delete_confirm: "Are you sure?"
+      destroy:
+        destroyed: "Post successfully deleted"
+      form-common:
+        save: "Save"
   layouts:
     menu:
       home: "Home"
+      publish_post: "Publish Post"
       login: "Log In"
       logout: "Log Out"
       languages: "Languages"
@@ -12,4 +29,4 @@ en:
       content_license: "The content of this page has a <a href=\"%{link}\">CC BY-SA</a> license"
   home:
     index:
-      posts_list_empty: "Sorry, there are currently no posts added"
+      posts_list_empty: "Sorry, there are currently no posts added."

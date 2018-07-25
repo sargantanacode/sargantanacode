@@ -6,6 +6,47 @@
     font-size: 17px;
     color: $font-color;
   }
+  img.post-header {
+    @include breakpoint-up(md) {
+      margin: -1.3vw -1.3vw 2vw -1.3vw;
+      width: calc(100% + #{2.6vw});
+    }
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.date-badge {
+  @include background-opacity($dark-gray, 0.5);
+  position: absolute;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  left: 25px;
+  padding: 3px 7px;
+  color: $white;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+.category-badge {
+  @include background-opacity($dark-gray, 0.5);
+  position: absolute;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  right: 25px;
+  padding: 3px 7px;
+  color: $white;
+  font-size: 13px;
+  border-radius: 10px;
+  a {
+    color: $white;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
 }
 
 .btn-primary {
@@ -31,4 +72,8 @@
       color: $white;
     }
   }
+}
+
+.hljs {
+  padding: 1.3vw;
 }
