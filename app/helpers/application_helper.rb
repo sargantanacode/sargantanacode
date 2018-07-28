@@ -31,4 +31,8 @@ module ApplicationHelper
 
     markdown.render(text)
   end
+
+  def admin_zone?
+    controller.class.name.split("::").first == "Admin" && current_user.admin?
+  end
 end

@@ -16,9 +16,13 @@ es:
       form-common:
         save: "Guardar"
   layouts:
-    menu:
+    admin-links:
       home: "Inicio"
       publish_post: "Publicar artículo"
+    public-links:
+      home: "Inicio"
+      publish_post: "Publicar artículo"
+    menu:
       login: "Entrar"
       logout: "Salir"
       languages: "Idiomas"

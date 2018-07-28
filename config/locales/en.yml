@@ -16,9 +16,13 @@ en:
       form-common:
         save: "Save"
   layouts:
-    menu:
+    admin-links:
       home: "Home"
       publish_post: "Publish Post"
+    public-links:
+      home: "Home"
+      publish_post: "Publish Post"
+    menu:
       login: "Log In"
       logout: "Log Out"
       languages: "Languages"
