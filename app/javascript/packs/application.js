@@ -8,20 +8,26 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import $ from 'jquery'
-import 'bootstrap'
 import Rails from 'rails-ujs'
-import Turbolinks from 'turbolinks'
+import hljs from 'highlight.js'
+import 'bootstrap'
+import 'bootstrap/scss/bootstrap.scss'
+import 'highlight.js/styles/monokai-sublime.css'
+import 'normalize.css/normalize.css'
+import 'font-awesome/scss/font-awesome.scss'
 
 global.$ = $
 global.jQuery = $
 Rails.start()
 global.Rails = Rails
-Turbolinks.start()
 
 require.context('../stylesheets/', true, /^\.\/[^_].*\.(css|scss|sass)$/i)
 require.context('../images/', true, /\.(gif|jpg|png|svg)$/i)
 
+hljs.initHighlightingOnLoad()
+
 $(document).ready(function () {
+  $('[data-toggle="tooltip"]').tooltip();
   let menu = $('.menu')
   let menuOffset = menu.offset()
   $(window).on('scroll', function () {

@@ -2530,6 +2530,10 @@ hawk@~3.1.3:
     hoek "2.x.x"
     sntp "1.x.x"
 
+highlight.js@^9.12.0:
+  version "9.12.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -5605,10 +5609,6 @@ tunnel-agent@^0.6.0:
 tunnel-agent@~0.4.1:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/tunnel-agent/-/tunnel-agent-0.4.3.tgz#6373db76909fe570e08d73583365ed828a74eeeb"
-
-turbolinks@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/turbolinks/-/turbolinks-5.1.1.tgz#3d418a2d8172edbde5e787bf74cb7bef151ae43f"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"

@@ -35,21 +35,4 @@ RSpec.describe Post, type: :model do
     post_without_type = build(:post, type: nil)
     expect(post_without_type).not_to be_valid
   end
-
-  it 'is not valid without a status' do
-    post_without_status = build(:post, status: nil)
-    expect(post_without_status).not_to be_valid
-  end
-
-  it 'can have an image' do
-    post_with_image = create(:post, :with_image)
-    expect(post_with_image).to be_valid
-    expect(post_with_image.image).not_to eq(post_with_image.category.cover_image)
-  end
-
-  it 'has the image of its category by default' do
-    post_without_image = create(:post)
-    expect(post_without_image).to be_valid
-    expect(post_without_image.image).to eq(post_without_image.category.cover_image)
-  end
 end

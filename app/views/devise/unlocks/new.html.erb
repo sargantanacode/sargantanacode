@@ -1,24 +1,22 @@
 <% content_for :title, t('.unlock') %>
 
-<div class="row justify-content-center mt-5 page">
-  <div class="col-11 col-sm-8 col-md-6 col-xl-5">
-    <div class="content">
-      <h2 class="text-center h2 mb-4"><%= t('.unlock') %></h2>
-      <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-        <%= devise_error_messages! %>
+<div class="col-11 col-sm-8 col-md-6 col-xl-5">
+  <div class="content">
+    <h2 class="text-center h2 mb-4"><%= t('.unlock') %></h2>
+    <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+      <%= devise_error_messages! %>
 
-        <div class="form-group">
-          <%= f.label :email %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control", :required => true %>
-        </div>
-
-        <div class="actions">
-          <%= f.submit t('.unlock'), :class => "btn btn-primary" %>
-        </div>
-      <% end %>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control", :required => true %>
       </div>
-    <div class="bottom-links">
-      <%= render "devise/shared/links" %>
+
+      <div class="actions">
+        <%= f.submit t('.unlock'), :class => "btn btn-primary" %>
+      </div>
+    <% end %>
     </div>
+  <div class="bottom-links">
+    <%= render "devise/shared/links" %>
   </div>
 </div>

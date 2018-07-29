@@ -8,9 +8,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarDropdown">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item <%= active?(homepage_path) %>">
-          <%= link_to t('.home'), homepage_path, :class => 'nav-link' %>
-        </li>
+        <% if admin_zone? %>
+          <%= render 'layouts/admin-links' %>
+        <% else %>
+          <%= render 'layouts/public-links' %>
+        <% end %>
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item dropdown">

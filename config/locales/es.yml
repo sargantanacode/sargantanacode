@@ -1,7 +1,51 @@
 es:
+  errors:
+    access: "¡Tú no tienes poder aquí, Gandalf el gris!"
+  admin:
+    posts:
+      new:
+        publish_post: "Publicar artículo"
+      edit:
+        edit_post: "Editar artículo"
+      destroy:
+        destroyed: "Artículo eliminado correctamente"
+      form-common:
+        save: "Guardar"
+      index:
+        posts_pages: "Artículos y páginas"
+        posts: "Artículos"
+        pages: "Páginas"
+        posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado."
+        pages_list_empty: "Lo sentimos, actualmente no hay ninguna página publicada."
+        publish_something: "¡Publica algo!"
+      posts-list-header:
+        title: "Título"
+        published: "Publicado"
+        visits-count: "Visitas"
+        actions: "Acciones"
+      posts-list:
+        title: "Título"
+        published: "Publicado"
+        visits-count: "Visitas"
+        actions: "Acciones"
+        view: "Ver"
+        edit: "Editar"
+        draft: "Borrador"
+        publish: "Publicar"
+        destroy: "Eliminar"
+        delete_confirm: "¿Estás seguro?"
+      publish:
+        published: "El artículo ha sido publicado con éxito"
+      draft:
+        draft: "El artículo ha sido movido a borradores con éxito"
   layouts:
-    menu:
+    admin-links:
       home: "Inicio"
+      posts_pages: "Artículos y páginas"
+      publish_post: "Publicar artículo"
+    public-links:
+      home: "Inicio"
+    menu:
       login: "Entrar"
       logout: "Salir"
       languages: "Idiomas"
@@ -10,3 +54,10 @@ es:
     footer:
       github_repo: "Este proyecto es de código abierto, lo puedes encontrar en <a href=\"%{link}\">nuestro repositorio de GitHub</a>"
       content_license: "El contenido de esta página tiene una licencia <a href=\"%{link}\">CC BY-SA</a>"
+  posts:
+    index:
+      posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
+    show:
+      edit_post: "Editar"
+      delete_post: "Eliminar"
+      delete_confirm: "¿Estás seguro?"

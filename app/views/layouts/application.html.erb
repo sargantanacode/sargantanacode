@@ -8,13 +8,17 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application', defer: true  %>
   </head>
 
   <body>
     <%= render 'layouts/header' %>
-    <%= yield %>
+    <div class="container mt-5 page">
+      <div class="row justify-content-center">
+        <%= yield %>
+      </div>
+    </div>
     <%= render 'layouts/footer' %>
   </body>
 </html>

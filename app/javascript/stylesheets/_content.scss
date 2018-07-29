@@ -6,6 +6,47 @@
     font-size: 17px;
     color: $font-color;
   }
+  img.post-header {
+    @include breakpoint-up(md) {
+      margin: -1.3vw -1.3vw 2vw -1.3vw;
+      width: calc(100% + #{2.6vw});
+    }
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.date-badge {
+  @include background-opacity($dark-gray, 0.5);
+  position: absolute;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  left: 25px;
+  padding: 3px 7px;
+  color: $white;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+.category-badge {
+  @include background-opacity($dark-gray, 0.5);
+  position: absolute;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  right: 25px;
+  padding: 3px 7px;
+  color: $white;
+  font-size: 13px;
+  border-radius: 10px;
+  a {
+    color: $white;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
 }
 
 .btn-primary {
@@ -29,6 +70,128 @@
     &:hover {
       text-decoration: none;
       color: $white;
+    }
+  }
+}
+
+.hljs {
+  padding: 1.3vw;
+}
+
+.responsive-table {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+  white-space: normal;
+  border: 1px solid $dark-gray;
+  @include breakpoint-up(lg) {
+    flex-direction: row;
+    margin-bottom: 0;
+    &:not(:first-of-type) {
+      border-top: 0;
+    }
+  }
+  > * {
+    padding: .4vw;
+  }
+  > :nth-child(even) {
+    background-color: $light-gray;
+    @include breakpoint-up(lg) {
+      background-color: inherit;
+    }
+  }
+  &:nth-of-type(even) {
+    @include breakpoint-up(lg) {
+      background-color: $light-gray;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    color: $white;
+    background-color: $dark-gray;
+    @include breakpoint-up(lg) {
+      width: 60vw;
+      background-color: inherit;
+      font-weight: normal;
+      color: inherit;
+    }
+  }
+  &__published {
+    @include breakpoint-up(lg) {
+      text-align: center;
+      width: 10vw;
+    }
+  }
+  &__visits-count {
+    @include breakpoint-up(lg) {
+      width: 10vw;
+      text-align: center;
+      .legend {
+        display: none;
+      }
+    }
+  }
+  &__actions {
+    @include breakpoint-up(lg) {
+      width: 16vw;
+      text-align: center;
+    }
+  }
+}
+
+.responsive-header {
+  display: none;
+  @include breakpoint-up(lg) {
+    display: flex;
+    padding: .4vw;
+    border: 1px solid $dark-gray;
+    background-color: $dark-gray;
+    color: $white;
+    font-weight: bold;
+    &__title {
+      width: 60vw;
+    }
+    &__published, &__visits-count {
+      text-align: center;
+      width: 10vw;
+    }
+    &__actions {
+      width: 16vw;
+      text-align: center;
+    }
+  }
+}
+
+.list {
+  @include breakpoint-up(lg) {
+    background-color: $entry-background;
+  }
+  border: 1px solid $entry-border;
+  height: 100%;
+  transition: all .5s ease;
+  &:hover {
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
+  }
+  .date-badge, .category-badge {
+    top: 10px;
+  }
+  img {
+    width: 100%;
+  }
+  &__content {
+    padding: 1.25rem;
+  }
+  &__title {
+    margin-bottom: .75rem;
+    font-size: 1.25rem;
+  }
+  &__text {
+    margin-bottom: 0;
+  }
+  a p {
+    color: $font-color;
+    &:hover {
+      color: $font-color;
     }
   }
 }

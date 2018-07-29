@@ -19,3 +19,21 @@ es:
         role_list:
           user: "Usuario"
           admin: "Administrador"
+      post:
+        title_en: "Title"
+        content_en: "Content"
+        excerpt_en: "Excerpt"
+        title_es: "Título"
+        content_es: "Contenido"
+        excerpt_es: "Extracto"
+        category: "Categoría"
+        course: "Curso"
+        status_l: "Estado"
+        status_list:
+          draft: "Borrador"
+          published: "Publicado"
+        image: "Imagen (1840x720)"
+        type_l: "Tipo"
+        type_list:
+          post: "Artículo"
+          page: "Página"

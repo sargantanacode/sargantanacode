@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_22_164747) do
+ActiveRecord::Schema.define(version: 2018_07_29_082739) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 2018_07_22_164747) do
     t.bigint "visit_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "published_at"
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["course_id"], name: "index_posts_on_course_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
