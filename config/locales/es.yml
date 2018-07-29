@@ -15,13 +15,20 @@ es:
         destroyed: "Artículo eliminado correctamente"
       form-common:
         save: "Guardar"
+      index:
+        posts: "Artículos"
+        title: "Título"
+        published: "Publicado"
+        visits-count: "Visitas"
+        actions: "Acciones"
+        delete_confirm: "¿Estás seguro?"
   layouts:
     admin-links:
       home: "Inicio"
+      posts_list: "Artículos"
       publish_post: "Publicar artículo"
     public-links:
       home: "Inicio"
-      publish_post: "Publicar artículo"
     menu:
       login: "Entrar"
       logout: "Salir"

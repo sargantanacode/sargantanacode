@@ -1,2 +1,35 @@
-<h1>Admin::Posts#index</h1>
-<p>Find me in app/views/admin/posts/index.html.erb</p>
+<% content_for :title, t('.posts') %>
+
+<div class="col-12 content mb-3">
+  <h2 class="text-center mb-4"><%= t('.posts') %></h2>
+  <div class="responsive-header">
+    <div class="responsive-header__title"><%= t('.title') %></div>
+    <div class="responsive-header__published"><%= t('.published') %></div>
+    <div class="responsive-header__visits-count"><%= t('.visits-count') %></div>
+    <div class="responsive-header__actions"><%= t('.actions') %></div>
+  </div>
+  <% @posts.each do |post| %>
+    <div class="responsive-table">
+      <div class="responsive-table__title"><%= post.title %></div>
+      <div class="responsive-table__published"><%= post.published? %></div>
+      <div class="responsive-table__visits-count">
+        <span class="legend"><%= t('.visits-count') %>:</span> <%= post.visit_count %>
+      </div>
+      <div class="responsive-table__actions">
+        <%= link_to admin_post_path(id: post.slug),
+            :class =>  "btn btn-sm btn-info text-center" do %>
+          <i class="fa fa-eye" aria-hidden="true"></i>
+        <% end %>
+        <%= link_to edit_admin_post_path(id: post.slug),
+            :class =>  "btn btn-sm btn-primary text-center" do %>
+          <i class="fa fa-edit" aria-hidden="true"></i>
+        <% end %>
+        <%= link_to admin_post_path(id: post.slug),
+            data: { confirm: t('.delete_confirm') }, :method => :delete,
+            :class => "btn btn-sm btn-danger text-center" do %>
+          <i class="fa fa-remove" aria-hidden="true"></i>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

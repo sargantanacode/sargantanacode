@@ -15,13 +15,20 @@ en:
         destroyed: "Post successfully deleted"
       form-common:
         save: "Save"
+      index:
+        posts: "Posts"
+        title: "Title"
+        published: "Published"
+        visits-count: "Visits"
+        actions: "Actions"
+        delete_confirm: "Are you sure?"
   layouts:
     admin-links:
       home: "Home"
+      posts_list: "Artículos"
       publish_post: "Publish Post"
     public-links:
       home: "Home"
-      publish_post: "Publish Post"
     menu:
       login: "Log In"
       logout: "Log Out"

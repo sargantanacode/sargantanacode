@@ -77,3 +77,90 @@
 .hljs {
   padding: 1.3vw;
 }
+
+.responsive-table {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+  white-space: normal;
+  border: 1px solid $dark-gray;
+  @include breakpoint-up(lg) {
+    flex-direction: row;
+    margin-bottom: 0;
+    &:not(:first-of-type) {
+      border-top: 0;
+    }
+  }
+  > * {
+    padding: .4vw;
+  }
+  > :nth-child(even) {
+    background-color: $light-gray;
+    @include breakpoint-up(lg) {
+      background-color: inherit;
+    }
+  }
+  &:nth-of-type(even) {
+    @include breakpoint-up(lg) {
+      background-color: $light-gray;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    color: $white;
+    background-color: $dark-gray;
+    @include breakpoint-up(lg) {
+      width: 60vw;
+      background-color: inherit;
+      font-weight: normal;
+      color: inherit;
+    }
+  }
+  &__published {
+    @include breakpoint-up(lg) {
+      width: 10vw;
+    }
+  }
+  &__visits-count {
+    @include breakpoint-up(lg) {
+      width: 10vw;
+      text-align: center;
+      .legend {
+        display: none;
+      }
+    }
+  }
+  &__actions {
+    @include breakpoint-up(lg) {
+      width: 15vw;
+      text-align: center;
+    }
+  }
+}
+
+
+.responsive-header {
+  display: none;
+  @include breakpoint-up(lg) {
+    display: flex;
+    padding: .4vw;
+    border: 1px solid $dark-gray;
+    background-color: $dark-gray;
+    color: $white;
+    font-weight: bold;
+    &__title {
+      width: 60vw;
+    }
+    &__published {
+      width: 10vw;
+    }
+    &__visits-count {
+      width: 10vw;
+      text-align: center;
+    }
+    &__actions {
+      width: 15vw;
+      text-align: center;
+    }
+  }
+}

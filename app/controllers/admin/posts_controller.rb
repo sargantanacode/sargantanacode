@@ -36,7 +36,8 @@ class Admin::PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to homepage_path, notice: t('.destroyed')
+    flash[:notice] = t('.destroyed')
+    redirect_back(fallback_location: homepage_path)
   end
 
   private

@@ -33,6 +33,11 @@ class Post < ApplicationRecord
     self.visits_count = self.visits_count + 1 unless current_user.admin?
   end
 
+  def published?
+    self.status == :published ? self.updated_at.strftime('%d/%m/%Y') : self.translated_status
+  end
+  
+
   def to_s
     self.title
   end
