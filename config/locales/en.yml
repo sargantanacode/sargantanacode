@@ -16,11 +16,27 @@ en:
       form-common:
         save: "Save"
       index:
+        posts_pages: "Posts and Pages"
         posts: "Posts"
+        pages: "Pages"
+        posts_list_empty: "Sorry, there are currently no posts added."
+        pages_list_empty: "Sorry, there are currently no pages added."
+        publish_something: "Publish something!"
+      posts-list-header:
         title: "Title"
         published: "Published"
         visits-count: "Visits"
         actions: "Actions"
+      posts-list:
+        title: "Title"
+        published: "Published"
+        visits-count: "Visits"
+        actions: "Actions"
+        view: "View"
+        edit: "Edit"
+        draft: "Draft"
+        publish: "Publish"
+        destroy: "Delete"
         delete_confirm: "Are you sure?"
       publish:
         published: "The Post has been published successfully"
@@ -29,7 +45,7 @@ en:
   layouts:
     admin-links:
       home: "Home"
-      posts_list: "Artículos"
+      posts_pages: "Posts and Pages"
       publish_post: "Publish Post"
     public-links:
       home: "Home"

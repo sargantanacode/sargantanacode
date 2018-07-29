@@ -27,6 +27,7 @@ require.context('../images/', true, /\.(gif|jpg|png|svg)$/i)
 hljs.initHighlightingOnLoad()
 
 $(document).ready(function () {
+  $('[data-toggle="tooltip"]').tooltip();
   let menu = $('.menu')
   let menuOffset = menu.offset()
   $(window).on('scroll', function () {

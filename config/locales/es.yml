@@ -16,11 +16,27 @@ es:
       form-common:
         save: "Guardar"
       index:
+        posts_pages: "Artículos y páginas"
         posts: "Artículos"
+        pages: "Páginas"
+        posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado."
+        pages_list_empty: "Lo sentimos, actualmente no hay ninguna página publicada."
+        publish_something: "¡Publica algo!"
+      posts-list-header:
         title: "Título"
         published: "Publicado"
         visits-count: "Visitas"
         actions: "Acciones"
+      posts-list:
+        title: "Título"
+        published: "Publicado"
+        visits-count: "Visitas"
+        actions: "Acciones"
+        view: "Ver"
+        edit: "Editar"
+        draft: "Borrador"
+        publish: "Publicar"
+        destroy: "Eliminar"
         delete_confirm: "¿Estás seguro?"
       publish:
         published: "El artículo ha sido publicado con éxito"
@@ -29,7 +45,7 @@ es:
   layouts:
     admin-links:
       home: "Inicio"
-      posts_list: "Artículos"
+      posts_pages: "Artículos y páginas"
       publish_post: "Publicar artículo"
     public-links:
       home: "Inicio"
@@ -44,4 +60,4 @@ es:
       content_license: "El contenido de esta página tiene una licencia <a href=\"%{link}\">CC BY-SA</a>"
   home:
     index:
-      posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado."
+      posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
