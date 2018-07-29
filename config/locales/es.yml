@@ -7,10 +7,6 @@ es:
         publish_post: "Publicar artículo"
       edit:
         edit_post: "Editar artículo"
-      show:
-        edit_post: "Editar"
-        delete_post: "Eliminar"
-        delete_confirm: "¿Estás seguro?"
       destroy:
         destroyed: "Artículo eliminado correctamente"
       form-common:
@@ -58,6 +54,10 @@ es:
     footer:
       github_repo: "Este proyecto es de código abierto, lo puedes encontrar en <a href=\"%{link}\">nuestro repositorio de GitHub</a>"
       content_license: "El contenido de esta página tiene una licencia <a href=\"%{link}\">CC BY-SA</a>"
-  home:
+  posts:
     index:
       posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
+    show:
+      edit_post: "Editar"
+      delete_post: "Eliminar"
+      delete_confirm: "¿Estás seguro?"

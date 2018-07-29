@@ -7,10 +7,6 @@ en:
         publish_post: "Publish Post"
       edit:
         edit_post: "Editing Post"
-      show:
-        edit_post: "Edit"
-        delete_post: "Delete"
-        delete_confirm: "Are you sure?"
       destroy:
         destroyed: "Post successfully deleted"
       form-common:
@@ -58,6 +54,10 @@ en:
     footer:
       github_repo: "This project is open source, you can find it on <a href=\"%{link}\">our GitHub repository</a>"
       content_license: "The content of this page has a <a href=\"%{link}\">CC BY-SA</a> license"
-  home:
+  posts:
     index:
       posts_list_empty: "Sorry, there are currently no posts added."
+    show:
+      edit_post: "Edit"
+      delete_post: "Delete"
+      delete_confirm: "Are you sure?"

@@ -139,7 +139,6 @@
   }
 }
 
-
 .responsive-header {
   display: none;
   @include breakpoint-up(lg) {
@@ -159,6 +158,40 @@
     &__actions {
       width: 16vw;
       text-align: center;
+    }
+  }
+}
+
+.list {
+  @include breakpoint-up(lg) {
+    background-color: $entry-background;
+  }
+  border: 1px solid $entry-border;
+  height: 100%;
+  transition: all .5s ease;
+  &:hover {
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
+  }
+  .date-badge, .category-badge {
+    top: 10px;
+  }
+  img {
+    width: 100%;
+  }
+  &__content {
+    padding: 1.25rem;
+  }
+  &__title {
+    margin-bottom: .75rem;
+    font-size: 1.25rem;
+  }
+  &__text {
+    margin-bottom: 0;
+  }
+  a p {
+    color: $font-color;
+    &:hover {
+      color: $font-color;
     }
   }
 }

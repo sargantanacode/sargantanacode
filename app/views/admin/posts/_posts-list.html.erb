@@ -11,7 +11,7 @@
     <span class="legend"><%= t('.visits-count') %>:</span> <%= post.visit_count %>
   </div>
   <div class="responsive-table__actions">
-    <%= link_to admin_post_path(id: post.slug),
+    <%= link_to post_path(id: post.slug),
         :class => "btn btn-sm btn-info text-center" do %>
       <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"
         data-placement="top" title="<%= t('.view') %>"></i>

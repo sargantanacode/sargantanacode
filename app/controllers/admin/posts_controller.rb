@@ -1,13 +1,10 @@
 class Admin::PostsController < ApplicationController
   before_action :only_admins
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.type(:post).by_date
     @pages = Post.type(:page).by_date
-  end
-
-  def show
   end
 
   def new

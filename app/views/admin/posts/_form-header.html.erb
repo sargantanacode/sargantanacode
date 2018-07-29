@@ -1,5 +1,5 @@
 <% unless new_post %>
-  <%= render 'cover', post: post %>
+  <%= render 'posts/cover', post: post %>
 <% end %>
 <% if post.errors.any? %>
   <% post.errors.full_messages.each do |message| %>
