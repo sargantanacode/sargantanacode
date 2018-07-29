@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
+  let(:post) { create(:post) }
+
   it 'has a valid post factory' do
     post = build(:post)
     expect(post).to be_valid
@@ -34,5 +36,13 @@ RSpec.describe Post, type: :model do
   it 'is not valid without a type' do
     post_without_type = build(:post, type: nil)
     expect(post_without_type).not_to be_valid
+  end
+
+  it 'has a valid slug' do
+    expect(post.slug).not_to be nil
+  end
+
+  it 'has the same slug as its English title' do
+    expect(post.slug).to eq(post.title_en.parameterize)
   end
 end

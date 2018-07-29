@@ -17,7 +17,8 @@ class Admin::PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
-      redirect_to admin_post_path(id: @post.slug)
+      redirect_to admin_posts_path, notice: t('.post_saved') if @post.type == 'post'
+      redirect_to admin_posts_path, notice: t('.page_saved') if @post.type == 'page'
     else
       render :new
     end
@@ -25,7 +26,8 @@ class Admin::PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to admin_post_path(id: @post.slug)
+      redirect_to admin_posts_path, notice: t('.post_saved') if @post.type == 'post'
+      redirect_to admin_posts_path, notice: t('.page_saved') if @post.type == 'page'
     else
       render :edit
     end
@@ -33,21 +35,24 @@ class Admin::PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    flash[:notice] = t('.destroyed')
+    flash[:notice] = t('.post_destroyed') if @post.type == 'post'
+    flash[:notice] = t('.page_destroyed') if @post.type == 'page'
     redirect_back(fallback_location: homepage_path)
   end
 
   def publish
     @post = Post.friendly.find(params[:post_id])
     @post.publish
-    flash[:notice] = t('.published')
+    flash[:notice] = t('.post_published') if @post.type == 'post'
+    flash[:notice] = t('.page_published') if @post.type == 'page'
     redirect_back(fallback_location: homepage_path)
   end
 
   def draft
     @post = Post.friendly.find(params[:post_id])
     @post.draft
-    flash[:notice] = t('.draft')
+    flash[:notice] = t('.post_draft') if @post.type == 'post'
+    flash[:notice] = t('.page_draft') if @post.type == 'page'
     redirect_back(fallback_location: homepage_path)
   end
 

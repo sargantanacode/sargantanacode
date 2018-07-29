@@ -4,12 +4,16 @@ es:
   admin:
     posts:
       new:
-        publish_post: "Publicar artículo"
+        add_post: "Añadir artículo"
+        add_page: "Añadir página"
       edit:
         edit_post: "Editar artículo"
+        edit_page: "Editar página"
       destroy:
-        destroyed: "Artículo eliminado correctamente"
+        post_destroyed: "Artículo eliminado correctamente"
+        page_destroyed: "Página eliminado correctamente"
       form-common:
+        slug_help: "Si lo dejas en blanco será generado automáticamente"
         save: "Guardar"
       index:
         posts_pages: "Artículos y páginas"
@@ -34,19 +38,29 @@ es:
         publish: "Publicar"
         destroy: "Eliminar"
         delete_confirm: "¿Estás seguro?"
+      create:
+        post_saved: "El artículo ha sido guardado con éxito"
+        page_saved: "La página ha sido guardada con éxito"
       publish:
-        published: "El artículo ha sido publicado con éxito"
+        post_published: "El artículo ha sido publicado con éxito"
+        page_published: "La página ha sido publicada con éxito"
       draft:
-        draft: "El artículo ha sido movido a borradores con éxito"
+        post_draft: "El artículo ha sido movido a borradores con éxito"
+        page_draft: "La página ha sido movida a borradores con éxito"
   layouts:
     admin-links:
       home: "Inicio"
       posts_pages: "Artículos y páginas"
-      publish_post: "Publicar artículo"
+      add_post: "Añadir artículo"
+      add_page: "Añadir página"
     public-links:
       home: "Inicio"
     menu:
       login: "Entrar"
+      hello: "¡Hola, %{name}!"
+      add_post: "Añadir artículo"
+      add_page: "Añadir página"
+      edit_user: "Editar usuario"
       logout: "Salir"
       languages: "Idiomas"
       english: "Inglés"

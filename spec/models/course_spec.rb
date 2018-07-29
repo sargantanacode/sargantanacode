@@ -26,7 +26,7 @@ RSpec.describe Course, type: :model do
     expect(course.slug).not_to be nil
   end
 
-  it 'has the same slug as its name' do
-    expect(course.slug).to eq(course.name.parameterize)
+  it 'has the same slug as its English name' do
+    expect(course.slug).to eq(course.name_en.parameterize)
   end
 end
