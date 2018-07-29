@@ -14,7 +14,7 @@ Rails.application.configure do
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = true
+  config.action_controller.perform_caching = false
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
@@ -57,6 +57,22 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "SargantanaCode_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { host: ENV['DOMAIN'] }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    user_name: ENV['SMTP_USERNAME'],
+    password: ENV['SMTP_PASSWORD'],
+    domain: ENV['DOMAIN'],
+    address: ENV['SMTP_ADDRESS'],
+    port: ENV['SMTP_PORT'],
+    ssl: ENV['SMTP_SSL'],
+    tls: ENV['SMTP_TLS'],
+    authentication: :plain,
+    openssl_verify_mode: ENV['SMTP_SSL_VERIFY'],
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

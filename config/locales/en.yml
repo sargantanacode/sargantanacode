@@ -1,33 +1,63 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  errors:
+    access: "You have no Power here, Gandalf the Grey!"
+  admin:
+    posts:
+      new:
+        publish_post: "Publish Post"
+      edit:
+        edit_post: "Editing Post"
+      destroy:
+        destroyed: "Post successfully deleted"
+      form-common:
+        save: "Save"
+      index:
+        posts_pages: "Posts and Pages"
+        posts: "Posts"
+        pages: "Pages"
+        posts_list_empty: "Sorry, there are currently no posts added."
+        pages_list_empty: "Sorry, there are currently no pages added."
+        publish_something: "Publish something!"
+      posts-list-header:
+        title: "Title"
+        published: "Published"
+        visits-count: "Visits"
+        actions: "Actions"
+      posts-list:
+        title: "Title"
+        published: "Published"
+        visits-count: "Visits"
+        actions: "Actions"
+        view: "View"
+        edit: "Edit"
+        draft: "Draft"
+        publish: "Publish"
+        destroy: "Delete"
+        delete_confirm: "Are you sure?"
+      publish:
+        published: "The Post has been published successfully"
+      draft:
+        draft: "The Post has been moved to drafts successfully"
+  layouts:
+    admin-links:
+      home: "Home"
+      posts_pages: "Posts and Pages"
+      publish_post: "Publish Post"
+    public-links:
+      home: "Home"
+    menu:
+      login: "Log In"
+      logout: "Log Out"
+      languages: "Languages"
+      english: "English"
+      spanish: "Spanish"
+    footer:
+      github_repo: "This project is open source, you can find it on <a href=\"%{link}\">our GitHub repository</a>"
+      content_license: "The content of this page has a <a href=\"%{link}\">CC BY-SA</a> license"
+  posts:
+    index:
+      posts_list_empty: "Sorry, there are currently no posts added."
+    show:
+      edit_post: "Edit"
+      delete_post: "Delete"
+      delete_confirm: "Are you sure?"

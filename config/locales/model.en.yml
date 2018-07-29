@@ -1,0 +1,39 @@
+en:
+  activerecord:
+    attributes:
+      user:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        current_password: "Current Password"
+        remember_me: "Remember me"
+        name: "Name"
+        bio: "Bio"
+        job_l: "Job"
+        job_list:
+          translator: "Translator"
+          graphic_designer: "Graphic Designer"
+          editor: "Editor"
+          developer: "Developer"
+        role_l: "Roles"
+        role_list:
+          user: "User"
+          admin: "Admin"
+      post:
+        title_en: "Title"
+        content_en: "Content"
+        excerpt_en: "Excerpt"
+        title_es: "Título"
+        content_es: "Contenido"
+        excerpt_es: "Extracto"
+        category: "Category"
+        course: "Course"
+        status_l: "Status"
+        status_list:
+          draft: "Draft"
+          published: "Published"
+        image: "Image (1840x720)"
+        type_l: "Type"
+        type_list:
+          post: "Post"
+          page: "Page"

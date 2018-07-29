@@ -1,0 +1,32 @@
+<div class="form-group">
+  <%= f.label :category %>
+  <% categories = Category.all.collect { |category| [category.name, category.id] } %>
+  <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: true }, :class => "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :course %>
+  <% courses = Course.all.collect { |course| [course.name, course.id] } %>
+  <%= f.collection_select :course_id, Course.all, :id, :name, { prompt: true }, :class => "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :type_l %>
+  <%= f.select :type, options_for_select(f.object.class.translated_types.map {
+        |translation, k, _v| [translation, k]
+      }), {}, :class => "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :slug %>
+  <%= f.text_field :slug, :class => "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :image %>
+  <%= f.file_field :image, :class => "form-control-file" %>
+</div>
+
+<div class="actions">
+  <%= f.submit t('.save'), :class => "btn btn-primary" %>
+</div>

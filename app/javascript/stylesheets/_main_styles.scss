@@ -1,0 +1,41 @@
+html, body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  @include breakpoint-up(md) {
+    background-color: $background;
+  }
+}
+
+.page {
+  flex: 1 0 auto;
+  h2, h3, h4, h5, h6 {
+    color: $entry-link;
+    em, strong {
+      color: $entry-link;
+    }
+  }
+  a:not(.btn, .badge-link, .page-link, .social-btn) {
+    color: $entry-link;
+    &:hover {
+      text-decoration: none;
+      color: $entry-link-hover;
+    }
+  }
+  .fa {
+    color: $white;
+  }
+}
+
+pre {
+  @include breakpoint-up(md) {
+    margin-right: -1.3vw;
+    margin-left: -1.3vw;
+  }
+  &:last-child {
+    margin-bottom: -1.3vw;
+  }
+}

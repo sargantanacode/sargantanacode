@@ -1,0 +1,25 @@
+<% content_for :title, @post.title %>
+
+<div class="col-12 content mb-3">
+  <span class="date-badge">
+    <%= @post.published_at.strftime('%d/%m/%Y') %>
+  </span>
+  <span class="category-badge">
+    <%= @post.category.name %>
+  </span>
+  <%= render 'cover', post: @post %>
+  <h2 class="post-title"><%= @post.title %></h2>
+  <div class="post-body">
+    <%= raw markdown @post.content %>
+  </div>
+</div>
+
+<% if current_user.present? && current_user.admin? %>
+  <div class="bottom-links">
+    <%= link_to t('.edit_post'), edit_admin_post_path(id: @post.slug),
+      :class => "btn btn-warning" %>
+    <%= link_to t('.delete_post'), admin_post_path(id: @post.slug),
+      data: { confirm: t('.delete_confirm') }, :method => :delete,
+      :class => "btn btn-danger" %>
+  </div>
+<% end %>
