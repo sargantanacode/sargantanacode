@@ -9,7 +9,9 @@
   <div class="dropdown-menu m-0 rounded-0" aria-labelledby="postsDropdown">
     <%= link_to t('.posts_pages'), admin_posts_path,
       :class => "dropdown-item #{active?(admin_posts_path)}" %>
-    <%= link_to t('.publish_post'), new_admin_post_path,
-      :class => "dropdown-item #{active?(new_admin_post_path)}" %>
+    <%= link_to t('.add_post'), new_admin_post_path(:type => :post),
+      :class => "dropdown-item #{active?(new_admin_post_path(:type => :post))}" %>
+    <%= link_to t('.add_page'), new_admin_post_path(:type => :page),
+      :class => "dropdown-item #{active?(new_admin_post_path(:type => :page))}" %>
   </div>
 </li>

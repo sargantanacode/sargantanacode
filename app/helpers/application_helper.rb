@@ -2,7 +2,7 @@ module ApplicationHelper
   # Return 'active' string if the passed path is exactly the same as the
   # current path.
   def active?(path)
-    'active' if request.path == path
+    'active' if request.fullpath == path
   end
 
   # Return 'active' string if the passed locale is the same as the current locale.

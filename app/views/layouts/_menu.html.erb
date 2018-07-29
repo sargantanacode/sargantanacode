@@ -39,8 +39,10 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right m-0 rounded-0" aria-labelledby="postsDropdown">
               <% if current_user.admin? %>
-                <%= link_to t('.publish_post'), new_admin_post_path,
-                  :class => "dropdown-item #{active?(new_admin_post_path)}" %>
+                <%= link_to t('.add_post'), new_admin_post_path(:type => :post),
+                  :class => "dropdown-item #{active?(new_admin_post_path(:type => :post))}" %>
+                <%= link_to t('.add_page'), new_admin_post_path(:type => :page),
+                  :class => "dropdown-item #{active?(new_admin_post_path(:type => :page))}" %>
                 <div class="dropdown-divider"></div>
               <% end %>
               <%= link_to t('.edit_user'), edit_user_registration_path,

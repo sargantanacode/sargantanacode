@@ -4,12 +4,16 @@ en:
   admin:
     posts:
       new:
-        publish_post: "Publish Post"
+        add_post: "Add Post"
+        add_page: "Add Page"
       edit:
         edit_post: "Editing Post"
+        edit_page: "Editing Page"
       destroy:
-        destroyed: "Post successfully deleted"
+        post_destroyed: "Post successfully deleted"
+        page_destroyed: "Page successfully deleted"
       form-common:
+        slug_help: "If you leave it blank it will be generated automatically"
         save: "Save"
       index:
         posts_pages: "Posts and Pages"
@@ -34,21 +38,28 @@ en:
         publish: "Publish"
         destroy: "Delete"
         delete_confirm: "Are you sure?"
+      create:
+        post_saved: "The Post has been saved successfully"
+        page_saved: "The Page has been saved successfully"
       publish:
-        published: "The Post has been published successfully"
+        post_published: "The Post has been published successfully"
+        page_published: "The Page has been published successfully"
       draft:
-        draft: "The Post has been moved to drafts successfully"
+        post_draft: "The Post has been moved to drafts successfully"
+        page_draft: "The Page has been moved to drafts successfully"
   layouts:
     admin-links:
       home: "Home"
       posts_pages: "Posts and Pages"
-      publish_post: "Publish Post"
+      add_post: "Add Post"
+      add_page: "Add Page"
     public-links:
       home: "Home"
     menu:
       login: "Log In"
       hello: "Hey, %{name}!"
-      publish_post: "Publish Post"
+      add_post: "Add Post"
+      add_page: "Add Page"
       edit_user: "Edit user"
       logout: "Log Out"
       languages: "Languages"

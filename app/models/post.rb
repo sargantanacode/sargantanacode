@@ -65,6 +65,7 @@ class Post < ApplicationRecord
   end  
 
   def update_slug
+    return self.slug = self.title_en.to_s.parameterize if self.slug.blank?
     self.slug = self.slug.parameterize
   end
 end
