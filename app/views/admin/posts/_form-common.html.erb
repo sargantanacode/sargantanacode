@@ -11,13 +11,6 @@
 </div>
 
 <div class="form-group">
-  <%= f.label :status_l %>
-  <%= f.select :status, options_for_select(f.object.class.translated_statuses.map {
-        |translation, k, _v| [translation, k]
-      }), {}, :class => "form-control" %>
-</div>
-
-<div class="form-group">
   <%= f.label :type_l %>
   <%= f.select :type, options_for_select(f.object.class.translated_types.map {
         |translation, k, _v| [translation, k]

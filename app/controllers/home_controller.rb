@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   before_action :set_post, only: [:show]
   
   def index
-    @posts = Post.status(:published).type(:post)
+    @posts = Post.status(:published).type(:post).by_date
   end
 
   def show
@@ -11,6 +11,6 @@ class HomeController < ApplicationController
   private
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 end

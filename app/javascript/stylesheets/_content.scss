@@ -118,6 +118,7 @@
   }
   &__published {
     @include breakpoint-up(lg) {
+      text-align: center;
       width: 10vw;
     }
   }
@@ -132,7 +133,7 @@
   }
   &__actions {
     @include breakpoint-up(lg) {
-      width: 15vw;
+      width: 16vw;
       text-align: center;
     }
   }
@@ -151,15 +152,12 @@
     &__title {
       width: 60vw;
     }
-    &__published {
-      width: 10vw;
-    }
-    &__visits-count {
-      width: 10vw;
+    &__published, &__visits-count {
       text-align: center;
+      width: 10vw;
     }
     &__actions {
-      width: 15vw;
+      width: 16vw;
       text-align: center;
     }
   }

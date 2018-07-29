@@ -5,7 +5,10 @@ Rails.application.routes.draw do
     root to: "home#index", as: "homepage"
 
     namespace :admin do
-      resources :posts
+      resources :posts do
+        put :publish, as: "publish"
+        put :draft, as: "draft"
+      end
     end
   end  
   get "/*path" => "application#change_path", constraints: { path: /(?!(#{I18n.available_locales.join("|")})\/).*/ }

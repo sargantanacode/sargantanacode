@@ -3,8 +3,8 @@ class Admin::PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.type(:post)
-    @pages = Post.type(:page)
+    @posts = Post.type(:post).by_date
+    @pages = Post.type(:page).by_date
   end
 
   def show
@@ -40,6 +40,20 @@ class Admin::PostsController < ApplicationController
     redirect_back(fallback_location: homepage_path)
   end
 
+  def publish
+    @post = Post.friendly.find(params[:post_id])
+    @post.publish
+    flash[:notice] = t('.published')
+    redirect_back(fallback_location: homepage_path)
+  end
+
+  def draft
+    @post = Post.friendly.find(params[:post_id])
+    @post.draft
+    flash[:notice] = t('.draft')
+    redirect_back(fallback_location: homepage_path)
+  end
+
   private
 
   def only_admins
@@ -55,7 +69,7 @@ class Admin::PostsController < ApplicationController
 
   def post_params
     permitted = Post.globalize_attribute_names + [:position] + [:category_id] +
-      [:course_id] + [:type] + [:status] + [:slug] + [:image]
+      [:course_id] + [:type] + [:slug] + [:image]
     params.require(:post).permit(permitted)
   end
 end

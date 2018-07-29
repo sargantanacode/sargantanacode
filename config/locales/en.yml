@@ -22,6 +22,10 @@ en:
         visits-count: "Visits"
         actions: "Actions"
         delete_confirm: "Are you sure?"
+      publish:
+        published: "The Post has been published successfully"
+      draft:
+        draft: "The Post has been moved to drafts successfully"
   layouts:
     admin-links:
       home: "Home"

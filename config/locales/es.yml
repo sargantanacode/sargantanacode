@@ -22,6 +22,10 @@ es:
         visits-count: "Visitas"
         actions: "Acciones"
         delete_confirm: "¿Estás seguro?"
+      publish:
+        published: "El artículo ha sido publicado con éxito"
+      draft:
+        draft: "El artículo ha sido movido a borradores con éxito"
   layouts:
     admin-links:
       home: "Inicio"

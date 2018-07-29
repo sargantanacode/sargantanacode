@@ -12,7 +12,6 @@ FactoryBot.define do
     association :category, factory: :category
     association :course, factory: :course
     type :post
-    status :draft
   end
 
   trait :page do

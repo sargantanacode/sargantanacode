@@ -35,9 +35,4 @@ RSpec.describe Post, type: :model do
     post_without_type = build(:post, type: nil)
     expect(post_without_type).not_to be_valid
   end
-
-  it 'is not valid without a status' do
-    post_without_status = build(:post, status: nil)
-    expect(post_without_status).not_to be_valid
-  end
 end
