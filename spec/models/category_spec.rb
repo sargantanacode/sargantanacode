@@ -31,7 +31,7 @@ RSpec.describe Category, type: :model do
     expect(category.slug).not_to be nil
   end
 
-  it 'has the same slug as its name' do
-    expect(category.slug).to eq(category.name.parameterize)
+  it 'has the same slug as its English name' do
+    expect(category.slug).to eq(category.name_en.parameterize)
   end
 end

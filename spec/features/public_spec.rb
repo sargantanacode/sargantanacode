@@ -1,10 +1,13 @@
 require 'rails_helper'
 
-RSpec.feature "Homepage", type: :feature do
+RSpec.feature "Public Zone", type: :feature do
   before do
     page.driver.header 'Accept-Language', locale
     I18n.locale = locale
+    post.publish
   end
+
+  let(:post) { create(:post) }
 
   context 'when the user has set their locale to :es' do
     let(:locale) { :es }
@@ -19,7 +22,13 @@ RSpec.feature "Homepage", type: :feature do
     end
 
     it "gets a list of published posts" do
-      fail "This needs to be implemented"
+      visit homepage_path(locale: locale)
+      expect(page).to have_css("h2.list__title", text: post.title)
+    end
+
+    it "can access to a single published post" do
+      visit post_path(id: post.slug, locale: locale)
+      expect(page.status_code).to be 200
     end
   end
   
@@ -36,7 +45,13 @@ RSpec.feature "Homepage", type: :feature do
     end
 
     it "gets a list of published posts" do
-      fail "This needs to be implemented"
+      visit homepage_path(locale: locale)
+      expect(page).to have_css("h2.list__title", text: post.title)
+    end
+
+    it "can access to a single published post" do
+      visit post_path(id: post.slug, locale: locale)
+      expect(page.status_code).to be 200
     end
   end
 end

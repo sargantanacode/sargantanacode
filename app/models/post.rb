@@ -29,7 +29,7 @@ class Post < ApplicationRecord
 
   scope :type, -> type { where(type: type) }
   scope :status, -> status { where(status: status) }
-  scope :by_date, -> { order('published_at IS NOT NULL, published_at DESC, updated_at DESC') }
+  scope :by_date, -> { order(Arel.sql('published_at IS NOT NULL, published_at DESC, updated_at DESC')) }
 
   def update_visits_count
     self.visits_count = self.visits_count + 1 unless current_user.admin?

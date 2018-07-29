@@ -18,10 +18,6 @@ FactoryBot.define do
     type :page
   end
 
-  trait :published do
-    status :published
-  end
-
   trait :with_image do
     image { Rack::Test::UploadedFile.new(Rails.root.join('spec/support/image.jpg'), 'image/jpeg') }
   end
