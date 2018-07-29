@@ -47,6 +47,9 @@ en:
       home: "Home"
     menu:
       login: "Log In"
+      hello: "Hey, %{name}!"
+      publish_post: "Publish Post"
+      edit_user: "Edit user"
       logout: "Log Out"
       languages: "Languages"
       english: "English"

@@ -47,6 +47,9 @@ es:
       home: "Inicio"
     menu:
       login: "Entrar"
+      hello: "¡Hola, %{name}!"
+      publish_post: "Publicar artículo"
+      edit_user: "Editar usuario"
       logout: "Salir"
       languages: "Idiomas"
       english: "Inglés"
