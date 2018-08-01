@@ -15,6 +15,8 @@ es:
       form-common:
         slug_help: "Si lo dejas en blanco será generado automáticamente"
         save: "Guardar"
+        destroy_image: "Eliminar portada"
+        delete_confirm: "Si has realizado algún cambio que no haya sido guardado se perderá. ¿Continuar?"
       index:
         posts_pages: "Artículos y páginas"
         posts: "Artículos"
@@ -47,6 +49,8 @@ es:
       draft:
         post_draft: "El artículo ha sido movido a borradores con éxito"
         page_draft: "La página ha sido movida a borradores con éxito"
+      destroy_image:
+        image_destroyed: "La portada ha sido eliminada, se mostrará la imagen de su categoría en su lugar"
   layouts:
     admin-links:
       home: "Inicio"
@@ -72,6 +76,7 @@ es:
     index:
       posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
     show:
+      destroy_image: "Eliminar portada"
       edit_post: "Editar"
       delete_post: "Eliminar"
       delete_confirm: "¿Estás seguro?"

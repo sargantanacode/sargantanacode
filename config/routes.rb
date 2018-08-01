@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :posts, except: [:show] do
         put :publish, as: "publish"
         put :draft, as: "draft"
+        put :destroy_image, as: "destroy_image"
       end
     end
   end  
