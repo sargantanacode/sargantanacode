@@ -2,7 +2,8 @@
 
 <div class="col-12 content mb-3">
   <span class="date-badge">
-    <%= @post.published_at.strftime('%d/%m/%Y') %>
+    <%= @post.published_at.strftime('%d/%m/%Y') if @post.status == 'published' %>
+    <%= @post.translated_status if @post.status == 'draft' %>
   </span>
   <span class="category-badge">
     <%= @post.category.name %>
