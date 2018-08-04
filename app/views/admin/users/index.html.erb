@@ -1,0 +1,30 @@
+<% content_for :title, t('.users') %>
+
+<div class="col-12 content mb-3">
+  <div class="responsive-header">
+    <div class="vw60"><%= t('.name') %></div>
+    <div class="vw10"><%= t('.role') %></div>
+    <div class="vw16"><%= t('.job') %></div>
+    <div class="vw10"><%= t('.actions') %></div>
+  </div>
+  <% @users.each do |user| %>
+    <div class="responsive-table">
+      <div class="vw60"><%= user.name %></div>
+      <div class="vw10"><%= user.translated_role %></div>
+      <div class="vw16"><%= user.translated_job || "-" %></div>
+      <div class="vw10">
+        <%= link_to edit_admin_user_path(id: user.id),
+            :class => "btn btn-sm btn-primary text-center" do %>
+          <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"
+            data-placement="top" title="<%= t('.edit') %>"></i>
+        <% end %>
+        <%= link_to admin_user_path(id: user.id),
+            data: { confirm: t('.delete_confirm') }, :method => :delete,
+            :class => "btn btn-sm btn-danger text-center" do %>
+          <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"
+            data-placement="top" title="<%= t('.destroy') %>"></i>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -78,6 +78,29 @@
   padding: 1.3vw;
 }
 
+.responsive-header {
+  display: none;
+  @include breakpoint-up(lg) {
+    display: flex;
+    padding: .4vw;
+    border: 1px solid $dark-gray;
+    background-color: $dark-gray;
+    color: $white;
+    font-weight: bold;
+    .vw60 {
+      width: 60vw;
+    }
+    .vw10 {
+      text-align: center;
+      width: 10vw;
+    }
+    .vw16 {
+      width: 16vw;
+      text-align: center;
+    }
+  }
+}
+
 .responsive-table {
   display: flex;
   flex-direction: column;
@@ -105,7 +128,7 @@
       background-color: $light-gray;
     }
   }
-  &__title {
+  .vw60 {
     font-weight: bold;
     color: $white;
     background-color: $dark-gray;
@@ -116,13 +139,7 @@
       color: inherit;
     }
   }
-  &__published {
-    @include breakpoint-up(lg) {
-      text-align: center;
-      width: 10vw;
-    }
-  }
-  &__visits-count {
+  .vw10 {
     @include breakpoint-up(lg) {
       width: 10vw;
       text-align: center;
@@ -131,31 +148,8 @@
       }
     }
   }
-  &__actions {
+  .vw16 {
     @include breakpoint-up(lg) {
-      width: 16vw;
-      text-align: center;
-    }
-  }
-}
-
-.responsive-header {
-  display: none;
-  @include breakpoint-up(lg) {
-    display: flex;
-    padding: .4vw;
-    border: 1px solid $dark-gray;
-    background-color: $dark-gray;
-    color: $white;
-    font-weight: bold;
-    &__title {
-      width: 60vw;
-    }
-    &__published, &__visits-count {
-      text-align: center;
-      width: 10vw;
-    }
-    &__actions {
       width: 16vw;
       text-align: center;
     }

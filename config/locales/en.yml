@@ -51,12 +51,28 @@ en:
         page_draft: "The Page has been moved to drafts successfully"
       destroy_image:
         image_destroyed: "The cover has been removed, the image of its category will be showed instead"
+    users:
+      index:
+        users: "Users"
+        name: "Name"
+        role: "Role"
+        job: "Job"
+        actions: "Actions"
+        edit: "Edit"
+        delete_confirm: "Are you sure to delete this user?"
+        destroy: "Delete"
+      edit:
+        edit_user: "Edit user %{name}"
+        save: "Save"
+      update:
+        user_saved: "User changes have been saved successfully"
   layouts:
     admin-links:
       home: "Home"
       posts_pages: "Posts and Pages"
       add_post: "Add Post"
       add_page: "Add Page"
+      users: "Users"
     public-links:
       home: "Home"
     menu:

@@ -51,12 +51,28 @@ es:
         page_draft: "La página ha sido movida a borradores con éxito"
       destroy_image:
         image_destroyed: "La portada ha sido eliminada, se mostrará la imagen de su categoría en su lugar"
+    users:
+      index:
+        users: "Usuarios"
+        name: "Nombre"
+        role: "Permisos"
+        job: "Cargo"
+        actions: "Acciones"
+        edit: "Editar"
+        delete_confirm: "¿Estás seguro de querer eliminar a este usuario?"
+        destroy: "Eliminar"
+      edit:
+        edit_user: "Editar usuario %{name}"
+        save: "Guardar"
+      update:
+        user_saved: "Los cambios realizados en el usuario han sido guardados correctamente"
   layouts:
     admin-links:
       home: "Inicio"
       posts_pages: "Artículos y páginas"
       add_post: "Añadir artículo"
       add_page: "Añadir página"
+      users: "Usuarios"
     public-links:
       home: "Inicio"
     menu:
