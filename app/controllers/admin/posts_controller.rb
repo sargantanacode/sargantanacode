@@ -1,6 +1,7 @@
 class Admin::PostsController < ApplicationController
   before_action :only_admins
   before_action :set_post, only: [:edit, :update, :destroy]
+  before_action :set_post_id, only: [:publish, :draft, :destroy_image]
 
   def index
     @posts = Post.type(:post).by_date
@@ -41,7 +42,6 @@ class Admin::PostsController < ApplicationController
   end
 
   def publish
-    @post = Post.friendly.find(params[:post_id])
     @post.publish
     flash[:notice] = t('.post_published') if @post.type == 'post'
     flash[:notice] = t('.page_published') if @post.type == 'page'
@@ -49,11 +49,16 @@ class Admin::PostsController < ApplicationController
   end
 
   def draft
-    @post = Post.friendly.find(params[:post_id])
     @post.draft
     flash[:notice] = t('.post_draft') if @post.type == 'post'
     flash[:notice] = t('.page_draft') if @post.type == 'page'
     redirect_back(fallback_location: homepage_path)
+  end
+
+  def destroy_image
+    @post.remove_image!
+    @post.save
+    redirect_to admin_posts_path, notice: t('.image_destroyed')
   end
 
   private
@@ -67,6 +72,10 @@ class Admin::PostsController < ApplicationController
 
   def set_post
     @post = Post.friendly.find(params[:id])
+  end
+
+  def set_post_id
+    @post = Post.friendly.find(params[:post_id])
   end
 
   def post_params

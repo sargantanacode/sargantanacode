@@ -1,16 +1,16 @@
 <div class="responsive-table">
-  <div class="responsive-table__title"><%= post.title %></div>
-  <div class="responsive-table__published">
+  <div class="vw60"><%= post.title %></div>
+  <div class="vw10">
     <% if post.published? %>
       <%= post.published_at.strftime('%d/%m/%Y') %>
     <% else %>
       <%= post.translated_status %>
     <% end %>
   </div>
-  <div class="responsive-table__visits-count">
-    <span class="legend"><%= t('.visits-count') %>:</span> <%= post.visit_count %>
+  <div class="vw10">
+    <span class="legend"><%= t('.visits-count') %>:</span> <%= post.visits_count %>
   </div>
-  <div class="responsive-table__actions">
+  <div class="vw16">
     <%= link_to post_path(id: post.slug),
         :class => "btn btn-sm btn-info text-center" do %>
       <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"

@@ -15,3 +15,6 @@
       :class => "dropdown-item #{active?(new_admin_post_path(:type => :page))}" %>
   </div>
 </li>
+<li class="nav-item <%= active?(admin_users_path) %>">
+  <%= link_to t('.users'), admin_users_path, :class => 'nav-link' %>
+</li>

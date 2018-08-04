@@ -1,0 +1,78 @@
+<% content_for :title, t('.edit_user', name: @user.name) %>
+
+<div class="col-11 col-md-9 col-lg-8 mb-3">
+  <h2 class="text-center h2 mb-4">
+    <%= t('.edit_user', name: @user.name) %>
+  </h2>
+  <%= form_for @user, :url => admin_user_path do |f| %>
+    <div class="content mb-5">
+      <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="alert alert-danger" role="alert">
+            <%= message %>
+          </div>
+        <% end %>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => "form-control", :required => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, :class => "form-control", :required => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :bio %>
+        <%= f.text_area :bio, :class => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :url %>
+        <%= f.text_field :url, :class => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :github %>
+        <%= f.text_field :github, :class => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :linkedin %>
+        <%= f.text_field :linkedin, :class => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :twitter %>
+        <%= f.text_field :twitter, :class => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :facebook %>
+        <%= f.text_field :facebook, :class => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :job_l %>
+        <%= f.select :job, options_for_select(f.object.class.translated_jobs.map {
+              |translation, k, _v| [translation, k]
+            }, selected: @user.job), {}, :class => "form-control" %>
+      </div>
+
+      <% unless @user.admin? && admins_count == 1 %>
+        <div class="form-group">
+          <%= f.label :role_l %>
+          <%= f.select :role, options_for_select(f.object.class.translated_roles.map {
+                |translation, k, _v| [translation, k]
+              }, selected: @user.role), {}, :class => "form-control" %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit t('.save'), :class => "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

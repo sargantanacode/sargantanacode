@@ -18,7 +18,7 @@ body {
       color: $entry-link;
     }
   }
-  a:not(.btn, .badge-link, .page-link, .social-btn) {
+  a:not(.btn):not(.badge-link):not(.page-link):not(.social-btn) {
     color: $entry-link;
     &:hover {
       text-decoration: none;
@@ -38,4 +38,42 @@ pre {
   &:last-child {
     margin-bottom: -1.3vw;
   }
+}
+
+.container, .container-fluid {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  position: relative;
+  :not(h2):not(h3):not(h4):not(h5):not(h6) > em {
+    color: $italic;
+    font-family: "Times New Roman", cursive;
+    font-size: 19px;
+  }
+}
+
+p {
+  &:last-child {
+    margin-bottom: -1px;
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5, h6 {
+  font-size: 1rem;
+}
+
+blockquote {
+  padding-left: 1.5rem;
+  border-left: 5px solid $main-color-hover;
 }

@@ -25,4 +25,9 @@
 
 <div class="actions">
   <%= f.submit t('.save'), :class => "btn btn-primary" %>
+  <% if defined?(post) && post.image.present? %>
+      <%= link_to t('.destroy_image'), admin_post_destroy_image_path(post_id: post.slug),
+        data: { confirm: t('.delete_confirm') }, :method => :put,
+        :class => "btn btn-warning float-right" %>
+    <% end %>
 </div>

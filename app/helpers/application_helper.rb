@@ -35,4 +35,8 @@ module ApplicationHelper
   def admin_zone?
     controller.class.name.split("::").first == "Admin" && current_user.admin?
   end
+
+  def admins_count
+    User.role(:admin).length
+  end
 end

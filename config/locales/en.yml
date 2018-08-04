@@ -15,6 +15,8 @@ en:
       form-common:
         slug_help: "If you leave it blank it will be generated automatically"
         save: "Save"
+        destroy_image: "Remove Cover"
+        delete_confirm: "If you have made some changes that haven't been saved yet they will be lost. Do you want to continue?"
       index:
         posts_pages: "Posts and Pages"
         posts: "Posts"
@@ -47,12 +49,30 @@ en:
       draft:
         post_draft: "The Post has been moved to drafts successfully"
         page_draft: "The Page has been moved to drafts successfully"
+      destroy_image:
+        image_destroyed: "The cover has been removed, the image of its category will be showed instead"
+    users:
+      index:
+        users: "Users"
+        name: "Name"
+        role: "Role"
+        job: "Job"
+        actions: "Actions"
+        edit: "Edit"
+        delete_confirm: "Are you sure to delete this user?"
+        destroy: "Delete"
+      edit:
+        edit_user: "Edit user %{name}"
+        save: "Save"
+      update:
+        user_saved: "User changes have been saved successfully"
   layouts:
     admin-links:
       home: "Home"
       posts_pages: "Posts and Pages"
       add_post: "Add Post"
       add_page: "Add Page"
+      users: "Users"
     public-links:
       home: "Home"
     menu:
@@ -72,6 +92,7 @@ en:
     index:
       posts_list_empty: "Sorry, there are currently no posts added."
     show:
+      destroy_image: "Remove Cover"
       edit_post: "Edit"
       delete_post: "Delete"
       delete_confirm: "Are you sure?"
