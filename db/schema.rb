@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 2018_07_29_082739) do
     t.integer "status", null: false
     t.string "slug", null: false
     t.string "image"
-    t.bigint "visit_count", default: 0
+    t.bigint "visits_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "published_at"

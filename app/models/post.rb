@@ -32,7 +32,7 @@ class Post < ApplicationRecord
   scope :by_date, -> { order(Arel.sql('published_at IS NOT NULL, published_at DESC, updated_at DESC')) }
 
   def update_visits_count
-    self.visits_count = self.visits_count + 1 unless current_user.admin?
+    update(:visits_count => self.visits_count + 1) unless self.status == 'draft'
   end
 
   def published

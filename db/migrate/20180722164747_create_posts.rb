@@ -8,7 +8,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.integer :status, null: false
       t.string :slug, null: false
       t.string :image
-      t.bigint :visit_count, default: 0
+      t.bigint :visits_count, default: 0
 
       t.timestamps
     end

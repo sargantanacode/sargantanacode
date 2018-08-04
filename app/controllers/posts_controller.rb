@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post.update_visits_count unless defined?(current_user.admin?) && current_user.admin?
   end
   
   private
