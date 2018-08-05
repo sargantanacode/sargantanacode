@@ -12,7 +12,7 @@ class Admin::UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to admin_users_path, notice: t('.user_saved')
+      redirect_to admin_users_path, notice: t('.saved')
     else
       render :edit
     end

@@ -68,7 +68,7 @@ es:
         edit_user: "Editar usuario %{name}"
         save: "Guardar"
       update:
-        user_saved: "Los cambios realizados en el usuario han sido guardados correctamente"
+        saved: "Los cambios realizados en el usuario han sido guardados correctamente"
     categories:
       index:
         categories: "Categorías"
