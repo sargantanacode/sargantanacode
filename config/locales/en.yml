@@ -73,6 +73,7 @@ en:
         name: "Name"
         description: "Description"
         actions: "Actions"
+        view: "View"
         edit: "Edit"
         delete_confirm: "Are you sure to delete this category?"
         destroy: "Delete"
@@ -136,6 +137,8 @@ en:
     index:
       categories: "Categories"
       categories_list_empty: "Sorry, there are currently no categories added."
+    show:
+      category: "%{name}"
     categories-list:
       posts:
         one: "1 post"

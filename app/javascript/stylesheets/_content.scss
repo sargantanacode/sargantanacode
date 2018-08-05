@@ -195,3 +195,25 @@
     }
   }
 }
+
+.category {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__image {
+    margin-right: 3vw;
+    img {
+      background-color: $white;
+      padding: 3px;
+      border: 1px solid $dark-gray;
+      border-radius: 50%;
+      width: 90px;
+    }
+  }
+  .show-up-lg {
+    display: none;
+    @include breakpoint-up(lg) {
+      display: block;
+    }
+  }
+}

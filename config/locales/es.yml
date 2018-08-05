@@ -76,6 +76,7 @@ es:
         name: "Nombre"
         description: "Descripción"
         actions: "Acciones"
+        view: "Ver"
         edit: "Editar"
         delete_confirm: "¿Estás seguro de querer eliminar esta categoría?"
         destroy: "Eliminar"
@@ -139,6 +140,8 @@ es:
     index:
       categories: "Categorías"
       categories_list_empty: "Lo sentimos, actualmente no hay ninguna categoría publicada"
+    show:
+      category: "%{name}"
     categories-list:
       posts:
         one: "1 artículo"
