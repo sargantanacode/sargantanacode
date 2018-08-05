@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     devise_for :users
     resources :posts, only: [:show]
     resources :admins, only: [:new, :create]
+    resources :categories, only: [:index, :show]
     root to: "posts#index", as: "homepage"
 
     namespace :admin do

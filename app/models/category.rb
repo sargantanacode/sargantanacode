@@ -17,6 +17,10 @@ class Category < ApplicationRecord
   mount_uploader :cover_image, ImageUploader
 
   scope :by_name, -> { order(Arel.sql('name ASC')) }
+  scope :with_published_posts, -> {
+    joins(:posts).where(Arel.sql('posts.status = 1 AND posts.type = 0'))
+    .group('posts.id').uniq
+  }
 
   def to_s
     self.name

@@ -102,6 +102,7 @@ en:
       users: "Users"
     public-links:
       home: "Home"
+      categories: "Categories"
     menu:
       login: "Log In"
       hello: "Hey, %{name}!"
@@ -131,3 +132,11 @@ en:
       save: "Save"
     create:
       created: "Admin user created successfully. You will receive an email with instructions for how to confirm your email address in a few minutes."
+  categories:
+    index:
+      categories: "Categories"
+      categories_list_empty: "Sorry, there are currently no categories added."
+    categories-list:
+      posts:
+        one: "1 post"
+        other: "%{count} posts"

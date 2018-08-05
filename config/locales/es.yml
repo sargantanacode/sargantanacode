@@ -105,6 +105,7 @@ es:
       users: "Usuarios"
     public-links:
       home: "Inicio"
+      categories: "Categorías"
     menu:
       login: "Entrar"
       hello: "¡Hola, %{name}!"
@@ -134,3 +135,11 @@ es:
       save: "Guardar"
     create:
       created: "Administrador creado. Recibirás un email con las instrucciones para confirmar tu correo electrónico en unos minutos."
+  categories:
+    index:
+      categories: "Categorías"
+      categories_list_empty: "Lo sentimos, actualmente no hay ninguna categoría publicada"
+    categories-list:
+      posts:
+        one: "1 artículo"
+        other: "%{count} artículos"

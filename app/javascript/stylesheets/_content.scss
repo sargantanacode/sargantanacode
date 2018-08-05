@@ -29,7 +29,7 @@
   border-radius: 10px;
 }
 
-.category-badge {
+.category-badge, .posts-badge {
   @include background-opacity($dark-gray, 0.5);
   position: absolute;
   white-space: nowrap;
@@ -163,7 +163,7 @@
 }
 
 .list {
-  @include breakpoint-up(lg) {
+  @include breakpoint-up(md) {
     background-color: $entry-background;
   }
   border: 1px solid $entry-border;
@@ -172,7 +172,7 @@
   &:hover {
     box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
   }
-  .date-badge, .category-badge {
+  .date-badge, .category-badge, .posts-badge {
     top: 10px;
   }
   img {
