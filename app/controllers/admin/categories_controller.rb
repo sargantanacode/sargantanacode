@@ -1,6 +1,7 @@
 class Admin::CategoriesController < ApplicationController
   include ApplicationHelper
   before_action :only_admins
+  before_action :set_category, only: [:edit, :update, :destroy]
 
   def index
     @categories = Category.with_translations(I18n.locale).by_name
@@ -23,12 +24,21 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def update
+    if @category.update(category_params)
+      redirect_to admin_categories_path, notice: t('.saved')
+    else
+      render :edit
+    end
   end
 
   def destroy
   end
 
   private
+
+  def set_category
+    @category = Category.find(params[:id])
+  end
 
   def category_params
     permitted = Category.globalize_attribute_names + [:image] + [:cover_image] + [:slug]
