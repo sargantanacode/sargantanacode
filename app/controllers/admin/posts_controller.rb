@@ -1,4 +1,5 @@
 class Admin::PostsController < ApplicationController
+  include ApplicationHelper
   before_action :only_admins
   before_action :set_post, only: [:edit, :update, :destroy]
   before_action :set_post_id, only: [:publish, :draft, :destroy_image]
@@ -62,13 +63,6 @@ class Admin::PostsController < ApplicationController
   end
 
   private
-
-  def only_admins
-    unless current_user.present?
-      return redirect_to new_user_session_path, alert: t('devise.failure.unauthenticated')
-    end
-    redirect_to homepage_path, alert: t('errors.access') unless current_user.admin?
-  end
 
   def set_post
     @post = Post.friendly.find(params[:id])

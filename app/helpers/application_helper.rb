@@ -1,13 +1,14 @@
 module ApplicationHelper
-  # Return 'active' string if the passed path is exactly the same as the
-  # current path.
   def active?(path)
     'active' if request.fullpath == path
   end
 
-  # Return 'active' string if the passed locale is the same as the current locale.
   def current_locale?(locale)
     'active' if I18n.locale == locale
+  end
+
+  def justify_content
+    'justify-content-center' unless %w[CategoriesController PostsController].include? controller.class.name
   end
 
   def markdown(text)
@@ -34,6 +35,13 @@ module ApplicationHelper
 
   def admin_zone?
     controller.class.name.split("::").first == "Admin" && current_user.admin?
+  end
+
+  def only_admins
+    unless current_user.present?
+      return redirect_to new_user_session_path, alert: t('devise.failure.unauthenticated')
+    end
+    redirect_to homepage_path, alert: t('errors.access') unless current_user.admin?
   end
 
   def admins_count

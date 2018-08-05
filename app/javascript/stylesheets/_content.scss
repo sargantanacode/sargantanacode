@@ -29,7 +29,7 @@
   border-radius: 10px;
 }
 
-.category-badge {
+.category-badge, .posts-badge {
   @include background-opacity($dark-gray, 0.5);
   position: absolute;
   white-space: nowrap;
@@ -87,15 +87,7 @@
     background-color: $dark-gray;
     color: $white;
     font-weight: bold;
-    .vw60 {
-      width: 60vw;
-    }
-    .vw10 {
-      text-align: center;
-      width: 10vw;
-    }
-    .vw16 {
-      width: 16vw;
+    .center {
       text-align: center;
     }
   }
@@ -110,6 +102,7 @@
   @include breakpoint-up(lg) {
     flex-direction: row;
     margin-bottom: 0;
+    align-items: center;
     &:not(:first-of-type) {
       border-top: 0;
     }
@@ -128,36 +121,49 @@
       background-color: $light-gray;
     }
   }
-  .vw60 {
+  .highlighted {
     font-weight: bold;
     color: $white;
     background-color: $dark-gray;
     @include breakpoint-up(lg) {
-      width: 60vw;
       background-color: inherit;
       font-weight: normal;
       color: inherit;
     }
   }
-  .vw10 {
+  .center {
     @include breakpoint-up(lg) {
-      width: 10vw;
       text-align: center;
-      .legend {
-        display: none;
-      }
     }
   }
-  .vw16 {
+  .legend {
     @include breakpoint-up(lg) {
-      width: 16vw;
-      text-align: center;
+      display: none;
     }
+  }
+  .first {
+    order: -1;
+    @include breakpoint-up(lg) {
+      order: inherit;
+    }
+  }
+  .show-up-lg {
+    display: none;
+    @include breakpoint-up(lg) {
+      display: block;
+    }
+  }
+  img {
+    height: 50px;
+    background-color: $white;
+    padding: 3px;
+    border: 1px solid $dark-gray;
+    border-radius: 50%;
   }
 }
 
 .list {
-  @include breakpoint-up(lg) {
+  @include breakpoint-up(md) {
     background-color: $entry-background;
   }
   border: 1px solid $entry-border;
@@ -166,7 +172,7 @@
   &:hover {
     box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
   }
-  .date-badge, .category-badge {
+  .date-badge, .category-badge, .posts-badge {
     top: 10px;
   }
   img {
@@ -186,6 +192,28 @@
     color: $font-color;
     &:hover {
       color: $font-color;
+    }
+  }
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__image {
+    margin-right: 3vw;
+    img {
+      background-color: $white;
+      padding: 3px;
+      border: 1px solid $dark-gray;
+      border-radius: 50%;
+      width: 90px;
+    }
+  }
+  .show-up-lg {
+    display: none;
+    @include breakpoint-up(lg) {
+      display: block;
     }
   }
 }

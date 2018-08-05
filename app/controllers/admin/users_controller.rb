@@ -1,4 +1,5 @@
 class Admin::UsersController < ApplicationController
+  include ApplicationHelper
   before_action :only_admins
   before_action :set_user, only: [:edit, :update, :destroy]
 
@@ -24,13 +25,6 @@ class Admin::UsersController < ApplicationController
   end
 
   private
-
-  def only_admins
-    unless current_user.present?
-      return redirect_to new_user_session_path, alert: t('devise.failure.unauthenticated')
-    end
-    redirect_to homepage_path, alert: t('errors.access') unless current_user.admin?
-  end
 
   def set_user
     @user = User.find(params[:id])

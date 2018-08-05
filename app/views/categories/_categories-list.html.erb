@@ -1,0 +1,16 @@
+<% @categories.each do |category| %>
+  <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-4">
+    <div class="list">
+      <%= link_to category_path(id: category.slug) do %>
+        <span class="posts-badge">
+          <%= t('.posts', count: category.posts.status(:published).type(:post).count) %>
+        </span>
+        <%= image_tag category.image.url, :alt => category.name, :class => "post-header" %>
+        <div class="list__content">
+          <h2 class="list__title"><%= category.name %></h2>
+          <p class="list__text"><%= category.description %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

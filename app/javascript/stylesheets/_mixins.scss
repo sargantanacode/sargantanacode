@@ -26,3 +26,13 @@
   background: $color;
   background: rgba($color, $opacity);
 }
+
+$wide: (10, 16, 20, 50, 60);
+
+@each $width in $wide {
+  .vw#{$width} {
+    @include breakpoint-up(lg) {
+      width: #{$width}vw;
+    }
+  }
+}

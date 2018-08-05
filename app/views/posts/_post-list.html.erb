@@ -1,4 +1,4 @@
-<% @posts.each do |post| %>
+<% posts.each do |post| %>
   <div class="col-md-6 mb-4">
     <div class="list">
       <%= link_to post_path(id: post.slug) do %>
@@ -8,7 +8,7 @@
         <span class="category-badge">
           <%= post.category.name %>
         </span>
-        <%= render 'cover', post: post %>
+        <%= render 'posts/cover', post: post %>
         <div class="list__content">
           <h2 class="list__title"><%= post.title %></h2>
           <p class="list__text"><%= post.excerpt %></p>

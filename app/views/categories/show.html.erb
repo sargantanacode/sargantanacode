@@ -1,0 +1,13 @@
+<% content_for :title, t('.category', name: @category) %>
+
+<div class="col-12 mb-5 content category">
+  <div class="category__image show-up-lg">
+    <%= image_tag @category.image.url, :alt => @category.name %>
+  </div>
+  <div class="category__desc">
+    <h2><%= @category.name %></h2>
+    <%= @category.description %>
+  </div>
+</div>
+
+<%= render 'posts/post-list', posts: @category.posts.status(:published).type(:post).by_date %>
