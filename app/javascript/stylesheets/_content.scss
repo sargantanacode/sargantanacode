@@ -110,6 +110,7 @@
   @include breakpoint-up(lg) {
     flex-direction: row;
     margin-bottom: 0;
+    align-items: center;
     &:not(:first-of-type) {
       border-top: 0;
     }
@@ -128,21 +129,32 @@
       background-color: $light-gray;
     }
   }
-  .vw60 {
+  .highlighted {
     font-weight: bold;
     color: $white;
     background-color: $dark-gray;
     @include breakpoint-up(lg) {
-      width: 60vw;
       background-color: inherit;
       font-weight: normal;
       color: inherit;
     }
   }
+  .center {
+    @include breakpoint-up(lg) {
+      text-align: center;
+    }
+  }
+  .vw60 {
+    @include breakpoint-up(lg) {
+      width: 60vw;
+      .legend {
+        display: none;
+      }
+    }
+  }
   .vw10 {
     @include breakpoint-up(lg) {
       width: 10vw;
-      text-align: center;
       .legend {
         display: none;
       }
@@ -151,8 +163,26 @@
   .vw16 {
     @include breakpoint-up(lg) {
       width: 16vw;
-      text-align: center;
     }
+  }
+  .first {
+    order: -1;
+    @include breakpoint-up(lg) {
+      order: inherit;
+    }
+  }
+  .show-up-lg {
+    display: none;
+    @include breakpoint-up(lg) {
+      display: block;
+    }
+  }
+  img {
+    height: 50px;
+    background-color: $white;
+    padding: 3px;
+    border: 1px solid $dark-gray;
+    border-radius: 50%;
   }
 }
 

@@ -15,6 +15,8 @@ class Category < ApplicationRecord
   mount_uploader :image, ImageUploader
   mount_uploader :cover_image, ImageUploader
 
+  scope :by_name, -> { order(Arel.sql('name ASC')) }
+
   def to_s
     self.name
   end

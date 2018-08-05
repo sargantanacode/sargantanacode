@@ -12,6 +12,7 @@ Rails.application.routes.draw do
         put :destroy_image, as: "destroy_image"
       end
       resources :users, except: [:new, :create]
+      resources :categories, except: [:show]
     end
   end  
   get "/*path" => "application#change_path", constraints: { path: /(?!(#{I18n.available_locales.join("|")})\/).*/ }
