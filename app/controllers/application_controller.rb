@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
   def change_path
     path = params[:path]
     user_locale = extract_locale_from_browser()
-    logger.debug "* Path: #{path} - User locale: #{user_locale}"
     if user_locale.present?
       redirect_to("/#{user_locale}/#{path}")
     else

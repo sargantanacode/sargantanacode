@@ -91,8 +91,15 @@ en:
   posts:
     index:
       posts_list_empty: "Sorry, there are currently no posts added."
+      new_admin: "Before you start you need to create an admin user"
     show:
       destroy_image: "Remove Cover"
       edit_post: "Edit"
       delete_post: "Delete"
       delete_confirm: "Are you sure?"
+  admins:
+    new:
+      new_admin: "New Admin"
+      save: "Save"
+    create:
+      created: "Admin user created successfully. You will receive an email with instructions for how to confirm your email address in a few minutes."

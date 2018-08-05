@@ -39,4 +39,8 @@ module ApplicationHelper
   def admins_count
     User.role(:admin).length
   end
+
+  def users_count
+    User.all.length
+  end
 end

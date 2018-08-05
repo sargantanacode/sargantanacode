@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users
     resources :posts, only: [:show]
+    resources :admins, only: [:new, :create]
     root to: "posts#index", as: "homepage"
 
     namespace :admin do
