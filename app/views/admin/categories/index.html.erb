@@ -1,0 +1,39 @@
+<% content_for :title, t('.categories') %>
+
+<div class="col-12 content mb-3">
+  <div class="responsive-header">
+    <div class="vw10 center"><%= t('.image') %></div>
+    <div class="vw20 center"><%= t('.name') %></div>
+    <div class="vw50"><%= t('.description') %></div>
+    <div class="vw16 center"><%= t('.actions') %></div>
+  </div>
+  <% @categories.each do |category| %>
+    <div class="responsive-table">
+      <div class="vw10 center show-up-lg">
+        <%= image_tag category.image.url, :alt => category.name %>
+      </div>
+      <div class="vw20 first highlighted center"><%= category.name %></div>
+      <div class="vw50"><%= category.description %></div>
+      <div class="vw16 center">
+        <%= link_to category_path(id: category.slug),
+            :class => "btn btn-sm btn-info text-center" do %>
+          <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"
+            data-placement="top" title="<%= t('.view') %>"></i>
+        <% end %>
+        <%= link_to edit_admin_category_path(id: category.id),
+            :class => "btn btn-sm btn-primary text-center" do %>
+          <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"
+            data-placement="top" title="<%= t('.edit') %>"></i>
+        <% end %>
+        <% if category.posts.empty? %>
+          <%= link_to admin_category_path(id: category.id),
+              data: { confirm: t('.delete_confirm') }, :method => :delete,
+              :class => "btn btn-sm btn-danger text-center" do %>
+            <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"
+              data-placement="top" title="<%= t('.destroy') %>"></i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

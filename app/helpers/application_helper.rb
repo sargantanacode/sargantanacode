@@ -1,13 +1,14 @@
 module ApplicationHelper
-  # Return 'active' string if the passed path is exactly the same as the
-  # current path.
   def active?(path)
     'active' if request.fullpath == path
   end
 
-  # Return 'active' string if the passed locale is the same as the current locale.
   def current_locale?(locale)
     'active' if I18n.locale == locale
+  end
+
+  def justify_content
+    'justify-content-center' unless %w[CategoriesController PostsController].include? controller.class.name
   end
 
   def markdown(text)

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     devise_for :users
     resources :posts, only: [:show]
     resources :admins, only: [:new, :create]
+    resources :categories, only: [:index, :show]
     root to: "posts#index", as: "homepage"
 
     namespace :admin do
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
         put :destroy_image, as: "destroy_image"
       end
       resources :users, except: [:new, :create]
+      resources :categories, except: [:show]
     end
   end  
   get "/*path" => "application#change_path", constraints: { path: /(?!(#{I18n.available_locales.join("|")})\/).*/ }
