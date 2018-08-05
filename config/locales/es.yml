@@ -91,8 +91,15 @@ es:
   posts:
     index:
       posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
+      new_admin: "Antes de empezar necesitas crear un administrador"
     show:
       destroy_image: "Eliminar portada"
       edit_post: "Editar"
       delete_post: "Eliminar"
       delete_confirm: "¿Estás seguro?"
+  admins:
+    new:
+      new_admin: "Crear admin"
+      save: "Guardar"
+    create:
+      created: "Administrador creado. Recibirás un email con las instrucciones para confirmar tu correo electrónico en unos minutos."

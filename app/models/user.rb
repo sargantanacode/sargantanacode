@@ -25,6 +25,10 @@ class User < ApplicationRecord
     self.role ||= :user
   end
 
+  def admin
+    update(:role => :admin)
+  end
+
   def to_s
     self.name
   end
