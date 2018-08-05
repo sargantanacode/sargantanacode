@@ -36,6 +36,13 @@ module ApplicationHelper
     controller.class.name.split("::").first == "Admin" && current_user.admin?
   end
 
+  def only_admins
+    unless current_user.present?
+      return redirect_to new_user_session_path, alert: t('devise.failure.unauthenticated')
+    end
+    redirect_to homepage_path, alert: t('errors.access') unless current_user.admin?
+  end
+
   def admins_count
     User.role(:admin).length
   end
