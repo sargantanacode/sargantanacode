@@ -84,6 +84,8 @@ en:
         edit_category: "Edit Category"
       update:
         saved: "Category changes have been saved successfully"
+      destroy:
+        destroyed: "Category successfully deleted"
       form-common:
         slug_help: "If you leave it blank it will be generated automatically"
         image_help: "This will be the image associated with this category"
