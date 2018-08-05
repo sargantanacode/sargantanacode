@@ -1,2 +1,17 @@
-<h1>Admin::Categories#new</h1>
-<p>Find me in app/views/admin/categories/new.html.erb</p>
+<% content_for :title, t('.add_category') %>
+
+<div class="col-10 mb-3">
+  <h2 class="text-center h2 mb-4"><%= t('.add_category') %></h2>
+  <%= form_for [:admin, @category] do |f| %>
+    <div class="content mb-5">
+      <%= render 'form-header', category: @category %>
+      <%= render 'form-es', f: f %>
+    </div>
+    <div class="content mb-5">
+      <%= render 'form-en', f: f %>
+    </div>
+    <div class="content">
+      <%= render 'form-common', f: f %>
+    </div>
+  <% end %>
+</div>

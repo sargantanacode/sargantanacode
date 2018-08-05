@@ -43,6 +43,9 @@ es:
       create:
         post_saved: "El artículo ha sido guardado con éxito"
         page_saved: "La página ha sido guardada con éxito"
+      update:
+        post_saved: "El artículo ha sido guardado con éxito"
+        page_saved: "La página ha sido guardada con éxito"
       publish:
         post_published: "El artículo ha sido publicado con éxito"
         page_published: "La página ha sido publicada con éxito"
@@ -76,6 +79,15 @@ es:
         edit: "Editar"
         delete_confirm: "¿Estás seguro de querer eliminar esta categoría?"
         destroy: "Eliminar"
+      new:
+        add_category: "Añadir categoría"
+      create:
+        created: "Categoría añadida con éxito"
+      form-common:
+        slug_help: "Si lo dejas en blanco será generado automáticamente"
+        image_help: "Esta será la imagen que represente a esta categoría"
+        cover_image_help: "Esta será la imagen de portada por defecto para los artículos que no tengan imagen"
+        add: "Añadir"
   layouts:
     admin-links:
       home: "Inicio"
@@ -83,6 +95,7 @@ es:
       add_post: "Añadir artículo"
       add_page: "Añadir página"
       categories: "Categorías"
+      add_category: "Añadir categoría"
       users: "Usuarios"
     public-links:
       home: "Inicio"
@@ -91,6 +104,7 @@ es:
       hello: "¡Hola, %{name}!"
       add_post: "Añadir artículo"
       add_page: "Añadir página"
+      add_category: "Añadir categoría"
       edit_user: "Editar usuario"
       logout: "Salir"
       languages: "Idiomas"

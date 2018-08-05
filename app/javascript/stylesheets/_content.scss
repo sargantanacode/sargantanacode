@@ -87,15 +87,7 @@
     background-color: $dark-gray;
     color: $white;
     font-weight: bold;
-    .vw60 {
-      width: 60vw;
-    }
-    .vw10 {
-      text-align: center;
-      width: 10vw;
-    }
-    .vw16 {
-      width: 16vw;
+    .center {
       text-align: center;
     }
   }
@@ -144,25 +136,9 @@
       text-align: center;
     }
   }
-  .vw60 {
+  .legend {
     @include breakpoint-up(lg) {
-      width: 60vw;
-      .legend {
-        display: none;
-      }
-    }
-  }
-  .vw10 {
-    @include breakpoint-up(lg) {
-      width: 10vw;
-      .legend {
-        display: none;
-      }
-    }
-  }
-  .vw16 {
-    @include breakpoint-up(lg) {
-      width: 16vw;
+      display: none;
     }
   }
   .first {

@@ -23,6 +23,8 @@
   <div class="dropdown-menu m-0 rounded-0" aria-labelledby="postsDropdown">
     <%= link_to t('.categories'), admin_categories_path,
       :class => "dropdown-item #{active?(admin_categories_path)}" %>
+    <%= link_to t('.add_category'), new_admin_category_path,
+      :class => "dropdown-item #{active?(new_admin_category_path)}" %>
   </div>
 </li>
 <li class="nav-item <%= active?(admin_users_path) %>">

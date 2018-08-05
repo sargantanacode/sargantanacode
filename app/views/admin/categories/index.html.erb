@@ -2,18 +2,18 @@
 
 <div class="col-12 content mb-3">
   <div class="responsive-header">
-    <div class="vw10"><%= t('.image') %></div>
-    <div class="vw10"><%= t('.name') %></div>
-    <div class="vw60"><%= t('.description') %></div>
-    <div class="vw10"><%= t('.actions') %></div>
+    <div class="vw10 center"><%= t('.image') %></div>
+    <div class="vw20 center"><%= t('.name') %></div>
+    <div class="vw50"><%= t('.description') %></div>
+    <div class="vw10 center"><%= t('.actions') %></div>
   </div>
   <% @categories.each do |category| %>
     <div class="responsive-table">
       <div class="vw10 center show-up-lg">
         <%= image_tag category.image.url, :alt => category.name %>
       </div>
-      <div class="vw10 first highlighted center"><%= category.name %></div>
-      <div class="vw60"><%= category.description %></div>
+      <div class="vw20 first highlighted center"><%= category.name %></div>
+      <div class="vw50"><%= category.description %></div>
       <div class="vw10 center">
         <%= link_to edit_admin_category_path(id: category.id),
             :class => "btn btn-sm btn-primary text-center" do %>

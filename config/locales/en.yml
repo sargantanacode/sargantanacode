@@ -76,6 +76,15 @@ en:
         edit: "Edit"
         delete_confirm: "Are you sure to delete this category?"
         destroy: "Delete"
+      new:
+       add_category: "Add Category"
+      create:
+        created: "Category added successfully"
+      form-common:
+        slug_help: "If you leave it blank it will be generated automatically"
+        image_help: "This will be the image associated with this category"
+        cover_image_help: "This will be the default cover image for Posts without cover image"
+        add: "Add"
   layouts:
     admin-links:
       home: "Home"
@@ -83,6 +92,7 @@ en:
       add_post: "Add Post"
       add_page: "Add Page"
       categories: "Categories"
+      add_category: "Add Category"
       users: "Users"
     public-links:
       home: "Home"
@@ -91,6 +101,7 @@ en:
       hello: "Hey, %{name}!"
       add_post: "Add Post"
       add_page: "Add Page"
+      add_category: "Add Category"
       edit_user: "Edit user"
       logout: "Log Out"
       languages: "Languages"

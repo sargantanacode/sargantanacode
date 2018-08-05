@@ -28,6 +28,7 @@ es:
         excerpt_es: "Extracto"
         category: "Categoría"
         course: "Curso"
+        slug: "Slug"
         status_l: "Estado"
         status_list:
           draft: "Borrador"
@@ -37,3 +38,11 @@ es:
         type_list:
           post: "Artículo"
           page: "Página"
+      category:
+        name_es: "Nombre"
+        description_es: "Descripción"
+        name_en: "Name"
+        description_en: "Description"
+        slug: "Slug"
+        image: "Imagen"
+        cover_image: "Imagen de portada"
