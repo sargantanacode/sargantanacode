@@ -26,6 +26,7 @@ en:
         title_es: "Título"
         content_es: "Contenido"
         excerpt_es: "Extracto"
+        author: "Author"
         category: "Category"
         course: "Course"
         slug: "Slug"
