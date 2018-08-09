@@ -104,6 +104,7 @@ en:
     public-links:
       home: "Home"
       categories: "Categories"
+      about_us: "About Us"
     menu:
       login: "Log In"
       hello: "Hey, %{name}!"

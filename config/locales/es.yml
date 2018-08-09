@@ -107,6 +107,7 @@ es:
     public-links:
       home: "Inicio"
       categories: "Categorías"
+      about_us: "Sobre nosotros"
     menu:
       login: "Entrar"
       hello: "¡Hola, %{name}!"
