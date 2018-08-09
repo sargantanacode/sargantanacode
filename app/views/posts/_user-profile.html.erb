@@ -1,0 +1,51 @@
+<div class="col-12 mb-5 content user">
+  <div class="user__image show-up-lg">
+    <%= image_tag gravatar_url(user.email, 90), :alt => user.name %>
+  </div>
+  <div class="user__bio">
+    <h2><%= user.name %></h2>
+    <% if user.job? %>
+      <h3><small><%= user.translated_job %></small></h3>
+    <% end %>
+    <%= user.bio %>
+    <% if user.has_social_links? %>
+      <ul class="user__links">
+        <% unless user.url.blank? %>
+          <li>
+            <%= link_to user.url do %>
+              <i class="fa fa-external-link-square" aria-hidden="true"></i>
+            <% end %>
+          </li>
+        <% end %>
+        <% unless user.github.blank? %>
+          <li>
+            <%= link_to user.github do %>
+              <i class="fa fa-github-square" aria-hidden="true"></i>
+            <% end %>
+          </li>
+        <% end %>
+        <% unless user.linkedin.blank? %>
+          <li>
+            <%= link_to user.linkedin do %>
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            <% end %>
+          </li>
+        <% end %>
+        <% unless user.twitter.blank? %>
+          <li>
+            <%= link_to user.twitter do %>
+              <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <% end %>
+          </li>
+        <% end %>
+        <% unless user.facebook.blank? %>
+          <li>
+            <%= link_to user.facebook do %>
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>

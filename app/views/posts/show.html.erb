@@ -1,6 +1,21 @@
 <% content_for :title, @post.title %>
 
-<div class="col-12 content mb-3">
+<% if current_user.present? && current_user.admin? %>
+  <div class="col-12 links text-center mb-5">
+    <% if @post.image.present? %>
+      <%= link_to t('.destroy_image'), admin_post_destroy_image_path(post_id: @post.slug),
+        data: { confirm: t('.delete_confirm') }, :method => :put,
+        :class => "btn btn-primary" %>
+    <% end %>
+    <%= link_to t('.edit_post'), edit_admin_post_path(id: @post.slug),
+      :class => "btn btn-warning" %>
+    <%= link_to t('.delete_post'), admin_post_path(id: @post.slug),
+      data: { confirm: t('.delete_confirm') }, :method => :delete,
+      :class => "btn btn-danger" %>
+  </div>
+<% end %>
+
+<div class="col-12 content mb-5">
   <span class="date-badge">
     <%= @post.published_at.strftime('%d/%m/%Y') if @post.status == 'published' %>
     <%= @post.translated_status if @post.status == 'draft' %>
@@ -16,17 +31,4 @@
   </div>
 </div>
 
-<% if current_user.present? && current_user.admin? %>
-  <div class="bottom-links">
-    <% if @post.image.present? %>
-      <%= link_to t('.destroy_image'), admin_post_destroy_image_path(post_id: @post.slug),
-        data: { confirm: t('.delete_confirm') }, :method => :put,
-        :class => "btn btn-primary" %>
-    <% end %>
-    <%= link_to t('.edit_post'), edit_admin_post_path(id: @post.slug),
-      :class => "btn btn-warning" %>
-    <%= link_to t('.delete_post'), admin_post_path(id: @post.slug),
-      data: { confirm: t('.delete_confirm') }, :method => :delete,
-      :class => "btn btn-danger" %>
-  </div>
-<% end %>
+<%= render 'user-profile', user: @post.user %>

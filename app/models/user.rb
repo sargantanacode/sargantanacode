@@ -32,4 +32,12 @@ class User < ApplicationRecord
   def to_s
     self.name
   end
+
+  def has_social_links?
+    links = [self.url, self.github, self.linkedin, self.twitter, self.facebook]
+    links.each do |link|
+      return true unless link.empty?
+    end
+    false
+  end
 end
