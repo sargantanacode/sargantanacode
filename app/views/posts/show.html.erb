@@ -25,7 +25,7 @@
       <%= link_to @post.category.name, category_path(id: @post.category.slug),
         :class => "badge-link" %>
     </span>
-    <%= render 'cover', post: @post %>
+     <%= image_tag post_image(@post), :alt => @post.title, :class => "post-header" %>
   <% end %>
   <h2 class="post-title"><%= @post.title %></h2>
   <div class="post-body">

@@ -1,5 +1,5 @@
-<% unless new_post %>
-  <%= render 'posts/cover', post: post %>
+<% unless new_post || post.type == 'page' %>
+  <%= image_tag post_image(post), :alt => post.title, :class => "post-header" %>
 <% end %>
 <% if post.errors.any? %>
   <% post.errors.full_messages.each do |message| %>

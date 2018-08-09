@@ -32,6 +32,11 @@ module ApplicationHelper
     "#{request.base_url}#{request.fullpath}"
   end
 
+  def post_image(post)
+    return post.image.url unless post.image.blank?
+    post.course.blank? ? post.category.cover_image.url : post.course.cover_image.url
+  end  
+
   def markdown(text)
     options = {
       filter_html: true,
