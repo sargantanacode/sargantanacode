@@ -95,14 +95,29 @@ es:
         image_help: "Esta será la imagen que represente a esta categoría"
         cover_image_help: "Esta será la imagen de portada por defecto para los artículos que no tengan imagen"
         save: "Guardar"
+    courses:
+      index:
+        courses: "Cursos"
+        courses_list_empty: "Actualmente no hay ningún curso creado."
+        add_one_course: "¡Puedes crear uno ahora!"
+        image: "Imagen"
+        name: "Nombre"
+        description: "Descripción"
+        actions: "Acciones"
+        view: "Ver"
+        edit: "Editar"
+        delete_confirm: "¿Estás seguro de querer eliminar este curso?"
+        destroy: "Eliminar"
   layouts:
     admin-links:
       home: "Inicio"
       posts_pages: "Artículos y páginas"
       add_post: "Añadir artículo"
       add_page: "Añadir página"
+      categories_courses: "Categorías y cursos"
       categories: "Categorías"
       add_category: "Añadir categoría"
+      courses: "Cursos"
       users: "Usuarios"
     public-links:
       home: "Inicio"

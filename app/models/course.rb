@@ -14,6 +14,8 @@ class Course < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  scope :by_name, -> { order(Arel.sql('name ASC')) }
+
   def to_s
     self.name
   end

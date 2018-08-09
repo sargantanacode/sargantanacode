@@ -28,11 +28,9 @@ module ApplicationHelper
     "mailto:?subject=#{text}&body=#{text}: #{current_url}"
   end
   
-  
   def current_url
     "#{request.base_url}#{request.fullpath}"
   end
-  
 
   def markdown(text)
     options = {

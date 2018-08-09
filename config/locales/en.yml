@@ -92,14 +92,27 @@ en:
         image_help: "This will be the image associated with this category"
         cover_image_help: "This will be the default cover image for Posts without cover image"
         save: "Save"
+    courses:
+      index:
+        courses: "Categories"
+        image: "Image"
+        name: "Name"
+        description: "Description"
+        actions: "Actions"
+        view: "View"
+        edit: "Edit"
+        delete_confirm: "Are you sure to delete this course?"
+        destroy: "Delete"
   layouts:
     admin-links:
       home: "Home"
       posts_pages: "Posts and Pages"
       add_post: "Add Post"
       add_page: "Add Page"
+      categories_courses: "Categories and Courses"
       categories: "Categories"
       add_category: "Add Category"
+      courses: "Courses"
       users: "Users"
     public-links:
       home: "Home"
