@@ -16,19 +16,23 @@
 <% end %>
 
 <div class="col-12 content mb-5">
-  <span class="date-badge">
-    <%= @post.published_at.strftime('%d/%m/%Y') if @post.status == 'published' %>
-    <%= @post.translated_status if @post.status == 'draft' %>
-  </span>
-  <span class="category-badge">
-    <%= link_to @post.category.name, category_path(id: @post.category.slug),
-      :class => "badge-link" %>
-  </span>
-  <%= render 'cover', post: @post %>
+  <% unless @post.type == 'page' %>
+    <span class="date-badge">
+      <%= @post.published_at.strftime('%d/%m/%Y') if @post.status == 'published' %>
+      <%= @post.translated_status if @post.status == 'draft' %>
+    </span>
+    <span class="category-badge">
+      <%= link_to @post.category.name, category_path(id: @post.category.slug),
+        :class => "badge-link" %>
+    </span>
+    <%= render 'cover', post: @post %>
+  <% end %>
   <h2 class="post-title"><%= @post.title %></h2>
   <div class="post-body">
     <%= raw markdown @post.content %>
   </div>
 </div>
 
-<%= render 'user-profile', user: @post.user %>
+<% unless @post.type == 'page' %>
+  <%= render 'user-profile', user: @post.user %>
+<% end %>
