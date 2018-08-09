@@ -36,7 +36,7 @@ class User < ApplicationRecord
   def has_social_links?
     links = [self.url, self.github, self.linkedin, self.twitter, self.facebook]
     links.each do |link|
-      return true unless link.empty?
+      return true unless link.to_s.empty?
     end
     false
   end

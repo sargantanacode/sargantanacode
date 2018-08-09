@@ -27,6 +27,8 @@
       :class => "dropdown-item #{active?(new_admin_category_path)}" %>
     <%= link_to t('.courses'), admin_courses_path,
       :class => "dropdown-item #{active?(admin_courses_path)}" %>
+    <%= link_to t('.add_course'), new_admin_course_path,
+      :class => "dropdown-item #{active?(new_admin_course_path)}" %>
   </div>
 </li>
 <li class="nav-item <%= active?(admin_users_path) %>">

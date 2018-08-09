@@ -108,6 +108,15 @@ es:
         edit: "Editar"
         delete_confirm: "¿Estás seguro de querer eliminar este curso?"
         destroy: "Eliminar"
+      new:
+        add_course: "Añadir curso"
+      create:
+        created: "Curso añadido con éxito"
+      form-common:
+        slug_help: "Si lo dejas en blanco será generado automáticamente"
+        image_help: "Esta será la imagen que represente a este curso"
+        cover_image_help: "Esta será la imagen de portada por defecto para los artículos que no tengan imagen"
+        save: "Guardar"
   layouts:
     admin-links:
       home: "Inicio"
@@ -118,6 +127,7 @@ es:
       categories: "Categorías"
       add_category: "Añadir categoría"
       courses: "Cursos"
+      add_course: "Añadir curso"
       users: "Usuarios"
     public-links:
       home: "Inicio"
@@ -129,6 +139,7 @@ es:
       add_post: "Añadir artículo"
       add_page: "Añadir página"
       add_category: "Añadir categoría"
+      add_course: "Añadir curso"
       edit_user: "Editar usuario"
       logout: "Salir"
       languages: "Idiomas"

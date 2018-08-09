@@ -22,6 +22,11 @@ RSpec.describe Course, type: :model do
     expect(course_without_image).not_to be_valid
   end
 
+  it 'is not valid without a cover image' do
+    course_without_cover_image = build(:course, cover_image: nil)
+    expect(course_without_cover_image).not_to be_valid
+  end
+
   it 'has a valid slug' do
     expect(course.slug).not_to be nil
   end

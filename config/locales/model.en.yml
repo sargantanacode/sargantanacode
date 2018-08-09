@@ -47,3 +47,11 @@ en:
         slug: "Slug"
         image: "Image"
         cover_image: "Cover Image"
+      course:
+        name_es: "Nombre"
+        description_es: "Descripción"
+        name_en: "Name"
+        description_en: "Description"
+        slug: "Slug"
+        image: "Image"
+        cover_image: "Cover Image"

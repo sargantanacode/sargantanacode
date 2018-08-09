@@ -45,6 +45,8 @@
                   :class => "dropdown-item #{active?(new_admin_post_path(:type => :page))}" %>
                 <%= link_to t('.add_category'), new_admin_category_path,
                   :class => "dropdown-item #{active?(new_admin_category_path)}" %>
+                <%= link_to t('.add_course'), new_admin_course_path,
+                  :class => "dropdown-item #{active?(new_admin_course_path)}" %>
                 <div class="dropdown-divider"></div>
               <% end %>
               <%= link_to t('.edit_user'), edit_user_registration_path,

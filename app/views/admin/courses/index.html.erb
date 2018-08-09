@@ -26,7 +26,7 @@
           <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"
             data-placement="top" title="<%= t('.edit') %>"></i>
         <% end %>
-        <% if category.posts.empty? %>
+        <% if course.posts.empty? %>
           <%= link_to admin_course_path(id: course.id),
               data: { confirm: t('.delete_confirm') }, :method => :delete,
               :class => "btn btn-sm btn-danger text-center" do %>

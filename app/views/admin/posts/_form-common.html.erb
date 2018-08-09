@@ -15,7 +15,7 @@
 <div class="form-group">
   <%= f.label :course %>
   <% courses = Course.all.collect { |course| [course.name, course.id] } %>
-  <%= f.collection_select :course_id, Course.all, :id, :name, { prompt: true }, :class => "form-control" %>
+  <%= f.collection_select :course_id, Course.all, :id, :name, { :include_blank => t('helpers.select.prompt') }, :class => "form-control" %>
 </div>
 
 <%= f.hidden_field :type, :value => defined?(post) ? post.type : type %>
