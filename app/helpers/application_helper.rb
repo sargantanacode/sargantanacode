@@ -16,6 +16,24 @@ module ApplicationHelper
     "http://gravatar.com/avatar/#{gravatar}.png?s=#{size}&d=mm"
   end
 
+  def share_twitter(text)
+    "https://twitter.com/intent/tweet?url=#{current_url}&text=#{text}&via=SargantanaCode"
+  end
+
+  def share_facebook(text)
+    "https://www.facebook.com/sharer.php?u=#{current_url}&t=#{text}"
+  end
+
+  def share_mail(text)
+    "mailto:?subject=#{text}&body=#{text}: #{current_url}"
+  end
+  
+  
+  def current_url
+    "#{request.base_url}#{request.fullpath}"
+  end
+  
+
   def markdown(text)
     options = {
       filter_html: true,
