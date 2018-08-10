@@ -191,7 +191,7 @@ es:
       courses: "Cursos"
       courses_list_empty: "Lo sentimos, actualmente no hay ningún curso publicado"
     show:
-      category: "%{name}"
+      course: "%{name}"
     courses-list:
       posts:
         one: "1 artículo"

@@ -200,7 +200,7 @@
   }
 }
 
-.category, .user {
+.category, .course, .user {
   display: flex;
   flex-direction: row;
   &__image, &__avatar {

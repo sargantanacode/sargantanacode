@@ -189,7 +189,7 @@ en:
       courses: "courses"
       courses_list_empty: "Sorry, there are currently no courses added."
     show:
-      category: "%{name}"
+      course: "%{name}"
     ccourses-list:
       posts:
         one: "1 post"
