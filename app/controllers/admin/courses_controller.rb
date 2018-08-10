@@ -24,6 +24,11 @@ class Admin::CoursesController < ApplicationController
   end
 
   def update
+    if @course.update(course_params)
+      redirect_to admin_courses_path, notice: t('.saved')
+    else
+      render :edit
+    end
   end
 
   def destroy

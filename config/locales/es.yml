@@ -112,6 +112,10 @@ es:
         add_course: "Añadir curso"
       create:
         created: "Curso añadido con éxito"
+      edit:
+        edit_course: "Editar curso"
+      update:
+        saved: "Los cambios realizados en el curso han sido guardados correctamente"
       form-common:
         slug_help: "Si lo dejas en blanco será generado automáticamente"
         image_help: "Esta será la imagen que represente a este curso"
