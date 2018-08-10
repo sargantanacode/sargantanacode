@@ -28,8 +28,9 @@ class Admin::PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to admin_posts_path, notice: t('.post_saved') if @post.type == 'post'
-      redirect_to admin_posts_path, notice: t('.page_saved') if @post.type == 'page'
+      flash[:notice] = t('.post_saved') if @post.type == 'post'
+      flash[:notice] = t('.page_saved') if @post.type == 'page'
+      redirect_back(fallback_location: homepage_path)
     else
       render :edit
     end
