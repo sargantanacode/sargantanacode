@@ -32,6 +32,9 @@ class Admin::CoursesController < ApplicationController
   end
 
   def destroy
+    @course.destroy
+    flash[:notice] = t('.destroyed')
+    redirect_back(fallback_location: homepage_path)
   end
 
   private
