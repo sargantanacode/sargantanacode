@@ -72,6 +72,8 @@ en:
     categories:
       index:
         categories: "Categories"
+        categories_list_empty: "Currently there are no added Categories."
+        add_one_category: "You can add one now!"
         image: "Image"
         name: "Name"
         description: "Description"
@@ -98,6 +100,8 @@ en:
     courses:
       index:
         courses: "Categories"
+        courses_list_empty: "Currently there are no added Courses."
+        add_one_course: "You can add one now!"
         image: "Image"
         name: "Name"
         description: "Description"

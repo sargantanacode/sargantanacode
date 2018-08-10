@@ -72,6 +72,8 @@ es:
     categories:
       index:
         categories: "Categorías"
+        categories_list_empty: "Actualmente no hay ninguna categoría creado."
+        add_one_category: "¡Puedes crear una ahora!"
         image: "Imagen"
         name: "Nombre"
         description: "Descripción"
