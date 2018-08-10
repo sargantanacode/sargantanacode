@@ -63,8 +63,7 @@
   }
 }
 
-.bottom-links {
-  margin-top: 6vh;
+.links {
   a {
     color: $white;
     &:hover {
@@ -72,6 +71,11 @@
       color: $white;
     }
   }
+}
+
+.bottom-links {
+  @extend .links;
+  margin-top: 6vh;
 }
 
 .hljs {
@@ -196,11 +200,10 @@
   }
 }
 
-.category {
+.category, .course, .user {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  &__image {
+  &__image, &__avatar {
     margin-right: 3vw;
     img {
       background-color: $white;
@@ -210,10 +213,76 @@
       width: 90px;
     }
   }
+  &__bio, &__desc {
+    width: 100vw;
+    .fa {
+      color: inherit;
+    }
+  }
+  &__links {
+    list-style-type: none;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 3vh;
+    margin-bottom: 0;
+    padding-left: 0;
+    li {
+      display: inline;
+      margin-right: 6%;
+      a {
+        transition: all .8s ease;
+        &:hover {
+          transition: all .8s ease;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
   .show-up-lg {
     display: none;
     @include breakpoint-up(lg) {
       display: block;
+    }
+  }
+}
+
+.social {
+  text-align: center;
+  &__list {
+    list-style-type: none;
+    text-align: center;
+    font-size: 40px;
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+      display: inline;
+      margin-right: 6%;
+      .fa {
+        color: $dark-gray;
+        transition: all .8s ease;
+      }
+      a.social-btn {
+        &--twitter .fa {
+          &:hover {
+            color: $twitter;
+          }
+        }
+        &--facebook .fa {
+          &:hover {
+            color: $facebook;
+          }
+        }
+        &--mail .fa {
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

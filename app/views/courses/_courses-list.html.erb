@@ -1,0 +1,16 @@
+<% @courses.each do |course| %>
+  <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-4">
+    <div class="list">
+      <%= link_to course_path(id: course.slug) do %>
+        <span class="posts-badge">
+          <%= t('.posts', count: course.posts.status(:published).type(:post).count) %>
+        </span>
+        <%= image_tag course.image.url, :alt => course.name, :class => "post-header" %>
+        <div class="list__content">
+          <h2 class="list__title"><%= course.name %></h2>
+          <p class="list__text"><%= course.description %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -26,6 +26,7 @@ es:
         title_es: "Título"
         content_es: "Contenido"
         excerpt_es: "Extracto"
+        author: "Autor"
         category: "Categoría"
         course: "Curso"
         slug: "Slug"
@@ -39,6 +40,14 @@ es:
           post: "Artículo"
           page: "Página"
       category:
+        name_es: "Nombre"
+        description_es: "Descripción"
+        name_en: "Name"
+        description_en: "Description"
+        slug: "Slug"
+        image: "Imagen"
+        cover_image: "Imagen de portada"
+      course:
         name_es: "Nombre"
         description_es: "Descripción"
         name_en: "Name"

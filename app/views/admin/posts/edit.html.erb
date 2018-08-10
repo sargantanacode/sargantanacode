@@ -15,7 +15,7 @@
       <%= render 'form-en', f: f %>
     </div>
     <div class="content">
-      <%= render 'form-common', f: f, post: @post %>
+      <%= render 'form-common', f: f, type: @post.type, new_post: false %>
     </div>
   <% end %>
 </div>

@@ -1,0 +1,17 @@
+<% content_for :title, t('.add_course') %>
+
+<div class="col-10 mb-3">
+  <h2 class="text-center h2 mb-4"><%= t('.add_course') %></h2>
+  <%= form_for [:admin, @course] do |f| %>
+    <div class="content mb-5">
+      <%= render 'admin/categories/form-header', category: @course %>
+      <%= render 'admin/categories/form-es', f: f %>
+    </div>
+    <div class="content mb-5">
+      <%= render 'admin/categories/form-en', f: f %>
+    </div>
+    <div class="content">
+      <%= render 'admin/categories/form-common', f: f %>
+    </div>
+  <% end %>
+</div>
