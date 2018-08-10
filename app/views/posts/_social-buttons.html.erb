@@ -1,0 +1,22 @@
+<div class="social col-12 mb-4">
+  <ul class="social__list">
+    <li>
+      <%= link_to share_twitter(@post.title), target: :blank,
+        :class => "social-btn--twitter" do %>
+        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to share_facebook(@post.title), target: :blank,
+        :class => "social-btn--facebook" do %>
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to share_mail(@post.title), target: :blank,
+        :class => "social-btn--mail" do %>
+        <i class="fa fa-envelope-square" aria-hidden="true"></i>
+      <% end %>
+    </li>
+  </ul>
+</div>

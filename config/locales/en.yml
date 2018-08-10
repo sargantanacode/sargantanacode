@@ -150,11 +150,17 @@ en:
     index:
       posts_list_empty: "Sorry, there are currently no posts added."
       new_admin: "Before you start you need to create an admin user"
-    show:
+    toolbar:
       destroy_image: "Remove Cover"
       edit_post: "Edit"
       delete_post: "Delete"
       delete_confirm: "Are you sure?"
+    course-info:
+      header: "Starving for knowledge?"
+      info: "This post is part of the %{href} course."
+      info_prev: "The previous post of this course is %{href}"
+      info_next: "The next post of this course is %{href}"
+      info_prev_next: "The previous post of this course is %{href_prev} and the next one is %{href_next}."
   admins:
     new:
       new_admin: "New Admin"

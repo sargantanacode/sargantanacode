@@ -35,7 +35,23 @@ module ApplicationHelper
   def post_image(post)
     return post.image.url unless post.image.blank?
     post.course.blank? ? post.category.cover_image.url : post.course.cover_image.url
-  end  
+  end
+
+  def course_previous_post(current_post)
+    posts = current_post.course.posts.status(:published).type(:post)
+    posts.each do |post|
+      return post if post.published_at < current_post.published_at
+    end
+    nil
+  end
+
+  def course_next_post(current_post)
+    posts = current_post.course.posts.status(:published).type(:post)
+    posts.each do |post|
+      return post if post.published_at > current_post.published_at
+    end
+    nil
+  end
 
   def markdown(text)
     options = {
@@ -43,7 +59,6 @@ module ApplicationHelper
       hard_wrap: true,
       link_attributes: { target: "_blank" }
     }
-
     extensions = {
       autolink: true,
       superscript: true,
@@ -52,10 +67,8 @@ module ApplicationHelper
       no_intra_emphasis: true,
       strikethrough: true,
     }
-
     renderer = Redcarpet::Render::HTML.new(options)
     markdown = Redcarpet::Markdown.new(renderer, extensions)
-
     markdown.render(text)
   end
 

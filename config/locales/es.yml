@@ -152,11 +152,17 @@ es:
     index:
       posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
       new_admin: "Antes de empezar necesitas crear un administrador"
-    show:
+    toolbar:
       destroy_image: "Eliminar portada"
       edit_post: "Editar"
       delete_post: "Eliminar"
       delete_confirm: "¿Estás seguro?"
+    course-info:
+      header: "¿Sed de conocimiento?"
+      info: "Este artículo forma parte del curso %{href}."
+      info_prev: "El anterior artículo de este curso es %{href}."
+      info_next: "El próximo artículo de este curso es %{href}."
+      info_prev_next: "El anterior artículo de este curso es %{href_prev} y el próximo es %{href_next}."
   admins:
     new:
       new_admin: "Crear admin"

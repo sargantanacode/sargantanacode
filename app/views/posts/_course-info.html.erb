@@ -1,0 +1,21 @@
+<% prev_post = course_previous_post(@post) %>
+<% next_post = course_next_post(@post) %>
+
+<% if prev_post || next_post %>
+  <h3><%= t('.header') %></h3>
+  <p><%= raw t('.info', href: link_to(@post.course.name, course_path(id: @post.course.slug))) %>
+<% end %>
+
+<% if prev_post && next_post.nil? %>
+  <%= raw t('.info_prev', href: link_to(prev_post.title, post_path(id: prev_post.slug))) %></p>
+<% end %>
+
+<% if prev_post.nil? && next_post %>
+  <%= raw t('.info_next', href: link_to(next_post.title, post_path(id: next_post.slug))) %></p>
+<% end %>
+
+<% if prev_post && next_post %>
+  <%= raw t('.info_prev_next',
+    href_prev: link_to(prev_post.title, post_path(id: prev_post.slug)),
+    href_next: link_to(next_post.title, post_path(id: next_post.slug))) %></p>
+<% end %>
