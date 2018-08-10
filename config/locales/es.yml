@@ -2,6 +2,12 @@ es:
   errors:
     access: "¡Tú no tienes poder aquí, Gandalf el gris!"
   admin:
+    dashboard:
+      index:
+        dashboard: "Administración"
+        last_posts: "Últimos artículos"
+        last_drafts: "Últimos borradores"
+        more_visited_posts: "Artículos más visitados"
     posts:
       new:
         add_post: "Añadir artículo"
@@ -72,6 +78,8 @@ es:
     categories:
       index:
         categories: "Categorías"
+        categories_list_empty: "Actualmente no hay ninguna categoría creado."
+        add_one_category: "¡Puedes crear una ahora!"
         image: "Imagen"
         name: "Nombre"
         description: "Descripción"
@@ -125,7 +133,7 @@ es:
         save: "Guardar"
   layouts:
     admin-links:
-      home: "Inicio"
+      dashboard: "Administración"
       posts_pages: "Artículos y páginas"
       add_post: "Añadir artículo"
       add_page: "Añadir página"
@@ -143,6 +151,8 @@ es:
     menu:
       login: "Entrar"
       hello: "¡Hola, %{name}!"
+      dashboard: "Administración"
+      homepage: "Página de inicio"
       add_post: "Añadir artículo"
       add_page: "Añadir página"
       add_category: "Añadir categoría"
