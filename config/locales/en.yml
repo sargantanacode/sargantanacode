@@ -135,6 +135,7 @@ en:
       users: "Users"
     public-links:
       home: "Home"
+      courses: "Courses"
       categories: "Categories"
       about_us: "About Us"
     menu:
@@ -180,6 +181,16 @@ en:
     show:
       category: "%{name}"
     categories-list:
+      posts:
+        one: "1 post"
+        other: "%{count} posts"
+  courses:
+    index:
+      courses: "courses"
+      courses_list_empty: "Sorry, there are currently no courses added."
+    show:
+      category: "%{name}"
+    ccourses-list:
       posts:
         one: "1 post"
         other: "%{count} posts"

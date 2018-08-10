@@ -137,6 +137,7 @@ es:
       users: "Usuarios"
     public-links:
       home: "Inicio"
+      courses: "Cursos"
       categories: "Categorías"
       about_us: "Sobre nosotros"
     menu:
@@ -182,6 +183,16 @@ es:
     show:
       category: "%{name}"
     categories-list:
+      posts:
+        one: "1 artículo"
+        other: "%{count} artículos"
+  courses:
+    index:
+      courses: "Cursos"
+      courses_list_empty: "Lo sentimos, actualmente no hay ningún curso publicado"
+    show:
+      category: "%{name}"
+    courses-list:
       posts:
         one: "1 artículo"
         other: "%{count} artículos"

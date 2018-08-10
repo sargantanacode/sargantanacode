@@ -8,7 +8,8 @@ module ApplicationHelper
   end
 
   def justify_content
-    'justify-content-center' unless %w[CategoriesController PostsController].include? controller.class.name
+    list = %w[CategoriesController CoursesController PostsController]
+    'justify-content-center' unless list.include? controller.class.name
   end
 
   def gravatar_url(email, size)
