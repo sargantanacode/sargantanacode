@@ -20,6 +20,7 @@ class User < ApplicationRecord
 
   scope :role, -> role { where(role: role) }
   scope :by_role, -> { order(Arel.sql('role DESC, created_at ASC')) }
+  scope :by_name, -> { order(Arel.sql('name ASC')) }
 
   def set_default_role
     self.role ||= :user
