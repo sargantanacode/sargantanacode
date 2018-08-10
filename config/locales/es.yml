@@ -95,17 +95,49 @@ es:
         image_help: "Esta será la imagen que represente a esta categoría"
         cover_image_help: "Esta será la imagen de portada por defecto para los artículos que no tengan imagen"
         save: "Guardar"
+    courses:
+      index:
+        courses: "Cursos"
+        courses_list_empty: "Actualmente no hay ningún curso creado."
+        add_one_course: "¡Puedes crear uno ahora!"
+        image: "Imagen"
+        name: "Nombre"
+        description: "Descripción"
+        actions: "Acciones"
+        view: "Ver"
+        edit: "Editar"
+        delete_confirm: "¿Estás seguro de querer eliminar este curso?"
+        destroy: "Eliminar"
+      new:
+        add_course: "Añadir curso"
+      create:
+        created: "Curso añadido con éxito"
+      edit:
+        edit_course: "Editar curso"
+      update:
+        saved: "Los cambios realizados en el curso han sido guardados correctamente"
+      destroy:
+        destroyed: "El curso ha sido eliminado correctamente"
+      form-common:
+        slug_help: "Si lo dejas en blanco será generado automáticamente"
+        image_help: "Esta será la imagen que represente a este curso"
+        cover_image_help: "Esta será la imagen de portada por defecto para los artículos que no tengan imagen"
+        save: "Guardar"
   layouts:
     admin-links:
       home: "Inicio"
       posts_pages: "Artículos y páginas"
       add_post: "Añadir artículo"
       add_page: "Añadir página"
+      categories_courses: "Categorías y cursos"
       categories: "Categorías"
       add_category: "Añadir categoría"
+      courses: "Cursos"
+      add_course: "Añadir curso"
       users: "Usuarios"
     public-links:
       home: "Inicio"
+      courses: "Cursos"
       categories: "Categorías"
       about_us: "Sobre nosotros"
     menu:
@@ -114,6 +146,7 @@ es:
       add_post: "Añadir artículo"
       add_page: "Añadir página"
       add_category: "Añadir categoría"
+      add_course: "Añadir curso"
       edit_user: "Editar usuario"
       logout: "Salir"
       languages: "Idiomas"
@@ -126,11 +159,17 @@ es:
     index:
       posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
       new_admin: "Antes de empezar necesitas crear un administrador"
-    show:
+    toolbar:
       destroy_image: "Eliminar portada"
       edit_post: "Editar"
       delete_post: "Eliminar"
       delete_confirm: "¿Estás seguro?"
+    course-info:
+      header: "¿Sed de conocimiento?"
+      info: "Este artículo forma parte del curso %{href}."
+      info_prev: "El anterior artículo de este curso es %{href}."
+      info_next: "El próximo artículo de este curso es %{href}."
+      info_prev_next: "El anterior artículo de este curso es %{href_prev} y el próximo es %{href_next}."
   admins:
     new:
       new_admin: "Crear admin"
@@ -144,6 +183,16 @@ es:
     show:
       category: "%{name}"
     categories-list:
+      posts:
+        one: "1 artículo"
+        other: "%{count} artículos"
+  courses:
+    index:
+      courses: "Cursos"
+      courses_list_empty: "Lo sentimos, actualmente no hay ningún curso publicado"
+    show:
+      course: "%{name}"
+    courses-list:
       posts:
         one: "1 artículo"
         other: "%{count} artículos"

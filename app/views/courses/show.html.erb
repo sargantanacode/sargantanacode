@@ -1,0 +1,13 @@
+<% content_for :title, t('.course', name: @course) %>
+
+<div class="col-12 mb-5 content course">
+  <div class="course__image show-up-lg">
+    <%= image_tag @course.image.url, :alt => @course.name %>
+  </div>
+  <div class="course__desc">
+    <h2><%= @course.name %></h2>
+    <%= @course.description %>
+  </div>
+</div>
+
+<%= render 'posts/post-list', posts: @course.posts.status(:published).type(:post).by_date %>

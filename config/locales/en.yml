@@ -43,6 +43,9 @@ en:
       create:
         post_saved: "The Post has been saved successfully"
         page_saved: "The Page has been saved successfully"
+      update:
+        post_saved: "The Post has been saved successfully"
+        page_saved: "The Page has been saved successfully"
       publish:
         post_published: "The Post has been published successfully"
         page_published: "The Page has been published successfully"
@@ -92,17 +95,47 @@ en:
         image_help: "This will be the image associated with this category"
         cover_image_help: "This will be the default cover image for Posts without cover image"
         save: "Save"
+    courses:
+      index:
+        courses: "Categories"
+        image: "Image"
+        name: "Name"
+        description: "Description"
+        actions: "Actions"
+        view: "View"
+        edit: "Edit"
+        delete_confirm: "Are you sure to delete this course?"
+        destroy: "Delete"
+      new:
+       add_course: "Add Course"
+      create:
+        created: "Course added successfully"
+      edit:
+        edit_course: "Edit Course"
+      update:
+        saved: "Course changes have been saved successfully"
+      destroy:
+        destroyed: "Course successfully deleted"
+      form-common:
+        slug_help: "If you leave it blank it will be generated automatically"
+        image_help: "This will be the image associated with this course"
+        cover_image_help: "This will be the default cover image for Posts without cover image"
+        save: "Save"
   layouts:
     admin-links:
       home: "Home"
       posts_pages: "Posts and Pages"
       add_post: "Add Post"
       add_page: "Add Page"
+      categories_courses: "Categories and Courses"
       categories: "Categories"
       add_category: "Add Category"
+      courses: "Courses"
+      add_course: "Add Course"
       users: "Users"
     public-links:
       home: "Home"
+      courses: "Courses"
       categories: "Categories"
       about_us: "About Us"
     menu:
@@ -111,6 +144,7 @@ en:
       add_post: "Add Post"
       add_page: "Add Page"
       add_category: "Add Category"
+      add_course: "Add Course"
       edit_user: "Edit user"
       logout: "Log Out"
       languages: "Languages"
@@ -123,11 +157,17 @@ en:
     index:
       posts_list_empty: "Sorry, there are currently no posts added."
       new_admin: "Before you start you need to create an admin user"
-    show:
+    toolbar:
       destroy_image: "Remove Cover"
       edit_post: "Edit"
       delete_post: "Delete"
       delete_confirm: "Are you sure?"
+    course-info:
+      header: "Starving for knowledge?"
+      info: "This post is part of the %{href} course."
+      info_prev: "The previous post of this course is %{href}"
+      info_next: "The next post of this course is %{href}"
+      info_prev_next: "The previous post of this course is %{href_prev} and the next one is %{href_next}."
   admins:
     new:
       new_admin: "New Admin"
@@ -141,6 +181,16 @@ en:
     show:
       category: "%{name}"
     categories-list:
+      posts:
+        one: "1 post"
+        other: "%{count} posts"
+  courses:
+    index:
+      courses: "courses"
+      courses_list_empty: "Sorry, there are currently no courses added."
+    show:
+      course: "%{name}"
+    ccourses-list:
       posts:
         one: "1 post"
         other: "%{count} posts"

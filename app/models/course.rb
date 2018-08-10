@@ -2,6 +2,7 @@ class Course < ApplicationRecord
   extend FriendlyId
   
   before_create :set_slug, prepend: true
+  before_update :update_slug, prepend: true
 
   has_many :posts
 
@@ -10,9 +11,16 @@ class Course < ApplicationRecord
   friendly_id :slug, use: :slugged
 
   validates *Course.globalize_attribute_names, presence: true
-  validates :image, presence: true
+  validates :image, :cover_image, presence: true
 
   mount_uploader :image, ImageUploader
+  mount_uploader :cover_image, ImageUploader
+
+  scope :by_name, -> { order(Arel.sql('name ASC')) }
+  scope :with_published_posts, -> {
+    joins(:posts).where(Arel.sql('posts.status = 1 AND posts.type = 0'))
+    .group('posts.id').uniq
+  }
 
   def to_s
     self.name
@@ -21,6 +29,12 @@ class Course < ApplicationRecord
   private
 
   def set_slug
-    self.slug = self.name.to_s.parameterize
+    return self.slug = self.name_en.to_s.parameterize if self.slug.blank?
+    self.slug = self.slug.parameterize
+  end
+
+  def update_slug
+    return self.slug = self.name_en.to_s.parameterize if self.slug.blank?
+    self.slug = self.slug.parameterize
   end
 end

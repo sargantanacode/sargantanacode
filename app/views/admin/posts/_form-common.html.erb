@@ -2,23 +2,30 @@
   <div class="form-group">
     <%= f.label :author %>
     <% categories = User.all.collect { |user| [user.name, user.id] } %>
-    <%= f.collection_select :user_id, User.all, :id, :name, { prompt: true }, :class => "form-control" %>
+    <%= f.collection_select :user_id, User.by_role.by_name, :id, :name,
+      { prompt: true }, :class => "form-control" %>
   </div>
 <% end %>
 
-<div class="form-group">
-  <%= f.label :category %>
-  <% categories = Category.all.collect { |category| [category.name, category.id] } %>
-  <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: true }, :class => "form-control" %>
-</div>
+<% unless type == 'page' %>
+  <div class="form-group">
+    <%= f.label :category %>
+    <%= f.collection_select :category_id, Category.with_translations(I18n.locale).by_name,
+      :id, :name, { prompt: true }, :class => "form-control" %>
+  </div>
 
-<div class="form-group">
-  <%= f.label :course %>
-  <% courses = Course.all.collect { |course| [course.name, course.id] } %>
-  <%= f.collection_select :course_id, Course.all, :id, :name, { prompt: true }, :class => "form-control" %>
-</div>
+  <div class="form-group">
+    <%= f.label :course %>
+    <%= f.collection_select :course_id, Course.with_translations(I18n.locale).by_name,
+      :id, :name, { :include_blank => t('helpers.select.prompt') }, :class => "form-control" %>
+  </div>
+<% end %>
 
-<%= f.hidden_field :type, :value => defined?(post) ? post.type : type %>
+<% if new_post && type == 'page' %>
+  <%= f.hidden_field :category_id, :value => Category.first.id %>
+<% end %>
+
+<%= f.hidden_field :type, :value => type %>
 
 <div class="form-group">
   <%= f.label :slug %>

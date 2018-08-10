@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :posts, only: [:show]
     resources :admins, only: [:new, :create]
     resources :categories, only: [:index, :show]
+    resources :courses, only: [:index, :show]
     root to: "posts#index", as: "homepage"
 
     # Simplifying public-zone's menu links
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
       end
       resources :users, except: [:new, :create]
       resources :categories, except: [:show]
+      resources :courses, except: [:show]
     end
   end
   get "/*path" => "application#change_path", constraints: { path: /(?!(#{I18n.available_locales.join("|")})\/).*/ }

@@ -1,5 +1,0 @@
-<% unless post.image.blank? %>
-  <%= image_tag post.image.url, :alt => post.title, :class => "post-header" %>
-<% else %>
-  <%= image_tag post.category.cover_image.url, :alt => post.title, :class => "post-header" %>
-<% end %>

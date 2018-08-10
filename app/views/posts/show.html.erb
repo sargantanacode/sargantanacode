@@ -1,21 +1,8 @@
 <% content_for :title, @post.title %>
 
-<% if current_user.present? && current_user.admin? %>
-  <div class="col-12 links text-center mb-5">
-    <% if @post.image.present? %>
-      <%= link_to t('.destroy_image'), admin_post_destroy_image_path(post_id: @post.slug),
-        data: { confirm: t('.delete_confirm') }, :method => :put,
-        :class => "btn btn-primary" %>
-    <% end %>
-    <%= link_to t('.edit_post'), edit_admin_post_path(id: @post.slug),
-      :class => "btn btn-warning" %>
-    <%= link_to t('.delete_post'), admin_post_path(id: @post.slug),
-      data: { confirm: t('.delete_confirm') }, :method => :delete,
-      :class => "btn btn-danger" %>
-  </div>
-<% end %>
+<%= render 'toolbar' %>
 
-<div class="col-12 content mb-3">
+<div class="col-12 content mb-4">
   <% unless @post.type == 'page' %>
     <span class="date-badge">
       <%= @post.published_at.strftime('%d/%m/%Y') if @post.status == 'published' %>
@@ -25,36 +12,16 @@
       <%= link_to @post.category.name, category_path(id: @post.category.slug),
         :class => "badge-link" %>
     </span>
-    <%= render 'cover', post: @post %>
+     <%= image_tag post_image(@post), :alt => @post.title, :class => "post-header" %>
   <% end %>
   <h2 class="post-title"><%= @post.title %></h2>
   <div class="post-body">
     <%= raw markdown @post.content %>
+    <%= render 'course-info' unless @post.course.blank? || @post.status == 'draft' %>
   </div>
 </div>
 
-<div class="social col-12 mb-3">
-  <ul class="social__list">
-    <li>
-      <%= link_to share_twitter(@post.title), target: :blank,
-        :class => "social-btn--twitter" do %>
-        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to share_facebook(@post.title), target: :blank,
-        :class => "social-btn--facebook" do %>
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to share_mail(@post.title), target: :blank,
-        :class => "social-btn--mail" do %>
-        <i class="fa fa-envelope-square" aria-hidden="true"></i>
-      <% end %>
-    </li>
-  </ul>
-</div>
+<%= render 'social-buttons' %>
 
 <% unless @post.type == 'page' %>
   <%= render 'user-profile', user: @post.user %>
