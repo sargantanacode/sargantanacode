@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       resources :users, except: [:new, :create]
       resources :categories, except: [:show]
       resources :courses, except: [:show]
+      root to: "dashboard#index", as: "dashboard"
     end
   end
   get "/*path" => "application#change_path", constraints: { path: /(?!(#{I18n.available_locales.join("|")})\/).*/ }

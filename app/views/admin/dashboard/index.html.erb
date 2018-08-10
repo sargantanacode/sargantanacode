@@ -1,0 +1,33 @@
+<% content_for :title, t('.dashboard') %>
+
+<div class="col-12 mb-3">
+  <% unless @posts.empty? %>
+    <h2 class="text-center h2 mb-4"><%= t('.last_posts') %></h2>
+    <div class="content mb-5">
+      <%= render 'admin/posts/posts-list-header' %>
+      <% @posts.each do |post| %>
+        <%= render 'admin/posts/posts-list', post: post %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% unless @drafts.empty? %>
+    <h2 class="text-center h2 mb-4"><%= t('.last_drafts') %></h2>
+    <div class="content mb-5">
+      <%= render 'admin/posts/posts-list-header' %>
+      <% @drafts.each do |draft| %>
+        <%= render 'admin/posts/posts-list', post: draft %>
+      <% end %>
+    </div>
+  <% end %>
+
+    <% unless @visits.empty? %>
+    <h2 class="text-center h2 mb-4"><%= t('.more_visited_posts') %></h2>
+    <div class="content mb-5">
+      <%= render 'admin/posts/posts-list-header' %>
+      <% @visits.each do |visit| %>
+        <%= render 'admin/posts/posts-list', post: visit %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
