@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       resources :users, except: [:new, :create]
       resources :categories, except: [:show]
       resources :courses, except: [:show]
+      resources :images
       root to: "dashboard#index", as: "dashboard"
     end
   end

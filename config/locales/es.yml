@@ -131,6 +131,37 @@ es:
         image_help: "Esta será la imagen que represente a este curso"
         cover_image_help: "Esta será la imagen de portada por defecto para los artículos que no tengan imagen"
         save: "Guardar"
+    images:
+      index:
+        images: "Imágenes"
+        images_list_empty: "Actualmente no hay ninguna imagen."
+        add_one_image: "¡Puedes subir una ahora!"
+        image: "Imagen"
+        title: "Título"
+        description: "Descripción"
+        actions: "Acciones"
+        view: "Ver"
+        edit: "Editar"
+        delete_confirm: "¿Estás seguro de querer eliminar esta imagen?"
+        destroy: "Eliminar"
+      show:
+        image: "%{title}"
+        link: "Enlace"
+        link_copied: "Enlace copiado"
+        markdown_link_es: "Enlace markdown"
+        markdown_link_en: "Markdown Link"
+      new:
+        add_image: "Añadir imagen"
+      create:
+        created: "Imagen añadida con éxito"
+      edit:
+        edit_image: "Editar imagen"
+      update:
+        saved: "Los cambios realizados en la imagen han sido guardados correctamente"
+      destroy:
+        destroyed: "La imagen ha sido eliminado correctamente"
+      form-common:
+        save: "Guardar"
   layouts:
     admin-links:
       dashboard: "Administración"
@@ -142,6 +173,8 @@ es:
       add_category: "Añadir categoría"
       courses: "Cursos"
       add_course: "Añadir curso"
+      images: "Imágenes"
+      add_image: "Añadir imagen"
       users: "Usuarios"
     public-links:
       home: "Inicio"
@@ -157,6 +190,7 @@ es:
       add_page: "Añadir página"
       add_category: "Añadir categoría"
       add_course: "Añadir curso"
+      add_image: "Añadir imagen"
       edit_user: "Editar usuario"
       logout: "Salir"
       languages: "Idiomas"
