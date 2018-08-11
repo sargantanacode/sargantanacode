@@ -240,3 +240,6 @@ es:
       posts:
         one: "1 artículo"
         other: "%{count} artículos"
+  profile:
+    show:
+      profile: "Perfil de %{name}"
