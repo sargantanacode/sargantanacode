@@ -6,6 +6,16 @@
     font-size: 17px;
     color: $font-color;
   }
+  .post-body {
+    img {
+      @include breakpoint-up(md) {
+        margin: 0 -1.3vw 0 -1.3vw;
+        width: calc(100% + #{2.6vw});
+      }
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
   img.post-header {
     @include breakpoint-up(md) {
       margin: -1.3vw -1.3vw 2vw -1.3vw;
