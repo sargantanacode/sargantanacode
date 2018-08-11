@@ -17,3 +17,10 @@
     </div>
   </div>
 <% end %>
+
+<% if posts.total_pages > 1 %>
+  <div class="pagination col-12 d-flex justify-content-center mt-5">
+    <%= link_to_previous_page posts, t('.previous_page') %>
+    <%= link_to_next_page posts, t('.next_page') %>
+  </div>
+<% end %>

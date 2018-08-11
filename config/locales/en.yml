@@ -203,6 +203,9 @@ en:
     index:
       posts_list_empty: "Sorry, there are currently no posts added."
       new_admin: "Before you start you need to create an admin user"
+    post-list:
+      previous_page: "← previous page"
+      next_page: "next page →"
     toolbar:
       destroy_image: "Remove Cover"
       edit_post: "Edit"

@@ -203,6 +203,9 @@ es:
     index:
       posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
       new_admin: "Antes de empezar necesitas crear un administrador"
+    post-list:
+      previous_page: "← página anterior"
+      next_page: "página siguiente →"
     toolbar:
       destroy_image: "Eliminar portada"
       edit_post: "Editar"

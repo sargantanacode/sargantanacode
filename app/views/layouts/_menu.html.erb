@@ -48,8 +48,8 @@
                 <% end %>
                 <%= link_to t('.add_post'), new_admin_post_path(:type => :post),
                   :class => "dropdown-item #{active?(new_admin_post_path(:type => :post))}" %>
-                <%= link_to t('.add_page'), new_admin_post_path(:type => :page),
-                  :class => "dropdown-item #{active?(new_admin_post_path(:type => :page))}" %>
+                <%= link_to t('.add_page'), new_admin_post_path(:type => :static),
+                  :class => "dropdown-item #{active?(new_admin_post_path(:type => :static))}" %>
                 <%= link_to t('.add_category'), new_admin_category_path,
                   :class => "dropdown-item #{active?(new_admin_category_path)}" %>
                 <%= link_to t('.add_course'), new_admin_course_path,

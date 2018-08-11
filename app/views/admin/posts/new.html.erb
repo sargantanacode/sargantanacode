@@ -1,12 +1,12 @@
 <% type = params[:type] || 'post' %>
 
 <% content_for :title, t('.add_post') if type == 'post' %>
-<% content_for :title, t('.add_page') if type == 'page' %>
+<% content_for :title, t('.add_page') if type == 'static' %>
 
 <div class="col-10 mb-3">
   <h2 class="text-center h2 mb-4">
     <%= t('.add_post') if type == 'post' %>
-    <%= t('.add_page') if type == 'page' %>
+    <%= t('.add_page') if type == 'static' %>
   </h2>
   <%= form_for [:admin, @post] do |f| %>
     <div class="content mb-5">

@@ -332,3 +332,12 @@
     }
   }
 }
+
+.pagination > * {
+  &:nth-child(even) {
+    margin-left: 10vw;
+    @include breakpoint-up(md) {
+      margin-left: 40vw;
+    }
+  }
+}
