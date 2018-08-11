@@ -180,7 +180,8 @@ en:
       home: "Home"
       courses: "Courses"
       categories: "Categories"
-      about_us: "About Us"
+      contact_form: "Contact us"
+      about_us: "About us"
     menu:
       login: "Log In"
       hello: "Hey, %{name}!"
@@ -203,6 +204,9 @@ en:
     index:
       posts_list_empty: "Sorry, there are currently no posts added."
       new_admin: "Before you start you need to create an admin user"
+    post-list:
+      previous_page: "← previous page"
+      next_page: "next page →"
     toolbar:
       destroy_image: "Remove Cover"
       edit_post: "Edit"
@@ -236,7 +240,25 @@ en:
       courses_list_empty: "Sorry, there are currently no courses added."
     show:
       course: "%{name}"
+      previous_page: "← previous page"
+      next_page: "next page →"
     ccourses-list:
       posts:
         one: "1 post"
         other: "%{count} posts"
+  profile:
+    show:
+      profile: "Profile for %{name}"
+  contact:
+    new:
+      contact_form: "Contact us"
+      send: "Send message"
+    create:
+      sended: "Email sended successfully"
+  mail_form:
+    attributes:
+      contact:
+        name: "Name"
+        email: "Email"
+        subject: "Subject"
+        message: "Message"

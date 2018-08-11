@@ -6,6 +6,16 @@
     font-size: 17px;
     color: $font-color;
   }
+  .post-body {
+    img {
+      @include breakpoint-up(md) {
+        margin: 0 -1.3vw 0 -1.3vw;
+        width: calc(100% + #{2.6vw});
+      }
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
   img.post-header {
     @include breakpoint-up(md) {
       margin: -1.3vw -1.3vw 2vw -1.3vw;
@@ -204,9 +214,53 @@
   }
 }
 
+.courses-list {
+  display: flex;
+  transition: all .5s ease;
+  &__number {
+    display: flex;
+    justify-content: center;
+    margin: -0.3vw 1vw 0 2vw;
+    @include breakpoint-up(lg) {
+      margin-top: 0;
+      align-items: center;
+      align-self: center;
+      background-color: $main-color;
+      border-radius: 50%;
+      height: 4vw;
+      width: 4vw;
+    }
+    p {
+      font-weight: bold;
+      font-size: 20px;
+      color: $main-color;
+      @include breakpoint-up(lg) {
+        color: $white;
+      }
+    }
+  }
+  &__content {
+    padding: 0 1.3vw 0 1.3vw;
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+  a {
+    width: 80vw;
+    p {
+      color: $font-color;
+      &:hover {
+        color: $font-color;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
+  }
+}
+
 .category, .course, .user {
   display: flex;
-  flex-direction: row;
   &__image, &__avatar {
     margin-right: 3vw;
     img {
@@ -319,6 +373,15 @@
         border: 10px solid transparent;
         border-left: 10px solid $black;
       }
+    }
+  }
+}
+
+.pagination > * {
+  &:nth-child(even) {
+    margin-left: 10vw;
+    @include breakpoint-up(md) {
+      margin-left: 40vw;
     }
   }
 }

@@ -1,10 +1,10 @@
-<% content_for :title, t('.edit_post') if @post.type == 'post' %>
-<% content_for :title, t('.edit_page') if @post.type == 'page' %>
+<% content_for :title, t('.edit_post') if @post.post? %>
+<% content_for :title, t('.edit_page') if @post.static? %>
 
 <div class="col-10 mb-3">
   <h2 class="text-center h2 mb-4">
-    <%= t('.edit_post') if @post.type == 'post' %>
-    <%= t('.edit_page') if @post.type == 'page' %>
+    <%= t('.edit_post') if @post.post? %>
+    <%= t('.edit_page') if @post.static? %>
   </h2>
   <%= form_for @post, :url => admin_post_path do |f| %>
     <div class="content mb-5">

@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def justify_content
-    list = %w[CategoriesController CoursesController PostsController]
+    list = %w[CategoriesController CoursesController PostsController ProfileController]
     'justify-content-center' unless list.include? controller.class.name
   end
 

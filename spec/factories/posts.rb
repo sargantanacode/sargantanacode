@@ -14,8 +14,8 @@ FactoryBot.define do
     type :post
   end
 
-  trait :page do
-    type :page
+  trait :static do
+    type :static
   end
 
   trait :with_image do

@@ -7,7 +7,7 @@
   </div>
 <% end %>
 
-<% unless type == 'page' %>
+<% unless type == 'static' %>
   <div class="form-group">
     <%= f.label :category %>
     <%= f.collection_select :category_id, Category.with_translations(I18n.locale).by_name,
@@ -21,7 +21,7 @@
   </div>
 <% end %>
 
-<% if new_post && type == 'page' %>
+<% if new_post && type == 'static' %>
   <%= f.hidden_field :category_id, :value => Category.first.id %>
 <% end %>
 

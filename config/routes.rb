@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :admins, only: [:new, :create]
     resources :categories, only: [:index, :show]
     resources :courses, only: [:index, :show]
+    resources :profile, only: [:show]
+    resources :contact, only: [:new, :create]
     root to: "posts#index", as: "homepage"
 
     # Simplifying public-zone's menu links
@@ -13,6 +15,7 @@ Rails.application.routes.draw do
     # Redirecting old links for the new ones
     get "/category/:category" => redirect("/categories/%{category}")
     get "/course/:course" => redirect("/courses/%{course}")
+    get "/contact" => redirect("/contact/new")
 
     namespace :admin do
       resources :posts, except: [:show] do

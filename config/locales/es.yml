@@ -180,6 +180,7 @@ es:
       home: "Inicio"
       courses: "Cursos"
       categories: "Categorías"
+      contact_form: "Contacto"
       about_us: "Sobre nosotros"
     menu:
       login: "Entrar"
@@ -203,6 +204,9 @@ es:
     index:
       posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
       new_admin: "Antes de empezar necesitas crear un administrador"
+    post-list:
+      previous_page: "← página anterior"
+      next_page: "página siguiente →"
     toolbar:
       destroy_image: "Eliminar portada"
       edit_post: "Editar"
@@ -236,7 +240,25 @@ es:
       courses_list_empty: "Lo sentimos, actualmente no hay ningún curso publicado"
     show:
       course: "%{name}"
+      previous_page: "← página anterior"
+      next_page: "página siguiente →"
     courses-list:
       posts:
         one: "1 artículo"
         other: "%{count} artículos"
+  profile:
+    show:
+      profile: "Perfil de %{name}"
+  contact:
+    new:
+      contact_form: "Contacto"
+      send: "Enviar mensaje"
+    create:
+      sended: "Correo electrónico enviado con éxito"
+  mail_form:
+    attributes:
+      contact:
+        name: "Nombre"
+        email: "Correo electrónico"
+        subject: "Asunto"
+        message: "Mensaje"

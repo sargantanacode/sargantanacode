@@ -10,4 +10,5 @@
   </div>
 </div>
 
-<%= render 'posts/post-list', posts: @category.posts.status(:published).type(:post).by_date %>
+<%= render 'posts/post-list', posts: @category.posts.status(:published)
+    .type(:post).by_date.page(params[:page]) %>
