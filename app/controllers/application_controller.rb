@@ -17,6 +17,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def after_sign_in_path_for(resource)
+    if current_user.admin?
+      return admin_dashboard_path
+    end
+    homepage_path
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    request.referrer
+  end
+
   private
 
   def get_locale(locale)

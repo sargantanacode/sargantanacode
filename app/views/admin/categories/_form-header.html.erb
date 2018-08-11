@@ -1,3 +1,6 @@
+<% unless new_item %>
+  <%= image_tag category.cover_image.url, :alt => category.name, :class => "post-header" %>
+<% end %>
 <% if category.errors.any? %>
   <% category.errors.full_messages.each do |message| %>
     <div class="alert alert-danger" role="alert">

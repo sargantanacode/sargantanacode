@@ -1,0 +1,46 @@
+<% content_for :title, t('.image', title: @image.title) %>
+
+<div class="col-10 mb-3">
+  <h2 class="text-center h2 mb-4"><%= t('.image', title: @image.title) %></h2>
+    <div class="content mb-5">
+      <%= image_tag @image.image.url, :alt => @image.title, :class => "post-header" %>
+      <div class="form-group">
+        <label for="link" class="d-flex justify-content-between">
+          <span><%= t('.link') %></span>
+          <div class="copy">
+            <div class="alert-copy hidden" id="alert-copy-link-image">
+              <small><%= t('.link_copied') %></small>
+            </div>
+            <i class="fa fa-copy" aria-hidden="true" id="copy-link-image"></i>
+          </div>
+        </label>
+        <input type="text" id="link" value="<%= image_url(@image) %>" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="markdown-link-es" class="d-flex justify-content-between">
+          <span><%= t('.markdown_link_es') %></span>
+          <div class="copy">
+            <div class="alert-copy hidden" id="alert-copy-markdown-image-es">
+              <small><%= t('.link_copied') %></small>
+            </div>
+            <i class="fa fa-copy" aria-hidden="true" id="copy-markdown-image-es"></i>
+          </div>
+        </label>
+        <input type="text" id="markdown-link-es"
+          value="<%= image_markdown_url(@image, :es) %>" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="markdown-link-en" class="d-flex justify-content-between">
+          <span><%= t('.markdown_link_en') %></span>
+          <div class="copy">
+            <div class="alert-copy hidden" id="alert-copy-markdown-image-en">
+              <small><%= t('.link_copied') %></small>
+            </div>
+            <i class="fa fa-copy" aria-hidden="true" id="copy-markdown-image-en"></i>
+          </div>
+        </label>
+        <input type="text" id="markdown-link-en"
+          value="<%= image_markdown_url(@image, :en) %>" class="form-control" />
+      </div>
+    </div>
+</div>

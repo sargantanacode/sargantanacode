@@ -117,7 +117,7 @@ en:
         delete_confirm: "Are you sure to delete this course?"
         destroy: "Delete"
       new:
-       add_course: "Add Course"
+        add_course: "Add Course"
       create:
         created: "Course added successfully"
       edit:
@@ -131,6 +131,37 @@ en:
         image_help: "This will be the image associated with this course"
         cover_image_help: "This will be the default cover image for Posts without cover image"
         save: "Save"
+    images:
+      index:
+        images: "Images"
+        images_list_empty: "Currently there are no Images."
+        add_one_image: "You can upload one now!"
+        image: "Image"
+        title: "Title"
+        description: "Description"
+        actions: "Actions"
+        view: "View"
+        edit: "Edit"
+        delete_confirm: "Are you sure to delete this image?"
+        destroy: "Delete"
+      show:
+        image: "%{title}"
+        link: "Link"
+        link_copied: "Link copied"
+        markdown_link_es: "Enlace markdown"
+        markdown_link_en: "Markdown Link"
+      new:
+        add_image: "Add Image"
+      create:
+        created: "Image added successfully"
+      edit:
+        edit_image: "Edit Image"
+      update:
+        saved: "Image changes have been saved successfully"
+      destroy:
+        destroyed: "Image successfully deleted"
+      form-common:
+        save: "Save"
   layouts:
     admin-links:
       dashboard: "Dashboard"
@@ -142,6 +173,8 @@ en:
       add_category: "Add Category"
       courses: "Courses"
       add_course: "Add Course"
+      images: "Images"
+      add_image: "Add Image"
       users: "Users"
     public-links:
       home: "Home"
@@ -157,6 +190,7 @@ en:
       add_page: "Add Page"
       add_category: "Add Category"
       add_course: "Add Course"
+      add_image: "Add Image"
       edit_user: "Edit user"
       logout: "Log Out"
       languages: "Languages"

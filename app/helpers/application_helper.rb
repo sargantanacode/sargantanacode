@@ -17,6 +17,17 @@ module ApplicationHelper
     "http://gravatar.com/avatar/#{gravatar}.png?s=#{size}&d=mm"
   end
 
+  def image_url(image)
+    "#{request.base_url}#{image.image.url}"
+  end
+
+  def image_markdown_url(image, locale)
+    if locale == :es
+      return "![#{image.title_es}](#{request.base_url}#{image.image.url} \"#{image.title_es}\")"
+    end
+    "![#{image.title_en}](#{request.base_url}#{image.image.url} \"#{image.title_en}\")"
+  end
+
   def share_twitter(text)
     "https://twitter.com/intent/tweet?url=#{current_url}&text=#{text}&via=SargantanaCode"
   end
