@@ -4,17 +4,17 @@
   <% unless @images.empty? %>
     <div class="responsive-header">
       <div class="vw16 center"><%= t('.image') %></div>
-      <div class="vw20 center"><%= t('.title') %></div>
-      <div class="vw50"><%= t('.description') %></div>
+      <div class="vw30 center"><%= t('.title') %></div>
+      <div class="vw40 center"><%= t('.description') %></div>
       <div class="vw10 center"><%= t('.actions') %></div>
     </div>
     <% @images.each do |image| %>
       <div class="responsive-table">
         <div class="vw16 center show-up-lg">
-          <%= image_tag image.image.url, :alt => image.title %>
+          <%= image_tag image.image.url, :alt => image.title, :class => "no-radius" %>
         </div>
-        <div class="vw20 first highlighted center"><%= image.title %></div>
-        <div class="vw50"><%= image.description %></div>
+        <div class="vw30 first highlighted center"><%= image.title %></div>
+        <div class="vw40"><%= image.description %></div>
         <div class="vw10 center">
           <%= link_to edit_admin_image_path(id: image.id),
               :class => "btn btn-sm btn-primary text-center" do %>

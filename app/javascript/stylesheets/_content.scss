@@ -163,6 +163,10 @@
     padding: 3px;
     border: 1px solid $dark-gray;
     border-radius: 50%;
+    &.no-radius {
+      @extend img;
+      border-radius: 0;
+    }
   }
 }
 
