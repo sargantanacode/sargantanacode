@@ -32,6 +32,9 @@ class Admin::ImagesController < ApplicationController
   end
 
   def destroy
+    @image.destroy
+    flash[:notice] = t('.destroyed')
+    redirect_back(fallback_location: admin_dashboard_path)
   end
 
   private

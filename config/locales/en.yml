@@ -151,6 +151,8 @@ en:
         edit_image: "Edit Image"
       update:
         saved: "Image changes have been saved successfully"
+      destroy:
+        destroyed: "Image successfully deleted"
       form-common:
         save: "Save"
   layouts:

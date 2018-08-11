@@ -151,6 +151,8 @@ es:
         edit_image: "Editar imagen"
       update:
         saved: "Los cambios realizados en la imagen han sido guardados correctamente"
+      destroy:
+        destroyed: "La imagen ha sido eliminado correctamente"
       form-common:
         save: "Guardar"
   layouts:
