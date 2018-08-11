@@ -11,9 +11,9 @@
     <% @images.each do |image| %>
       <div class="responsive-table">
         <div class="vw16 center show-up-lg">
-          <%= image_tag image.image.url, :alt => image.name %>
+          <%= image_tag image.image.url, :alt => image.title %>
         </div>
-        <div class="vw20 first highlighted center"><%= image.name %></div>
+        <div class="vw20 first highlighted center"><%= image.title %></div>
         <div class="vw50"><%= image.description %></div>
         <div class="vw10 center">
           <%= link_to edit_admin_image_path(id: image.id),

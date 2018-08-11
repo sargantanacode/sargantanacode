@@ -117,7 +117,7 @@ en:
         delete_confirm: "Are you sure to delete this course?"
         destroy: "Delete"
       new:
-       add_course: "Add Course"
+        add_course: "Add Course"
       create:
         created: "Course added successfully"
       edit:
@@ -143,6 +143,12 @@ en:
         edit: "Edit"
         delete_confirm: "Are you sure to delete this image?"
         destroy: "Delete"
+      new:
+        add_image: "Add Image"
+      create:
+        created: "Image added successfully"
+      form-common:
+        upload: "Upload Image"
   layouts:
     admin-links:
       dashboard: "Dashboard"
@@ -155,6 +161,7 @@ en:
       courses: "Courses"
       add_course: "Add Course"
       images: "Images"
+      add_image: "Add Image"
       users: "Users"
     public-links:
       home: "Home"
@@ -170,6 +177,7 @@ en:
       add_page: "Add Page"
       add_category: "Add Category"
       add_course: "Add Course"
+      add_image: "Add Image"
       edit_user: "Edit user"
       logout: "Log Out"
       languages: "Languages"

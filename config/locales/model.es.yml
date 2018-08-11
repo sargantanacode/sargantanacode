@@ -55,3 +55,10 @@ es:
         slug: "Slug"
         image: "Imagen"
         cover_image: "Imagen de portada"
+      image:
+        title_es: "Nombre"
+        description_es: "Descripción"
+        title_en: "Name"
+        description_en: "Description"
+        image: "Imagen"
+

@@ -143,6 +143,12 @@ es:
         edit: "Editar"
         delete_confirm: "¿Estás seguro de querer eliminar esta imagen?"
         destroy: "Eliminar"
+      new:
+        add_image: "Añadir imagen"
+      create:
+        created: "Imagen añadida con éxito"
+      form-common:
+        upload: "Subir imagen"
   layouts:
     admin-links:
       dashboard: "Administración"
@@ -155,6 +161,7 @@ es:
       courses: "Cursos"
       add_course: "Añadir curso"
       images: "Imágenes"
+      add_image: "Añadir imagen"
       users: "Usuarios"
     public-links:
       home: "Inicio"
@@ -170,6 +177,7 @@ es:
       add_page: "Añadir página"
       add_category: "Añadir categoría"
       add_course: "Añadir curso"
+      add_image: "Añadir imagen"
       edit_user: "Editar usuario"
       logout: "Salir"
       languages: "Idiomas"

@@ -1,0 +1,10 @@
+<% unless new_image %>
+  <%= image_tag image.image.url, :alt => image.title, :class => "post-header" %>
+<% end %>
+<% if image.errors.any? %>
+  <% image.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger" role="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
