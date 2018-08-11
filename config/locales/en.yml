@@ -131,6 +131,18 @@ en:
         image_help: "This will be the image associated with this course"
         cover_image_help: "This will be the default cover image for Posts without cover image"
         save: "Save"
+    images:
+      index:
+        images: "Images"
+        images_list_empty: "Currently there are no Images."
+        add_one_image: "You can upload one now!"
+        image: "Image"
+        title: "Title"
+        description: "Description"
+        actions: "Actions"
+        edit: "Edit"
+        delete_confirm: "Are you sure to delete this image?"
+        destroy: "Delete"
   layouts:
     admin-links:
       dashboard: "Dashboard"
@@ -142,6 +154,7 @@ en:
       add_category: "Add Category"
       courses: "Courses"
       add_course: "Add Course"
+      images: "Images"
       users: "Users"
     public-links:
       home: "Home"

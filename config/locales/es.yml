@@ -131,6 +131,18 @@ es:
         image_help: "Esta será la imagen que represente a este curso"
         cover_image_help: "Esta será la imagen de portada por defecto para los artículos que no tengan imagen"
         save: "Guardar"
+    images:
+      index:
+        images: "Imágenes"
+        images_list_empty: "Actualmente no hay ninguna imagen."
+        add_one_image: "¡Puedes subir una ahora!"
+        image: "Imagen"
+        title: "Título"
+        description: "Descripción"
+        actions: "Acciones"
+        edit: "Editar"
+        delete_confirm: "¿Estás seguro de querer eliminar esta imagen?"
+        destroy: "Eliminar"
   layouts:
     admin-links:
       dashboard: "Administración"
@@ -142,6 +154,7 @@ es:
       add_category: "Añadir categoría"
       courses: "Cursos"
       add_course: "Añadir curso"
+      images: "Imágenes"
       users: "Usuarios"
     public-links:
       home: "Inicio"
