@@ -290,3 +290,35 @@
     }
   }
 }
+
+.copy {
+  display: flex;
+  i {
+    align-self: center;
+  }
+  .fa {
+    color: $black;
+  }
+  .alert-copy {
+    position: relative;
+    margin-right: 20px;
+    padding: 0;
+    small {
+      top: 0;
+      background-color: $black;
+      color: $white;
+      text-transform: lowercase;
+      padding: 2px 2px 2px 4px;
+      &:after {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        left: 100%;
+        top: 3px;
+        border: 10px solid transparent;
+        border-left: 10px solid $black;
+      }
+    }
+  }
+}

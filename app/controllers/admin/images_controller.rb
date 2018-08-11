@@ -1,10 +1,13 @@
 class Admin::ImagesController < ApplicationController
   include ApplicationHelper
   before_action :only_admins
-  before_action :set_image, only: [:edit, :update, :destroy]
+  before_action :set_image, only: [:show, :edit, :update, :destroy]
 
   def index
     @images = Image.with_translations(I18n.locale)
+  end
+
+  def show
   end
 
   def new

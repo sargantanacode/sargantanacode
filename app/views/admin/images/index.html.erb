@@ -3,19 +3,24 @@
 <div class="col-12 content mb-3">
   <% unless @images.empty? %>
     <div class="responsive-header">
-      <div class="vw16 center"><%= t('.image') %></div>
+      <div class="vw20 center"><%= t('.image') %></div>
       <div class="vw30 center"><%= t('.title') %></div>
       <div class="vw40 center"><%= t('.description') %></div>
-      <div class="vw10 center"><%= t('.actions') %></div>
+      <div class="vw16 center"><%= t('.actions') %></div>
     </div>
     <% @images.each do |image| %>
       <div class="responsive-table">
-        <div class="vw16 center show-up-lg">
+        <div class="vw20 center show-up-lg">
           <%= image_tag image.image.url, :alt => image.title, :class => "no-radius" %>
         </div>
         <div class="vw30 first highlighted center"><%= image.title %></div>
         <div class="vw40"><%= image.description %></div>
-        <div class="vw10 center">
+        <div class="vw16 center">
+          <%= link_to admin_image_path(id: image.id),
+              :class => "btn btn-sm btn-info text-center" do %>
+            <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"
+              data-placement="top" title="<%= t('.view') %>"></i>
+          <% end %>
           <%= link_to edit_admin_image_path(id: image.id),
               :class => "btn btn-sm btn-primary text-center" do %>
             <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"

@@ -140,9 +140,16 @@ en:
         title: "Title"
         description: "Description"
         actions: "Actions"
+        view: "View"
         edit: "Edit"
         delete_confirm: "Are you sure to delete this image?"
         destroy: "Delete"
+      show:
+        image: "%{title}"
+        link: "Link"
+        link_copied: "Link copied"
+        markdown_link_es: "Enlace markdown"
+        markdown_link_en: "Markdown Link"
       new:
         add_image: "Add Image"
       create:

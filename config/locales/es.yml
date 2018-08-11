@@ -140,9 +140,16 @@ es:
         title: "Título"
         description: "Descripción"
         actions: "Acciones"
+        view: "Ver"
         edit: "Editar"
         delete_confirm: "¿Estás seguro de querer eliminar esta imagen?"
         destroy: "Eliminar"
+      show:
+        image: "%{title}"
+        link: "Enlace"
+        link_copied: "Enlace copiado"
+        markdown_link_es: "Enlace markdown"
+        markdown_link_en: "Markdown Link"
       new:
         add_image: "Añadir imagen"
       create:
