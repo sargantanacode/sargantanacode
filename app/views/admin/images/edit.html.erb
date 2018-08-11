@@ -1,2 +1,17 @@
-<h1>Admin::Images#edit</h1>
-<p>Find me in app/views/admin/images/edit.html.erb</p>
+<% content_for :title, t('.edit_image') %>
+
+<div class="col-10 mb-3">
+  <h2 class="text-center h2 mb-4"><%= t('.edit_image') %></h2>
+  <%= form_for @image, :url => admin_image_path do |f| %>
+    <div class="content mb-5">
+      <%= render 'form-header', image: @image, new_image: false %>
+      <%= render 'form-es', f: f %>
+    </div>
+    <div class="content mb-5">
+      <%= render 'form-en', f: f %>
+    </div>
+    <div class="content">
+      <%= render 'form-common', f: f %>
+    </div>
+  <% end %>
+</div>

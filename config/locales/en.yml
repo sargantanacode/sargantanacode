@@ -147,8 +147,12 @@ en:
         add_image: "Add Image"
       create:
         created: "Image added successfully"
+      edit:
+        edit_image: "Edit Image"
+      update:
+        saved: "Image changes have been saved successfully"
       form-common:
-        upload: "Upload Image"
+        save: "Save"
   layouts:
     admin-links:
       dashboard: "Dashboard"

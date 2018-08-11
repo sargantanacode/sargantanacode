@@ -1,6 +1,7 @@
 class Admin::ImagesController < ApplicationController
   include ApplicationHelper
   before_action :only_admins
+  before_action :set_image, only: [:edit, :update, :destroy]
 
   def index
     @images = Image.with_translations(I18n.locale)
@@ -23,12 +24,21 @@ class Admin::ImagesController < ApplicationController
   end
 
   def update
+    if @image.update(image_params)
+      redirect_to admin_images_path, notice: t('.saved')
+    else
+      render :edit
+    end
   end
 
   def destroy
   end
 
   private
+
+  def set_image
+    @image = Image.find(params[:id])
+  end
 
   def image_params
     permitted = Image.globalize_attribute_names + [:image]
