@@ -239,6 +239,8 @@ es:
       courses_list_empty: "Lo sentimos, actualmente no hay ningún curso publicado"
     show:
       course: "%{name}"
+      previous_page: "← página anterior"
+      next_page: "página siguiente →"
     courses-list:
       posts:
         one: "1 artículo"

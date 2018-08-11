@@ -10,5 +10,24 @@
   </div>
 </div>
 
-<%= render 'posts/post-list', posts: @course.posts.status(:published)
-    .type(:post).by_date.page(params[:page]) %>
+<% posts = @course.posts.status(:published).type(:post).oldest_first.page(params[:page]) %>
+
+<% posts.each_with_index do |post, index| %>
+  <% number = posts.current_page*(index+1)%>
+  <div class="col-12 px-0 mb-3 content courses-list">
+    <div class="courses-list__number"><p><%= number %></p></div>
+    <%= link_to post_path(id: post.slug) do %>
+      <div class="courses-list__content">
+        <h2 class="courses-list__title"><%= post.title %></h2>
+        <p class="courses-list__text"><%= post.excerpt %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<% if posts.total_pages > 1 %>
+  <div class="pagination col-12 d-flex justify-content-center mt-5">
+    <%= link_to_previous_page posts, t('.previous_page') %>
+    <%= link_to_next_page posts, t('.next_page') %>
+  </div>
+<% end %>

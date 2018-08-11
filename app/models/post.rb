@@ -32,6 +32,7 @@ class Post < ApplicationRecord
   scope :type, -> type { where(type: type) }
   scope :status, -> status { where(status: status) }
   scope :by_date, -> { order(Arel.sql('published_at IS NOT NULL, published_at DESC, updated_at DESC')) }
+  scope :oldest_first, -> { order(Arel.sql('published_at IS NOT NULL, published_at ASC, updated_at ASC')) }
   scope :by_views, -> { where('visits_count > 0').order(Arel.sql('visits_count DESC, published_at DESC')) }
 
   def update_visits_count
