@@ -180,7 +180,8 @@ en:
       home: "Home"
       courses: "Courses"
       categories: "Categories"
-      about_us: "About Us"
+      contact_form: "Contact us"
+      about_us: "About us"
     menu:
       login: "Log In"
       hello: "Hey, %{name}!"
@@ -248,3 +249,16 @@ en:
   profile:
     show:
       profile: "Profile for %{name}"
+  contact:
+    new:
+      contact_form: "Contact us"
+      send: "Send message"
+    create:
+      sended: "Email sended successfully"
+  mail_form:
+    attributes:
+      contact:
+        name: "Name"
+        email: "Email"
+        subject: "Subject"
+        message: "Message"
