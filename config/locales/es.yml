@@ -180,6 +180,7 @@ es:
       home: "Inicio"
       courses: "Cursos"
       categories: "Categorías"
+      search: "Buscador"
       contact_form: "Contacto"
       about_us: "Sobre nosotros"
     menu:
@@ -255,6 +256,12 @@ es:
       send: "Enviar mensaje"
     create:
       sended: "Correo electrónico enviado con éxito"
+  search:
+    index:
+      search: "Buscador"
+      search_message: "Desde este buscador encontrarás fácilmente el contenido que deseas en español. Escribe las palabras clave relacionadas con el tema que prefieras y se buscará tanto en títulos como en contenidos."
+      search_placeholder: "Escribe lo que quieras y pulsa la tecla intro"
+      term_not_found: "No se han encontrado resultados para el término \"%{term}\" en español"
   mail_form:
     attributes:
       contact:

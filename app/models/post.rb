@@ -34,6 +34,7 @@ class Post < ApplicationRecord
   scope :by_date, -> { order(Arel.sql('published_at IS NOT NULL, published_at DESC, updated_at DESC')) }
   scope :oldest_first, -> { order(Arel.sql('published_at IS NOT NULL, published_at ASC, updated_at ASC')) }
   scope :by_views, -> { where('visits_count > 0').order(Arel.sql('visits_count DESC, published_at DESC')) }
+  scope :search, -> term { where("title LIKE ? OR content LIKE ?", "%#{term}%", "%#{term}%") }
 
   def update_visits_count
     update(:visits_count => self.visits_count + 1) unless self.status == 'draft'

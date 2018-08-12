@@ -180,6 +180,7 @@ en:
       home: "Home"
       courses: "Courses"
       categories: "Categories"
+      search: "Search"
       contact_form: "Contact us"
       about_us: "About us"
     menu:
@@ -255,6 +256,12 @@ en:
       send: "Send message"
     create:
       sended: "Email sended successfully"
+  search:
+    index:
+      search: "Search"
+      search_message: "From this search form you'll easily find the content you want in English. Write the keywords related to the topic you want and the engine will search both title and content."
+      search_placeholder: "Write what you want and press the enter key"
+      term_not_found: "No results for \"%{term}\" term found in English"
   mail_form:
     attributes:
       contact:
