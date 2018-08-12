@@ -12,6 +12,13 @@ class PostsController < ApplicationController
   def show
     @post.update_visits_count unless defined?(current_user.admin?) && current_user.admin?
   end
+
+  def rss
+    @posts = Post.status(:published).type(:post).by_date.limit(30)
+    respond_to do |format|
+      format.atom { render :layout => false }
+    end
+  end
   
   private
 

@@ -1,4 +1,7 @@
 en:
+  main:
+    title: "SargantanaCode"
+    description: "SargantanaCode is a website where you can find different subjects related to computer science but mainly related to programming, with both Spanish and English free content"
   errors:
     access: "You have no Power here, Gandalf the Grey!"
   admin:
@@ -183,6 +186,7 @@ en:
       search: "Search"
       contact_form: "Contact us"
       about_us: "About us"
+      rss: "RSS"
     menu:
       login: "Log In"
       hello: "Hey, %{name}!"

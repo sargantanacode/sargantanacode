@@ -1,4 +1,7 @@
 es:
+  main:
+    title: "SargantanaCode"
+    description: "SargantanaCode es una web en la que podrás encontrar distintos temas relacionados con la informática pero sobre todo con la programación, con contenido gratuito y en español"
   errors:
     access: "¡Tú no tienes poder aquí, Gandalf el gris!"
   admin:
@@ -183,6 +186,7 @@ es:
       search: "Buscador"
       contact_form: "Contacto"
       about_us: "Sobre nosotros"
+      rss: "RSS"
     menu:
       login: "Entrar"
       hello: "¡Hola, %{name}!"
