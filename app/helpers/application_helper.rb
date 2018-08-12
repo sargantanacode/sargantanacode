@@ -3,12 +3,16 @@ module ApplicationHelper
     'active' if request.fullpath == path
   end
 
+  def active_exact_match?(path)
+    'active' if request.path == path
+  end
+
   def current_locale?(locale)
     'active' if I18n.locale == locale
   end
 
   def justify_content
-    list = %w[CategoriesController CoursesController PostsController ProfileController]
+    list = %w[CategoriesController CoursesController PostsController ProfileController SearchController]
     'justify-content-center' unless list.include? controller.class.name
   end
 

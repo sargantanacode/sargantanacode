@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :courses, only: [:index, :show]
     resources :profile, only: [:show]
     resources :contact, only: [:new, :create]
+    resources :search, only: [:index]
     root to: "posts#index", as: "homepage"
 
     # Simplifying public-zone's menu links
