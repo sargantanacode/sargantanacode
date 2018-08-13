@@ -222,12 +222,6 @@ en:
       info_prev: "The previous post of this course is %{href}"
       info_next: "The next post of this course is %{href}"
       info_prev_next: "The previous post of this course is %{href_prev} and the next one is %{href_next}."
-  admins:
-    new:
-      new_admin: "New Admin"
-      save: "Save"
-    create:
-      created: "Admin user created successfully. You will receive an email with instructions for how to confirm your email address in a few minutes."
   categories:
     index:
       categories: "Categories"
@@ -250,23 +244,28 @@ en:
       posts:
         one: "1 post"
         other: "%{count} posts"
-  profile:
-    show:
+  pages:
+    admin:
+      new_admin: "New Admin"
+      save: "Save"
+    create_admin:
+      created: "Admin user created successfully. You will receive an email with instructions for how to confirm your email address in a few minutes."
+    profile:
       profile: "Profile for %{name}"
-  contact:
-    new:
+    contact:
       contact_form: "Contact us"
       send: "Send message"
-    create:
+    create_contact:
       sended: "Email sended successfully"
-  search:
-    index:
+    about_us:
+      about_us: "About us"
+      about_us_not_found: "This section is not available yet"
+    search:
       search: "Search"
       search_message: "From this search form you'll easily find the content you want in English. Write the keywords related to the topic you want and the engine will search both title and content."
       search_placeholder: "Write what you want and press the enter key"
       term_not_found: "No results for \"%{term}\" term found in English"
-  team:
-    index:
+    team:
       team: "Team"
       team?members: "Currently there are no members on the team"
   mail_form:

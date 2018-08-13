@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   
   def index
     if users_count == 0
-      redirect_to new_admin_path, notice: t('.new_admin')
+      redirect_to admin_path, notice: t('.new_admin')
     end
     @posts = Post.status(:published).type(:post).by_date.page(params[:page])
   end

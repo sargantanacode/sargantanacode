@@ -222,12 +222,6 @@ es:
       info_prev: "El anterior artículo de este curso es %{href}."
       info_next: "El próximo artículo de este curso es %{href}."
       info_prev_next: "El anterior artículo de este curso es %{href_prev} y el próximo es %{href_next}."
-  admins:
-    new:
-      new_admin: "Crear admin"
-      save: "Guardar"
-    create:
-      created: "Administrador creado. Recibirás un email con las instrucciones para confirmar tu correo electrónico en unos minutos."
   categories:
     index:
       categories: "Categorías"
@@ -250,23 +244,28 @@ es:
       posts:
         one: "1 artículo"
         other: "%{count} artículos"
-  profile:
-    show:
+  pages:
+    admin:
+      new_admin: "Crear admin"
+      save: "Guardar"
+    create_admin:
+      created: "Administrador creado. Recibirás un email con las instrucciones para confirmar tu correo electrónico en unos minutos."
+    profile:
       profile: "Perfil de %{name}"
-  contact:
-    new:
+    contact:
       contact_form: "Contacto"
       send: "Enviar mensaje"
-    create:
+    create_contact:
       sended: "Correo electrónico enviado con éxito"
-  search:
-    index:
+    about_us:
+      about_us: "Sobre nosotros"
+      about_us_not_found: "Por el momento no está disponible esta sección"
+    search:
       search: "Buscador"
       search_message: "Desde este buscador encontrarás fácilmente el contenido que deseas en español. Escribe las palabras clave relacionadas con el tema que prefieras y se buscará tanto en títulos como en contenidos."
       search_placeholder: "Escribe lo que quieras y pulsa la tecla intro"
       term_not_found: "No se han encontrado resultados para el término \"%{term}\" en español"
-  team:
-    index:
+    team:
       team: "Equipo"
       no_team_members: "Actualmente no hay miembros en el equipo"
   mail_form:

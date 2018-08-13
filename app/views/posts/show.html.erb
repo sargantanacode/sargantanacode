@@ -2,24 +2,7 @@
 
 <%= render 'toolbar' %>
 
-<div class="col-12 content mb-4">
-  <% unless @post.type == 'static' %>
-    <span class="date-badge">
-      <%= @post.published_at.strftime('%d/%m/%Y') if @post.status == 'published' %>
-      <%= @post.translated_status if @post.status == 'draft' %>
-    </span>
-    <span class="category-badge">
-      <%= link_to @post.category.name, category_path(id: @post.category.slug),
-        :class => "badge-link" %>
-    </span>
-     <%= image_tag post_image(@post), :alt => @post.title, :class => "post-header" %>
-  <% end %>
-  <h2 class="post-title"><%= @post.title %></h2>
-  <div class="post-body">
-    <%= raw markdown @post.content %>
-    <%= render 'course-info' unless @post.course.blank? || @post.status == 'draft' %>
-  </div>
-</div>
+<%= render 'post' %>
 
 <%= render 'social-buttons' %>
 

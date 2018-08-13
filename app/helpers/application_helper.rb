@@ -18,10 +18,9 @@ module ApplicationHelper
   def pages_active?(posts, pages)
     'show active' if posts.empty? unless pages.empty?
   end
-  
 
   def justify_content
-    list = %w[CategoriesController CoursesController PostsController ProfileController SearchController]
+    list = %w[CategoriesController CoursesController PostsController PagesController]
     'justify-content-center' unless list.include? controller.class.name
   end
 
