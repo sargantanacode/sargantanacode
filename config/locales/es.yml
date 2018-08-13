@@ -80,7 +80,7 @@ es:
     categories:
       index:
         categories: "Categorías"
-        categories_list_empty: "Actualmente no hay ninguna categoría creado."
+        categories_list_empty: "Actualmente no hay ninguna categoría creado. %{href}"
         add_one_category: "¡Puedes crear una ahora!"
         image: "Imagen"
         name: "Nombre"
@@ -108,7 +108,7 @@ es:
     courses:
       index:
         courses: "Cursos"
-        courses_list_empty: "Actualmente no hay ningún curso creado."
+        courses_list_empty: "Actualmente no hay ningún curso creado. %{href}"
         add_one_course: "¡Puedes crear uno ahora!"
         image: "Imagen"
         name: "Nombre"
