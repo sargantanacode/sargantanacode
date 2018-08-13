@@ -30,8 +30,7 @@ en:
         posts_pages: "Posts and Pages"
         posts: "Posts"
         pages: "Pages"
-        posts_list_empty: "Sorry, there are currently no posts added."
-        pages_list_empty: "Sorry, there are currently no pages added."
+        posts_list_empty: "Sorry, there are currently no posts added. %{href}"
         publish_something: "Publish something!"
       posts-list-header:
         title: "Title"
@@ -137,7 +136,7 @@ en:
     images:
       index:
         images: "Images"
-        images_list_empty: "Currently there are no Images."
+        images_list_empty: "Currently there are no Images. %{href}"
         add_one_image: "You can upload one now!"
         image: "Image"
         title: "Title"

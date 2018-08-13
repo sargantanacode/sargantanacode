@@ -11,6 +11,15 @@ module ApplicationHelper
     'active' if I18n.locale == locale
   end
 
+  def posts_active?(posts)
+    'show active' unless posts.empty?
+  end
+
+  def pages_active?(posts, pages)
+    'show active' if posts.empty? unless pages.empty?
+  end
+  
+
   def justify_content
     list = %w[CategoriesController CoursesController PostsController ProfileController SearchController]
     'justify-content-center' unless list.include? controller.class.name

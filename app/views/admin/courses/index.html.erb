@@ -1,7 +1,7 @@
 <% content_for :title, t('.courses') %>
 
-<div class="col-12 content mb-3">
-  <% unless @courses.empty? %>
+<% unless @courses.empty? %>
+  <div class="col-12 content mb-3">
     <div class="responsive-header">
       <div class="vw10 center"><%= t('.image') %></div>
       <div class="vw20 center"><%= t('.name') %></div>
@@ -37,10 +37,8 @@
         </div>
       </div>
     <% end %>
-  <% else %>
-    <div class="alert alert-danger" role="alert">
-      <%= t('.courses_list_empty') %>
-      <%= link_to t('.add_one_course'), new_admin_course_path %>
-    </div>
-  <% end %>
-</div>
+  </div>
+<% else %>
+  <% content_for :notice, raw(t('.courses_list_empty',
+    href: link_to(t('.add_one_course'), new_admin_course_path))) %>
+<% end %>

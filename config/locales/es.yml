@@ -30,8 +30,7 @@ es:
         posts_pages: "Artículos y páginas"
         posts: "Artículos"
         pages: "Páginas"
-        posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado."
-        pages_list_empty: "Lo sentimos, actualmente no hay ninguna página publicada."
+        posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado. %{href}"
         publish_something: "¡Publica algo!"
       posts-list-header:
         title: "Título"
@@ -137,7 +136,7 @@ es:
     images:
       index:
         images: "Imágenes"
-        images_list_empty: "Actualmente no hay ninguna imagen."
+        images_list_empty: "Actualmente no hay ninguna imagen. %{href}"
         add_one_image: "¡Puedes subir una ahora!"
         image: "Imagen"
         title: "Título"

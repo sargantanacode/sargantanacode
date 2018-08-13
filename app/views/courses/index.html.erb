@@ -1,9 +1,7 @@
 <% content_for :title, t('.courses') %>
 
-<% if @courses.empty? %>
-  <div class="alert alert-info" role="alert">
-    <%= t('.courses_list_empty') %>
-  </div>
-<% else %>
+<% unless @courses.empty? %>
   <%= render 'courses-list' %>
+<% else %>
+  <% content_for :notice, t('.courses_list_empty') %>
 <% end %>
