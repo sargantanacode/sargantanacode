@@ -1,0 +1,9 @@
+<% content_for :title, t('.team') %>
+
+<% unless @users.empty? %>
+  <% @users.each do |user| %>
+    <%= render 'posts/user-profile', user: user, team: true %>
+  <% end %>
+<% else %>
+  <% content_for :notice, t('.no_team_members') %>
+<% end %>

@@ -266,6 +266,10 @@ en:
       search_message: "From this search form you'll easily find the content you want in English. Write the keywords related to the topic you want and the engine will search both title and content."
       search_placeholder: "Write what you want and press the enter key"
       term_not_found: "No results for \"%{term}\" term found in English"
+  team:
+    index:
+      team: "Team"
+      team?members: "Currently there are no members on the team"
   mail_form:
     attributes:
       contact:
