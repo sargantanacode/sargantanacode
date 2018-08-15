@@ -61,4 +61,9 @@ es:
         title_en: "Name"
         description_en: "Description"
         image: "Imagen"
+      comment:
+        author: "Nombre"
+        email: "Correo electrónico"
+        url: "Página web"
+        comment: "Comentario"
 

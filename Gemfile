@@ -21,6 +21,7 @@ gem 'redcarpet'
 gem 'rouge'
 gem 'kaminari'
 gem 'mail_form'
+gem 'closure_tree'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

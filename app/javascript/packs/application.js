@@ -89,3 +89,33 @@ if (document.body.contains(copyMarkdownImageEn)) {
     }
   }, false)
 }
+
+let replyButton = document.querySelectorAll('.reply-button')
+if (replyButton) {
+  for (let i = 0; i < replyButton.length; i++) {
+    replyButton[i].addEventListener('click', () => {
+      let id = replyButton[i].getAttribute('id')
+      let parentId = document.getElementById('comment_parent_id')
+      let newComment = document.getElementById('new-comment')
+      let comment = document.getElementById('comment-' + id)
+      let cancelButton = document.getElementById('cancel-reply-' + id)
+      let commentSection = comment.parentNode
+      replyButton[i].classList.add('hidden')
+      cancelButton.classList.remove('hidden')
+      parentId.value = id
+      commentSection.insertBefore(newComment, comment.nextSibling)
+      newComment.classList.remove('mt-5')
+      newComment.classList.add('mb-2')
+      cancelButton.addEventListener('click', () => {
+        replyButton[i].classList.remove('hidden')
+        cancelButton.classList.add('hidden')
+        newComment.classList.add('mt-5')
+        newComment.classList.remove('mb-2')
+        parentId.value = ''
+        let comments = document.getElementById('comments')
+        let commentSection = comments.parentNode
+        commentSection.insertBefore(newComment, comments.nextSibling)
+      }, false)
+    }, false)
+  }
+}

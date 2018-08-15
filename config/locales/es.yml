@@ -208,6 +208,8 @@ es:
     index:
       posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
       new_admin: "Antes de empezar necesitas crear un administrador"
+    show:
+      comments: "Comentarios"
     post-list:
       previous_page: "← página anterior"
       next_page: "página siguiente →"
@@ -222,6 +224,15 @@ es:
       info_prev: "El anterior artículo de este curso es %{href}."
       info_next: "El próximo artículo de este curso es %{href}."
       info_prev_next: "El anterior artículo de este curso es %{href_prev} y el próximo es %{href_next}."
+  comments:
+    comment:
+      reply: "Responder"
+      cancel-reply: "Cancelar respuesta"
+    form:
+      new_comment: "Nuevo comentario"
+      anonymous_user_message: "Escribe tu nombre y correo electrónico para poder comentar, o %{href} para que estos campos se rellenen automáticamente."
+      login: "inicia sesión"
+      send: "Enviar comentario"
   categories:
     index:
       categories: "Categorías"

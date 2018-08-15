@@ -86,3 +86,15 @@ blockquote {
 .hidden {
   display: none;
 }
+
+ul.no-padding {
+  list-style-type: none;
+  padding-left: 0;
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    @include breakpoint-up(md) {
+      margin-left: 5%;
+    }
+  }
+}

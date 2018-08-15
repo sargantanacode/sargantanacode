@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   include ApplicationHelper
-  before_action :set_post, only: [:show]
+  before_action :set_post, only: [:show, :comment]
   
   def index
     if users_count == 0
@@ -11,6 +11,8 @@ class PostsController < ApplicationController
 
   def show
     @post.update_visits_count unless defined?(current_user.admin?) && current_user.admin?
+    @comments = @post.comments.hash_tree
+    @comment = @post.comments.build
   end
 
   def rss
@@ -19,10 +21,36 @@ class PostsController < ApplicationController
       format.atom { render :layout => false }
     end
   end
+
+  def comment
+    parent_id = params[:comment][:parent_id]
+    if parent_id.to_i > 0
+      logger.debug "* Parent id: #{parent_id}"
+      parent = Comment.find_by(id: parent_id)
+      logger.debug "* Parent: #{parent}"
+      @comment = parent.children.build(comment_params)
+      @comment.post_id = @post.id
+      logger.debug "* Comment: #{@comment}"
+    else
+      @comment = @post.comments.build(comment_params)
+    end
+
+    if @comment.save
+      flash[:success] = 'Comentario enviado'
+      redirect_back(fallback_location: homepage_path)
+    else
+      flash[:notice] = 'Hubo un error'
+      redirect_back(fallback_location: homepage_path)
+    end
+  end
   
   private
 
   def set_post
     @post = Post.friendly.find(params[:id])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:parent_id, :ip, :author, :email, :url, :comment)
   end
 end

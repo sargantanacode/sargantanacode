@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users
     get "post/:id" => "posts#show", as: "post"
+    post "post/:id/comments" => "posts#comment", as: "comments"
     get "new-admin" => "pages#admin", as: "admin"
     post "new-admin/new" => "pages#create_admin", as: "admin_new"
     get "categories" => "categories#index", as: "categories"
@@ -15,7 +16,6 @@ Rails.application.routes.draw do
     get "team" => "pages#team", as: "team"
     get "rss" => "posts#rss", format: "atom", as: "rss"
     get "about-us" => "pages#about_us", as: "about_us"
-    resources :comments, only: [:index, :new, :create]
     root to: "posts#index", as: "homepage"
 
     # Redirecting old links for the new ones

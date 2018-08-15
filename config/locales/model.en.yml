@@ -61,3 +61,8 @@ en:
         title_en: "Name"
         description_en: "Description"
         image: "Image"
+      comment:
+        author: "Author"
+        email: "Email"
+        url: "Website"
+        comment: "Comment"

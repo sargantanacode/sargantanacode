@@ -208,6 +208,8 @@ en:
     index:
       posts_list_empty: "Sorry, there are currently no posts added."
       new_admin: "Before you start you need to create an admin user"
+    show:
+      comments: "Comments"
     post-list:
       previous_page: "← previous page"
       next_page: "next page →"
@@ -222,6 +224,15 @@ en:
       info_prev: "The previous post of this course is %{href}"
       info_next: "The next post of this course is %{href}"
       info_prev_next: "The previous post of this course is %{href_prev} and the next one is %{href_next}."
+  comments:
+    comment:
+      reply: "Reply"
+      cancel-reply: "Cancel reply"
+    form:
+      new_comment: "New comment"
+      anonymous_user_message: "Enter your name and email to comment, or %{href} and these fields will be filled in automatically"
+      login: "sign in"
+      send: "Send comment"
   categories:
     index:
       categories: "Categories"
