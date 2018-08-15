@@ -17,18 +17,18 @@ class Comment < ApplicationRecord
     update(:status => :pending)
   end
 
-  def author_with_link(class_name)
+  def author_with_link(class_name = nil)
     class_name = class_name.blank? ? "" : "class=\"#{class_name}\""
     return "<a href=\"#{self.url}\" #{class_name}>#{self.author}</a>" unless self.url.blank?
     self.author
   end
 
-  def email_with_link(class_name)
+  def email_with_link(class_name = nil)
     class_name = class_name.blank? ? "" : "class=\"#{class_name}\""
     "<a href=\"mailto:#{self.email}\" #{class_name}>#{self.email}</a>"
   end
 
-  def ip_with_lookup_link(class_name)
+  def ip_with_lookup_link(class_name = nil)
     class_name = class_name.blank? ? "" : "class=\"#{class_name}\""
     "<a href=\"https://whatismyipaddress.com/ip/#{self.ip}\" target=\"_blank\" #{class_name}>#{self.ip}</a>"
   end
