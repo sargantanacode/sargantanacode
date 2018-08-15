@@ -166,7 +166,7 @@ es:
       update:
         saved: "Los cambios realizados en la imagen han sido guardados correctamente"
       destroy:
-        destroyed: "La imagen ha sido eliminado correctamente"
+        destroyed: "La imagen ha sido eliminada correctamente"
       form-common:
         save: "Guardar"
     comments:
@@ -174,6 +174,10 @@ es:
         comments: "Comentarios"
       approve:
         approved: "El comentario ha sudo publicado con éxito"
+      update:
+        saved: "Los cambios realizados en el comentario han sido guardados correctamente"
+      destroy:
+        destroyed: "El comentario ha sido eliminado correctamente"
       comments-list-header:
         author: "Nombre"
         comment: "Comentario"
