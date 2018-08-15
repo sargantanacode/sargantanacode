@@ -34,6 +34,10 @@ en:
         status_list:
           draft: "Draft"
           published: "Published"
+        comment_status_l: "Comments Status"
+        comment_status_list:
+          closed: "Closed"
+          opened: "Opened"
         image: "Image (1840x720)"
         type_l: "Type"
         type_list:

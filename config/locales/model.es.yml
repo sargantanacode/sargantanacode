@@ -34,6 +34,10 @@ es:
         status_list:
           draft: "Borrador"
           published: "Publicado"
+        comment_status_l: "Estado de los comentarios"
+        comment_status_list:
+          closed: "Cerrados"
+          opened: "Abiertos"
         image: "Imagen (1840x720)"
         type_l: "Tipo"
         type_list:

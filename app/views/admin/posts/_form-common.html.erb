@@ -1,3 +1,5 @@
+<% comment_status = defined?(@post) ? @post.comment_status : :opened %>
+
 <% unless new_post %>
   <div class="form-group">
     <%= f.label :author %>
@@ -32,6 +34,17 @@
   <%= f.text_field :slug, :class => "form-control" %>
   <small id="slugHelp" class="form-text text-muted"><%= t('.slug_help') %></small>
 </div>
+
+<% unless type == 'static' %>
+  <div class="form-group">
+    <%= f.label :comment_status_l %>
+    <%= f.select :comment_status, options_for_select(f.object.class.translated_comment_statuses.map {
+          |translation, k, _v| [translation, k]
+        }, selected: comment_status), {}, :class => "form-control" %>
+  </div>
+<% else %>
+  <%= f.hidden_field :comment_status, :value => :closed %>
+<% end %>
 
 <div class="form-group">
   <%= f.label :image %>

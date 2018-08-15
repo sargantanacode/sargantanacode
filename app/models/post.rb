@@ -25,6 +25,8 @@ class Post < ApplicationRecord
   translate_enum :type
   enum status: [:draft, :published]
   translate_enum :status
+  enum comment_status: [:closed, :opened]
+  translate_enum :comment_status
 
   mount_uploader :image, ImageUploader
 

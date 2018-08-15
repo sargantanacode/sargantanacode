@@ -19,4 +19,12 @@
   </div>
 <% end %>
 
-<%= render 'comments/form' %>
+<% if @post.opened? %>
+  <%= render 'comments/form' %>
+<% else %>
+  <% if @post.post? %>
+    <div class="alert alert-info col-12">
+      <%= t('.closed_comments') %>
+    </div>
+  <% end %>
+<% end %>

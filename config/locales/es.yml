@@ -210,6 +210,10 @@ es:
       new_admin: "Antes de empezar necesitas crear un administrador"
     show:
       comments: "Comentarios"
+      closed_comments: "Los comentarios están cerrados en este momento"
+    comment:
+      sended: "Tu comentario ha sido añadido con éxito"
+      failed: "Algo salió mal al enviar tu comentario"
     post-list:
       previous_page: "← página anterior"
       next_page: "página siguiente →"

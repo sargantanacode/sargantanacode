@@ -5,7 +5,7 @@
     </div>
     <div class="comment__content">
       <div class="comment__header">
-        <% if comment.url %>
+        <% unless comment.url.blank? %>
           <a href="<%= comment.url %>"><h2><%= comment.author %></h2></a>
         <% else %>
           <h2><%= comment.author %></h2>

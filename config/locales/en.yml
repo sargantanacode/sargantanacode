@@ -210,6 +210,10 @@ en:
       new_admin: "Before you start you need to create an admin user"
     show:
       comments: "Comments"
+      closed_comments: "The comments are closed for the moment"
+    comment:
+      sended: "Your comment has been added successfully"
+      failed: "Something went wrong when sending your comment"
     post-list:
       previous_page: "← previous page"
       next_page: "next page →"

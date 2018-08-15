@@ -25,21 +25,18 @@ class PostsController < ApplicationController
   def comment
     parent_id = params[:comment][:parent_id]
     if parent_id.to_i > 0
-      logger.debug "* Parent id: #{parent_id}"
       parent = Comment.find_by(id: parent_id)
-      logger.debug "* Parent: #{parent}"
       @comment = parent.children.build(comment_params)
       @comment.post_id = @post.id
-      logger.debug "* Comment: #{@comment}"
     else
       @comment = @post.comments.build(comment_params)
     end
 
     if @comment.save
-      flash[:success] = 'Comentario enviado'
+      flash[:notice] = t('.sended')
       redirect_back(fallback_location: homepage_path)
     else
-      flash[:notice] = 'Hubo un error'
+      flash[:notice] = t('.failed')
       redirect_back(fallback_location: homepage_path)
     end
   end
