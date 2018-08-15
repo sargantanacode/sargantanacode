@@ -53,6 +53,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    akismet (2.0.0)
     arel (9.0.0)
     bcrypt (3.1.12)
     bindex (0.5.0)
@@ -276,6 +277,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  akismet
   bootsnap (>= 1.1.0)
   byebug
   capybara

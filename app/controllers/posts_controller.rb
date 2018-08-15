@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   def show
     @post.update_visits_count unless defined?(current_user.admin?) && current_user.admin?
-    @comments = @post.comments.hash_tree
+    @comments = @post.comments.approved.hash_tree
     @comment = @post.comments.build
   end
 
@@ -32,8 +32,17 @@ class PostsController < ApplicationController
       @comment = @post.comments.build(comment_params)
     end
 
+    is_spam = comment_is_spam?(request, @comment)
+
+    if is_spam
+      @comment.status = :pending
+    else
+      @comment.status = :approved
+    end
+
     if @comment.save
-      flash[:notice] = t('.sended')
+      flash[:notice] = t('.sended') unless is_spam
+      flash[:alert] = t('.spam_detected') if is_spam
       redirect_back(fallback_location: homepage_path)
     else
       flash[:notice] = t('.failed')

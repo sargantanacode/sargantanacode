@@ -10,7 +10,7 @@
   <%= render 'user-profile', user: @post.user %>
 <% end %>
 
-<% if @post.comments.count > 0 %>
+<% if @post.comments.approved.count > 0 %>
   <div id="comments" class="mt-3 col-12 px-md-0">
     <h2 class="text-center mb-4"><%= t('.comments') %></h2>
     <ul class="no-padding">

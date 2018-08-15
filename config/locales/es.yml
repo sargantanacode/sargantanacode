@@ -213,6 +213,7 @@ es:
       closed_comments: "Los comentarios están cerrados en este momento"
     comment:
       sended: "Tu comentario ha sido añadido con éxito"
+      spam_detected: "Tu comentario ha sido marcado como spam y no será publicado hasta que se revise manualmente"
       failed: "Algo salió mal al enviar tu comentario"
     post-list:
       previous_page: "← página anterior"

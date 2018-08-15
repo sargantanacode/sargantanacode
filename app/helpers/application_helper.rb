@@ -121,4 +121,15 @@ module ApplicationHelper
           (nested_comments.size > 0 ? content_tag(:ul, comments_tree_for(nested_comments), class: "replies") : nil)
     end.join.html_safe
   end
+
+  def comment_is_spam?(request, comment)
+    params = {
+      text: comment.comment,
+      author: comment.author,
+      author_email: comment.email,
+      author_url: comment.url,
+      referrer: request.referrer,
+    }
+    Akismet.spam?(request.ip, request.user_agent, params)
+  end
 end
