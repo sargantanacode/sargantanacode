@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get "team" => "pages#team", as: "team"
     get "rss" => "posts#rss", format: "atom", as: "rss"
     get "about-us" => "pages#about_us", as: "about_us"
+    resources :comments, only: [:index, :new, :create]
     root to: "posts#index", as: "homepage"
 
     # Redirecting old links for the new ones
