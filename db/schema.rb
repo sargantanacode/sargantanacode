@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_135731) do
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "post_id", null: false
     t.integer "parent_id"
-    t.integer "status"
+    t.integer "status", default: 1
     t.string "author", null: false
     t.string "email", null: false
     t.string "url"

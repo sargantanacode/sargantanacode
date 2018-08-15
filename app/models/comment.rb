@@ -10,4 +10,8 @@ class Comment < ApplicationRecord
   def to_s
     self.comment
   end
+
+  def spam
+    update(:status => :pending)
+  end
 end

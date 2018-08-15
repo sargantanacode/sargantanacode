@@ -3,7 +3,7 @@ class CreateComments < ActiveRecord::Migration[5.2]
     create_table :comments do |t|
       t.references :post, foreign_key: true, null: false
       t.integer :parent_id
-      t.integer :status
+      t.integer :status, default: 1
       t.string :author, null: false
       t.string :email, null: false
       t.string :url
