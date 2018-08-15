@@ -33,6 +33,7 @@ Rails.application.routes.draw do
       resources :images
       resources :comments, except: [:new, :show, :create] do
         put :approve, as: "approve"
+        put :spam, as: "spam"
       end
       root to: "dashboard#index", as: "dashboard"
     end
