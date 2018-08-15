@@ -8,9 +8,12 @@ es:
     dashboard:
       index:
         dashboard: "Administración"
+        pending_comments: "Comentarios pendientes"
+        last_comments: "Últimos comentarios"
         last_posts: "Últimos artículos"
         last_drafts: "Últimos borradores"
         more_visited_posts: "Artículos más visitados"
+        more_commented_posts: "Artículos más comentados"
     posts:
       new:
         add_post: "Añadir artículo"
@@ -36,11 +39,13 @@ es:
         title: "Título"
         published: "Publicado"
         visits-count: "Visitas"
+        comments-count: "Comentarios"
         actions: "Acciones"
       posts-list:
         title: "Título"
         published: "Publicado"
         visits-count: "Visitas"
+        comments-count: "Comentarios"
         actions: "Acciones"
         view: "Ver"
         edit: "Editar"
@@ -167,9 +172,11 @@ es:
     comments:
       index:
         comments: "Comentarios"
+      comments-list-header:
         author: "Nombre"
         comment: "Comentario"
         actions: "Acciones"
+      comments-list:
         view: "Ver"
         approve: "Aprobar comentario"
         edit: "Editar"

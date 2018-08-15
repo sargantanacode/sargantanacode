@@ -139,6 +139,11 @@
     > :nth-child(even) {
       background-color: $red;
     }
+    &:nth-of-type(even) {
+      @include breakpoint-up(lg) {
+        background-color: $red;
+      }
+    }
     background-color: $red;
     a.alternative {
       color: $spam-comment-link;

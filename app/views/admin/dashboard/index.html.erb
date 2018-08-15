@@ -1,6 +1,26 @@
 <% content_for :title, t('.dashboard') %>
 
 <div class="col-12 mb-3">
+  <% unless @spam_comments.empty? %>
+    <h2 class="text-center h2 mb-4"><%= t('.pending_comments') %></h2>
+    <div class="content mb-5">
+      <%= render 'admin/comments/comments-list-header' %>
+      <% @spam_comments.each do |comment| %>
+        <%= render 'admin/comments/comments-list', comment: comment %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% unless @comments.empty? %>
+    <h2 class="text-center h2 mb-4"><%= t('.last_comments') %></h2>
+    <div class="content mb-5">
+      <%= render 'admin/comments/comments-list-header' %>
+      <% @comments.each do |comment| %>
+        <%= render 'admin/comments/comments-list', comment: comment %>
+      <% end %>
+    </div>
+  <% end %>
+
   <% unless @posts.empty? %>
     <h2 class="text-center h2 mb-4"><%= t('.last_posts') %></h2>
     <div class="content mb-5">
@@ -21,12 +41,22 @@
     </div>
   <% end %>
 
-    <% unless @visits.empty? %>
+    <% unless @max_visits.empty? %>
     <h2 class="text-center h2 mb-4"><%= t('.more_visited_posts') %></h2>
     <div class="content mb-5">
       <%= render 'admin/posts/posts-list-header' %>
-      <% @visits.each do |visit| %>
-        <%= render 'admin/posts/posts-list', post: visit %>
+      <% @max_visits.each do |post| %>
+        <%= render 'admin/posts/posts-list', post: post %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% unless @max_comments.empty? %>
+    <h2 class="text-center h2 mb-4"><%= t('.more_commented_posts') %></h2>
+    <div class="content mb-5">
+      <%= render 'admin/posts/posts-list-header' %>
+      <% @max_comments.each do |post| %>
+        <%= render 'admin/posts/posts-list', post: post %>
       <% end %>
     </div>
   <% end %>
