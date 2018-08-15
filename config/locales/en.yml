@@ -174,8 +174,8 @@ en:
         comments: "Comments"
       approve:
         approved: "Comment successfully published"
-      spam:
-        spam: "Comment successfully marked as spam"
+      pend:
+        pended: "Comment successfully marked as pending"
       edit:
         edit_comment: "Edit Comment"
       form:
@@ -191,7 +191,7 @@ en:
       comments-list:
         view: "View"
         approve: "Approve comment"
-        spam: "Mark as Spam"
+        pend: "Mark as Pending"
         edit: "Edit"
         delete_confirm: "Are you sure to delete this comment?"
         destroy: "Delete"

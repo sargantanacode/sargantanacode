@@ -2,7 +2,7 @@ class Admin::CommentsController < ApplicationController
   include ApplicationHelper
   before_action :only_admins
   before_action :set_comment, only: [:edit, :update, :destroy]
-  before_action :set_comment_id, only: [:approve, :spam]
+  before_action :set_comment_id, only: [:approve, :pend]
 
   def index
     @comments = Comment.by_date
@@ -32,9 +32,9 @@ class Admin::CommentsController < ApplicationController
     redirect_back(fallback_location: admin_dashboard_path)
   end
 
-  def spam
-    @comment.spam
-    flash[:notice] = t('.spam')
+  def pend
+    @comment.pend
+    flash[:notice] = t('.pended')
     redirect_back(fallback_location: admin_dashboard_path)
   end
 

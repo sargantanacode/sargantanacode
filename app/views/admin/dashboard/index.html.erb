@@ -1,11 +1,11 @@
 <% content_for :title, t('.dashboard') %>
 
 <div class="col-12 mb-3">
-  <% unless @spam_comments.empty? %>
+  <% unless @pending_comments.empty? %>
     <h2 class="text-center h2 mb-4"><%= t('.pending_comments') %></h2>
     <div class="content mb-5">
       <%= render 'admin/comments/comments-list-header' %>
-      <% @spam_comments.each do |comment| %>
+      <% @pending_comments.each do |comment| %>
         <%= render 'admin/comments/comments-list', comment: comment %>
       <% end %>
     </div>

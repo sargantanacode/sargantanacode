@@ -22,10 +22,10 @@
         <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"
           data-placement="top" title="<%= t('.view') %>"></i>
       <% end %>
-      <%= link_to admin_comment_spam_path(comment_id: comment.id), :method => :put,
+      <%= link_to admin_comment_pend_path(comment_id: comment.id), :method => :put,
           :class => "btn btn-sm btn-warning text-center" do %>
         <i class="fa fa-thumbs-down" aria-hidden="true" data-toggle="tooltip"
-          data-placement="top" title="<%= t('.spam') %>"></i>
+          data-placement="top" title="<%= t('.pend') %>"></i>
       <% end %>
       <%= link_to edit_admin_comment_path(id: comment.id),
           :class => "btn btn-sm btn-primary text-center" do %>

@@ -16,7 +16,7 @@ class Comment < ApplicationRecord
     self.comment
   end
 
-  def spam
+  def pend
     update(:status => :pending)
   end
 

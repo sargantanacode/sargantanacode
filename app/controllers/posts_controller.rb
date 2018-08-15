@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     end
 
     is_spam = comment_is_spam?(request, @comment)
-    @comment.spam if is_spam
+    @comment.pend if is_spam
 
     if @comment.save
       flash[:notice] = t('.sended') unless is_spam

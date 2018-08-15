@@ -174,8 +174,8 @@ es:
         comments: "Comentarios"
       approve:
         approved: "El comentario ha sido publicado con éxito"
-      spam:
-        spam: "El comentario ha sido marcado como spam"
+      pend:
+        pended: "El comentario ha sido marcado como pendiente"
       edit:
         edit_comment: "Editar comentario"
       form:
@@ -191,7 +191,7 @@ es:
       comments-list:
         view: "Ver"
         approve: "Aprobar comentario"
-        spam: "Marcar como spam"
+        pend: "Marcar como pendiente"
         edit: "Editar"
         delete_confirm: "¿Estás seguro de querer eliminar este comentario?"
         destroy: "Eliminar"
