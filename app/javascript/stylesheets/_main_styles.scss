@@ -18,7 +18,7 @@ body {
       color: $entry-link;
     }
   }
-  a:not(.btn):not(.badge-link):not(.page-link):not(.social-btn) {
+  a:not(.btn):not(.badge-link):not(.page-link):not(.social-btn):not(.alternative) {
     color: $entry-link;
     &:hover {
       text-decoration: none;

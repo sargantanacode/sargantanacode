@@ -164,6 +164,17 @@ en:
         destroyed: "Image successfully deleted"
       form-common:
         save: "Save"
+    comments:
+      index:
+        comments: "Comments"
+        author: "Author"
+        comment: "Comment"
+        actions: "Actions"
+        view: "View"
+        approve: "Approve comment"
+        edit: "Edit"
+        delete_confirm: "Are you sure to delete this comment?"
+        destroy: "Delete"
   layouts:
     admin-links:
       dashboard: "Dashboard"
@@ -175,6 +186,7 @@ en:
       add_category: "Add Category"
       courses: "Courses"
       add_course: "Add Course"
+      comments: "Comments"
       images: "Images"
       add_image: "Add Image"
       users: "Users"

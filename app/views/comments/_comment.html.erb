@@ -5,11 +5,7 @@
     </div>
     <div class="comment__content">
       <div class="comment__header">
-        <% unless comment.url.blank? %>
-          <a href="<%= comment.url %>"><h2><%= comment.author %></h2></a>
-        <% else %>
-          <h2><%= comment.author %></h2>
-        <% end %>
+        <h2><%= sanitize raw comment.author_with_link %></h2>
         <small><%= comment.created_at.strftime('%d/%m/%Y %H:%M (%Z)') %></small>
       </div>
       <%= sanitize markdown comment.comment %>
