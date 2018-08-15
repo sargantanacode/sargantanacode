@@ -111,7 +111,7 @@ if (replyButton) {
         cancelButton.classList.add('hidden')
         newComment.classList.add('mt-5')
         newComment.classList.remove('mb-2')
-        parentId.value = ''
+        parentId.value = 0
         let comments = document.getElementById('comments')
         let commentSection = comments.parentNode
         commentSection.insertBefore(newComment, comments.nextSibling)

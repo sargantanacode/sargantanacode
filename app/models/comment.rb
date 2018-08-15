@@ -17,6 +17,10 @@ class Comment < ApplicationRecord
     update(:status => :pending)
   end
 
+  def approve
+    update(:status => :approved)
+  end
+
   def author_with_link(class_name = nil)
     class_name = class_name.blank? ? "" : "class=\"#{class_name}\""
     return "<a href=\"#{self.url}\" #{class_name}>#{self.author}</a>" unless self.url.blank?

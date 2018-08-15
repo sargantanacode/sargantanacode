@@ -172,6 +172,8 @@ en:
     comments:
       index:
         comments: "Comments"
+      approve:
+        approved: "Comment successfully published"
       comments-list-header:
         author: "Author"
         comment: "Comment"

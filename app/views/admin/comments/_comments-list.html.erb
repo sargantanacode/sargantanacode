@@ -11,7 +11,7 @@
   </div>
   <div class="vw16 center">
     <% if comment.pending? %>
-      <%= link_to admin_comment_approve_path(comment_id: comment.id),
+      <%= link_to admin_comment_approve_path(comment_id: comment.id), :method => :put,
           :class => "btn btn-sm btn-primary text-center" do %>
         <i class="fa fa-thumbs-up" aria-hidden="true" data-toggle="tooltip"
           data-placement="top" title="<%= t('.approve') %>"></i>

@@ -172,6 +172,8 @@ es:
     comments:
       index:
         comments: "Comentarios"
+      approve:
+        approved: "El comentario ha sudo publicado con éxito"
       comments-list-header:
         author: "Nombre"
         comment: "Comentario"
