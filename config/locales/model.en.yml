@@ -69,4 +69,9 @@ en:
         author: "Author"
         email: "Email"
         url: "Website"
+        ip: "IP Address"
         comment: "Comment"
+        status_l: "Status"
+        status_list:
+          pending: "Pending"
+          approved: "Approved"

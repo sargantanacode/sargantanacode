@@ -69,5 +69,9 @@ es:
         author: "Nombre"
         email: "Correo electrónico"
         url: "Página web"
+        ip: "Dirección IP"
         comment: "Comentario"
-
+        status_l: "Estado"
+        status_list:
+          pending: "Pendiente"
+          approved: "Aprobado"

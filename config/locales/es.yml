@@ -176,6 +176,10 @@ es:
         approved: "El comentario ha sido publicado con éxito"
       spam:
         spam: "El comentario ha sido marcado como spam"
+      edit:
+        edit_comment: "Editar comentario"
+      form:
+        save: "Guardar"
       update:
         saved: "Los cambios realizados en el comentario han sido guardados correctamente"
       destroy:

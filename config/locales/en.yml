@@ -176,6 +176,10 @@ en:
         approved: "Comment successfully published"
       spam:
         spam: "Comment successfully marked as spam"
+      edit:
+        edit_comment: "Edit Comment"
+      form:
+        save: "Save"
       update:
         saved: "Comment changes have been saved successfully"
       destroy:

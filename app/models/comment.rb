@@ -1,8 +1,11 @@
 class Comment < ApplicationRecord
+  include TranslateEnum
+  
   belongs_to :post
   acts_as_tree order: 'created_at ASC'
 
   enum status: [:pending, :approved]
+  translate_enum :status
 
   validates :author, :email, :comment, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
