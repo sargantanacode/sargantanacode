@@ -1,0 +1,9 @@
+<% content_for :title, t('.about_us') %>
+
+<% unless @post.nil? %>
+  <%= render 'posts/toolbar' %>
+  <%= render 'posts/post' %>
+  <%= render 'posts/social-buttons' %>
+<% else %>
+  <% content_for :notice, t('.about_us_not_found') %>
+<% end %>

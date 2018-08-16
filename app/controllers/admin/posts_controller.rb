@@ -75,7 +75,7 @@ class Admin::PostsController < ApplicationController
 
   def post_params
     permitted = Post.globalize_attribute_names + [:position] + [:category_id] +
-      [:course_id] + [:user_id] + [:type] + [:slug] + [:image]
+      [:course_id] + [:user_id] + [:type] + [:slug] + [:image] + [:comment_status]
     params.require(:post).permit(permitted)
   end
 end

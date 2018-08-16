@@ -11,6 +11,7 @@ class Post < ApplicationRecord
   belongs_to :user
   belongs_to :category
   belongs_to :course, optional: true
+  has_many :comments
 
   translates :title, :content, :excerpt
   globalize_accessors :locales => [:en, :es], :attributes => [:title, :content, :excerpt]
@@ -24,6 +25,8 @@ class Post < ApplicationRecord
   translate_enum :type
   enum status: [:draft, :published]
   translate_enum :status
+  enum comment_status: [:closed, :opened]
+  translate_enum :comment_status
 
   mount_uploader :image, ImageUploader
 
@@ -35,6 +38,12 @@ class Post < ApplicationRecord
   scope :oldest_first, -> { order(Arel.sql('published_at IS NOT NULL, published_at ASC, updated_at ASC')) }
   scope :by_views, -> { where('visits_count > 0').order(Arel.sql('visits_count DESC, published_at DESC')) }
   scope :search, -> term { where("title LIKE ? OR content LIKE ?", "%#{term}%", "%#{term}%") }
+  scope :more_commented, -> number {
+    joins(:comments).where(Arel.sql('comments.status = 1'))
+    .limit(number)
+    .group('comments.id')
+    .uniq
+  }
 
   def update_visits_count
     update(:visits_count => self.visits_count + 1) unless self.status == 'draft'

@@ -1,7 +1,7 @@
 <% content_for :title, t('.images') %>
 
-<div class="col-12 content mb-3">
-  <% unless @images.empty? %>
+<% unless @images.empty? %>
+  <div class="col-12 content mb-3">
     <div class="responsive-header">
       <div class="vw20 center"><%= t('.image') %></div>
       <div class="vw30 center"><%= t('.title') %></div>
@@ -35,10 +35,8 @@
         </div>
       </div>
     <% end %>
-  <% else %>
-    <div class="alert alert-danger" role="alert">
-      <%= t('.images_list_empty') %>
-      <%= link_to t('.add_one_image'), new_admin_image_path %>
-    </div>
-  <% end %>
-</div>
+  </div>
+<% else %>
+  <% content_for :notice, raw(t('.images_list_empty',
+    href: link_to(t('.add_one_image'), new_admin_image_path))) %>
+<% end %>

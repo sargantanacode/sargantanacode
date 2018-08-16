@@ -135,6 +135,50 @@
       background-color: $light-gray;
     }
   }
+  &--pending {
+    > :nth-child(even) {
+      background-color: $red;
+    }
+    &:nth-of-type(even) {
+      @include breakpoint-up(lg) {
+        background-color: $red;
+      }
+    }
+    background-color: $red;
+    a.alternative {
+      color: $pending-comment-link;
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+  &--approved {
+    a.alternative {
+      color: $blue;
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+    .highlighted {
+      a.alternative {
+        color: $white;
+        &:hover {
+          color: $entry-link-hover;
+          text-decoration: none;
+        }
+      }
+      @include breakpoint-up(lg) {
+        a.alternative {
+          color: $blue;
+          &:hover {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
   .highlighted {
     font-weight: bold;
     color: $white;
@@ -165,6 +209,17 @@
     display: none;
     @include breakpoint-up(lg) {
       display: block;
+    }
+  }
+  .distribute {
+    display: flex;
+    justify-content: space-between;
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    @include breakpoint-up(lg) {
+      display: inline-block;
     }
   }
   img {
@@ -259,7 +314,7 @@
   }
 }
 
-.category, .course, .user {
+.category, .course, .user, .comment {
   display: flex;
   &__image, &__avatar {
     margin-right: 3vw;
@@ -270,6 +325,23 @@
       border-radius: 50%;
       width: 90px;
     }
+  }
+  &__content {
+    width: 100%;
+      p + .comment__reply {
+        margin-top: -10px;
+      }
+  }
+  &__header {
+      display: flex;
+      justify-content: space-between;
+  }
+  &__reply {
+    float: right;
+    color: $white;
+      a {
+        font-size: 9px;
+      }
   }
   &__bio, &__desc {
     width: 100vw;

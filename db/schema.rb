@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_11_090638) do
+ActiveRecord::Schema.define(version: 2018_08_15_135731) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
@@ -29,6 +29,28 @@ ActiveRecord::Schema.define(version: 2018_08_11_090638) do
     t.text "description", null: false
     t.index ["category_id"], name: "index_category_translations_on_category_id"
     t.index ["locale"], name: "index_category_translations_on_locale"
+  end
+
+  create_table "comment_hierarchies", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "ancestor_id", null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations", null: false
+    t.index ["ancestor_id", "descendant_id", "generations"], name: "comment_anc_desc_idx", unique: true
+    t.index ["descendant_id"], name: "comment_desc_idx"
+  end
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "post_id", null: false
+    t.integer "parent_id"
+    t.integer "status", default: 1
+    t.string "author", null: false
+    t.string "email", null: false
+    t.string "url"
+    t.string "ip"
+    t.text "comment", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
   create_table "course_translations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -103,6 +125,7 @@ ActiveRecord::Schema.define(version: 2018_08_11_090638) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "published_at"
+    t.integer "comment_status", default: 1
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["course_id"], name: "index_posts_on_course_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
@@ -143,6 +166,7 @@ ActiveRecord::Schema.define(version: 2018_08_11_090638) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "comments", "posts"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "courses"
   add_foreign_key "posts", "users"

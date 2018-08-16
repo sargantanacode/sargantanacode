@@ -7,12 +7,15 @@
 <li class="nav-item <%= active?(categories_path) %>">
   <%= link_to t('.categories'), categories_path, :class => 'nav-link' %>
 </li>
-<li class="nav-item <%= active_exact_match?(search_index_path) %>">
-  <%= link_to t('.search'), search_index_path, :class => 'nav-link' %>
+<li class="nav-item <%= active_exact_match?(search_path) %>">
+  <%= link_to t('.search'), search_path, :class => 'nav-link' %>
 </li>
-<li class="nav-item <%= active?(new_contact_path) %>">
-  <%= link_to t('.contact_form'), new_contact_path, :class => 'nav-link' %>
+<li class="nav-item <%= active?(contact_path) %>">
+  <%= link_to t('.contact_form'), contact_path, :class => 'nav-link' %>
 </li>
 <li class="nav-item <%= active?(about_us_path) %>">
   <%= link_to t('.about_us'), about_us_path, :class => 'nav-link' %>
+</li>
+<li class="nav-item">
+  <%= link_to t('.rss'), rss_path, :class => 'nav-link' %>
 </li>

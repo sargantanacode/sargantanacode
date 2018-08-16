@@ -30,7 +30,12 @@ module SargantanaCode
     # Don't generate system test files.
     config.generators.system_tests = nil
 
+    config.time_zone = "Madrid"
+
     I18n.available_locales = [:en, :es]
     I18n.default_locale = :en
+
+    Akismet.api_key = ENV["AKISMET_API_KEY"]
+    Akismet.app_url = ENV["AKISMET_APP_URL"]
   end
 end

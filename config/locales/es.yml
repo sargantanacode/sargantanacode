@@ -1,13 +1,19 @@
 es:
+  main:
+    title: "SargantanaCode"
+    description: "SargantanaCode es una web en la que podrás encontrar distintos temas relacionados con la informática pero sobre todo con la programación, con contenido gratuito y en español"
   errors:
     access: "¡Tú no tienes poder aquí, Gandalf el gris!"
   admin:
     dashboard:
       index:
         dashboard: "Administración"
+        pending_comments: "Comentarios pendientes"
+        last_comments: "Últimos comentarios"
         last_posts: "Últimos artículos"
         last_drafts: "Últimos borradores"
         more_visited_posts: "Artículos más visitados"
+        more_commented_posts: "Artículos más comentados"
     posts:
       new:
         add_post: "Añadir artículo"
@@ -27,18 +33,19 @@ es:
         posts_pages: "Artículos y páginas"
         posts: "Artículos"
         pages: "Páginas"
-        posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado."
-        pages_list_empty: "Lo sentimos, actualmente no hay ninguna página publicada."
+        posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado. %{href}"
         publish_something: "¡Publica algo!"
       posts-list-header:
         title: "Título"
         published: "Publicado"
         visits-count: "Visitas"
+        comments-count: "Comentarios"
         actions: "Acciones"
       posts-list:
         title: "Título"
         published: "Publicado"
         visits-count: "Visitas"
+        comments-count: "Comentarios"
         actions: "Acciones"
         view: "Ver"
         edit: "Editar"
@@ -78,7 +85,7 @@ es:
     categories:
       index:
         categories: "Categorías"
-        categories_list_empty: "Actualmente no hay ninguna categoría creado."
+        categories_list_empty: "Actualmente no hay ninguna categoría creado. %{href}"
         add_one_category: "¡Puedes crear una ahora!"
         image: "Imagen"
         name: "Nombre"
@@ -106,7 +113,7 @@ es:
     courses:
       index:
         courses: "Cursos"
-        courses_list_empty: "Actualmente no hay ningún curso creado."
+        courses_list_empty: "Actualmente no hay ningún curso creado. %{href}"
         add_one_course: "¡Puedes crear uno ahora!"
         image: "Imagen"
         name: "Nombre"
@@ -134,7 +141,7 @@ es:
     images:
       index:
         images: "Imágenes"
-        images_list_empty: "Actualmente no hay ninguna imagen."
+        images_list_empty: "Actualmente no hay ninguna imagen. %{href}"
         add_one_image: "¡Puedes subir una ahora!"
         image: "Imagen"
         title: "Título"
@@ -159,9 +166,35 @@ es:
       update:
         saved: "Los cambios realizados en la imagen han sido guardados correctamente"
       destroy:
-        destroyed: "La imagen ha sido eliminado correctamente"
+        destroyed: "La imagen ha sido eliminada correctamente"
       form-common:
         save: "Guardar"
+    comments:
+      index:
+        comments: "Comentarios"
+      approve:
+        approved: "El comentario ha sido publicado con éxito"
+      pend:
+        pended: "El comentario ha sido marcado como pendiente"
+      edit:
+        edit_comment: "Editar comentario"
+      form:
+        save: "Guardar"
+      update:
+        saved: "Los cambios realizados en el comentario han sido guardados correctamente"
+      destroy:
+        destroyed: "El comentario ha sido eliminado correctamente"
+      comments-list-header:
+        author: "Nombre"
+        comment: "Comentario"
+        actions: "Acciones"
+      comments-list:
+        view: "Ver"
+        approve: "Aprobar comentario"
+        pend: "Marcar como pendiente"
+        edit: "Editar"
+        delete_confirm: "¿Estás seguro de querer eliminar este comentario?"
+        destroy: "Eliminar"
   layouts:
     admin-links:
       dashboard: "Administración"
@@ -173,6 +206,7 @@ es:
       add_category: "Añadir categoría"
       courses: "Cursos"
       add_course: "Añadir curso"
+      comments: "Comentarios"
       images: "Imágenes"
       add_image: "Añadir imagen"
       users: "Usuarios"
@@ -183,6 +217,7 @@ es:
       search: "Buscador"
       contact_form: "Contacto"
       about_us: "Sobre nosotros"
+      rss: "RSS"
     menu:
       login: "Entrar"
       hello: "¡Hola, %{name}!"
@@ -205,6 +240,13 @@ es:
     index:
       posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
       new_admin: "Antes de empezar necesitas crear un administrador"
+    show:
+      comments: "Comentarios"
+      closed_comments: "Los comentarios están cerrados en este momento"
+    comment:
+      sended: "Tu comentario ha sido añadido con éxito"
+      spam_detected: "Tu comentario ha sido marcado como spam y no será publicado hasta que se revise manualmente"
+      failed: "Algo salió mal al enviar tu comentario"
     post-list:
       previous_page: "← página anterior"
       next_page: "página siguiente →"
@@ -219,12 +261,15 @@ es:
       info_prev: "El anterior artículo de este curso es %{href}."
       info_next: "El próximo artículo de este curso es %{href}."
       info_prev_next: "El anterior artículo de este curso es %{href_prev} y el próximo es %{href_next}."
-  admins:
-    new:
-      new_admin: "Crear admin"
-      save: "Guardar"
-    create:
-      created: "Administrador creado. Recibirás un email con las instrucciones para confirmar tu correo electrónico en unos minutos."
+  comments:
+    comment:
+      reply: "Responder"
+      cancel-reply: "Cancelar respuesta"
+    form:
+      new_comment: "Nuevo comentario"
+      anonymous_user_message: "Escribe tu nombre y correo electrónico para poder comentar, o %{href} para que estos campos se rellenen automáticamente."
+      login: "inicia sesión"
+      send: "Enviar comentario"
   categories:
     index:
       categories: "Categorías"
@@ -247,21 +292,30 @@ es:
       posts:
         one: "1 artículo"
         other: "%{count} artículos"
-  profile:
-    show:
+  pages:
+    admin:
+      new_admin: "Crear admin"
+      save: "Guardar"
+    create_admin:
+      created: "Administrador creado. Recibirás un email con las instrucciones para confirmar tu correo electrónico en unos minutos."
+    profile:
       profile: "Perfil de %{name}"
-  contact:
-    new:
+    contact:
       contact_form: "Contacto"
       send: "Enviar mensaje"
-    create:
+    create_contact:
       sended: "Correo electrónico enviado con éxito"
-  search:
-    index:
+    about_us:
+      about_us: "Sobre nosotros"
+      about_us_not_found: "Por el momento no está disponible esta sección"
+    search:
       search: "Buscador"
       search_message: "Desde este buscador encontrarás fácilmente el contenido que deseas en español. Escribe las palabras clave relacionadas con el tema que prefieras y se buscará tanto en títulos como en contenidos."
       search_placeholder: "Escribe lo que quieras y pulsa la tecla intro"
       term_not_found: "No se han encontrado resultados para el término \"%{term}\" en español"
+    team:
+      team: "Equipo"
+      no_team_members: "Actualmente no hay miembros en el equipo"
   mail_form:
     attributes:
       contact:

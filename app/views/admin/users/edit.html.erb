@@ -58,7 +58,7 @@
         <%= f.label :job_l %>
         <%= f.select :job, options_for_select(f.object.class.translated_jobs.map {
               |translation, k, _v| [translation, k]
-            }, selected: @user.job), {}, :class => "form-control" %>
+            }, selected: @user.job), { :include_blank => t('helpers.select.prompt') }, :class => "form-control" %>
       </div>
 
       <% unless @user.admin? && admins_count == 1 %>
