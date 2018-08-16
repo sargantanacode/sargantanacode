@@ -30,7 +30,7 @@ class Admin::PostsController < ApplicationController
     if @post.update(post_params)
       flash[:notice] = t('.post_saved') if @post.post?
       flash[:notice] = t('.page_saved') if @post.static?
-      redirect_back(fallback_location: homepage_path)
+      redirect_back(fallback_location: admin_dashboard_path)
     else
       render :edit
     end
@@ -40,21 +40,21 @@ class Admin::PostsController < ApplicationController
     @post.destroy
     flash[:notice] = t('.post_destroyed') if @post.post?
     flash[:notice] = t('.page_destroyed') if @post.static?
-    redirect_back(fallback_location: homepage_path)
+    redirect_back(fallback_location: admin_dashboard_path)
   end
 
   def publish
     @post.publish
     flash[:notice] = t('.post_published') if @post.post?
     flash[:notice] = t('.page_published') if @post.static?
-    redirect_back(fallback_location: homepage_path)
+    redirect_back(fallback_location: admin_dashboard_path)
   end
 
   def draft
     @post.draft
     flash[:notice] = t('.post_draft') if @post.post?
     flash[:notice] = t('.page_draft') if @post.static?
-    redirect_back(fallback_location: homepage_path)
+    redirect_back(fallback_location: admin_dashboard_path)
   end
 
   def destroy_image
