@@ -1,5 +1,5 @@
 <% unless @posts.empty? %>
-  <%= render 'post-list', posts: @posts %>
+  <%= render 'list', posts: @posts %>
 <% else %>
   <% content_for :notice, t('.posts_list_empty') %>
 <% end %>

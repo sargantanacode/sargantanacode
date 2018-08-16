@@ -10,4 +10,4 @@
   </div>
 </div>
 
-<%= render 'posts/post-list', posts: @category.posts.published.post.by_date.page(params[:page]) %>
+<%= render 'posts/list', posts: @category.posts.published.post.by_date.page(params[:page]) %>

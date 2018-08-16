@@ -4,7 +4,7 @@
   <h2 class="text-center h2 mb-4"><%= t('.edit_comment') %></h2>
   <%= form_for @comment, :url => admin_comment_path do |f| %>
     <div class="content mb-5">
-      <%= render 'form-header' %>
+      <%= render 'form_header' %>
       <%= render 'form', f: f %>
     </div>
   <% end %>

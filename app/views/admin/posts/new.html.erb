@@ -10,14 +10,14 @@
   </h2>
   <%= form_for [:admin, @post] do |f| %>
     <div class="content mb-5">
-      <%= render 'form-header', post: @post, new_post: true %>
-      <%= render 'form-es', f: f %>
+      <%= render 'form_header', post: @post, new_post: true %>
+      <%= render 'form_es', f: f %>
     </div>
     <div class="content mb-5">
-      <%= render 'form-en', f: f %>
+      <%= render 'form_en', f: f %>
     </div>
     <div class="content">
-      <%= render 'form-common', f: f, type: type, new_post: true %>
+      <%= render 'form_common', f: f, type: type, new_post: true %>
     </div>
   <% end %>
 </div>
