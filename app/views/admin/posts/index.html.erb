@@ -23,18 +23,18 @@
       <% unless @posts.empty? %>
         <div class="tab-pane fade <%= posts_active?(@posts) %>" id="posts"
           role="tabpanel" aria-labelledby="posts-tab">
-          <%= render 'posts-list-header' %>
+          <%= render 'list_header' %>
           <% @posts.each do |post| %>
-            <%= render 'posts-list', post: post %>
+            <%= render 'list', post: post %>
           <% end %>
         </div>
       <% end %>
       <% unless @pages.empty? %>
         <div class="tab-pane fade <%= pages_active?(@posts, @pages) %>"
           id="pages" role="tabpanel" aria-labelledby="pages-tab">
-          <%= render 'posts-list-header' %>
+          <%= render 'list_header' %>
           <% @pages.each do |page| %>
-            <%= render 'posts-list', post: page %>
+            <%= render 'list', post: page %>
           <% end %>
         </div>
       <% end %>

@@ -3,7 +3,7 @@
 <% unless @post.nil? %>
   <%= render 'posts/toolbar' %>
   <%= render 'posts/post' %>
-  <%= render 'posts/social-buttons' %>
+  <%= render 'posts/social_buttons' %>
 <% else %>
   <% content_for :notice, t('.about_us_not_found') %>
 <% end %>

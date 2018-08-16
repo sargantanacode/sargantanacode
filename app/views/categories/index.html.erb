@@ -1,7 +1,7 @@
 <% content_for :title, t('.categories') %>
 
 <% unless @categories.empty? %>
-  <%= render 'categories-list' %>
+  <%= render 'list' %>
 <% else %>
   <% content_for :notice, t('.categories_list_empty') %>
 <% end %>

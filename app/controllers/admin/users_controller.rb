@@ -4,7 +4,7 @@ class Admin::UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :destroy]
 
   def index
-    @users = User.all.by_role
+    @users = User.by_role
   end
 
   def edit
@@ -21,7 +21,7 @@ class Admin::UsersController < ApplicationController
   def destroy
     @user.destroy
     flash[:notice] = t('.user_destroyed')
-    redirect_back(fallback_location: homepage_path)
+    redirect_back(fallback_location: admin_dashboard_path)
   end
 
   private

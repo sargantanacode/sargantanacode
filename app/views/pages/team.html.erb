@@ -2,7 +2,7 @@
 
 <% unless @users.empty? %>
   <% @users.each do |user| %>
-    <%= render 'posts/user-profile', user: user, team: true %>
+    <%= render 'posts/user_profile', user: user, team: true %>
   <% end %>
 <% else %>
   <% content_for :notice, t('.no_team_members') %>

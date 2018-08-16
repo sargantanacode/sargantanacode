@@ -2,9 +2,9 @@
 
 <% unless @comments.empty? %>
   <div class="col-12 content mb-3">
-    <%= render 'comments-list-header' %>
+    <%= render 'list_header' %>
     <% @comments.each do |comment| %>
-      <%= render 'comments-list', comment: comment %>
+      <%= render 'list', comment: comment %>
     <% end %>
   </div>
 <% else %>

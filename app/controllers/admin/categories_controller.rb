@@ -34,7 +34,7 @@ class Admin::CategoriesController < ApplicationController
   def destroy
     @category.destroy
     flash[:notice] = t('.destroyed')
-    redirect_back(fallback_location: homepage_path)
+    redirect_back(fallback_location: admin_dashboard_path)
   end
 
   private

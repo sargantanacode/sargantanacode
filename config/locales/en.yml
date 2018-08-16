@@ -24,7 +24,7 @@ en:
       destroy:
         post_destroyed: "Post successfully deleted"
         page_destroyed: "Page successfully deleted"
-      form-common:
+      form_common:
         slug_help: "If you leave it blank it will be generated automatically"
         save: "Save"
         destroy_image: "Remove Cover"
@@ -35,13 +35,13 @@ en:
         pages: "Pages"
         posts_list_empty: "Sorry, there are currently no posts added. %{href}"
         publish_something: "Publish something!"
-      posts-list-header:
+      list_header:
         title: "Title"
         published: "Published"
         visits-count: "Visits"
         comments-count: "Comments"
         actions: "Actions"
-      posts-list:
+      list:
         title: "Title"
         published: "Published"
         visits-count: "Visits"
@@ -105,7 +105,7 @@ en:
         saved: "Category changes have been saved successfully"
       destroy:
         destroyed: "Category successfully deleted"
-      form-common:
+      form_common:
         slug_help: "If you leave it blank it will be generated automatically"
         image_help: "This will be the image associated with this category"
         cover_image_help: "This will be the default cover image for Posts without cover image"
@@ -133,7 +133,7 @@ en:
         saved: "Course changes have been saved successfully"
       destroy:
         destroyed: "Course successfully deleted"
-      form-common:
+      form_common:
         slug_help: "If you leave it blank it will be generated automatically"
         image_help: "This will be the image associated with this course"
         cover_image_help: "This will be the default cover image for Posts without cover image"
@@ -167,7 +167,7 @@ en:
         saved: "Image changes have been saved successfully"
       destroy:
         destroyed: "Image successfully deleted"
-      form-common:
+      form_common:
         save: "Save"
     comments:
       index:
@@ -184,11 +184,11 @@ en:
         saved: "Comment changes have been saved successfully"
       destroy:
         destroyed: "Comment successfully deleted"
-      comments-list-header:
+      list_header:
         author: "Author"
         comment: "Comment"
         actions: "Actions"
-      comments-list:
+      list:
         view: "View"
         approve: "Approve comment"
         pend: "Mark as Pending"
@@ -196,7 +196,7 @@ en:
         delete_confirm: "Are you sure to delete this comment?"
         destroy: "Delete"
   layouts:
-    admin-links:
+    admin_links:
       dashboard: "Dashboard"
       posts_pages: "Posts and Pages"
       add_post: "Add Post"
@@ -210,7 +210,7 @@ en:
       images: "Images"
       add_image: "Add Image"
       users: "Users"
-    public-links:
+    public_links:
       home: "Home"
       courses: "Courses"
       categories: "Categories"
@@ -247,7 +247,7 @@ en:
       sended: "Your comment has been added successfully"
       spam_detected: "Your comment has been marked as spam and will not be published until we manually review it"
       failed: "Something went wrong when sending your comment"
-    post-list:
+    list:
       previous_page: "← previous page"
       next_page: "next page →"
     toolbar:
@@ -255,7 +255,7 @@ en:
       edit_post: "Edit"
       delete_post: "Delete"
       delete_confirm: "Are you sure?"
-    course-info:
+    course_info:
       header: "Starving for knowledge?"
       info: "This post is part of the %{href} course."
       info_prev: "The previous post of this course is %{href}"
@@ -276,7 +276,7 @@ en:
       categories_list_empty: "Sorry, there are currently no categories added."
     show:
       category: "%{name}"
-    categories-list:
+    list:
       posts:
         one: "1 post"
         other: "%{count} posts"
@@ -288,7 +288,7 @@ en:
       course: "%{name}"
       previous_page: "← previous page"
       next_page: "next page →"
-    ccourses-list:
+    list:
       posts:
         one: "1 post"
         other: "%{count} posts"

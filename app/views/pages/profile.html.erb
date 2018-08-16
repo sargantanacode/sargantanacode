@@ -3,6 +3,5 @@
 <%= render 'posts/user-profile', user: @user %>
 
 <% unless @user.posts.empty? %>
-  <%= render 'posts/post-list', posts: @user.posts.status(:published)
-      .type(:post).by_date.page(params[:page]) %>
+  <%= render 'posts/list', posts: @user.posts.published.post.by_date.page(params[:page]) %>
 <% end %>

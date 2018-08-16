@@ -1,7 +1,7 @@
 <% content_for :title, t('.courses') %>
 
 <% unless @courses.empty? %>
-  <%= render 'courses-list' %>
+  <%= render 'list' %>
 <% else %>
   <% content_for :notice, t('.courses_list_empty') %>
 <% end %>

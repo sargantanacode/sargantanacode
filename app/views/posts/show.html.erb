@@ -4,10 +4,10 @@
 
 <%= render 'post' %>
 
-<%= render 'social-buttons' %>
+<%= render 'social_buttons' %>
 
 <% unless @post.static? %>
-  <%= render 'user-profile', user: @post.user %>
+  <%= render 'user_profile', user: @post.user %>
 <% end %>
 
 <% if @post.comments.approved.count > 0 %>

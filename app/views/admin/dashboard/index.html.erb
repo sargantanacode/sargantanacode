@@ -4,9 +4,9 @@
   <% unless @pending_comments.empty? %>
     <h2 class="text-center h2 mb-4"><%= t('.pending_comments') %></h2>
     <div class="content mb-5">
-      <%= render 'admin/comments/comments-list-header' %>
+      <%= render 'admin/comments/list_header' %>
       <% @pending_comments.each do |comment| %>
-        <%= render 'admin/comments/comments-list', comment: comment %>
+        <%= render 'admin/comments/list', comment: comment %>
       <% end %>
     </div>
   <% end %>
@@ -14,9 +14,9 @@
   <% unless @comments.empty? %>
     <h2 class="text-center h2 mb-4"><%= t('.last_comments') %></h2>
     <div class="content mb-5">
-      <%= render 'admin/comments/comments-list-header' %>
+      <%= render 'admin/comments/list_header' %>
       <% @comments.each do |comment| %>
-        <%= render 'admin/comments/comments-list', comment: comment %>
+        <%= render 'admin/comments/list', comment: comment %>
       <% end %>
     </div>
   <% end %>
@@ -24,9 +24,9 @@
   <% unless @posts.empty? %>
     <h2 class="text-center h2 mb-4"><%= t('.last_posts') %></h2>
     <div class="content mb-5">
-      <%= render 'admin/posts/posts-list-header' %>
+      <%= render 'admin/posts/list_header' %>
       <% @posts.each do |post| %>
-        <%= render 'admin/posts/posts-list', post: post %>
+        <%= render 'admin/posts/list', post: post %>
       <% end %>
     </div>
   <% end %>
@@ -34,9 +34,9 @@
   <% unless @drafts.empty? %>
     <h2 class="text-center h2 mb-4"><%= t('.last_drafts') %></h2>
     <div class="content mb-5">
-      <%= render 'admin/posts/posts-list-header' %>
+      <%= render 'admin/posts/list_header' %>
       <% @drafts.each do |draft| %>
-        <%= render 'admin/posts/posts-list', post: draft %>
+        <%= render 'admin/posts/list', post: draft %>
       <% end %>
     </div>
   <% end %>
@@ -44,9 +44,9 @@
     <% unless @max_visits.empty? %>
     <h2 class="text-center h2 mb-4"><%= t('.more_visited_posts') %></h2>
     <div class="content mb-5">
-      <%= render 'admin/posts/posts-list-header' %>
+      <%= render 'admin/posts/list_header' %>
       <% @max_visits.each do |post| %>
-        <%= render 'admin/posts/posts-list', post: post %>
+        <%= render 'admin/posts/list', post: post %>
       <% end %>
     </div>
   <% end %>
@@ -54,9 +54,9 @@
   <% unless @max_comments.empty? %>
     <h2 class="text-center h2 mb-4"><%= t('.more_commented_posts') %></h2>
     <div class="content mb-5">
-      <%= render 'admin/posts/posts-list-header' %>
+      <%= render 'admin/posts/list_header' %>
       <% @max_comments.each do |post| %>
-        <%= render 'admin/posts/posts-list', post: post %>
+        <%= render 'admin/posts/list', post: post %>
       <% end %>
     </div>
   <% end %>
