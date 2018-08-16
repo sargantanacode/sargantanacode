@@ -4,6 +4,14 @@ en:
     description: "SargantanaCode is a website where you can find different subjects related to computer science but mainly related to programming, with both Spanish and English free content"
   errors:
     access: "You have no Power here, Gandalf the Grey!"
+  comments_mailer:
+    comment_notification:
+      subject: "New comment received"
+      new_comment_text: "There is a new comment in the post <strong>%{post}</strong>, click on the following link to view it:"
+      author: "Author: %{author}"
+      email: "Email: %{email}"
+      ip: "IP address: %{ip}"
+      comment: "Comment:"
   admin:
     dashboard:
       index:

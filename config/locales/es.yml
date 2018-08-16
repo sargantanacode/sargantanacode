@@ -4,6 +4,14 @@ es:
     description: "SargantanaCode es una web en la que podrás encontrar distintos temas relacionados con la informática pero sobre todo con la programación, con contenido gratuito y en español"
   errors:
     access: "¡Tú no tienes poder aquí, Gandalf el gris!"
+  comments_mailer:
+    comment_notification:
+      subject: "Nuevo comentario recibido"
+      new_comment_text: "Hay un nuevo comentario en el post: <strong>%{post}</strong>, haz clic en el siguiente enlace para verlo:"
+      author: "Autor: %{author}"
+      email: "Correo electrónico: %{email}"
+      ip: "Dirección IP: %{ip}"
+      comment: "Comentario:"
   admin:
     dashboard:
       index:

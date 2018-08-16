@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= t('.subject') %></title>
+</head>
+<body>
+  <p><%= raw t('.new_comment_text', post: @post.title) %></p>
+  <p>
+    <a href="<%= post_url(id: @post.slug, anchor: "comment-#{@comment.id}", locale: I18n.locale) %>">
+      <%= post_url(id: @post.slug, anchor: "comment-#{@comment.id}", locale: I18n.locale) %>
+    </a>
+  </p>
+  <p><%= t('.author', author: @comment.author) %></p>
+  <p><%= t('.email', email: @comment.email) %></p>
+  <p><%= t('.ip', ip: @comment.ip) %></p>
+  <p><%= t('.comment') %></p>
+  <p><%= @comment.comment %></p>
+</body>
+</html>
