@@ -3,7 +3,7 @@
     <div class="list">
       <%= link_to course_path(id: course.slug) do %>
         <span class="posts-badge">
-          <%= t('.posts', count: course.posts.status(:published).type(:post).count) %>
+          <%= t('.posts', count: course.posts.published.post.count) %>
         </span>
         <%= image_tag course.image.url, :alt => course.name, :class => "post-header" %>
         <div class="list__content">

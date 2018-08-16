@@ -5,8 +5,8 @@ class Admin::PostsController < ApplicationController
   before_action :set_post_id, only: [:publish, :draft, :destroy_image]
 
   def index
-    @posts = Post.type(:post).by_date
-    @pages = Post.type(:static).by_date
+    @posts = Post.post.by_date
+    @pages = Post.static.by_date
   end
 
   def new

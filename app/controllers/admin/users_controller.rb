@@ -4,7 +4,7 @@ class Admin::UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :destroy]
 
   def index
-    @users = User.all.by_role
+    @users = User.by_role
   end
 
   def edit

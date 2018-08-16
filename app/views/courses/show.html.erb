@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<% posts = @course.posts.status(:published).type(:post).oldest_first.page(params[:page]) %>
+<% posts = @course.posts.published.post.oldest_first.page(params[:page]) %>
 
 <% posts.each_with_index do |post, index| %>
   <% number = posts.offset_value+index+1 %>

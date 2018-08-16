@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     if users_count == 0
       redirect_to admin_path, notice: t('.new_admin')
     end
-    @posts = Post.status(:published).type(:post).by_date.page(params[:page])
+    @posts = Post.published.post.by_date.page(params[:page])
   end
 
   def show
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   end
 
   def rss
-    @posts = Post.status(:published).type(:post).by_date.limit(30)
+    @posts = Post.published.post.by_date.limit(30)
     respond_to do |format|
       format.atom { render :layout => false }
     end
