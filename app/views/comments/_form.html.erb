@@ -1,0 +1,45 @@
+<div id="new-comment" class="content col-12 mt-5">
+  <%= form_for @comment, :html => {:id => @post.id} do |f| %>
+    <% if @comment.errors.any? %>
+      <% @comment.errors.full_messages.each do |message| %>
+        <div class="alert alert-danger" role="alert">
+          <%= message %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <h2 class="text-center mb-4"><%= t('.new_comment') %></h2>
+
+    <%= f.hidden_field :parent_id, :value => 0 %>
+    <%= f.hidden_field :ip, :value => request.remote_ip %>
+    
+    <% if user_signed_in? %>
+      <%= f.hidden_field :author, :value => current_user.name %>
+      <%= f.hidden_field :email, :value => current_user.email %>
+      <%= f.hidden_field :url, :value => current_user.url %>
+    <% else %>
+      <p><%= raw t('.anonymous_user_message', href: link_to(t('.login'), new_user_session_path)) %></p>
+      <div class="form-group">
+        <%= f.label :author %>
+        <%= f.text_field :author, :class => "form-control", :required => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, :class => "form-control", :required => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :url %>
+        <%= f.text_field :url, :class => "form-control" %>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :comment %>
+      <%= f.text_area :comment, :class => "form-control", :rows => 8, :required => true %>
+    </div>
+
+    <%= f.submit t('.send'), :class => "btn btn-primary" %>
+  <% end %>
+</div>

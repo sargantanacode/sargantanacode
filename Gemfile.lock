@@ -53,6 +53,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    akismet (2.0.0)
     arel (9.0.0)
     bcrypt (3.1.12)
     bindex (0.5.0)
@@ -71,6 +72,9 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    closure_tree (6.6.0)
+      activerecord (>= 4.1.0)
+      with_advisory_lock (>= 3.0.0)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
@@ -264,6 +268,8 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
+    with_advisory_lock (4.0.0)
+      activerecord (>= 4.2)
     xpath (3.1.0)
       nokogiri (~> 1.8)
 
@@ -271,10 +277,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  akismet
   bootsnap (>= 1.1.0)
   byebug
   capybara
   carrierwave
+  closure_tree
   devise
   dotenv-rails
   factory_bot_rails

@@ -34,6 +34,10 @@ en:
         status_list:
           draft: "Draft"
           published: "Published"
+        comment_status_l: "Comments Status"
+        comment_status_list:
+          closed: "Closed"
+          opened: "Opened"
         image: "Image (1840x720)"
         type_l: "Type"
         type_list:
@@ -61,3 +65,13 @@ en:
         title_en: "Name"
         description_en: "Description"
         image: "Image"
+      comment:
+        author: "Author"
+        email: "Email"
+        url: "Website"
+        ip: "IP Address"
+        comment: "Comment"
+        status_l: "Status"
+        status_list:
+          pending: "Pending"
+          approved: "Approved"

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users
     get "post/:id" => "posts#show", as: "post"
+    post "post/:id/comments" => "posts#comment", as: "comments"
     get "new-admin" => "pages#admin", as: "admin"
     post "new-admin/new" => "pages#create_admin", as: "admin_new"
     get "categories" => "categories#index", as: "categories"
@@ -30,6 +31,10 @@ Rails.application.routes.draw do
       resources :categories, except: [:show]
       resources :courses, except: [:show]
       resources :images
+      resources :comments, except: [:new, :show, :create] do
+        put :approve, as: "approve"
+        put :pend, as: "pend"
+      end
       root to: "dashboard#index", as: "dashboard"
     end
   end

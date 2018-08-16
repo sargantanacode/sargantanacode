@@ -8,9 +8,12 @@ en:
     dashboard:
       index:
         dashboard: "Dasboard"
+        pending_comments: "Pending Comments"
+        last_comments: "Last Comments"
         last_posts: "Last Posts"
         last_drafts: "Last Drafts"
         more_visited_posts: "More visited Posts"
+        more_commented_posts: "More commented Posts"
     posts:
       new:
         add_post: "Add Post"
@@ -36,11 +39,13 @@ en:
         title: "Title"
         published: "Published"
         visits-count: "Visits"
+        comments-count: "Comments"
         actions: "Actions"
       posts-list:
         title: "Title"
         published: "Published"
         visits-count: "Visits"
+        comments-count: "Comments"
         actions: "Actions"
         view: "View"
         edit: "Edit"
@@ -164,6 +169,32 @@ en:
         destroyed: "Image successfully deleted"
       form-common:
         save: "Save"
+    comments:
+      index:
+        comments: "Comments"
+      approve:
+        approved: "Comment successfully published"
+      pend:
+        pended: "Comment successfully marked as pending"
+      edit:
+        edit_comment: "Edit Comment"
+      form:
+        save: "Save"
+      update:
+        saved: "Comment changes have been saved successfully"
+      destroy:
+        destroyed: "Comment successfully deleted"
+      comments-list-header:
+        author: "Author"
+        comment: "Comment"
+        actions: "Actions"
+      comments-list:
+        view: "View"
+        approve: "Approve comment"
+        pend: "Mark as Pending"
+        edit: "Edit"
+        delete_confirm: "Are you sure to delete this comment?"
+        destroy: "Delete"
   layouts:
     admin-links:
       dashboard: "Dashboard"
@@ -175,6 +206,7 @@ en:
       add_category: "Add Category"
       courses: "Courses"
       add_course: "Add Course"
+      comments: "Comments"
       images: "Images"
       add_image: "Add Image"
       users: "Users"
@@ -208,6 +240,13 @@ en:
     index:
       posts_list_empty: "Sorry, there are currently no posts added."
       new_admin: "Before you start you need to create an admin user"
+    show:
+      comments: "Comments"
+      closed_comments: "The comments are closed for the moment"
+    comment:
+      sended: "Your comment has been added successfully"
+      spam_detected: "Your comment has been marked as spam and will not be published until we manually review it"
+      failed: "Something went wrong when sending your comment"
     post-list:
       previous_page: "← previous page"
       next_page: "next page →"
@@ -222,6 +261,15 @@ en:
       info_prev: "The previous post of this course is %{href}"
       info_next: "The next post of this course is %{href}"
       info_prev_next: "The previous post of this course is %{href_prev} and the next one is %{href_next}."
+  comments:
+    comment:
+      reply: "Reply"
+      cancel-reply: "Cancel reply"
+    form:
+      new_comment: "New comment"
+      anonymous_user_message: "Enter your name and email to comment, or %{href} and these fields will be filled in automatically"
+      login: "sign in"
+      send: "Send comment"
   categories:
     index:
       categories: "Categories"

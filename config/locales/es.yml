@@ -8,9 +8,12 @@ es:
     dashboard:
       index:
         dashboard: "Administración"
+        pending_comments: "Comentarios pendientes"
+        last_comments: "Últimos comentarios"
         last_posts: "Últimos artículos"
         last_drafts: "Últimos borradores"
         more_visited_posts: "Artículos más visitados"
+        more_commented_posts: "Artículos más comentados"
     posts:
       new:
         add_post: "Añadir artículo"
@@ -36,11 +39,13 @@ es:
         title: "Título"
         published: "Publicado"
         visits-count: "Visitas"
+        comments-count: "Comentarios"
         actions: "Acciones"
       posts-list:
         title: "Título"
         published: "Publicado"
         visits-count: "Visitas"
+        comments-count: "Comentarios"
         actions: "Acciones"
         view: "Ver"
         edit: "Editar"
@@ -161,9 +166,35 @@ es:
       update:
         saved: "Los cambios realizados en la imagen han sido guardados correctamente"
       destroy:
-        destroyed: "La imagen ha sido eliminado correctamente"
+        destroyed: "La imagen ha sido eliminada correctamente"
       form-common:
         save: "Guardar"
+    comments:
+      index:
+        comments: "Comentarios"
+      approve:
+        approved: "El comentario ha sido publicado con éxito"
+      pend:
+        pended: "El comentario ha sido marcado como pendiente"
+      edit:
+        edit_comment: "Editar comentario"
+      form:
+        save: "Guardar"
+      update:
+        saved: "Los cambios realizados en el comentario han sido guardados correctamente"
+      destroy:
+        destroyed: "El comentario ha sido eliminado correctamente"
+      comments-list-header:
+        author: "Nombre"
+        comment: "Comentario"
+        actions: "Acciones"
+      comments-list:
+        view: "Ver"
+        approve: "Aprobar comentario"
+        pend: "Marcar como pendiente"
+        edit: "Editar"
+        delete_confirm: "¿Estás seguro de querer eliminar este comentario?"
+        destroy: "Eliminar"
   layouts:
     admin-links:
       dashboard: "Administración"
@@ -175,6 +206,7 @@ es:
       add_category: "Añadir categoría"
       courses: "Cursos"
       add_course: "Añadir curso"
+      comments: "Comentarios"
       images: "Imágenes"
       add_image: "Añadir imagen"
       users: "Usuarios"
@@ -208,6 +240,13 @@ es:
     index:
       posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
       new_admin: "Antes de empezar necesitas crear un administrador"
+    show:
+      comments: "Comentarios"
+      closed_comments: "Los comentarios están cerrados en este momento"
+    comment:
+      sended: "Tu comentario ha sido añadido con éxito"
+      spam_detected: "Tu comentario ha sido marcado como spam y no será publicado hasta que se revise manualmente"
+      failed: "Algo salió mal al enviar tu comentario"
     post-list:
       previous_page: "← página anterior"
       next_page: "página siguiente →"
@@ -222,6 +261,15 @@ es:
       info_prev: "El anterior artículo de este curso es %{href}."
       info_next: "El próximo artículo de este curso es %{href}."
       info_prev_next: "El anterior artículo de este curso es %{href_prev} y el próximo es %{href_next}."
+  comments:
+    comment:
+      reply: "Responder"
+      cancel-reply: "Cancelar respuesta"
+    form:
+      new_comment: "Nuevo comentario"
+      anonymous_user_message: "Escribe tu nombre y correo electrónico para poder comentar, o %{href} para que estos campos se rellenen automáticamente."
+      login: "inicia sesión"
+      send: "Enviar comentario"
   categories:
     index:
       categories: "Categorías"

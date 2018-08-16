@@ -21,4 +21,13 @@ FactoryBot.define do
   trait :with_image do
     image { Rack::Test::UploadedFile.new(Rails.root.join('spec/support/image.jpg'), 'image/jpeg') }
   end
+
+  trait :with_comments do
+    transient do
+      number_of_comments 2
+    end
+    after(:create) do |post, evaluator|
+      create_list(:comment, evaluator.number_of_comments, post: post)
+    end
+  end
 end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:post) { create(:post) }
+  let(:post) { create(:post, :with_comments, number_of_comments: 5) }
 
   it 'has a valid post factory' do
     post = build(:post)
@@ -44,5 +44,9 @@ RSpec.describe Post, type: :model do
 
   it 'has the same slug as its English title' do
     expect(post.slug).to eq(post.title_en.parameterize)
+  end
+
+  it 'may have comments' do
+    expect(post.comments.count).to eq(5)
   end
 end

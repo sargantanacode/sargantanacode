@@ -1,0 +1,35 @@
+<div class="form-group">
+  <%= f.label :author %>
+  <%= f.text_field :author, :class => "form-control", :required => true %>
+</div>
+
+<div class="form-group">
+  <%= f.label :email %>
+  <%= f.text_field :email, :class => "form-control", :required => true %>
+</div>
+
+<div class="form-group">
+  <%= f.label :url %>
+  <%= f.text_field :url, :class => "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :ip %>
+  <%= f.text_field :ip, :class => "form-control", disabled: true %>
+</div>
+
+<div class="form-group">
+  <%= f.label :comment %>
+  <%= f.text_area :comment, :class => "form-control", :rows => 8, :required => true %>
+</div>
+
+<div class="form-group">
+  <%= f.label :status_l %>
+  <%= f.select :status, options_for_select(f.object.class.translated_statuses.map {
+        |translation, k, _v| [translation, k]
+      }, selected: @comment.status), {}, :class => "form-control" %>
+</div>
+
+<div class="actions">
+  <%= f.submit t('.save'), :class => "btn btn-primary" %>
+</div>

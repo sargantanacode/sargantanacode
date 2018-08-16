@@ -34,6 +34,10 @@ es:
         status_list:
           draft: "Borrador"
           published: "Publicado"
+        comment_status_l: "Estado de los comentarios"
+        comment_status_list:
+          closed: "Cerrados"
+          opened: "Abiertos"
         image: "Imagen (1840x720)"
         type_l: "Tipo"
         type_list:
@@ -61,4 +65,13 @@ es:
         title_en: "Name"
         description_en: "Description"
         image: "Imagen"
-
+      comment:
+        author: "Nombre"
+        email: "Correo electrónico"
+        url: "Página web"
+        ip: "Dirección IP"
+        comment: "Comentario"
+        status_l: "Estado"
+        status_list:
+          pending: "Pendiente"
+          approved: "Aprobado"

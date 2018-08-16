@@ -1,0 +1,43 @@
+<div class="responsive-table responsive-table--<%= comment.status %>">
+  <div class="vw16 first highlighted center distribute">
+    <p><%= sanitize raw comment.author_with_link("alternative") %></p>
+    <p><%= sanitize raw comment.email_with_link("alternative") %></p>
+    <p><%= sanitize raw comment.ip_with_lookup_link("alternative") %></p>
+  </div>
+  <div class="vw60">
+    <%= link_to comment.post, post_path(id: comment.post.slug), :class => "alternative" %>
+    <hr/>
+    <%= sanitize markdown comment.comment %>
+  </div>
+  <div class="vw16 center">
+    <% if comment.pending? %>
+      <%= link_to admin_comment_approve_path(comment_id: comment.id), :method => :put,
+          :class => "btn btn-sm btn-primary text-center" do %>
+        <i class="fa fa-thumbs-up" aria-hidden="true" data-toggle="tooltip"
+          data-placement="top" title="<%= t('.approve') %>"></i>
+      <% end %>
+    <% else %>
+      <%= link_to post_path(id: comment.post.slug, anchor: "comment-#{comment.id}"),
+          :class => "btn btn-sm btn-info text-center" do %>
+        <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"
+          data-placement="top" title="<%= t('.view') %>"></i>
+      <% end %>
+      <%= link_to admin_comment_pend_path(comment_id: comment.id), :method => :put,
+          :class => "btn btn-sm btn-warning text-center" do %>
+        <i class="fa fa-thumbs-down" aria-hidden="true" data-toggle="tooltip"
+          data-placement="top" title="<%= t('.pend') %>"></i>
+      <% end %>
+      <%= link_to edit_admin_comment_path(id: comment.id),
+          :class => "btn btn-sm btn-primary text-center" do %>
+        <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"
+          data-placement="top" title="<%= t('.edit') %>"></i>
+      <% end %>
+    <% end %>
+    <%= link_to admin_comment_path(id: comment.id),
+        data: { confirm: t('.delete_confirm') }, :method => :delete,
+        :class => "btn btn-sm btn-danger text-center" do %>
+      <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"
+        data-placement="top" title="<%= t('.destroy') %>"></i>
+    <% end %>
+  </div>
+</div>

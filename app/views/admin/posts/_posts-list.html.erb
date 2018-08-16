@@ -10,6 +10,9 @@
   <div class="vw10 center">
     <span class="legend"><%= t('.visits-count') %>:</span> <%= post.visits_count %>
   </div>
+  <div class="vw10 center">
+    <span class="legend"><%= t('.comments-count') %>:</span> <%= post.comments.approved.count %>
+  </div>
   <div class="vw16 center">
     <%= link_to post_path(id: post.slug),
         :class => "btn btn-sm btn-info text-center" do %>

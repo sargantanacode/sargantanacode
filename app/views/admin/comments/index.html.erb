@@ -1,0 +1,13 @@
+<% content_for :title, t('.comments') %>
+
+<% unless @comments.empty? %>
+  <div class="col-12 content mb-3">
+    <%= render 'comments-list-header' %>
+    <% @comments.each do |comment| %>
+      <%= render 'comments-list', comment: comment %>
+    <% end %>
+  </div>
+<% else %>
+  <% content_for :notice, t('.comments_list_empty') %>
+<% end %>
+

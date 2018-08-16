@@ -1,0 +1,26 @@
+<li>
+  <div class="content comment mb-2" id="<%= "comment-#{comment.id}" %>">
+    <div class="comment__avatar show-up-lg">
+      <%= image_tag gravatar_url(comment.email, 90), :alt => comment.author %>
+    </div>
+    <div class="comment__content">
+      <div class="comment__header">
+        <h2><%= sanitize raw comment.author_with_link %></h2>
+        <small><%= comment.created_at.strftime('%d/%m/%Y %H:%M (%Z)') %></small>
+      </div>
+      <%= sanitize markdown comment.comment %>
+      <div class="comment__reply">
+        <a class="btn-sm btn-primary text-center reply-button" 
+          id="<%= "#{comment.id}" %>">
+            <i class="fa fa-reply" aria-hidden="true" data-toggle="tooltip"
+              data-placement="top" title="<%= t('.reply') %>"></i>
+        </a>
+        <a class="btn-sm btn-danger text-center hidden"
+          id="<%= "cancel-reply-#{comment.id}" %>">
+            <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"
+              data-placement="top" title="<%= t('.cancel-reply') %>"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</li>
