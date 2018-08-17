@@ -19,6 +19,7 @@ en:
         role_list:
           user: "User"
           admin: "Admin"
+        transfer_posts: "Transfer Posts"
       post:
         title_en: "Title"
         content_en: "Content"

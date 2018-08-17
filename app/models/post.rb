@@ -63,6 +63,10 @@ class Post < ApplicationRecord
     update(:published_at => nil)
   end
 
+  def update_author(user)
+    update(:user_id => user)
+  end
+
   def to_s
     self.title
   end

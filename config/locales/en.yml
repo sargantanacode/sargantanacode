@@ -4,6 +4,14 @@ en:
     description: "SargantanaCode is a website where you can find different subjects related to computer science but mainly related to programming, with both Spanish and English free content"
   errors:
     access: "You have no Power here, Gandalf the Grey!"
+  comments_mailer:
+    comment_notification:
+      subject: "New comment received"
+      new_comment_text: "There is a new comment in the post <strong>%{post}</strong>, click on the following link to view it:"
+      author: "Author: %{author}"
+      email: "Email: %{email}"
+      ip: "IP address: %{ip}"
+      comment: "Comment:"
   admin:
     dashboard:
       index:
@@ -79,6 +87,7 @@ en:
         destroy: "Delete"
       edit:
         edit_user: "Edit user %{name}"
+        transfer_help: "The author of each article from %{name} will be changed to the chosen user"
         save: "Save"
       update:
         saved: "User changes have been saved successfully"
@@ -316,6 +325,10 @@ en:
     team:
       team: "Team"
       team?members: "Currently there are no members on the team"
+  users:
+    registrations:
+      destroy:
+        destroy_account_with_posts: "This account can't be deleted because there's some published content of its authorship"
   mail_form:
     attributes:
       contact:

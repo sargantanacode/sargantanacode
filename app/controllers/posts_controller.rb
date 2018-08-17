@@ -36,6 +36,7 @@ class PostsController < ApplicationController
     @comment.pend if is_spam
 
     if @comment.save
+      CommentsMailer.comment_notification(@comment, @post).deliver unless is_spam
       flash[:notice] = t('.sended') unless is_spam
       flash[:alert] = t('.spam_detected') if is_spam
       redirect_back(fallback_location: homepage_path)

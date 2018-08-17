@@ -4,6 +4,14 @@ es:
     description: "SargantanaCode es una web en la que podrás encontrar distintos temas relacionados con la informática pero sobre todo con la programación, con contenido gratuito y en español"
   errors:
     access: "¡Tú no tienes poder aquí, Gandalf el gris!"
+  comments_mailer:
+    comment_notification:
+      subject: "Nuevo comentario recibido"
+      new_comment_text: "Hay un nuevo comentario en el post: <strong>%{post}</strong>, haz clic en el siguiente enlace para verlo:"
+      author: "Autor: %{author}"
+      email: "Correo electrónico: %{email}"
+      ip: "Dirección IP: %{ip}"
+      comment: "Comentario:"
   admin:
     dashboard:
       index:
@@ -79,6 +87,7 @@ es:
         destroy: "Eliminar"
       edit:
         edit_user: "Editar usuario %{name}"
+        transfer_help: "Se cambiará el autor de cada artículo de %{name} al usuario elegido"
         save: "Guardar"
       update:
         saved: "Los cambios realizados en el usuario han sido guardados correctamente"
@@ -316,6 +325,10 @@ es:
     team:
       team: "Equipo"
       no_team_members: "Actualmente no hay miembros en el equipo"
+  users:
+    registrations:
+      destroy:
+        destroy_account_with_posts: "No se puede eliminar esta cuenta debido a que tiene contenido publicado de su autoría"
   mail_form:
     attributes:
       contact:
