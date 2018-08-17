@@ -18,11 +18,13 @@
           <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"
             data-placement="top" title="<%= t('.edit') %>"></i>
         <% end %>
-        <%= link_to admin_user_path(id: user.id),
-            data: { confirm: t('.delete_confirm') }, :method => :delete,
-            :class => "btn btn-sm btn-danger text-center" do %>
-          <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"
-            data-placement="top" title="<%= t('.destroy') %>"></i>
+        <% unless (user.admin? && admins_count == 1) || user.has_posts? %>
+          <%= link_to admin_user_path(id: user.id),
+              data: { confirm: t('.delete_confirm') }, :method => :delete,
+              :class => "btn btn-sm btn-danger text-center" do %>
+            <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"
+              data-placement="top" title="<%= t('.destroy') %>"></i>
+          <% end %>
         <% end %>
       </div>
     </div>

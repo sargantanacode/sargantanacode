@@ -6,6 +6,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable
 
+  attr_accessor :transfer_posts
+  
   after_initialize :set_default_role, if: :new_record?
 
   has_many :posts
@@ -22,7 +24,8 @@ class User < ApplicationRecord
   scope :by_role, -> { order(Arel.sql('role DESC, created_at ASC')) }
   scope :only_with_job, -> { where.not(job: '') }
   scope :by_job, -> { order(Arel.sql('job DESC, created_at ASC')) }
-  scope :by_name, -> { order(Arel.sql('name ASC')) }
+  scope :by_name, -> { order(name: :asc) }
+  scope :all_except, -> user_to_hide { where.not(id: user_to_hide.id) }
 
   def set_default_role
     self.role ||= :user
@@ -32,15 +35,19 @@ class User < ApplicationRecord
     update(:role => :admin)
   end
 
-  def to_s
-    self.name
-  end
-
   def has_social_links?
     links = [self.url, self.github, self.linkedin, self.twitter, self.facebook]
     links.each do |link|
       return true unless link.to_s.empty?
     end
     false
+  end
+
+  def has_posts?
+    self.posts.count > 0
+  end
+
+  def to_s
+    self.name
   end
 end

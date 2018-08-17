@@ -132,4 +132,12 @@ module ApplicationHelper
     }
     Akismet.spam?(request.ip, request.user_agent, params)
   end
+
+  def transfer_posts(user, new_user_id)
+    user_to_transfer = User.find(new_user_id)
+    posts = user.posts
+    posts.each do |post|
+      post.update_author(user_to_transfer.id)
+    end
+  end
 end

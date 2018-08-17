@@ -87,6 +87,7 @@ es:
         destroy: "Eliminar"
       edit:
         edit_user: "Editar usuario %{name}"
+        transfer_help: "Se cambiará el autor de cada artículo de %{name} al usuario elegido"
         save: "Guardar"
       update:
         saved: "Los cambios realizados en el usuario han sido guardados correctamente"
@@ -324,6 +325,10 @@ es:
     team:
       team: "Equipo"
       no_team_members: "Actualmente no hay miembros en el equipo"
+  users:
+    registrations:
+      destroy:
+        destroy_account_with_posts: "No se puede eliminar esta cuenta debido a que tiene contenido publicado de su autoría"
   mail_form:
     attributes:
       contact:

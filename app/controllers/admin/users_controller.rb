@@ -11,6 +11,11 @@ class Admin::UsersController < ApplicationController
   end
 
   def update
+    transfer_user_id = params[:user][:transfer_posts]
+    if transfer_user_id.present?
+      transfer_posts(@user, transfer_user_id)
+    end
+    
     if @user.update(user_params)
       redirect_to admin_users_path, notice: t('.saved')
     else
@@ -31,7 +36,8 @@ class Admin::UsersController < ApplicationController
   end
 
   def user_params
-    permitted = [:email, :name, :bio, :url, :github, :linkedin, :twitter, :facebook, :role, :job]
+    permitted = [:email, :name, :bio, :url, :github, :linkedin, :twitter,
+      :facebook, :role, :job, :transfer_posts]
     params.require(:user).permit(permitted)
   end
 end

@@ -87,6 +87,7 @@ en:
         destroy: "Delete"
       edit:
         edit_user: "Edit user %{name}"
+        transfer_help: "The author of each article from %{name} will be changed to the chosen user"
         save: "Save"
       update:
         saved: "User changes have been saved successfully"
@@ -324,6 +325,10 @@ en:
     team:
       team: "Team"
       team?members: "Currently there are no members on the team"
+  users:
+    registrations:
+      destroy:
+        destroy_account_with_posts: "This account can't be deleted because there's some published content of its authorship"
   mail_form:
     attributes:
       contact:

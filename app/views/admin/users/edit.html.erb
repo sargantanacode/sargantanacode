@@ -70,6 +70,17 @@
         </div>
       <% end %>
 
+      <% if current_user.admin? && @user.has_posts? %>
+        <div class="form-group">
+          <%= f.label :transfer_posts %>
+          <%= f.collection_select :transfer_posts, User.all_except(@user).by_role.by_name, :id, :name,
+            { prompt: true }, :class => "form-control" %>
+          <small id="transferHelp" class="form-text text-muted">
+            <%= t('.transfer_help', name: @user.name) %>
+          </small>
+        </div>
+      <% end %>
+
       <div class="actions">
         <%= f.submit t('.save'), :class => "btn btn-primary" %>
       </div>

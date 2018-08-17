@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
-    devise_for :users
+    devise_for :users, controllers: { registrations: "users/registrations"}
     get "post/:id" => "posts#show", as: "post"
     post "post/:id/comments" => "posts#comment", as: "comments"
     get "new-admin" => "pages#admin", as: "admin"

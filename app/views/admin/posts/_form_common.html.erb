@@ -3,7 +3,6 @@
 <% unless new_post %>
   <div class="form-group">
     <%= f.label :author %>
-    <% categories = User.all.collect { |user| [user.name, user.id] } %>
     <%= f.collection_select :user_id, User.by_role.by_name, :id, :name,
       { prompt: true }, :class => "form-control" %>
   </div>
