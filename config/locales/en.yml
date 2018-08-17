@@ -320,8 +320,8 @@ en:
       search_placeholder: Write what you want and press the enter key
       term_not_found: No results for "%{term}" term found in English
     team:
+      no_team_members: Currently there are no members on the team
       team: Team
-      team?members: Currently there are no members on the team
   posts:
     comment:
       failed: Something went wrong when sending your comment

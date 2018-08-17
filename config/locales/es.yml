@@ -63,7 +63,7 @@ es:
         destroyed: El curso ha sido eliminado correctamente
       edit:
         edit_course: Editar curso
-      form-common:
+      form_common:
         cover_image_help: Esta será la imagen de portada por defecto para los artículos
           que no tengan imagen
         image_help: Esta será la imagen que represente a este curso
