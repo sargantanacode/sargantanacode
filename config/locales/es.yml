@@ -1,338 +1,358 @@
+---
 es:
-  main:
-    title: "SargantanaCode"
-    description: "SargantanaCode es una web en la que podrás encontrar distintos temas relacionados con la informática pero sobre todo con la programación, con contenido gratuito y en español"
-  errors:
-    access: "¡Tú no tienes poder aquí, Gandalf el gris!"
-  comments_mailer:
-    comment_notification:
-      subject: "Nuevo comentario recibido"
-      new_comment_text: "Hay un nuevo comentario en el post: <strong>%{post}</strong>, haz clic en el siguiente enlace para verlo:"
-      author: "Autor: %{author}"
-      email: "Correo electrónico: %{email}"
-      ip: "Dirección IP: %{ip}"
-      comment: "Comentario:"
   admin:
+    categories:
+      create:
+        created: Categoría añadida con éxito
+      destroy:
+        destroyed: La categoría ha sido eliminada correctamente
+      edit:
+        edit_category: Editar categoría
+      form_common:
+        cover_image_help: Esta será la imagen de portada por defecto para los artículos
+          que no tengan imagen
+        image_help: Esta será la imagen que represente a esta categoría
+        save: Guardar
+        slug_help: Si lo dejas en blanco será generado automáticamente
+      index:
+        actions: Acciones
+        add_one_category: "¡Puedes crear una ahora!"
+        categories: Categorías
+        categories_list_empty: Actualmente no hay ninguna categoría creado. %{href}
+        delete_confirm: "¿Estás seguro de querer eliminar esta categoría?"
+        description: Descripción
+        destroy: Eliminar
+        edit: Editar
+        image: Imagen
+        name: Nombre
+        view: Ver
+      new:
+        add_category: Añadir categoría
+      update:
+        saved: Los cambios realizados en la categoría han sido guardados correctamente
+    comments:
+      approve:
+        approved: El comentario ha sido publicado con éxito
+      destroy:
+        destroyed: El comentario ha sido eliminado correctamente
+      edit:
+        edit_comment: Editar comentario
+      form:
+        save: Guardar
+      index:
+        comments: Comentarios
+      list:
+        approve: Aprobar comentario
+        delete_confirm: "¿Estás seguro de querer eliminar este comentario?"
+        destroy: Eliminar
+        edit: Editar
+        pend: Marcar como pendiente
+        view: Ver
+      list_header:
+        actions: Acciones
+        author: Nombre
+        comment: Comentario
+      pend:
+        pended: El comentario ha sido marcado como pendiente
+      update:
+        saved: Los cambios realizados en el comentario han sido guardados correctamente
+    courses:
+      create:
+        created: Curso añadido con éxito
+      destroy:
+        destroyed: El curso ha sido eliminado correctamente
+      edit:
+        edit_course: Editar curso
+      form-common:
+        cover_image_help: Esta será la imagen de portada por defecto para los artículos
+          que no tengan imagen
+        image_help: Esta será la imagen que represente a este curso
+        save: Guardar
+        slug_help: Si lo dejas en blanco será generado automáticamente
+      index:
+        actions: Acciones
+        add_one_course: "¡Puedes crear uno ahora!"
+        courses: Cursos
+        courses_list_empty: Actualmente no hay ningún curso creado. %{href}
+        delete_confirm: "¿Estás seguro de querer eliminar este curso?"
+        description: Descripción
+        destroy: Eliminar
+        edit: Editar
+        image: Imagen
+        name: Nombre
+        view: Ver
+      new:
+        add_course: Añadir curso
+      update:
+        saved: Los cambios realizados en el curso han sido guardados correctamente
     dashboard:
       index:
-        dashboard: "Administración"
-        pending_comments: "Comentarios pendientes"
-        last_comments: "Últimos comentarios"
-        last_posts: "Últimos artículos"
-        last_drafts: "Últimos borradores"
-        more_visited_posts: "Artículos más visitados"
-        more_commented_posts: "Artículos más comentados"
-    posts:
-      new:
-        add_post: "Añadir artículo"
-        add_page: "Añadir página"
-      edit:
-        edit_post: "Editar artículo"
-        edit_page: "Editar página"
-      destroy:
-        post_destroyed: "Artículo eliminado correctamente"
-        page_destroyed: "Página eliminado correctamente"
-      form_common:
-        slug_help: "Si lo dejas en blanco será generado automáticamente"
-        save: "Guardar"
-        destroy_image: "Eliminar portada"
-        delete_confirm: "Si has realizado algún cambio que no haya sido guardado se perderá. ¿Continuar?"
-      index:
-        posts_pages: "Artículos y páginas"
-        posts: "Artículos"
-        pages: "Páginas"
-        posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado. %{href}"
-        publish_something: "¡Publica algo!"
-      list_header:
-        title: "Título"
-        published: "Publicado"
-        visits-count: "Visitas"
-        comments-count: "Comentarios"
-        actions: "Acciones"
-      list:
-        title: "Título"
-        published: "Publicado"
-        visits-count: "Visitas"
-        comments-count: "Comentarios"
-        actions: "Acciones"
-        view: "Ver"
-        edit: "Editar"
-        draft: "Borrador"
-        publish: "Publicar"
-        destroy: "Eliminar"
-        delete_confirm: "¿Estás seguro?"
-      create:
-        post_saved: "El artículo ha sido guardado con éxito"
-        page_saved: "La página ha sido guardada con éxito"
-      update:
-        post_saved: "El artículo ha sido guardado con éxito"
-        page_saved: "La página ha sido guardada con éxito"
-      publish:
-        post_published: "El artículo ha sido publicado con éxito"
-        page_published: "La página ha sido publicada con éxito"
-      draft:
-        post_draft: "El artículo ha sido movido a borradores con éxito"
-        page_draft: "La página ha sido movida a borradores con éxito"
-      destroy_image:
-        image_destroyed: "La portada ha sido eliminada, se mostrará la imagen de su categoría en su lugar"
-    users:
-      index:
-        users: "Usuarios"
-        name: "Nombre"
-        role: "Permisos"
-        job: "Cargo"
-        actions: "Acciones"
-        edit: "Editar"
-        delete_confirm: "¿Estás seguro de querer eliminar a este usuario?"
-        destroy: "Eliminar"
-      edit:
-        edit_user: "Editar usuario %{name}"
-        transfer_help: "Se cambiará el autor de cada artículo de %{name} al usuario elegido"
-        save: "Guardar"
-      update:
-        saved: "Los cambios realizados en el usuario han sido guardados correctamente"
-    categories:
-      index:
-        categories: "Categorías"
-        categories_list_empty: "Actualmente no hay ninguna categoría creado. %{href}"
-        add_one_category: "¡Puedes crear una ahora!"
-        image: "Imagen"
-        name: "Nombre"
-        description: "Descripción"
-        actions: "Acciones"
-        view: "Ver"
-        edit: "Editar"
-        delete_confirm: "¿Estás seguro de querer eliminar esta categoría?"
-        destroy: "Eliminar"
-      new:
-        add_category: "Añadir categoría"
-      create:
-        created: "Categoría añadida con éxito"
-      edit:
-        edit_category: "Editar categoría"
-      update:
-        saved: "Los cambios realizados en la categoría han sido guardados correctamente"
-      destroy:
-        destroyed: "La categoría ha sido eliminada correctamente"
-      form_common:
-        slug_help: "Si lo dejas en blanco será generado automáticamente"
-        image_help: "Esta será la imagen que represente a esta categoría"
-        cover_image_help: "Esta será la imagen de portada por defecto para los artículos que no tengan imagen"
-        save: "Guardar"
-    courses:
-      index:
-        courses: "Cursos"
-        courses_list_empty: "Actualmente no hay ningún curso creado. %{href}"
-        add_one_course: "¡Puedes crear uno ahora!"
-        image: "Imagen"
-        name: "Nombre"
-        description: "Descripción"
-        actions: "Acciones"
-        view: "Ver"
-        edit: "Editar"
-        delete_confirm: "¿Estás seguro de querer eliminar este curso?"
-        destroy: "Eliminar"
-      new:
-        add_course: "Añadir curso"
-      create:
-        created: "Curso añadido con éxito"
-      edit:
-        edit_course: "Editar curso"
-      update:
-        saved: "Los cambios realizados en el curso han sido guardados correctamente"
-      destroy:
-        destroyed: "El curso ha sido eliminado correctamente"
-      form-common:
-        slug_help: "Si lo dejas en blanco será generado automáticamente"
-        image_help: "Esta será la imagen que represente a este curso"
-        cover_image_help: "Esta será la imagen de portada por defecto para los artículos que no tengan imagen"
-        save: "Guardar"
+        dashboard: Administración
+        last_comments: Últimos comentarios
+        last_drafts: Últimos borradores
+        last_posts: Últimos artículos
+        more_commented_posts: Artículos más comentados
+        more_visited_posts: Artículos más visitados
+        pending_comments: Comentarios pendientes
     images:
+      create:
+        created: Imagen añadida con éxito
+      destroy:
+        destroyed: La imagen ha sido eliminada correctamente
+      edit:
+        edit_image: Editar imagen
+      form_common:
+        save: Guardar
       index:
-        images: "Imágenes"
-        images_list_empty: "Actualmente no hay ninguna imagen. %{href}"
+        actions: Acciones
         add_one_image: "¡Puedes subir una ahora!"
-        image: "Imagen"
-        title: "Título"
-        description: "Descripción"
-        actions: "Acciones"
-        view: "Ver"
-        edit: "Editar"
         delete_confirm: "¿Estás seguro de querer eliminar esta imagen?"
-        destroy: "Eliminar"
+        description: Descripción
+        destroy: Eliminar
+        edit: Editar
+        image: Imagen
+        images: Imágenes
+        images_list_empty: Actualmente no hay ninguna imagen. %{href}
+        title: Título
+        view: Ver
+      new:
+        add_image: Añadir imagen
       show:
         image: "%{title}"
-        link: "Enlace"
-        link_copied: "Enlace copiado"
-        markdown_link_es: "Enlace markdown"
-        markdown_link_en: "Markdown Link"
-      new:
-        add_image: "Añadir imagen"
+        link: Enlace
+        link_copied: Enlace copiado
+        markdown_link_en: Markdown Link
+        markdown_link_es: Enlace markdown
+      update:
+        saved: Los cambios realizados en la imagen han sido guardados correctamente
+    posts:
       create:
-        created: "Imagen añadida con éxito"
-      edit:
-        edit_image: "Editar imagen"
-      update:
-        saved: "Los cambios realizados en la imagen han sido guardados correctamente"
+        page_saved: La página ha sido guardada con éxito
+        post_saved: El artículo ha sido guardado con éxito
       destroy:
-        destroyed: "La imagen ha sido eliminada correctamente"
+        page_destroyed: Página eliminado correctamente
+        post_destroyed: Artículo eliminado correctamente
+      destroy_image:
+        image_destroyed: La portada ha sido eliminada, se mostrará la imagen de su
+          categoría en su lugar
+      draft:
+        page_draft: La página ha sido movida a borradores con éxito
+        post_draft: El artículo ha sido movido a borradores con éxito
+      edit:
+        edit_page: Editar página
+        edit_post: Editar artículo
       form_common:
-        save: "Guardar"
-    comments:
+        delete_confirm: Si has realizado algún cambio que no haya sido guardado se
+          perderá. ¿Continuar?
+        destroy_image: Eliminar portada
+        save: Guardar
+        slug_help: Si lo dejas en blanco será generado automáticamente
       index:
-        comments: "Comentarios"
-      approve:
-        approved: "El comentario ha sido publicado con éxito"
-      pend:
-        pended: "El comentario ha sido marcado como pendiente"
-      edit:
-        edit_comment: "Editar comentario"
-      form:
-        save: "Guardar"
-      update:
-        saved: "Los cambios realizados en el comentario han sido guardados correctamente"
-      destroy:
-        destroyed: "El comentario ha sido eliminado correctamente"
-      list_header:
-        author: "Nombre"
-        comment: "Comentario"
-        actions: "Acciones"
+        pages: Páginas
+        posts: Artículos
+        posts_list_empty: Lo sentimos, actualmente no hay ningún artículo publicado.
+          %{href}
+        posts_pages: Artículos y páginas
+        publish_something: "¡Publica algo!"
       list:
-        view: "Ver"
-        approve: "Aprobar comentario"
-        pend: "Marcar como pendiente"
-        edit: "Editar"
-        delete_confirm: "¿Estás seguro de querer eliminar este comentario?"
-        destroy: "Eliminar"
-  layouts:
-    admin_links:
-      dashboard: "Administración"
-      posts_pages: "Artículos y páginas"
-      add_post: "Añadir artículo"
-      add_page: "Añadir página"
-      categories_courses: "Categorías y cursos"
-      categories: "Categorías"
-      add_category: "Añadir categoría"
-      courses: "Cursos"
-      add_course: "Añadir curso"
-      comments: "Comentarios"
-      images: "Imágenes"
-      add_image: "Añadir imagen"
-      users: "Usuarios"
-    public_links:
-      home: "Inicio"
-      courses: "Cursos"
-      categories: "Categorías"
-      search: "Buscador"
-      contact_form: "Contacto"
-      about_us: "Sobre nosotros"
-      rss: "RSS"
-    menu:
-      login: "Entrar"
-      hello: "¡Hola, %{name}!"
-      dashboard: "Administración"
-      homepage: "Página de inicio"
-      add_post: "Añadir artículo"
-      add_page: "Añadir página"
-      add_category: "Añadir categoría"
-      add_course: "Añadir curso"
-      add_image: "Añadir imagen"
-      edit_user: "Editar usuario"
-      logout: "Salir"
-      languages: "Idiomas"
-      english: "Inglés"
-      spanish: "Español"
-    footer:
-      github_repo: "Este proyecto es de código abierto, lo puedes encontrar en <a href=\"%{link}\">nuestro repositorio de GitHub</a>"
-      content_license: "El contenido de esta página tiene una licencia <a href=\"%{link}\">CC BY-SA</a>"
-  posts:
-    index:
-      posts_list_empty: "Lo sentimos, actualmente no hay ningún artículo publicado"
-      new_admin: "Antes de empezar necesitas crear un administrador"
-    show:
-      comments: "Comentarios"
-      closed_comments: "Los comentarios están cerrados en este momento"
-    comment:
-      sended: "Tu comentario ha sido añadido con éxito"
-      spam_detected: "Tu comentario ha sido marcado como spam y no será publicado hasta que se revise manualmente"
-      failed: "Algo salió mal al enviar tu comentario"
-    list:
-      previous_page: "← página anterior"
-      next_page: "página siguiente →"
-    toolbar:
-      destroy_image: "Eliminar portada"
-      edit_post: "Editar"
-      delete_post: "Eliminar"
-      delete_confirm: "¿Estás seguro?"
-    course_info:
-      header: "¿Sed de conocimiento?"
-      info: "Este artículo forma parte del curso %{href}."
-      info_prev: "El anterior artículo de este curso es %{href}."
-      info_next: "El próximo artículo de este curso es %{href}."
-      info_prev_next: "El anterior artículo de este curso es %{href_prev} y el próximo es %{href_next}."
-  comments:
-    comment:
-      reply: "Responder"
-      cancel-reply: "Cancelar respuesta"
-    form:
-      new_comment: "Nuevo comentario"
-      anonymous_user_message: "Escribe tu nombre y correo electrónico para poder comentar, o %{href} para que estos campos se rellenen automáticamente."
-      login: "inicia sesión"
-      send: "Enviar comentario"
+        actions: Acciones
+        comments-count: Comentarios
+        delete_confirm: "¿Estás seguro?"
+        destroy: Eliminar
+        draft: Borrador
+        edit: Editar
+        publish: Publicar
+        published: Publicado
+        title: Título
+        view: Ver
+        visits-count: Visitas
+      list_header:
+        actions: Acciones
+        comments-count: Comentarios
+        published: Publicado
+        title: Título
+        visits-count: Visitas
+      new:
+        add_page: Añadir página
+        add_post: Añadir artículo
+      publish:
+        page_published: La página ha sido publicada con éxito
+        post_published: El artículo ha sido publicado con éxito
+      update:
+        page_saved: La página ha sido guardada con éxito
+        post_saved: El artículo ha sido guardado con éxito
+    users:
+      edit:
+        edit_user: Editar usuario %{name}
+        save: Guardar
+        transfer_help: Se cambiará el autor de cada artículo de %{name} al usuario
+          elegido
+      index:
+        actions: Acciones
+        delete_confirm: "¿Estás seguro de querer eliminar a este usuario?"
+        destroy: Eliminar
+        edit: Editar
+        job: Cargo
+        name: Nombre
+        role: Permisos
+        users: Usuarios
+      update:
+        saved: Los cambios realizados en el usuario han sido guardados correctamente
   categories:
     index:
-      categories: "Categorías"
-      categories_list_empty: "Lo sentimos, actualmente no hay ninguna categoría publicada"
+      categories: Categorías
+      categories_list_empty: Lo sentimos, actualmente no hay ninguna categoría publicada
+    list:
+      posts:
+        one: 1 artículo
+        other: "%{count} artículos"
     show:
       category: "%{name}"
-    list:
-      posts:
-        one: "1 artículo"
-        other: "%{count} artículos"
+  comments:
+    comment:
+      cancel-reply: Cancelar respuesta
+      reply: Responder
+    form:
+      anonymous_user_message: Escribe tu nombre y correo electrónico para poder comentar,
+        o %{href} para que estos campos se rellenen automáticamente.
+      login: inicia sesión
+      new_comment: Nuevo comentario
+      send: Enviar comentario
+  comments_mailer:
+    comment_notification:
+      author: 'Autor: %{author}'
+      comment: 'Comentario:'
+      email: 'Correo electrónico: %{email}'
+      ip: 'Dirección IP: %{ip}'
+      new_comment_text: 'Hay un nuevo comentario en el post: <strong>%{post}</strong>,
+        haz clic en el siguiente enlace para verlo:'
+      subject: Nuevo comentario recibido
   courses:
     index:
-      courses: "Cursos"
-      courses_list_empty: "Lo sentimos, actualmente no hay ningún curso publicado"
-    show:
-      course: "%{name}"
-      previous_page: "← página anterior"
-      next_page: "página siguiente →"
+      courses: Cursos
+      courses_list_empty: Lo sentimos, actualmente no hay ningún curso publicado
     list:
       posts:
-        one: "1 artículo"
+        one: 1 artículo
         other: "%{count} artículos"
-  pages:
-    admin:
-      new_admin: "Crear admin"
-      save: "Guardar"
-    create_admin:
-      created: "Administrador creado. Recibirás un email con las instrucciones para confirmar tu correo electrónico en unos minutos."
-    profile:
-      profile: "Perfil de %{name}"
-    contact:
-      contact_form: "Contacto"
-      send: "Enviar mensaje"
-    create_contact:
-      sended: "Correo electrónico enviado con éxito"
-    about_us:
-      about_us: "Sobre nosotros"
-      about_us_not_found: "Por el momento no está disponible esta sección"
-    search:
-      search: "Buscador"
-      search_message: "Desde este buscador encontrarás fácilmente el contenido que deseas en español. Escribe las palabras clave relacionadas con el tema que prefieras y se buscará tanto en títulos como en contenidos."
-      search_placeholder: "Escribe lo que quieras y pulsa la tecla intro"
-      term_not_found: "No se han encontrado resultados para el término \"%{term}\" en español"
-    team:
-      team: "Equipo"
-      no_team_members: "Actualmente no hay miembros en el equipo"
-  users:
-    registrations:
-      destroy:
-        destroy_account_with_posts: "No se puede eliminar esta cuenta debido a que tiene contenido publicado de su autoría"
+    show:
+      course: "%{name}"
+      next_page: página siguiente →
+      previous_page: "← página anterior"
+  errors:
+    access: "¡Tú no tienes poder aquí, Gandalf el gris!"
+  layouts:
+    admin_links:
+      add_category: Añadir categoría
+      add_course: Añadir curso
+      add_image: Añadir imagen
+      add_page: Añadir página
+      add_post: Añadir artículo
+      categories: Categorías
+      categories_courses: Categorías y cursos
+      comments: Comentarios
+      courses: Cursos
+      dashboard: Administración
+      images: Imágenes
+      posts_pages: Artículos y páginas
+      users: Usuarios
+    footer:
+      content_license: El contenido de esta página tiene una licencia <a href="%{link}">CC
+        BY-SA</a>
+      github_repo: Este proyecto es de código abierto, lo puedes encontrar en <a href="%{link}">nuestro
+        repositorio de GitHub</a>
+    menu:
+      add_category: Añadir categoría
+      add_course: Añadir curso
+      add_image: Añadir imagen
+      add_page: Añadir página
+      add_post: Añadir artículo
+      dashboard: Administración
+      edit_user: Editar usuario
+      english: Inglés
+      hello: "¡Hola, %{name}!"
+      homepage: Página de inicio
+      languages: Idiomas
+      login: Entrar
+      logout: Salir
+      spanish: Español
+    public_links:
+      about_us: Sobre nosotros
+      categories: Categorías
+      contact_form: Contacto
+      courses: Cursos
+      home: Inicio
+      rss: RSS
+      search: Buscador
   mail_form:
     attributes:
       contact:
-        name: "Nombre"
-        email: "Correo electrónico"
-        subject: "Asunto"
-        message: "Mensaje"
+        email: Correo electrónico
+        message: Mensaje
+        name: Nombre
+        subject: Asunto
+  main:
+    description: SargantanaCode es una web en la que podrás encontrar distintos temas
+      relacionados con la informática pero sobre todo con la programación, con contenido
+      gratuito y en español
+    title: SargantanaCode
+  pages:
+    about_us:
+      about_us: Sobre nosotros
+      about_us_not_found: Por el momento no está disponible esta sección
+    admin:
+      new_admin: Crear admin
+      save: Guardar
+    contact:
+      contact_form: Contacto
+      send: Enviar mensaje
+    create_admin:
+      created: Administrador creado. Recibirás un email con las instrucciones para
+        confirmar tu correo electrónico en unos minutos.
+    create_contact:
+      sended: Correo electrónico enviado con éxito
+    profile:
+      profile: Perfil de %{name}
+    search:
+      search: Buscador
+      search_message: Desde este buscador encontrarás fácilmente el contenido que
+        deseas en español. Escribe las palabras clave relacionadas con el tema que
+        prefieras y se buscará tanto en títulos como en contenidos.
+      search_placeholder: Escribe lo que quieras y pulsa la tecla intro
+      term_not_found: No se han encontrado resultados para el término "%{term}" en
+        español
+    team:
+      no_team_members: Actualmente no hay miembros en el equipo
+      team: Equipo
+  posts:
+    comment:
+      failed: Algo salió mal al enviar tu comentario
+      sended: Tu comentario ha sido añadido con éxito
+      spam_detected: Tu comentario ha sido marcado como spam y no será publicado hasta
+        que se revise manualmente
+    course_info:
+      header: "¿Sed de conocimiento?"
+      info: Este artículo forma parte del curso %{href}.
+      info_next: El próximo artículo de este curso es %{href}.
+      info_prev: El anterior artículo de este curso es %{href}.
+      info_prev_next: El anterior artículo de este curso es %{href_prev} y el próximo
+        es %{href_next}.
+    index:
+      new_admin: Antes de empezar necesitas crear un administrador
+      posts_list_empty: Lo sentimos, actualmente no hay ningún artículo publicado
+    list:
+      next_page: página siguiente →
+      previous_page: "← página anterior"
+    show:
+      closed_comments: Los comentarios están cerrados en este momento
+      comments: Comentarios
+    toolbar:
+      delete_confirm: "¿Estás seguro?"
+      delete_post: Eliminar
+      destroy_image: Eliminar portada
+      edit_post: Editar
+  users:
+    registrations:
+      destroy:
+        destroy_account_with_posts: No se puede eliminar esta cuenta debido a que
+          tiene contenido publicado de su autoría
