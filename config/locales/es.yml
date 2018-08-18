@@ -125,21 +125,60 @@ es:
         markdown_link_es: Enlace markdown
       update:
         saved: Los cambios realizados en la imagen han sido guardados correctamente
+    pages:
+      create:
+        saved: La página ha sido guardada con éxito
+      destroy:
+        destroyed: Página eliminado correctamente
+      draft:
+        draft: La página ha sido movida a borradores con éxito
+      edit:
+        edit_page: Editar página
+      form_common:
+        delete_confirm: Si has realizado algún cambio que no haya sido guardado se
+          perderá. ¿Continuar?
+        save: Guardar
+        slug_help: Si lo dejas en blanco será generado automáticamente
+      index:
+        pages: Páginas
+        pages_list_empty: Lo sentimos, actualmente no hay ningún artículo publicado.
+          %{href}
+        publish_something: "¡Publica algo!"
+      list:
+        actions: Acciones
+        comments_count: Comentarios
+        delete_confirm: "¿Estás seguro de querer eliminar esta página?"
+        destroy: Eliminar
+        draft: Borrador
+        edit: Editar
+        publish: Publicar
+        published: Publicado
+        title: Título
+        view: Ver
+        visits_count: Visitas
+      list_header:
+        actions: Acciones
+        comments_count: Comentarios
+        published: Publicado
+        title: Título
+        visits_count: Visitas
+      new:
+        add_page: Añadir página
+      publish:
+        published: La página ha sido publicada con éxito
+      update:
+        saved: La página ha sido guardada con éxito
     posts:
       create:
-        page_saved: La página ha sido guardada con éxito
-        post_saved: El artículo ha sido guardado con éxito
+        saved: El artículo ha sido guardado con éxito
       destroy:
-        page_destroyed: Página eliminado correctamente
-        post_destroyed: Artículo eliminado correctamente
+        destroyed: Artículo eliminado correctamente
       destroy_image:
         image_destroyed: La portada ha sido eliminada, se mostrará la imagen de su
           categoría en su lugar
       draft:
-        page_draft: La página ha sido movida a borradores con éxito
-        post_draft: El artículo ha sido movido a borradores con éxito
+        draft: El artículo ha sido movido a borradores con éxito
       edit:
-        edit_page: Editar página
         edit_post: Editar artículo
       form_common:
         delete_confirm: Si has realizado algún cambio que no haya sido guardado se
@@ -148,16 +187,14 @@ es:
         save: Guardar
         slug_help: Si lo dejas en blanco será generado automáticamente
       index:
-        pages: Páginas
         posts: Artículos
         posts_list_empty: Lo sentimos, actualmente no hay ningún artículo publicado.
           %{href}
-        posts_pages: Artículos y páginas
         publish_something: "¡Publica algo!"
       list:
         actions: Acciones
-        comments-count: Comentarios
-        delete_confirm: "¿Estás seguro?"
+        comments_count: Comentarios
+        delete_confirm: "¿Estás seguro de querer eliminar este artículo?"
         destroy: Eliminar
         draft: Borrador
         edit: Editar
@@ -165,22 +202,19 @@ es:
         published: Publicado
         title: Título
         view: Ver
-        visits-count: Visitas
+        visits_count: Visitas
       list_header:
         actions: Acciones
-        comments-count: Comentarios
+        comments_count: Comentarios
         published: Publicado
         title: Título
-        visits-count: Visitas
+        visits_count: Visitas
       new:
-        add_page: Añadir página
         add_post: Añadir artículo
       publish:
-        page_published: La página ha sido publicada con éxito
-        post_published: El artículo ha sido publicado con éxito
+        published: El artículo ha sido publicado con éxito
       update:
-        page_saved: La página ha sido guardada con éxito
-        post_saved: El artículo ha sido guardado con éxito
+        saved: El artículo ha sido guardado con éxito
     users:
       edit:
         edit_user: Editar usuario %{name}
@@ -210,7 +244,7 @@ es:
       category: "%{name}"
   comments:
     comment:
-      cancel-reply: Cancelar respuesta
+      cancel_reply: Cancelar respuesta
       reply: Responder
     form:
       anonymous_user_message: Escribe tu nombre y correo electrónico para poder comentar,
@@ -255,6 +289,8 @@ es:
       dashboard: Administración
       images: Imágenes
       posts_pages: Artículos y páginas
+      posts: Artículos
+      pages: Páginas
       users: Usuarios
     footer:
       content_license: El contenido de esta página tiene una licencia <a href="%{link}">CC
@@ -324,6 +360,10 @@ es:
     team:
       no_team_members: Actualmente no hay miembros en el equipo
       team: Equipo
+    toolbar:
+      delete_confirm: "¿Estás seguro de querer eliminar esta página?"
+      delete: Eliminar
+      edit: Editar
   posts:
     comment:
       failed: Algo salió mal al enviar tu comentario
@@ -347,10 +387,10 @@ es:
       closed_comments: Los comentarios están cerrados en este momento
       comments: Comentarios
     toolbar:
-      delete_confirm: "¿Estás seguro?"
-      delete_post: Eliminar
+      delete_confirm: "¿Estás seguro de querer eliminar este artículo?"
+      delete: Eliminar
       destroy_image: Eliminar portada
-      edit_post: Editar
+      edit: Editar
   users:
     registrations:
       destroy:

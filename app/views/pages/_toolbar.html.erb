@@ -1,0 +1,9 @@
+<% if current_user.present? && current_user.admin? %>
+  <div class="col-12 links text-center mb-5">
+    <%= link_to t('.edit'), edit_admin_page_path(id: @page.slug),
+      :class => "btn btn-warning" %>
+    <%= link_to t('.delete'), admin_page_path(id: @page.slug),
+      data: { confirm: t('.delete_confirm') }, :method => :delete,
+      :class => "btn btn-danger" %>
+  </div>
+<% end %>

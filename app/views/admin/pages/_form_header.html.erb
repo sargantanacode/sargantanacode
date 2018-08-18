@@ -1,0 +1,7 @@
+<% if page.errors.any? %>
+  <% page.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger" role="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>

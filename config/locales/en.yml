@@ -125,21 +125,59 @@ en:
         markdown_link_es: Enlace markdown
       update:
         saved: Image changes have been saved successfully
+    pages:
+      create:
+        saved: The Page has been saved successfully
+      destroy:
+        destroyed: Page successfully deleted
+      draft:
+        draft: The Page has been moved to drafts successfully
+      edit:
+        edit_page: Editing Page
+      form_common:
+        delete_confirm: If you have made some changes that haven't been saved yet
+          they will be lost. Do you want to continue?
+        save: Save
+        slug_help: If you leave it blank it will be generated automatically
+      index:
+        pages: Pages
+        pages_list_empty: Sorry, there are currently no posts added. %{href}
+        publish_something: Publish something!
+      list:
+        actions: Actions
+        comments_count: Comments
+        delete_confirm: Are you sure to delete this page?
+        destroy: Delete
+        draft: Draft
+        edit: Edit
+        publish: Publish
+        published: Published
+        title: Title
+        view: View
+        visits_count: Visits
+      list_header:
+        actions: Actions
+        comments_count: Comments
+        published: Published
+        title: Title
+        visits_count: Visits
+      new:
+        add_page: Add Page
+      publish:
+        published: The Page has been published successfully
+      update:
+        saved: The Page has been saved successfully
     posts:
       create:
-        page_saved: The Page has been saved successfully
-        post_saved: The Post has been saved successfully
+        saved: The Post has been saved successfully
       destroy:
-        page_destroyed: Page successfully deleted
-        post_destroyed: Post successfully deleted
+        destroyed: Post successfully deleted
       destroy_image:
         image_destroyed: The cover has been removed, the image of its category will
           be showed instead
       draft:
-        page_draft: The Page has been moved to drafts successfully
-        post_draft: The Post has been moved to drafts successfully
+        draft: The Post has been moved to drafts successfully
       edit:
-        edit_page: Editing Page
         edit_post: Editing Post
       form_common:
         delete_confirm: If you have made some changes that haven't been saved yet
@@ -148,15 +186,14 @@ en:
         save: Save
         slug_help: If you leave it blank it will be generated automatically
       index:
-        pages: Pages
         posts: Posts
         posts_list_empty: Sorry, there are currently no posts added. %{href}
         posts_pages: Posts and Pages
         publish_something: Publish something!
       list:
         actions: Actions
-        comments-count: Comments
-        delete_confirm: Are you sure?
+        comments_count: Comments
+        delete_confirm: Are you sure to delete this post?
         destroy: Delete
         draft: Draft
         edit: Edit
@@ -164,22 +201,19 @@ en:
         published: Published
         title: Title
         view: View
-        visits-count: Visits
+        visits_count: Visits
       list_header:
         actions: Actions
-        comments-count: Comments
+        comments_count: Comments
         published: Published
         title: Title
-        visits-count: Visits
+        visits_count: Visits
       new:
-        add_page: Add Page
         add_post: Add Post
       publish:
-        page_published: The Page has been published successfully
-        post_published: The Post has been published successfully
+        published: The Post has been published successfully
       update:
-        page_saved: The Page has been saved successfully
-        post_saved: The Post has been saved successfully
+        saved: The Post has been saved successfully
     users:
       edit:
         edit_user: Edit user %{name}
@@ -209,7 +243,7 @@ en:
       category: "%{name}"
   comments:
     comment:
-      cancel-reply: Cancel reply
+      cancel_reply: Cancel reply
       reply: Reply
     form:
       anonymous_user_message: Enter your name and email to comment, or %{href} and
@@ -254,6 +288,8 @@ en:
       dashboard: Dashboard
       images: Images
       posts_pages: Posts and Pages
+      posts: Posts
+      pages: Pages
       users: Users
     footer:
       content_license: The content of this page has a <a href="%{link}">CC BY-SA</a>
@@ -322,6 +358,10 @@ en:
     team:
       no_team_members: Currently there are no members on the team
       team: Team
+    toolbar:
+      delete_confirm: Are you sure to delete this page?
+      delete: Delete
+      edit: Edit
   posts:
     comment:
       failed: Something went wrong when sending your comment
@@ -345,10 +385,10 @@ en:
       closed_comments: The comments are closed for the moment
       comments: Comments
     toolbar:
-      delete_confirm: Are you sure?
-      delete_post: Delete
+      delete_confirm: Are you sure to delete this post?
+      delete: Delete
       destroy_image: Remove Cover
-      edit_post: Edit
+      edit: Edit
   users:
     registrations:
       destroy:

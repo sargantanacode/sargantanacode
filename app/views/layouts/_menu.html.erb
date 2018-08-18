@@ -24,9 +24,9 @@
           </a>
           <div class="dropdown-menu m-0 rounded-0" aria-labelledby="langDropdown">
             <%= link_to t('.english'), url_for(:locale => :en),
-                :class => "dropdown-item #{current_locale?(:en)}" %>
+                :class => "dropdown-item lang #{current_locale?(:en)}" %>
             <%= link_to t('.spanish'), url_for(:locale => :es),
-                :class => "dropdown-item #{current_locale?(:es)}" %>
+                :class => "dropdown-item lang #{current_locale?(:es)}" %>
           </div>
         </li>
         <% unless user_signed_in? %>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users, controllers: { registrations: "users/registrations"}
     get "post/:id" => "posts#show", as: "post"
+    get "page/:id" => "pages#show", as: "page"
     post "post/:id/comments" => "posts#comment", as: "comments"
     get "new-admin" => "pages#admin", as: "admin"
     post "new-admin/new" => "pages#create_admin", as: "admin_new"
@@ -26,6 +27,10 @@ Rails.application.routes.draw do
         put :publish, as: "publish"
         put :draft, as: "draft"
         put :destroy_image, as: "destroy_image"
+      end
+      resources :pages, except: [:show] do
+        put :publish, as: "publish"
+        put :draft, as: "draft"
       end
       resources :users, except: [:new, :create]
       resources :categories, except: [:show]

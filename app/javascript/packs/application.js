@@ -37,6 +37,7 @@ $(document).ready(function () {
       menu.removeClass('sticky')
     }
   })
+  $("ul.navbar-nav li a.active").not('.lang').parents('li').addClass('active')
 })
 
 let copyImageLink = document.querySelector('#copy-link-image')

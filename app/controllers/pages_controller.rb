@@ -1,5 +1,9 @@
 class PagesController < ApplicationController
   include ApplicationHelper
+  before_action :set_page, only: [:show]
+
+  def show
+  end
 
   def admin
     if users_count >= 1
@@ -37,7 +41,7 @@ class PagesController < ApplicationController
   end
 
   def about_us
-    @post = Post.find_by(slug: "about-us")
+    @page = Post.find_by(slug: "about-us")
   end
 
   def profile
@@ -49,6 +53,10 @@ class PagesController < ApplicationController
   end
 
   private
+
+  def set_page
+    @page = Post.friendly.find(params[:id])
+  end
 
   def admin_params
     permitted = [:email, :password, :password_confirmation, :name, :bio]
