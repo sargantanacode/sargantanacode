@@ -41,6 +41,8 @@ es:
         save: Guardar
       index:
         comments: Comentarios
+        next_page: página siguiente →
+        previous_page: "← página anterior"
       list:
         approve: Aprobar comentario
         delete_confirm: "¿Estás seguro de querer eliminar este comentario?"
@@ -187,9 +189,11 @@ es:
         save: Guardar
         slug_help: Si lo dejas en blanco será generado automáticamente
       index:
+        next_page: página siguiente →
         posts: Artículos
         posts_list_empty: Lo sentimos, actualmente no hay ningún artículo publicado.
           %{href}
+        previous_page: "← página anterior"
         publish_something: "¡Publica algo!"
       list:
         actions: Acciones

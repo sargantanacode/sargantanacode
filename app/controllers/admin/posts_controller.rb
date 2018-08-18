@@ -5,7 +5,7 @@ class Admin::PostsController < ApplicationController
   before_action :set_post_id, only: [:publish, :draft, :destroy_image]
 
   def index
-    @posts = Post.post.by_date
+    @posts = Post.post.by_date.page(params[:page]).per(30)
   end
 
   def new

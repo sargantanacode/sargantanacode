@@ -41,6 +41,8 @@ en:
         save: Save
       index:
         comments: Comments
+        next_page: next page →
+        previous_page: "← previous page"
       list:
         approve: Approve comment
         delete_confirm: Are you sure to delete this comment?
@@ -186,9 +188,11 @@ en:
         save: Save
         slug_help: If you leave it blank it will be generated automatically
       index:
+        next_page: next page →
         posts: Posts
         posts_list_empty: Sorry, there are currently no posts added. %{href}
         posts_pages: Posts and Pages
+        previous_page: "← previous page"
         publish_something: Publish something!
       list:
         actions: Actions

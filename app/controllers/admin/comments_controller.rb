@@ -5,7 +5,7 @@ class Admin::CommentsController < ApplicationController
   before_action :set_comment_id, only: [:approve, :pend]
 
   def index
-    @comments = Comment.by_date
+    @comments = Comment.by_date.page(params[:page])
   end
 
   def edit
