@@ -10,6 +10,8 @@ class Comment < ApplicationRecord
   validates :author, :email, :comment, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
+  paginates_per 20
+
   scope :by_date, -> { order(created_at: :desc) }
 
   def to_s

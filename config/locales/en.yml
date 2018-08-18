@@ -1,338 +1,400 @@
+---
 en:
-  main:
-    title: "SargantanaCode"
-    description: "SargantanaCode is a website where you can find different subjects related to computer science but mainly related to programming, with both Spanish and English free content"
-  errors:
-    access: "You have no Power here, Gandalf the Grey!"
-  comments_mailer:
-    comment_notification:
-      subject: "New comment received"
-      new_comment_text: "There is a new comment in the post <strong>%{post}</strong>, click on the following link to view it:"
-      author: "Author: %{author}"
-      email: "Email: %{email}"
-      ip: "IP address: %{ip}"
-      comment: "Comment:"
   admin:
+    categories:
+      create:
+        created: Category added successfully
+      destroy:
+        destroyed: Category successfully deleted
+      edit:
+        edit_category: Edit Category
+      form_common:
+        cover_image_help: This will be the default cover image for Posts without cover
+          image
+        image_help: This will be the image associated with this category
+        save: Save
+        slug_help: If you leave it blank it will be generated automatically
+      index:
+        actions: Actions
+        add_one_category: You can add one now!
+        categories: Categories
+        categories_list_empty: Currently there are no added Categories. %{href}
+        delete_confirm: Are you sure to delete this category?
+        description: Description
+        destroy: Delete
+        edit: Edit
+        image: Image
+        name: Name
+        view: View
+      new:
+        add_category: Add Category
+      update:
+        saved: Category changes have been saved successfully
+    comments:
+      approve:
+        approved: Comment successfully published
+      destroy:
+        destroyed: Comment successfully deleted
+      edit:
+        edit_comment: Edit Comment
+      form:
+        save: Save
+      index:
+        comments: Comments
+        next_page: next page →
+        previous_page: "← previous page"
+      list:
+        approve: Approve comment
+        delete_confirm: Are you sure to delete this comment?
+        destroy: Delete
+        edit: Edit
+        pend: Mark as Pending
+        view: View
+      list_header:
+        actions: Actions
+        author: Author
+        comment: Comment
+      pend:
+        pended: Comment successfully marked as pending
+      update:
+        saved: Comment changes have been saved successfully
+    courses:
+      create:
+        created: Course added successfully
+      destroy:
+        destroyed: Course successfully deleted
+      edit:
+        edit_course: Edit Course
+      form_common:
+        cover_image_help: This will be the default cover image for Posts without cover
+          image
+        image_help: This will be the image associated with this course
+        save: Save
+        slug_help: If you leave it blank it will be generated automatically
+      index:
+        actions: Actions
+        add_one_course: You can add one now!
+        courses: Categories
+        courses_list_empty: Currently there are no added Courses. %{href}
+        delete_confirm: Are you sure to delete this course?
+        description: Description
+        destroy: Delete
+        edit: Edit
+        image: Image
+        name: Name
+        view: View
+      new:
+        add_course: Add Course
+      update:
+        saved: Course changes have been saved successfully
     dashboard:
       index:
-        dashboard: "Dasboard"
-        pending_comments: "Pending Comments"
-        last_comments: "Last Comments"
-        last_posts: "Last Posts"
-        last_drafts: "Last Drafts"
-        more_visited_posts: "More visited Posts"
-        more_commented_posts: "More commented Posts"
-    posts:
-      new:
-        add_post: "Add Post"
-        add_page: "Add Page"
-      edit:
-        edit_post: "Editing Post"
-        edit_page: "Editing Page"
-      destroy:
-        post_destroyed: "Post successfully deleted"
-        page_destroyed: "Page successfully deleted"
-      form_common:
-        slug_help: "If you leave it blank it will be generated automatically"
-        save: "Save"
-        destroy_image: "Remove Cover"
-        delete_confirm: "If you have made some changes that haven't been saved yet they will be lost. Do you want to continue?"
-      index:
-        posts_pages: "Posts and Pages"
-        posts: "Posts"
-        pages: "Pages"
-        posts_list_empty: "Sorry, there are currently no posts added. %{href}"
-        publish_something: "Publish something!"
-      list_header:
-        title: "Title"
-        published: "Published"
-        visits-count: "Visits"
-        comments-count: "Comments"
-        actions: "Actions"
-      list:
-        title: "Title"
-        published: "Published"
-        visits-count: "Visits"
-        comments-count: "Comments"
-        actions: "Actions"
-        view: "View"
-        edit: "Edit"
-        draft: "Draft"
-        publish: "Publish"
-        destroy: "Delete"
-        delete_confirm: "Are you sure?"
-      create:
-        post_saved: "The Post has been saved successfully"
-        page_saved: "The Page has been saved successfully"
-      update:
-        post_saved: "The Post has been saved successfully"
-        page_saved: "The Page has been saved successfully"
-      publish:
-        post_published: "The Post has been published successfully"
-        page_published: "The Page has been published successfully"
-      draft:
-        post_draft: "The Post has been moved to drafts successfully"
-        page_draft: "The Page has been moved to drafts successfully"
-      destroy_image:
-        image_destroyed: "The cover has been removed, the image of its category will be showed instead"
-    users:
-      index:
-        users: "Users"
-        name: "Name"
-        role: "Role"
-        job: "Job"
-        actions: "Actions"
-        edit: "Edit"
-        delete_confirm: "Are you sure to delete this user?"
-        destroy: "Delete"
-      edit:
-        edit_user: "Edit user %{name}"
-        transfer_help: "The author of each article from %{name} will be changed to the chosen user"
-        save: "Save"
-      update:
-        saved: "User changes have been saved successfully"
-    categories:
-      index:
-        categories: "Categories"
-        categories_list_empty: "Currently there are no added Categories. %{href}"
-        add_one_category: "You can add one now!"
-        image: "Image"
-        name: "Name"
-        description: "Description"
-        actions: "Actions"
-        view: "View"
-        edit: "Edit"
-        delete_confirm: "Are you sure to delete this category?"
-        destroy: "Delete"
-      new:
-       add_category: "Add Category"
-      create:
-        created: "Category added successfully"
-      edit:
-        edit_category: "Edit Category"
-      update:
-        saved: "Category changes have been saved successfully"
-      destroy:
-        destroyed: "Category successfully deleted"
-      form_common:
-        slug_help: "If you leave it blank it will be generated automatically"
-        image_help: "This will be the image associated with this category"
-        cover_image_help: "This will be the default cover image for Posts without cover image"
-        save: "Save"
-    courses:
-      index:
-        courses: "Categories"
-        courses_list_empty: "Currently there are no added Courses. %{href}"
-        add_one_course: "You can add one now!"
-        image: "Image"
-        name: "Name"
-        description: "Description"
-        actions: "Actions"
-        view: "View"
-        edit: "Edit"
-        delete_confirm: "Are you sure to delete this course?"
-        destroy: "Delete"
-      new:
-        add_course: "Add Course"
-      create:
-        created: "Course added successfully"
-      edit:
-        edit_course: "Edit Course"
-      update:
-        saved: "Course changes have been saved successfully"
-      destroy:
-        destroyed: "Course successfully deleted"
-      form_common:
-        slug_help: "If you leave it blank it will be generated automatically"
-        image_help: "This will be the image associated with this course"
-        cover_image_help: "This will be the default cover image for Posts without cover image"
-        save: "Save"
+        dashboard: Dasboard
+        last_comments: Last Comments
+        last_drafts: Last Drafts
+        last_posts: Last Posts
+        more_commented_posts: More commented Posts
+        more_visited_posts: More visited Posts
+        pending_comments: Pending Comments
     images:
+      create:
+        created: Image added successfully
+      destroy:
+        destroyed: Image successfully deleted
+      edit:
+        edit_image: Edit Image
+      form_common:
+        save: Save
       index:
-        images: "Images"
-        images_list_empty: "Currently there are no Images. %{href}"
-        add_one_image: "You can upload one now!"
-        image: "Image"
-        title: "Title"
-        description: "Description"
-        actions: "Actions"
-        view: "View"
-        edit: "Edit"
-        delete_confirm: "Are you sure to delete this image?"
-        destroy: "Delete"
+        actions: Actions
+        add_one_image: You can upload one now!
+        delete_confirm: Are you sure to delete this image?
+        description: Description
+        destroy: Delete
+        edit: Edit
+        image: Image
+        images: Images
+        images_list_empty: Currently there are no Images. %{href}
+        title: Title
+        view: View
+      new:
+        add_image: Add Image
       show:
         image: "%{title}"
-        link: "Link"
-        link_copied: "Link copied"
-        markdown_link_es: "Enlace markdown"
-        markdown_link_en: "Markdown Link"
-      new:
-        add_image: "Add Image"
+        link: Link
+        link_copied: Link copied
+        markdown_link_en: Markdown Link
+        markdown_link_es: Enlace markdown
+      update:
+        saved: Image changes have been saved successfully
+    pages:
       create:
-        created: "Image added successfully"
-      edit:
-        edit_image: "Edit Image"
-      update:
-        saved: "Image changes have been saved successfully"
+        saved: The Page has been saved successfully
       destroy:
-        destroyed: "Image successfully deleted"
+        destroyed: Page successfully deleted
+      draft:
+        draft: The Page has been moved to drafts successfully
+      edit:
+        edit_page: Editing Page
       form_common:
-        save: "Save"
-    comments:
+        delete_confirm: If you have made some changes that haven't been saved yet
+          they will be lost. Do you want to continue?
+        save: Save
+        slug_help: If you leave it blank it will be generated automatically
       index:
-        comments: "Comments"
-      approve:
-        approved: "Comment successfully published"
-      pend:
-        pended: "Comment successfully marked as pending"
-      edit:
-        edit_comment: "Edit Comment"
-      form:
-        save: "Save"
-      update:
-        saved: "Comment changes have been saved successfully"
-      destroy:
-        destroyed: "Comment successfully deleted"
-      list_header:
-        author: "Author"
-        comment: "Comment"
-        actions: "Actions"
+        pages: Pages
+        pages_list_empty: Sorry, there are currently no posts added. %{href}
+        publish_something: Publish something!
       list:
-        view: "View"
-        approve: "Approve comment"
-        pend: "Mark as Pending"
-        edit: "Edit"
-        delete_confirm: "Are you sure to delete this comment?"
-        destroy: "Delete"
-  layouts:
-    admin_links:
-      dashboard: "Dashboard"
-      posts_pages: "Posts and Pages"
-      add_post: "Add Post"
-      add_page: "Add Page"
-      categories_courses: "Categories and Courses"
-      categories: "Categories"
-      add_category: "Add Category"
-      courses: "Courses"
-      add_course: "Add Course"
-      comments: "Comments"
-      images: "Images"
-      add_image: "Add Image"
-      users: "Users"
-    public_links:
-      home: "Home"
-      courses: "Courses"
-      categories: "Categories"
-      search: "Search"
-      contact_form: "Contact us"
-      about_us: "About us"
-      rss: "RSS"
-    menu:
-      login: "Log In"
-      hello: "Hey, %{name}!"
-      dashboard: "Dashboard"
-      homepage: "Homepage"
-      add_post: "Add Post"
-      add_page: "Add Page"
-      add_category: "Add Category"
-      add_course: "Add Course"
-      add_image: "Add Image"
-      edit_user: "Edit user"
-      logout: "Log Out"
-      languages: "Languages"
-      english: "English"
-      spanish: "Spanish"
-    footer:
-      github_repo: "This project is open source, you can find it on <a href=\"%{link}\">our GitHub repository</a>"
-      content_license: "The content of this page has a <a href=\"%{link}\">CC BY-SA</a> license"
-  posts:
-    index:
-      posts_list_empty: "Sorry, there are currently no posts added."
-      new_admin: "Before you start you need to create an admin user"
-    show:
-      comments: "Comments"
-      closed_comments: "The comments are closed for the moment"
-    comment:
-      sended: "Your comment has been added successfully"
-      spam_detected: "Your comment has been marked as spam and will not be published until we manually review it"
-      failed: "Something went wrong when sending your comment"
-    list:
-      previous_page: "← previous page"
-      next_page: "next page →"
-    toolbar:
-      destroy_image: "Remove Cover"
-      edit_post: "Edit"
-      delete_post: "Delete"
-      delete_confirm: "Are you sure?"
-    course_info:
-      header: "Starving for knowledge?"
-      info: "This post is part of the %{href} course."
-      info_prev: "The previous post of this course is %{href}"
-      info_next: "The next post of this course is %{href}"
-      info_prev_next: "The previous post of this course is %{href_prev} and the next one is %{href_next}."
-  comments:
-    comment:
-      reply: "Reply"
-      cancel-reply: "Cancel reply"
-    form:
-      new_comment: "New comment"
-      anonymous_user_message: "Enter your name and email to comment, or %{href} and these fields will be filled in automatically"
-      login: "sign in"
-      send: "Send comment"
+        actions: Actions
+        comments_count: Comments
+        delete_confirm: Are you sure to delete this page?
+        destroy: Delete
+        draft: Draft
+        edit: Edit
+        publish: Publish
+        published: Published
+        title: Title
+        view: View
+        visits_count: Visits
+      list_header:
+        actions: Actions
+        comments_count: Comments
+        published: Published
+        title: Title
+        visits_count: Visits
+      new:
+        add_page: Add Page
+      publish:
+        published: The Page has been published successfully
+      update:
+        saved: The Page has been saved successfully
+    posts:
+      create:
+        saved: The Post has been saved successfully
+      destroy:
+        destroyed: Post successfully deleted
+      destroy_image:
+        image_destroyed: The cover has been removed, the image of its category will
+          be showed instead
+      draft:
+        draft: The Post has been moved to drafts successfully
+      edit:
+        edit_post: Editing Post
+      form_common:
+        delete_confirm: If you have made some changes that haven't been saved yet
+          they will be lost. Do you want to continue?
+        destroy_image: Remove Cover
+        save: Save
+        slug_help: If you leave it blank it will be generated automatically
+      index:
+        next_page: next page →
+        posts: Posts
+        posts_list_empty: Sorry, there are currently no posts added. %{href}
+        posts_pages: Posts and Pages
+        previous_page: "← previous page"
+        publish_something: Publish something!
+      list:
+        actions: Actions
+        comments_count: Comments
+        delete_confirm: Are you sure to delete this post?
+        destroy: Delete
+        draft: Draft
+        edit: Edit
+        publish: Publish
+        published: Published
+        title: Title
+        view: View
+        visits_count: Visits
+      list_header:
+        actions: Actions
+        comments_count: Comments
+        published: Published
+        title: Title
+        visits_count: Visits
+      new:
+        add_post: Add Post
+      publish:
+        published: The Post has been published successfully
+      update:
+        saved: The Post has been saved successfully
+    users:
+      edit:
+        edit_user: Edit user %{name}
+        save: Save
+        transfer_help: The author of each article from %{name} will be changed to
+          the chosen user
+      index:
+        actions: Actions
+        delete_confirm: Are you sure to delete this user?
+        destroy: Delete
+        edit: Edit
+        job: Job
+        name: Name
+        role: Role
+        users: Users
+      update:
+        saved: User changes have been saved successfully
   categories:
     index:
-      categories: "Categories"
-      categories_list_empty: "Sorry, there are currently no categories added."
+      categories: Categories
+      categories_list_empty: Sorry, there are currently no categories added.
+    list:
+      posts:
+        one: 1 post
+        other: "%{count} posts"
     show:
       category: "%{name}"
-    list:
-      posts:
-        one: "1 post"
-        other: "%{count} posts"
+  comments:
+    comment:
+      cancel_reply: Cancel reply
+      reply: Reply
+    form:
+      anonymous_user_message: Enter your name and email to comment, or %{href} and
+        these fields will be filled in automatically
+      login: sign in
+      new_comment: New comment
+      send: Send comment
+  comments_mailer:
+    comment_notification:
+      author: 'Author: %{author}'
+      comment: 'Comment:'
+      email: 'Email: %{email}'
+      ip: 'IP address: %{ip}'
+      new_comment_text: 'There is a new comment in the post <strong>%{post}</strong>,
+        click on the following link to view it:'
+      subject: New comment received
   courses:
     index:
-      courses: "courses"
-      courses_list_empty: "Sorry, there are currently no courses added."
-    show:
-      course: "%{name}"
-      previous_page: "← previous page"
-      next_page: "next page →"
+      courses: courses
+      courses_list_empty: Sorry, there are currently no courses added.
     list:
       posts:
-        one: "1 post"
+        one: 1 post
         other: "%{count} posts"
-  pages:
-    admin:
-      new_admin: "New Admin"
-      save: "Save"
-    create_admin:
-      created: "Admin user created successfully. You will receive an email with instructions for how to confirm your email address in a few minutes."
-    profile:
-      profile: "Profile for %{name}"
-    contact:
-      contact_form: "Contact us"
-      send: "Send message"
-    create_contact:
-      sended: "Email sended successfully"
-    about_us:
-      about_us: "About us"
-      about_us_not_found: "This section is not available yet"
-    search:
-      search: "Search"
-      search_message: "From this search form you'll easily find the content you want in English. Write the keywords related to the topic you want and the engine will search both title and content."
-      search_placeholder: "Write what you want and press the enter key"
-      term_not_found: "No results for \"%{term}\" term found in English"
-    team:
-      team: "Team"
-      team?members: "Currently there are no members on the team"
-  users:
-    registrations:
-      destroy:
-        destroy_account_with_posts: "This account can't be deleted because there's some published content of its authorship"
+    show:
+      course: "%{name}"
+      next_page: next page →
+      previous_page: "← previous page"
+  errors:
+    access: You have no Power here, Gandalf the Grey!
+  layouts:
+    admin_links:
+      add_category: Add Category
+      add_course: Add Course
+      add_image: Add Image
+      add_page: Add Page
+      add_post: Add Post
+      categories: Categories
+      categories_courses: Categories and Courses
+      comments: Comments
+      courses: Courses
+      dashboard: Dashboard
+      images: Images
+      pages: Pages
+      posts: Posts
+      posts_pages: Posts and Pages
+      users: Users
+    footer:
+      content_license: The content of this page has a <a href="%{link}">CC BY-SA</a>
+        license
+      github_repo: This project is open source, you can find it on <a href="%{link}">our
+        GitHub repository</a>
+    menu:
+      add_category: Add Category
+      add_course: Add Course
+      add_image: Add Image
+      add_page: Add Page
+      add_post: Add Post
+      dashboard: Dashboard
+      edit_user: Edit user
+      english: English
+      hello: Hey, %{name}!
+      homepage: Homepage
+      languages: Languages
+      login: Log In
+      logout: Log Out
+      spanish: Spanish
+    public_links:
+      about_us: About us
+      categories: Categories
+      contact_form: Contact us
+      courses: Courses
+      home: Home
+      rss: RSS
+      search: Search
   mail_form:
     attributes:
       contact:
-        name: "Name"
-        email: "Email"
-        subject: "Subject"
-        message: "Message"
+        email: Email
+        message: Message
+        name: Name
+        subject: Subject
+  main:
+    description: SargantanaCode is a website where you can find different subjects
+      related to computer science but mainly related to programming, with both Spanish
+      and English free content
+    title: SargantanaCode
+  pages:
+    about_us:
+      about_us: About us
+      about_us_not_found: This section is not available yet
+    admin:
+      new_admin: New Admin
+      save: Save
+    contact:
+      contact_form: Contact us
+      send: Send message
+    create_admin:
+      created: Admin user created successfully. You will receive an email with instructions
+        for how to confirm your email address in a few minutes.
+    create_contact:
+      sended: Email sended successfully
+    profile:
+      profile: Profile for %{name}
+    search:
+      search: Search
+      search_message: From this search form you'll easily find the content you want
+        in English. Write the keywords related to the topic you want and the engine
+        will search both title and content.
+      search_placeholder: Write what you want and press the enter key
+      term_not_found: No results for "%{term}" term found in English
+    team:
+      no_team_members: Currently there are no members on the team
+      team: Team
+    toolbar:
+      delete: Delete
+      delete_confirm: Are you sure to delete this page?
+      edit: Edit
+  posts:
+    comment:
+      failed: Something went wrong when sending your comment
+      sended: Your comment has been added successfully
+      spam_detected: Your comment has been marked as spam and will not be published
+        until we manually review it
+    course_info:
+      header: Starving for knowledge?
+      info: This post is part of the %{href} course.
+      info_next: The next post of this course is %{href}
+      info_prev: The previous post of this course is %{href}
+      info_prev_next: The previous post of this course is %{href_prev} and the next
+        one is %{href_next}.
+    index:
+      new_admin: Before you start you need to create an admin user
+      posts_list_empty: Sorry, there are currently no posts added.
+    list:
+      next_page: next page →
+      previous_page: "← previous page"
+    show:
+      closed_comments: The comments are closed for the moment
+      comments: Comments
+    toolbar:
+      delete: Delete
+      delete_confirm: Are you sure to delete this post?
+      destroy_image: Remove Cover
+      edit: Edit
+  users:
+    registrations:
+      destroy:
+        destroy_account_with_posts: This account can't be deleted because there's
+          some published content of its authorship

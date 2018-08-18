@@ -5,8 +5,7 @@ class Admin::PostsController < ApplicationController
   before_action :set_post_id, only: [:publish, :draft, :destroy_image]
 
   def index
-    @posts = Post.post.by_date
-    @pages = Post.static.by_date
+    @posts = Post.post.by_date.page(params[:page]).per(30)
   end
 
   def new
@@ -19,8 +18,7 @@ class Admin::PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
-      redirect_to admin_posts_path, notice: t('.post_saved') if @post.post?
-      redirect_to admin_posts_path, notice: t('.page_saved') if @post.static?
+      redirect_to admin_posts_path, notice: t('.saved')
     else
       render :new
     end
@@ -28,8 +26,7 @@ class Admin::PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      flash[:notice] = t('.post_saved') if @post.post?
-      flash[:notice] = t('.page_saved') if @post.static?
+      flash[:notice] = t('.saved')
       redirect_back(fallback_location: admin_dashboard_path)
     else
       render :edit
@@ -38,22 +35,19 @@ class Admin::PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    flash[:notice] = t('.post_destroyed') if @post.post?
-    flash[:notice] = t('.page_destroyed') if @post.static?
+    flash[:notice] = t('.destroyed')
     redirect_back(fallback_location: admin_dashboard_path)
   end
 
   def publish
     @post.publish
-    flash[:notice] = t('.post_published') if @post.post?
-    flash[:notice] = t('.page_published') if @post.static?
+    flash[:notice] = t('.published')
     redirect_back(fallback_location: admin_dashboard_path)
   end
 
   def draft
     @post.draft
-    flash[:notice] = t('.post_draft') if @post.post?
-    flash[:notice] = t('.page_draft') if @post.static?
+    flash[:notice] = t('.draft')
     redirect_back(fallback_location: admin_dashboard_path)
   end
 
@@ -74,8 +68,8 @@ class Admin::PostsController < ApplicationController
   end
 
   def post_params
-    permitted = Post.globalize_attribute_names + [:position] + [:category_id] +
-      [:course_id] + [:user_id] + [:type] + [:slug] + [:image] + [:comment_status]
+    permitted = Post.globalize_attribute_names + [:category_id] + [:course_id] +
+      [:user_id] + [:type] + [:slug] + [:image] + [:comment_status]
     params.require(:post).permit(permitted)
   end
 end

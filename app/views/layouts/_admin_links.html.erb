@@ -6,13 +6,15 @@
     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <%= t('.posts_pages') %>
   </a>
-  <div class="dropdown-menu m-0 rounded-0" aria-labelledby="postsDropdown">
-    <%= link_to t('.posts_pages'), admin_posts_path,
+  <div class="dropdown-menu m-0 rounded-0" aria-labelledby="postsPagesDropdown">
+    <%= link_to t('.posts'), admin_posts_path,
       :class => "dropdown-item #{active?(admin_posts_path)}" %>
-    <%= link_to t('.add_post'), new_admin_post_path(:type => :post),
-      :class => "dropdown-item #{active?(new_admin_post_path(:type => :post))}" %>
-    <%= link_to t('.add_page'), new_admin_post_path(:type => :static),
-      :class => "dropdown-item #{active?(new_admin_post_path(:type => :static))}" %>
+    <%= link_to t('.add_post'), new_admin_post_path(),
+      :class => "dropdown-item #{active?(new_admin_post_path())}" %>
+    <%= link_to t('.pages'), admin_pages_path,
+      :class => "dropdown-item #{active?(admin_pages_path)}" %>
+    <%= link_to t('.add_page'), new_admin_page_path(),
+      :class => "dropdown-item #{active?(new_admin_page_path())}" %>
   </div>
 </li>
 <li class="nav-item dropdown">
@@ -20,7 +22,7 @@
     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <%= t('.categories_courses') %>
   </a>
-  <div class="dropdown-menu m-0 rounded-0" aria-labelledby="postsDropdown">
+  <div class="dropdown-menu m-0 rounded-0" aria-labelledby="categoriesCoursesDropdown">
     <%= link_to t('.categories'), admin_categories_path,
       :class => "dropdown-item #{active?(admin_categories_path)}" %>
     <%= link_to t('.add_category'), new_admin_category_path,
@@ -39,7 +41,7 @@
     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <%= t('.images') %>
   </a>
-  <div class="dropdown-menu m-0 rounded-0" aria-labelledby="postsDropdown">
+  <div class="dropdown-menu m-0 rounded-0" aria-labelledby="imagesDropdown">
     <%= link_to t('.images'), admin_images_path,
       :class => "dropdown-item #{active?(admin_images_path)}" %>
     <%= link_to t('.add_image'), new_admin_image_path,

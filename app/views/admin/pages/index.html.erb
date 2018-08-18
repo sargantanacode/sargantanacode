@@ -1,0 +1,13 @@
+<% content_for :title, t('.pages') %>
+
+<% unless @pages.empty? %>
+  <div class="col-12 content mb-3">
+    <%= render 'list_header' %>
+    <% @pages.each do |page| %>
+      <%= render 'list', page: page %>
+    <% end %>
+  </div>
+<% else %>
+  <% content_for :notice, raw(t('.pages_list_empty',
+    href: link_to(t('.publish_something'), new_admin_page_path))) %>
+<% end %>

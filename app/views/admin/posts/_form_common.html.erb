@@ -3,30 +3,24 @@
 <% unless new_post %>
   <div class="form-group">
     <%= f.label :author %>
-    <%= f.collection_select :user_id, User.by_role.by_name, :id, :name,
+    <%= f.collection_select :user_id, User.by_role.by_name.only_with_job, :id, :name,
       { prompt: true }, :class => "form-control" %>
   </div>
 <% end %>
 
-<% unless type == 'static' %>
-  <div class="form-group">
-    <%= f.label :category %>
-    <%= f.collection_select :category_id, Category.with_translations(I18n.locale).by_name,
-      :id, :name, { prompt: true }, :class => "form-control" %>
-  </div>
+<div class="form-group">
+  <%= f.label :category %>
+  <%= f.collection_select :category_id, Category.with_translations(I18n.locale).by_name,
+    :id, :name, { prompt: true }, :class => "form-control" %>
+</div>
 
-  <div class="form-group">
-    <%= f.label :course %>
-    <%= f.collection_select :course_id, Course.with_translations(I18n.locale).by_name,
-      :id, :name, { :include_blank => t('helpers.select.prompt') }, :class => "form-control" %>
-  </div>
-<% end %>
+<div class="form-group">
+  <%= f.label :course %>
+  <%= f.collection_select :course_id, Course.with_translations(I18n.locale).by_name,
+    :id, :name, { :include_blank => t('helpers.select.prompt') }, :class => "form-control" %>
+</div>
 
-<% if new_post && type == 'static' %>
-  <%= f.hidden_field :category_id, :value => Category.first.id %>
-<% end %>
-
-<%= f.hidden_field :type, :value => type %>
+<%= f.hidden_field :type, :value => :post %>
 
 <div class="form-group">
   <%= f.label :slug %>
@@ -34,16 +28,12 @@
   <small id="slugHelp" class="form-text text-muted"><%= t('.slug_help') %></small>
 </div>
 
-<% unless type == 'static' %>
-  <div class="form-group">
-    <%= f.label :comment_status_l %>
-    <%= f.select :comment_status, options_for_select(f.object.class.translated_comment_statuses.map {
-          |translation, k, _v| [translation, k]
-        }, selected: comment_status), {}, :class => "form-control" %>
-  </div>
-<% else %>
-  <%= f.hidden_field :comment_status, :value => :closed %>
-<% end %>
+<div class="form-group">
+  <%= f.label :comment_status_l %>
+  <%= f.select :comment_status, options_for_select(f.object.class.translated_comment_statuses.map {
+        |translation, k, _v| [translation, k]
+      }, selected: comment_status), {}, :class => "form-control" %>
+</div>
 
 <div class="form-group">
   <%= f.label :image %>
@@ -56,5 +46,5 @@
       <%= link_to t('.destroy_image'), admin_post_destroy_image_path(post_id: post.slug),
         data: { confirm: t('.delete_confirm') }, :method => :put,
         :class => "btn btn-warning float-right" %>
-    <% end %>
+  <% end %>
 </div>

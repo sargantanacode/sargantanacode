@@ -1,43 +1,19 @@
-<% content_for :title, t('.posts_pages') %>
+<% content_for :title, t('.posts') %>
 
-<% content_for :notice, raw(t('.posts_list_empty',
-  href: link_to(t('.publish_something'), new_admin_post_path))) if @posts.empty? %>
-
-<% unless @posts.empty? && @pages.empty? %>
+<% unless @posts.empty? %>
   <div class="col-12 content mb-3">
-    <ul class="nav nav-tabs" id="postsTab" role="tablist">
-      <% unless @posts.empty? %>
-        <li class="nav-item">
-          <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts"
-            role="tab" aria-controls="posts" aria-selected="true"><%= t('.posts') %></a>
-        </li>
-      <% end %>
-      <% unless @pages.empty? %>
-        <li class="nav-item">
-          <a class="nav-link" id="pages-tab" data-toggle="tab" href="#pages"
-            role="tab" aria-controls="pages" aria-selected="false"><%= t('.pages') %></a>
-        </li>
-      <% end %>
-    </ul>    
-    <div class="tab-content" id="postsTabContent">
-      <% unless @posts.empty? %>
-        <div class="tab-pane fade <%= posts_active?(@posts) %>" id="posts"
-          role="tabpanel" aria-labelledby="posts-tab">
-          <%= render 'list_header' %>
-          <% @posts.each do |post| %>
-            <%= render 'list', post: post %>
-          <% end %>
-        </div>
-      <% end %>
-      <% unless @pages.empty? %>
-        <div class="tab-pane fade <%= pages_active?(@posts, @pages) %>"
-          id="pages" role="tabpanel" aria-labelledby="pages-tab">
-          <%= render 'list_header' %>
-          <% @pages.each do |page| %>
-            <%= render 'list', post: page %>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+    <%= render 'list_header' %>
+    <% @posts.each do |post| %>
+      <%= render 'list', post: post %>
+    <% end %>
   </div>
+  <% if @posts.total_pages > 1 %>
+    <div class="pagination col-12 d-flex justify-content-center mt-5">
+      <%= link_to_previous_page @posts, t('.previous_page') %>
+      <%= link_to_next_page @posts, t('.next_page') %>
+    </div>
+  <% end %>
+<% else %>
+  <% content_for :notice, raw(t('.posts_list_empty',
+    href: link_to(t('.publish_something'), new_admin_post_path))) %>
 <% end %>

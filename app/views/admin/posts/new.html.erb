@@ -1,13 +1,7 @@
-<% type = params[:type] || 'post' %>
-
-<% content_for :title, t('.add_post') if type == 'post' %>
-<% content_for :title, t('.add_page') if type == 'static' %>
+<% content_for :title, t('.add_post') %>
 
 <div class="col-10 mb-3">
-  <h2 class="text-center h2 mb-4">
-    <%= t('.add_post') if type == 'post' %>
-    <%= t('.add_page') if type == 'static' %>
-  </h2>
+  <h2 class="text-center h2 mb-4"><%= t('.add_post') %></h2>
   <%= form_for [:admin, @post] do |f| %>
     <div class="content mb-5">
       <%= render 'form_header', post: @post, new_post: true %>
@@ -17,7 +11,7 @@
       <%= render 'form_en', f: f %>
     </div>
     <div class="content">
-      <%= render 'form_common', f: f, type: type, new_post: true %>
+      <%= render 'form_common', f: f, new_post: true %>
     </div>
   <% end %>
 </div>

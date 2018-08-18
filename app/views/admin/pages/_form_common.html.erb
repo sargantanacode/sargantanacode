@@ -1,0 +1,28 @@
+<% unless new_page %>
+  <div class="form-group">
+    <%= f.label :author %>
+    <%= f.collection_select :user_id, User.by_role.by_name.only_with_job, :id, :name,
+      { prompt: true }, :class => "form-control" %>
+  </div>
+
+  <%= f.hidden_field :category_id, :value => Category.first.id %>
+<% end %>
+
+<%= f.hidden_field :type, :value => :static %>
+
+<%= f.hidden_field :comment_status, :value => :closed %>
+
+<div class="form-group">
+  <%= f.label :slug %>
+  <%= f.text_field :slug, :class => "form-control" %>
+  <small id="slugHelp" class="form-text text-muted"><%= t('.slug_help') %></small>
+</div>
+
+<div class="form-group">
+  <%= f.label :image %>
+  <%= f.file_field :image, :class => "form-control-file" %>
+</div>
+
+<div class="actions">
+  <%= f.submit t('.save'), :class => "btn btn-primary" %>
+</div>

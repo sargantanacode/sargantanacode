@@ -1,43 +1,43 @@
 <div class="responsive-table">
-  <div class="vw60 highlighted"><%= post.title %></div>
+  <div class="vw60 highlighted"><%= page.title %></div>
   <div class="vw10 center">
-    <% if post.published? %>
-      <%= post.published_at.strftime('%d/%m/%Y') %>
+    <% if page.published? %>
+      <%= page.published_at.strftime('%d/%m/%Y') %>
     <% else %>
-      <%= post.translated_status %>
+      <%= page.translated_status %>
     <% end %>
   </div>
   <div class="vw5 center">
-    <span class="legend"><%= t('.visits_count') %>:</span> <%= post.visits_count %>
+    <span class="legend"><%= t('.visits_count') %>:</span> <%= page.visits_count %>
   </div>
   <div class="vw5 center">
-    <span class="legend"><%= t('.comments_count') %>:</span> <%= post.comments.approved.count %>
+    <span class="legend"><%= t('.comments_count') %>:</span> <%= page.comments.approved.count %>
   </div>
   <div class="vw16 center">
-    <%= link_to post_path(id: post.slug),
+    <%= link_to page_path(id: page.slug),
         :class => "btn btn-sm btn-info text-center" do %>
       <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"
         data-placement="top" title="<%= t('.view') %>"></i>
     <% end %>
-    <%= link_to edit_admin_post_path(id: post.slug),
+    <%= link_to edit_admin_page_path(id: page.slug),
         :class => "btn btn-sm btn-primary text-center" do %>
       <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"
         data-placement="top" title="<%= t('.edit') %>"></i>
     <% end %>
-    <% if post.published? %>
-      <%= link_to admin_post_draft_path(post_id: post.slug), :method => :put,
+    <% if page.published? %>
+      <%= link_to admin_page_draft_path(page_id: page.slug), :method => :put,
           :class =>  "btn btn-sm btn-warning text-center" do %>
         <i class="fa fa-thumbs-down" aria-hidden="true" data-toggle="tooltip"
         data-placement="top" title="<%= t('.draft') %>"></i>
       <% end %>
     <% else %>
-      <%= link_to admin_post_publish_path(post_id: post.slug), :method => :put,
+      <%= link_to admin_page_publish_path(page_id: page.slug), :method => :put,
           :class => "btn btn-sm btn-success text-center" do %>
         <i class="fa fa-thumbs-up" aria-hidden="true" data-toggle="tooltip"
         data-placement="top" title="<%= t('.publish') %>"></i>
       <% end %>
     <% end %>
-    <%= link_to admin_post_path(id: post.slug),
+    <%= link_to admin_page_path(id: page.slug),
         data: { confirm: t('.delete_confirm') }, :method => :delete,
         :class => "btn btn-sm btn-danger text-center" do %>
       <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"

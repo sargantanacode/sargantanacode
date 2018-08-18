@@ -1,4 +1,4 @@
-<% unless new_post || post.static? %>
+<% unless new_post %>
   <%= image_tag post_image(post), :alt => post.title, :class => "post-header" %>
 <% end %>
 <% if post.errors.any? %>

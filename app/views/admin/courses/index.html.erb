@@ -6,7 +6,10 @@
       <div class="vw10 center"><%= t('.image') %></div>
       <div class="vw20 center"><%= t('.name') %></div>
       <div class="vw50 center"><%= t('.description') %></div>
-      <div class="vw16 center"><%= t('.actions') %></div>
+      <div class="vw16 center">
+        <i class="fa fa-wrench" aria-hidden="true" data-toggle="tooltip"
+          data-placement="top" title="<%= t('.actions') %>"></i>
+      </div>
     </div>
     <% @courses.each do |course| %>
       <div class="responsive-table">
