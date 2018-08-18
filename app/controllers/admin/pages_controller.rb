@@ -40,13 +40,13 @@ class Admin::PagesController < ApplicationController
   end
 
   def publish
-    @post.publish
+    @page.publish
     flash[:notice] = t('.published')
     redirect_back(fallback_location: admin_dashboard_path)
   end
 
   def draft
-    @post.draft
+    @page.draft
     flash[:notice] = t('.draft')
     redirect_back(fallback_location: admin_dashboard_path)
   end
