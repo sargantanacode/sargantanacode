@@ -5,7 +5,10 @@
     <div class="vw60"><%= t('.name') %></div>
     <div class="vw10 center"><%= t('.role') %></div>
     <div class="vw16 center"><%= t('.job') %></div>
-    <div class="vw10 center"><%= t('.actions') %></div>
+    <div class="vw10 center">
+      <i class="fa fa-wrench" aria-hidden="true" data-toggle="tooltip"
+        data-placement="top" title="<%= t('.actions') %>"></i>
+    </div>
   </div>
   <% @users.each do |user| %>
     <div class="responsive-table">

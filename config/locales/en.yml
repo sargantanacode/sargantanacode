@@ -287,9 +287,9 @@ en:
       courses: Courses
       dashboard: Dashboard
       images: Images
-      posts_pages: Posts and Pages
-      posts: Posts
       pages: Pages
+      posts: Posts
+      posts_pages: Posts and Pages
       users: Users
     footer:
       content_license: The content of this page has a <a href="%{link}">CC BY-SA</a>
@@ -359,8 +359,8 @@ en:
       no_team_members: Currently there are no members on the team
       team: Team
     toolbar:
-      delete_confirm: Are you sure to delete this page?
       delete: Delete
+      delete_confirm: Are you sure to delete this page?
       edit: Edit
   posts:
     comment:
@@ -385,8 +385,8 @@ en:
       closed_comments: The comments are closed for the moment
       comments: Comments
     toolbar:
-      delete_confirm: Are you sure to delete this post?
       delete: Delete
+      delete_confirm: Are you sure to delete this post?
       destroy_image: Remove Cover
       edit: Edit
   users:

@@ -1,7 +1,19 @@
 <div class="responsive-header">
   <div class="vw60"><%= t('.title') %></div>
-  <div class="vw10 center"><%= t('.published') %></div>
-  <div class="vw10 center"><%= t('.visits_count') %></div>
-  <div class="vw10 center"><%= t('.comments_count') %></div>
-  <div class="vw20 center"><%= t('.actions') %></div>
+  <div class="vw10 center">
+    <i class="fa fa-calendar" aria-hidden="true" data-toggle="tooltip"
+        data-placement="top" title="<%= t('.published') %>"></i>
+  </div>
+  <div class="vw5 center">
+    <i class="fa fa-signal" aria-hidden="true" data-toggle="tooltip"
+        data-placement="top" title="<%= t('.visits_count') %>"></i>
+  </div>
+  <div class="vw5 center">
+    <i class="fa fa-comment" aria-hidden="true" data-toggle="tooltip"
+        data-placement="top" title="<%= t('.comments_count') %>"></i>
+  </div>
+  <div class="vw16 center">
+    <i class="fa fa-wrench" aria-hidden="true" data-toggle="tooltip"
+        data-placement="top" title="<%= t('.actions') %>"></i>
+  </div>
 </div>

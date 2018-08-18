@@ -288,9 +288,9 @@ es:
       courses: Cursos
       dashboard: Administración
       images: Imágenes
-      posts_pages: Artículos y páginas
-      posts: Artículos
       pages: Páginas
+      posts: Artículos
+      posts_pages: Artículos y páginas
       users: Usuarios
     footer:
       content_license: El contenido de esta página tiene una licencia <a href="%{link}">CC
@@ -361,8 +361,8 @@ es:
       no_team_members: Actualmente no hay miembros en el equipo
       team: Equipo
     toolbar:
-      delete_confirm: "¿Estás seguro de querer eliminar esta página?"
       delete: Eliminar
+      delete_confirm: "¿Estás seguro de querer eliminar esta página?"
       edit: Editar
   posts:
     comment:
@@ -387,8 +387,8 @@ es:
       closed_comments: Los comentarios están cerrados en este momento
       comments: Comentarios
     toolbar:
-      delete_confirm: "¿Estás seguro de querer eliminar este artículo?"
       delete: Eliminar
+      delete_confirm: "¿Estás seguro de querer eliminar este artículo?"
       destroy_image: Eliminar portada
       edit: Editar
   users:
