@@ -296,8 +296,11 @@ en:
       posts_pages: Posts and Pages
       users: Users
     footer:
+      accept: Accept
       content_license: The content of this page has a <a href="%{link}">CC BY-SA</a>
         license
+      cookie_message: European politicians urge us to warn you that cookies are stored
+        on this page
       github_repo: This project is open source, you can find it on <a href="%{link}">our
         GitHub repository</a>
     menu:
