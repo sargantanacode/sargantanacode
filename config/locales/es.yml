@@ -297,8 +297,11 @@ es:
       posts_pages: Artículos y páginas
       users: Usuarios
     footer:
+      accept: Acepto
       content_license: El contenido de esta página tiene una licencia <a href="%{link}">CC
         BY-SA</a>
+      cookie_message: Los políticos europeos nos obligan a avisarte de que en esta
+        página se almacenan cookies
       github_repo: Este proyecto es de código abierto, lo puedes encontrar en <a href="%{link}">nuestro
         repositorio de GitHub</a>
     menu:

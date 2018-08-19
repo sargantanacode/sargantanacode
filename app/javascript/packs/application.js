@@ -37,6 +37,7 @@ $(document).ready(function () {
       menu.removeClass('sticky')
     }
   })
+  checkCookies()
   $("ul.navbar-nav li a.active").not('.lang').parents('li').addClass('active')
 })
 
@@ -119,4 +120,25 @@ if (replyButton) {
       }, false)
     }, false)
   }
+}
+
+function checkCookies() {
+  if (window.localStorage.acceptCookie !== 'true') {
+    let cookies = document.getElementById('cookies')
+    cookies.classList.remove('hidden')
+  }
+}
+
+function acceptCookies() {
+  window.localStorage.setItem('acceptCookie', 'true')
+  let cookies = document.getElementById('cookies')
+  cookies.classList.add('hidden')
+}
+
+let acceptCookie = document.getElementById('acceptcookies')
+if (document.body.contains(acceptCookie)) {
+  acceptCookie.addEventListener('click', () => {
+    acceptCookies()
+    console.log('Acepta cookies')
+  }, false)
 }
