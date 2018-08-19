@@ -9,17 +9,15 @@ env:
   - RAILS_ENV=test
 services:
   - mysql
-addons:
-  chrome: stable
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
 before_install:
   - nvm install 8
   - nvm use 8
   - npm install -g yarn
+  - chromedriver-update
+  - wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+  - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+  - sudo apt-get update
+  - sudo apt-get install google-chrome-stable
 before_script:
   - mysql -e 'CREATE DATABASE sargantanacode_test;'
   - cp ./.travis.database.yml ./config/database.yml
