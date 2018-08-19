@@ -29,10 +29,6 @@ module ApplicationHelper
     "http://gravatar.com/avatar/#{gravatar}.png?s=#{size}&d=mm"
   end
 
-  def image_url(image)
-    "#{request.base_url}#{image.image.url}"
-  end
-
   def image_markdown_url(image, locale)
     if locale == :es
       return "![#{image.title_es}](#{request.base_url}#{image.image.url} \"#{image.title_es}\")"
@@ -56,6 +52,12 @@ module ApplicationHelper
     "#{request.base_url}#{request.fullpath}"
   end
 
+  def post_image_fullpath(post)
+    image = post.image.url unless post.image.blank?
+    image = post.course.blank? ? post.category.cover_image.url : post.course.cover_image.url
+    "#{request.base_url}#{image}"
+  end
+
   def post_image(post)
     return post.image.url unless post.image.blank?
     post.course.blank? ? post.category.cover_image.url : post.course.cover_image.url
@@ -75,6 +77,38 @@ module ApplicationHelper
       return post if post.published_at > current_post.published_at
     end
     nil
+  end
+
+  def default_image
+    "#{request.base_url}/default-image.jpg"
+  end
+
+  def custom_title(title = nil)
+    return "#{title} – #{t('main.title')}" unless title.nil?
+    t('main.title')
+  end
+
+  def social_networks_links(title = nil, desc = nil, image = nil)
+    desc = t('main.description') if desc.nil? || desc.to_s.empty?
+    image = default_image if image.nil?
+    meta_tags = ["<meta name=\"twitter:card\" content=\"summary\">",
+    "<meta name=\"twitter:site\" content=\"@SargantanaCode\">",
+    "<meta name=\"twitter:creator\" content=\"@fjpalacios\"/>",
+    "<meta name=\"twitter:title\" content=\"#{custom_title(title)}\">",
+    "<meta name=\"twitter:description\" content=\"#{desc}\">",
+    "<meta name=\"twitter:image\" content=\"#{image}\">",
+    "<meta property=\"og:url\" content=\"#{current_url}\">",
+    "<meta property=\"og:title\" content=\"#{custom_title(title)}\">",
+    "<meta property=\"og:site_name\" content=\"#{t('main.title')}\">",
+    "<meta property=\"article:author\" content=\"https://www.facebook.com/sargantanacode/\"/>",
+    "<meta property=\"og:description\" content=\"#{desc}\">",
+    "<meta property=\"og:type\" content=\"website\">",
+    "<meta property=\"og:image\" content=\"#{image}\">"]
+    tags = ""
+    meta_tags.each_with_index do |tag, index|
+      tags << "#{tag}\n\t"
+    end
+    tags.html_safe
   end
 
   def markdown(text)

@@ -1,6 +1,13 @@
+<% content_for :social_networks,
+  social_networks_links(
+    t('.profile', name: @user.name),
+    @user.bio
+  )
+%>
+
 <% content_for :title, t('.profile', name: @user.name) %>
 
-<%= render 'posts/user-profile', user: @user %>
+<%= render 'posts/user_profile', user: @user %>
 
 <% unless @user.posts.empty? %>
   <%= render 'posts/list', posts: @user.posts.published.post.by_date.page(params[:page]) %>

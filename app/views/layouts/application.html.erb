@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="/favicon.png"/>
-    <%= auto_discovery_link_tag(:rss, rss_url) %>
-    <title><%= "#{content_for(:title)} – " if content_for?(:title) %><%= t('main.title') %></title>
+
+    <%= tag(:link, rel: 'icon', href: "/favicon.png") %>
+    <%= tag(:link, rel: 'canonical', href: current_url) %>
+    <%= tag(:link, rel: 'alternate', href: rss_url, title: 'RSS', type: 'application/atom+xml') %>
+    <%= tag(:meta, name: 'description', content: t('main.description')) %>
+    <%= content_for(:social_networks) if content_for?(:social_networks) %>
+
+    <title><%= "#{custom_title(content_for(:title))}" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

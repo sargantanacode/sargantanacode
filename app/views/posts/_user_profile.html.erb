@@ -14,7 +14,7 @@
     <% if user.job? %>
       <h3><small><%= user.translated_job %></small></h3>
     <% end %>
-    <%= user.bio %>
+    <%= user.bio unless user.bio.blank? %>
     <% if user.has_social_links? %>
       <ul class="user__links">
         <% unless user.url.blank? %>
