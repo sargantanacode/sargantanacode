@@ -1,3 +1,10 @@
+<% content_for :social_networks,
+  social_networks_links(
+    @page.title,
+    @page.excerpt
+  )
+%>
+
 <% content_for :title, @page.title %>
 
 <%= render 'toolbar' %>

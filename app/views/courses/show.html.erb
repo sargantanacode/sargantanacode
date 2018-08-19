@@ -1,3 +1,11 @@
+<% content_for :social_networks,
+  social_networks_links(
+    @course.name,
+    @course.description,
+    image_url(@course.cover_image.url)
+  )
+%>
+
 <% content_for :title, t('.course', name: @course) %>
 
 <div class="col-12 mb-5 content course">
