@@ -349,7 +349,8 @@ en:
       created: Admin user created successfully. You will receive an email with instructions
         for how to confirm your email address in a few minutes.
     create_contact:
-      sended: Email sended successfully
+      error: There was an error sending your message, please try again
+      sended: Your message has been sent successfully
     profile:
       profile: Profile for %{name}
     search:

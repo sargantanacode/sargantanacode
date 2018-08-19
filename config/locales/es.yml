@@ -350,7 +350,8 @@ es:
       created: Administrador creado. Recibirás un email con las instrucciones para
         confirmar tu correo electrónico en unos minutos.
     create_contact:
-      sended: Correo electrónico enviado con éxito
+      error: Hubo un error al enviar tu mensaje, por favor, vuelve a intentarlo
+      sended: Tu mensaje ha sido enviado con éxito
     profile:
       profile: Perfil de %{name}
     search:
