@@ -1,0 +1,5 @@
+test:
+  adapter: mysql2
+  database: sargantanacode_test
+  username: root
+  encoding: utf8
