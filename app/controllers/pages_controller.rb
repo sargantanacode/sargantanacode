@@ -36,7 +36,8 @@ class PagesController < ApplicationController
     if @contact.deliver
       redirect_to contact_path, notice: t('.sended')
     else
-      render :new
+      flash[:notice] = t('.error')
+      render :contact
     end
   end
 

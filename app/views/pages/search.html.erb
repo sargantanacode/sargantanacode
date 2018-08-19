@@ -9,7 +9,7 @@
 <div class="col-12 content mb-4">
   <h2 class="post-title text-center mb-4"><%= t('.search') %></h2>
   <p><%= t('.search_message') %></p>
-  <%= form_tag(search_path, method: :get) do %>
+  <%= form_tag(search_path, method: :get, :id => "new_search") do %>
     <div class="form-group my-0">
       <%= text_field_tag :term, params[:term], :class => "form-control", :placeholder => t('.search_placeholder') %>
     </div>

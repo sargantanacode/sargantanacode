@@ -1,5 +1,5 @@
 <div id="new-comment" class="content col-12 mt-5">
-  <%= form_for @comment, :html => {:id => @post.id} do |f| %>
+  <%= form_for @comment do |f| %>
     <% if @comment.errors.any? %>
       <% @comment.errors.full_messages.each do |message| %>
         <div class="alert alert-danger" role="alert">
