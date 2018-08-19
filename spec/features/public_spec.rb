@@ -71,6 +71,21 @@ RSpec.feature "Public Zone", type: :feature do
       expect(page).to have_content comment
     end
 
+    it "allows users to leave a spam comment, which is marked as spam" do
+      author = 'viagra-test-123'
+      email = Faker::Internet.email
+      comment = Faker::Lorem.paragraph
+      visit post_path(id: post.slug, locale: I18n.locale)
+      within("#new_comment") do
+        fill_in 'Nombre', with: author
+        fill_in 'Correo electrónico', with: email
+        fill_in 'Comentario', with: comment
+      end
+      click_button 'Enviar comentario'
+      expect(page).not_to have_content comment
+      expect(page).to have_content I18n.t('posts.comment.spam_detected')
+    end
+
     it "allows users to send messages through the contact form" do
       name = Faker::Name.name
       email = Faker::Internet.email
@@ -173,6 +188,21 @@ RSpec.feature "Public Zone", type: :feature do
       end
       click_button 'Send comment'
       expect(page).to have_content comment
+    end
+
+    it "allows users to leave a spam comment, which is marked as spam" do
+      author = 'viagra-test-123'
+      email = Faker::Internet.email
+      comment = Faker::Lorem.paragraph
+      visit post_path(id: post.slug, locale: I18n.locale)
+      within("#new_comment") do
+        fill_in 'Author', with: author
+        fill_in 'Email', with: email
+        fill_in 'Comment', with: comment
+      end
+      click_button 'Send comment'
+      expect(page).not_to have_content comment
+      expect(page).to have_content I18n.t('posts.comment.spam_detected')
     end
 
     it "allows users to send messages through the contact form" do
