@@ -20,19 +20,22 @@
         <div class="vw50"><%= course.description %></div>
         <div class="vw16 center">
           <%= link_to course_path(id: course.slug),
-              :class => "btn btn-sm btn-info text-center" do %>
+              :class => "btn btn-sm btn-info text-center",
+              :id => "view-#{course.id}" do %>
             <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"
               data-placement="top" title="<%= t('.view') %>"></i>
           <% end %>
           <%= link_to edit_admin_course_path(id: course.id),
-              :class => "btn btn-sm btn-primary text-center" do %>
+              :class => "btn btn-sm btn-primary text-center",
+              :id => "edit-#{course.id}" do %>
             <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"
               data-placement="top" title="<%= t('.edit') %>"></i>
           <% end %>
           <% if course.posts.empty? %>
             <%= link_to admin_course_path(id: course.id),
                 data: { confirm: t('.delete_confirm') }, :method => :delete,
-                :class => "btn btn-sm btn-danger text-center" do %>
+                :class => "btn btn-sm btn-danger text-center",
+                :id => "delete-#{course.id}" do %>
               <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"
                 data-placement="top" title="<%= t('.destroy') %>"></i>
             <% end %>

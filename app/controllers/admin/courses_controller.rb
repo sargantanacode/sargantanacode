@@ -32,15 +32,19 @@ class Admin::CoursesController < ApplicationController
   end
 
   def destroy
-    @course.destroy
-    flash[:notice] = t('.destroyed')
+    if @course.posts.empty?
+      @course.destroy
+      flash[:notice] = t('.destroyed')
+    else
+      flash[:notice] = t('.error')
+    end
     redirect_back(fallback_location: admin_dashboard_path)
   end
 
   private
 
   def set_course
-    @course = Course.find(params[:id])
+    @course = Course.friendly.find(params[:id])
   end
 
   def course_params

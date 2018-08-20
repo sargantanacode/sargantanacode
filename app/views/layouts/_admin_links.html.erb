@@ -9,12 +9,12 @@
   <div class="dropdown-menu m-0 rounded-0" aria-labelledby="postsPagesDropdown">
     <%= link_to t('.posts'), admin_posts_path,
       :class => "dropdown-item #{active?(admin_posts_path)}" %>
-    <%= link_to t('.add_post'), new_admin_post_path(),
-      :class => "dropdown-item #{active?(new_admin_post_path())}" %>
+    <%= link_to t('.add_post'), new_admin_post_path,
+      :class => "dropdown-item #{active?(new_admin_post_path)}" %>
     <%= link_to t('.pages'), admin_pages_path,
       :class => "dropdown-item #{active?(admin_pages_path)}" %>
-    <%= link_to t('.add_page'), new_admin_page_path(),
-      :class => "dropdown-item #{active?(new_admin_page_path())}" %>
+    <%= link_to t('.add_page'), new_admin_page_path,
+      :class => "dropdown-item #{active?(new_admin_page_path)}" %>
   </div>
 </li>
 <li class="nav-item dropdown">
