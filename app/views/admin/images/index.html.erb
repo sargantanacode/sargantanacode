@@ -20,18 +20,21 @@
         <div class="vw40"><%= image.description %></div>
         <div class="vw16 center">
           <%= link_to admin_image_path(id: image.id),
-              :class => "btn btn-sm btn-info text-center" do %>
+              :class => "btn btn-sm btn-info text-center",
+              :id => "view-#{image.id}" do %>
             <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"
               data-placement="top" title="<%= t('.view') %>"></i>
           <% end %>
           <%= link_to edit_admin_image_path(id: image.id),
-              :class => "btn btn-sm btn-primary text-center" do %>
+              :class => "btn btn-sm btn-primary text-center",
+              :id => "edit-#{image.id}" do %>
             <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"
               data-placement="top" title="<%= t('.edit') %>"></i>
           <% end %>
           <%= link_to admin_image_path(id: image.id),
               data: { confirm: t('.delete_confirm') }, :method => :delete,
-              :class => "btn btn-sm btn-danger text-center" do %>
+              :class => "btn btn-sm btn-danger text-center",
+              :id => "delete-#{image.id}" do %>
             <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"
               data-placement="top" title="<%= t('.destroy') %>"></i>
           <% end %>

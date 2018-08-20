@@ -32,15 +32,19 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def destroy
-    @category.destroy
-    flash[:notice] = t('.destroyed')
+    if @category.posts.empty?
+      @category.destroy
+      flash[:notice] = t('.destroyed')
+    else
+      flash[:notice] = t('.error')
+    end
     redirect_back(fallback_location: admin_dashboard_path)
   end
 
   private
 
   def set_category
-    @category = Category.find(params[:id])
+    @category = Category.friendly.find(params[:id])
   end
 
   def category_params

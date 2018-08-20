@@ -25,7 +25,7 @@ class Admin::UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    flash[:notice] = t('.user_destroyed')
+    flash[:notice] = t('.destroyed')
     redirect_back(fallback_location: admin_dashboard_path)
   end
 

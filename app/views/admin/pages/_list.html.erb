@@ -15,31 +15,36 @@
   </div>
   <div class="vw16 center">
     <%= link_to page_path(id: page.slug),
-        :class => "btn btn-sm btn-info text-center" do %>
+        :class => "btn btn-sm btn-info text-center",
+        :id => "view-#{page.id}" do %>
       <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"
         data-placement="top" title="<%= t('.view') %>"></i>
     <% end %>
     <%= link_to edit_admin_page_path(id: page.slug),
-        :class => "btn btn-sm btn-primary text-center" do %>
+        :class => "btn btn-sm btn-primary text-center",
+        :id => "edit-#{page.id}" do %>
       <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"
         data-placement="top" title="<%= t('.edit') %>"></i>
     <% end %>
     <% if page.published? %>
       <%= link_to admin_page_draft_path(page_id: page.slug), :method => :put,
-          :class =>  "btn btn-sm btn-warning text-center" do %>
+          :class =>  "btn btn-sm btn-warning text-center",
+          :id => "draft-#{page.id}" do %>
         <i class="fa fa-thumbs-down" aria-hidden="true" data-toggle="tooltip"
         data-placement="top" title="<%= t('.draft') %>"></i>
       <% end %>
     <% else %>
       <%= link_to admin_page_publish_path(page_id: page.slug), :method => :put,
-          :class => "btn btn-sm btn-success text-center" do %>
+          :class => "btn btn-sm btn-success text-center",
+          :id => "publish-#{page.id}" do %>
         <i class="fa fa-thumbs-up" aria-hidden="true" data-toggle="tooltip"
         data-placement="top" title="<%= t('.publish') %>"></i>
       <% end %>
     <% end %>
     <%= link_to admin_page_path(id: page.slug),
         data: { confirm: t('.delete_confirm') }, :method => :delete,
-        :class => "btn btn-sm btn-danger text-center" do %>
+        :class => "btn btn-sm btn-danger text-center",
+        :id => "delete-#{page.id}" do %>
       <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"
         data-placement="top" title="<%= t('.destroy') %>"></i>
     <% end %>

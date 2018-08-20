@@ -20,19 +20,22 @@
         <div class="vw50"><%= category.description %></div>
         <div class="vw16 center">
           <%= link_to category_path(id: category.slug),
-              :class => "btn btn-sm btn-info text-center" do %>
+              :class => "btn btn-sm btn-info text-center",
+              :id => "view-#{category.id}" do %>
             <i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip"
               data-placement="top" title="<%= t('.view') %>"></i>
           <% end %>
           <%= link_to edit_admin_category_path(id: category.id),
-              :class => "btn btn-sm btn-primary text-center" do %>
+              :class => "btn btn-sm btn-primary text-center",
+              :id => "edit-#{category.id}" do %>
             <i class="fa fa-edit" aria-hidden="true" data-toggle="tooltip"
               data-placement="top" title="<%= t('.edit') %>"></i>
           <% end %>
           <% if category.posts.empty? %>
             <%= link_to admin_category_path(id: category.id),
                 data: { confirm: t('.delete_confirm') }, :method => :delete,
-                :class => "btn btn-sm btn-danger text-center" do %>
+                :class => "btn btn-sm btn-danger text-center",
+                :id => "delete-#{category.id}" do %>
               <i class="fa fa-remove" aria-hidden="true" data-toggle="tooltip"
                 data-placement="top" title="<%= t('.destroy') %>"></i>
             <% end %>

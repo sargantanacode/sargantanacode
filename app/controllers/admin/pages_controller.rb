@@ -16,9 +16,9 @@ class Admin::PagesController < ApplicationController
   end
 
   def create
-    @page = current_user.posts.new(post_params)
+    @page = current_user.posts.new(page_params)
     if @page.save
-      redirect_to admin_posts_path, notice: t('.saved')
+      redirect_to admin_pages_path, notice: t('.saved')
     else
       render :new
     end
@@ -64,6 +64,6 @@ class Admin::PagesController < ApplicationController
   def page_params
     permitted = Post.globalize_attribute_names + [:category_id] + [:user_id] +
       [:type] + [:slug] + [:comment_status]
-    params.require(:page).permit(permitted)
+    params.require(:post).permit(permitted)
   end
 end

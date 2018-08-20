@@ -2,7 +2,7 @@
 
 <div class="col-10 mb-3">
   <h2 class="text-center h2 mb-4"><%= t('.add_page') %></h2>
-  <%= form_for [:admin, @page] do |f| %>
+  <%= form_for @page, :url => admin_pages_path do |f| %>
     <div class="content mb-5">
       <%= render 'form_header', page: @page, new_page: true %>
       <%= render 'form_es', f: f %>

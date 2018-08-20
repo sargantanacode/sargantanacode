@@ -11,7 +11,7 @@ class Post < ApplicationRecord
   belongs_to :user
   belongs_to :category
   belongs_to :course, optional: true
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   translates :title, :content, :excerpt
   globalize_accessors :locales => [:en, :es], :attributes => [:title, :content, :excerpt]

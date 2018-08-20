@@ -6,6 +6,7 @@ en:
         created: Category added successfully
       destroy:
         destroyed: Category successfully deleted
+        error: You can't delete a category with Posts
       edit:
         edit_category: Edit Category
       form_common:
@@ -219,6 +220,8 @@ en:
       update:
         saved: The Post has been saved successfully
     users:
+      destroy:
+        destroyed: User successfully deleted
       edit:
         edit_user: Edit user %{name}
         save: Save

@@ -6,6 +6,7 @@ es:
         created: Categoría añadida con éxito
       destroy:
         destroyed: La categoría ha sido eliminada correctamente
+        error: No puedes eliminar una categoría con artículos
       edit:
         edit_category: Editar categoría
       form_common:
@@ -220,6 +221,8 @@ es:
       update:
         saved: El artículo ha sido guardado con éxito
     users:
+      destroy:
+        destroyed: Usuario eliminado correctamente
       edit:
         edit_user: Editar usuario %{name}
         save: Guardar
