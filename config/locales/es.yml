@@ -19,7 +19,7 @@ es:
         actions: Acciones
         add_one_category: "¡Puedes crear una ahora!"
         categories: Categorías
-        categories_list_empty: Actualmente no hay ninguna categoría creado. %{href}
+        categories_list_empty: Actualmente no hay ninguna categoría creada. %{href}
         delete_confirm: "¿Estás seguro de querer eliminar esta categoría?"
         description: Descripción
         destroy: Eliminar
@@ -42,6 +42,8 @@ es:
         save: Guardar
       index:
         comments: Comentarios
+        comments_list_empty: Todavía nadie comentó ningún artículo. ¡Seguro que pronto
+          lo harán!
         next_page: página siguiente →
         previous_page: "← página anterior"
       list:
@@ -91,6 +93,7 @@ es:
     dashboard:
       index:
         dashboard: Administración
+        dashboard_empty: Actualmente no hay contenido que mostrar en esta sección
         last_comments: Últimos comentarios
         last_drafts: Últimos borradores
         last_posts: Últimos artículos
@@ -144,8 +147,7 @@ es:
         slug_help: Si lo dejas en blanco será generado automáticamente
       index:
         pages: Páginas
-        pages_list_empty: Lo sentimos, actualmente no hay ningún artículo publicado.
-          %{href}
+        pages_list_empty: Actualmente no hay ninguna página publicada. %{href}
         publish_something: "¡Publica algo!"
       list:
         actions: Acciones
@@ -192,8 +194,7 @@ es:
       index:
         next_page: página siguiente →
         posts: Artículos
-        posts_list_empty: Lo sentimos, actualmente no hay ningún artículo publicado.
-          %{href}
+        posts_list_empty: Actualmente no hay ningún artículo publicado. %{href}
         previous_page: "← página anterior"
         publish_something: "¡Publica algo!"
       list:

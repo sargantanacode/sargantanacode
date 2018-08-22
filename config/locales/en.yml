@@ -42,6 +42,8 @@ en:
         save: Save
       index:
         comments: Comments
+        comments_list_empty: Nobody commented on any Post yet. Very soon everyone
+          will want to comment!
         next_page: next page →
         previous_page: "← previous page"
       list:
@@ -91,6 +93,7 @@ en:
     dashboard:
       index:
         dashboard: Dasboard
+        dashboard_empty: Currently this section doesn't have available content
         last_comments: Last Comments
         last_drafts: Last Drafts
         last_posts: Last Posts
@@ -144,7 +147,7 @@ en:
         slug_help: If you leave it blank it will be generated automatically
       index:
         pages: Pages
-        pages_list_empty: Sorry, there are currently no posts added. %{href}
+        pages_list_empty: Currently there are no added pages. %{href}
         publish_something: Publish something!
       list:
         actions: Actions
@@ -191,7 +194,7 @@ en:
       index:
         next_page: next page →
         posts: Posts
-        posts_list_empty: Sorry, there are currently no posts added. %{href}
+        posts_list_empty: Currently there are no added posts. %{href}
         posts_pages: Posts and Pages
         previous_page: "← previous page"
         publish_something: Publish something!

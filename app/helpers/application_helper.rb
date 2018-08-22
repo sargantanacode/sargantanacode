@@ -130,6 +130,13 @@ module ApplicationHelper
     markdown.render(text)
   end
 
+  def content_empty?(content)
+    content.each do |item|
+      return false unless item.empty?
+    end
+    true
+  end
+
   def admin_zone?
     controller.class.name.split("::").first == "Admin" && current_user.admin?
   end

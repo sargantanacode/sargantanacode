@@ -1,5 +1,11 @@
 <% content_for :title, t('.dashboard') %>
 
+<% all_variables = [@pending_comments, @comments, @posts, @drafts, @max_visits, @max_comments] %>
+
+<% if content_empty?(all_variables) %>
+  <% content_for :notice, t('.dashboard_empty') %>
+<% end %>
+
 <div class="col-12 mb-3">
   <% unless @pending_comments.empty? %>
     <h2 class="text-center h2 mb-4"><%= t('.pending_comments') %></h2>
