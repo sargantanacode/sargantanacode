@@ -23,7 +23,6 @@ before_install:
   - mv ./.env.example ./.env
 before_script:
   - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
-  - mysql -e 'CREATE DATABASE sargantanacode_test;'
   - cp ./.travis.database.yml ./config/database.yml
   - node --version
   - npm --version
@@ -32,10 +31,13 @@ before_script:
   - chromedriver --version
   - yarn install
 script:
+  - bundle exec rake db:create
   - bundle exec rake db:migrate
-  - bundle exec rake spec
+  - bundle exec rake parallel:spec
 cache:
   bundler: true
   directories:
     - node_modules
   yarn: true
+matrix:
+  fast_finish: true

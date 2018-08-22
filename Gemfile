@@ -24,6 +24,7 @@ gem 'akismet'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
+  gem 'parallel_tests'
 end
 
 group :development do
