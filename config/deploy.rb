@@ -22,8 +22,8 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :keep_releases, 2
 
-set :linked_files, %w{.env}
-set :linked_dirs,  %w{public/packs node_modules public/uploads}
+set :linked_files, %w{.env public/sitemap.xml.gz}
+set :linked_dirs,  %w{public/packs node_modules public/uploads log public/sitemaps}
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
@@ -79,8 +79,9 @@ namespace :deploy do
     end
   end
 
-  before :starting,     :check_revision
-  after  "bundler:install", "assets:precompile"
-  after  :finishing,    :cleanup
-  after  :finishing,    :restart
+  before :starting, :check_revision
+  after  'bundler:install', 'assets:precompile'
+  after  :finishing, 'sitemap:refresh:no_ping'
+  after  :finishing, :cleanup
+  after  :finishing, :restart
 end

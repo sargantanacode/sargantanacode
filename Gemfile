@@ -20,6 +20,8 @@ gem 'kaminari'
 gem 'mail_form'
 gem 'closure_tree'
 gem 'akismet'
+gem 'sitemap_generator'
+gem 'whenever'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -37,3 +37,7 @@ yarn-debug.log*
 
 # Ignore application configuration
 .env
+
+# Ignore all sitemap files
+/public/sitemap.xml.gz
+/public/sitemaps
