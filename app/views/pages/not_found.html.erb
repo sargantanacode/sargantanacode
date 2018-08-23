@@ -1,0 +1,8 @@
+<% content_for :social_networks, social_networks_links(t('.error_404')) %>
+
+<% content_for :title, t('.error_404') %>
+
+<div class="col-12 content mb-4">
+  <h2 class="text-center"><%= t('.header') %></h2>
+  <p><%= raw t('.content', search: link_to(t('.search'), search_path)) %></p>
+</div>

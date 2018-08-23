@@ -53,6 +53,18 @@ class PagesController < ApplicationController
     @users = User.only_with_job.by_job
   end
 
+  def not_found
+    render status: 404
+  end
+
+  def unprocessable_entity
+    render status: 422
+  end
+  
+  def internal_server_error
+    render status: 500
+  end
+
   private
 
   def set_page

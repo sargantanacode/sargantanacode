@@ -80,8 +80,8 @@ namespace :deploy do
   end
 
   before :starting, :check_revision
-  after  'bundler:install', 'assets:precompile'
-  after  :finishing, 'sitemap:create'
-  after  :finishing, :cleanup
-  after  :finishing, :restart
+  after 'bundler:install', 'assets:precompile'
+  after :finishing, 'sitemap:create'
+  after :finishing, :cleanup
+  after :finishing, :restart
 end

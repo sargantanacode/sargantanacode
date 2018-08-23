@@ -360,6 +360,28 @@ en:
     create_contact:
       error: There was an error sending your message, please try again
       sended: Your message has been sent successfully
+    internal_server_error:
+      content: The server hosting this website has failed to respond properly to the
+        request sent by your browser, maybe reloading the page automatically fix this
+        error. If this doesn't work is because the Oompa-Loompas have no more chocolate
+        and have been touching something on the server, and in that case we would
+        be very grateful if you could <a href="https://github.com/sargantanacode/sargantanacode/issues">report
+        this issue</a> on our GitHub account or notify us on our Twitter account <a
+        href="https://twitter.com/SargantanaCode">@SargantanaCode</a>.
+      error_500: 500 Error
+      header: Something went wrong!
+    not_found:
+      content: The page you are visiting doesn't currently exist or maybe it never
+        existed. This is a <strong>404 error</strong> like others you've been seeing
+        your whole life online. If you have manually typed the address of this website,
+        check that it has been correctly written; if you came here searching for something,
+        use instead the %{search} that you'll also find in the top menu. If you think
+        this is a <em>bug</em> you can <a href="https://github.com/sargantanacode/sargantanacode/issues">report
+        this issue</a> on our GitHub account or notify us on our Twitter account <a
+        href="https://twitter.com/SargantanaCode">@SargantanaCode</a>.
+      error_404: 404 Error
+      header: We couldn't find this web address
+      search: search form
     profile:
       profile: Profile for %{name}
     search:
@@ -376,6 +398,12 @@ en:
       delete: Delete
       delete_confirm: Are you sure to delete this page?
       edit: Edit
+    unprocessable_entity:
+      content: If you are seeing this error message, it's because you are a very curious
+        person and you have been trying bad things, isn't it? So if you don't want
+        to see this error message again, don't do what you were doing again.
+      error_422: 422 Error
+      header: Knock, knock. Who's there?
   posts:
     comment:
       failed: Something went wrong when sending your comment
