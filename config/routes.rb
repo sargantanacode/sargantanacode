@@ -19,6 +19,11 @@ Rails.application.routes.draw do
     get "about-us" => "pages#about_us", as: "about_us"
     root to: "posts#index", as: "homepage"
 
+    # Custom error pages
+    get "404" => "pages#not_found", via: :all
+    get "422" => "pages#unprocessable_entity", via: :all
+    get "500" => "pages#internal_server_error", via: :all
+
     # Redirecting old links for the new ones
     get "article/:slug" => redirect("post/%{slug}")
 

@@ -359,6 +359,28 @@ es:
     create_contact:
       error: Hubo un error al enviar tu mensaje, por favor, vuelve a intentarlo
       sended: Tu mensaje ha sido enviado con éxito
+    internal_server_error:
+      content: El servidor que hospeda esta página no ha podido responder correctamente
+        a la petición que ha enviado tu navegador, es muy probable que recargar la
+        página solucione este error. Si esto no funciona es porque los Oompa-Loompas
+        se han quedado sin chocolate y han estado toqueteando algo en el servidor,
+        y en ese caso te estaríamos muy agradecidos si pudieras <a href="https://github.com/sargantanacode/sargantanacode/issues">reportar
+        esta incidencia</a> en nuestra cuenta de GitHub o avisarnos en nuestra cuenta
+        de Twitter <a href="https://twitter.com/SargantanaCode">@SargantanaCode</a>.
+      error_500: Error 500
+      header: "¡Ya se ha roto algo!"
+    not_found:
+      content: La página que estás buscando no existe actualmente o quizá nunca existió.
+        Esto es un <strong>error 404</strong> de los que llevas viendo toda tu vida
+        por internet. Si has escrito manualmente la dirección de esta página, comprueba
+        que haya sido correctamente escrita; si llegaste aquí buscando algo, utiliza
+        en su lugar el %{search} que encontrarás también en el menú superior. Si crees
+        que esto es un <em>bug</em> puedes <a href="https://github.com/sargantanacode/sargantanacode/issues">reportar
+        esta incidencia</a> en nuestra cuenta de GitHub o avisarnos en nuestra cuenta
+        de Twitter <a href="https://twitter.com/SargantanaCode">@SargantanaCode</a>.
+      error_404: Error 404
+      header: No hemos podido encontrar la página
+      search: buscador
     profile:
       profile: Perfil de %{name}
     search:
@@ -376,6 +398,12 @@ es:
       delete: Eliminar
       delete_confirm: "¿Estás seguro de querer eliminar esta página?"
       edit: Editar
+    unprocessable_entity:
+      content: Si estás viendo este mensaje de error es porque eres una persona muy
+        curiosa y has estado toqueteando cosas que no debes, así que si no quieres
+        volver a ver este error no hagas más lo que quiera que estuvieses haciendo.
+      error_422: Error 422
+      header: Toc, toc, ¿quién es?
   posts:
     comment:
       failed: Algo salió mal al enviar tu comentario
