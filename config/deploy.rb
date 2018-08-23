@@ -81,7 +81,7 @@ namespace :deploy do
 
   before :starting, :check_revision
   after  'bundler:install', 'assets:precompile'
-  after  :finishing, 'sitemap:refresh:no_ping'
+  after  :finishing, 'sitemap:create'
   after  :finishing, :cleanup
   after  :finishing, :restart
 end
