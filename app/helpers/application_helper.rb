@@ -64,15 +64,15 @@ module ApplicationHelper
   end
 
   def course_previous_post(current_post)
-    posts = current_post.course.posts.status(:published).type(:post)
-    posts.each do |post|
+    posts = current_post.course.posts.published.post
+    posts.reverse.each do |post|
       return post if post.published_at < current_post.published_at
     end
     nil
   end
 
   def course_next_post(current_post)
-    posts = current_post.course.posts.status(:published).type(:post)
+    posts = current_post.course.posts.published.post
     posts.each do |post|
       return post if post.published_at > current_post.published_at
     end

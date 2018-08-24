@@ -4,7 +4,7 @@ class Admin::ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
 
   def index
-    @images = Image.with_translations(I18n.locale)
+    @images = Image.with_translations(I18n.locale).by_date
   end
 
   def show
