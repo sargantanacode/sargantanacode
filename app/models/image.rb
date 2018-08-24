@@ -7,6 +7,8 @@ class Image < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  scope :by_date, -> { order(Arel.sql('created_at DESC')) }
+
   def to_s
     self.title
   end

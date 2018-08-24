@@ -22,7 +22,7 @@ class User < ApplicationRecord
 
   scope :role, -> role { where(role: role) }
   scope :by_role, -> { order(Arel.sql('role DESC, created_at ASC')) }
-  scope :only_with_job, -> { where.not(job: '') }
+  scope :only_with_job, -> { where.not(job: nil) }
   scope :by_job, -> { order(Arel.sql('job DESC, created_at ASC')) }
   scope :by_name, -> { order(name: :asc) }
   scope :all_except, -> user_to_hide { where.not(id: user_to_hide.id) }
