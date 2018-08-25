@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="http://sargantanacode.es/uploads/sargantanacode-g.png" alt="SargantanaCode" />
+    <img src="http://sargantanacode.es/sargantanacode.png" alt="SargantanaCode" />
 </p>
 
 <p align="center">
