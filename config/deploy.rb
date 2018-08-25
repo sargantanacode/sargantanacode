@@ -3,8 +3,8 @@ server '46.101.250.120', port: 22, roles: [:web, :app, :db], primary: true
 set :repo_url,        'git@github.com:sargantanacode/sargantanacode.git'
 set :application,     'sargantanacode'
 set :user,            'sargantana'
-set :puma_threads,    [4, 16]
-set :puma_workers,    0
+set :puma_threads,    [0, 5]
+set :puma_workers,    3
 
 set :pty,             true
 set :use_sudo,        false
