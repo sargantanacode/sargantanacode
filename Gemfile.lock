@@ -348,10 +348,9 @@ DEPENDENCIES
   rspec-rails
   sitemap_generator
   translate_enum
-  tzinfo-data
   web-console (>= 3.3.0)
   webpacker (= 3.5.5)
   whenever
 
 BUNDLED WITH
-   1.17.3
+   2.0.1
