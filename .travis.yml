@@ -5,7 +5,7 @@ branches:
 rvm:
   - 2.4
   - 2.5
-env: 
+env:
   - RAILS_ENV=test
 services:
   - mysql
@@ -30,6 +30,7 @@ before_script:
   - google-chrome --version
   - chromedriver --version
   - yarn install
+  - ./bin/webpack
 script:
   - bundle exec rake db:create
   - bundle exec rake db:migrate
