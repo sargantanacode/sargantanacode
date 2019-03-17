@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.2.1'
 gem 'rails-i18n', '~> 5.1', '>= 5.1.1'
 gem 'translate_enum'
 gem 'friendly_id'
@@ -10,7 +10,7 @@ gem 'dotenv-rails'
 gem 'mysql2'
 gem 'devise'
 gem 'puma', '~> 3.11'
-gem 'webpacker'
+gem 'webpacker', '3.5.5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'carrierwave'
@@ -47,4 +47,3 @@ group :test do
   gem 'launchy'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
