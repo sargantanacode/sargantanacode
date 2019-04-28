@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
     get "/*path" => "application#change_path", constraints: { path: /(?!(#{I18n.available_locales.join("|")})\/).*/ }
+    root to: redirect("/")
   end
 
   devise_for :users, controllers: { registrations: "users/registrations"}
