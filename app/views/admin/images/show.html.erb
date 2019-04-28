@@ -29,18 +29,5 @@
         <input type="text" id="markdown-link-es"
           value="<%= image_markdown_url(@image, :es) %>" class="form-control" />
       </div>
-      <div class="form-group">
-        <label for="markdown-link-en" class="d-flex justify-content-between">
-          <span><%= t('.markdown_link_en') %></span>
-          <div class="copy">
-            <div class="alert-copy hidden" id="alert-copy-markdown-image-en">
-              <small><%= t('.link_copied') %></small>
-            </div>
-            <i class="fa fa-copy" aria-hidden="true" id="copy-markdown-image-en"></i>
-          </div>
-        </label>
-        <input type="text" id="markdown-link-en"
-          value="<%= image_markdown_url(@image, :en) %>" class="form-control" />
-      </div>
     </div>
 </div>

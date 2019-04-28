@@ -17,7 +17,7 @@ class Post < ApplicationRecord
   globalize_accessors :locales => [:en, :es], :attributes => [:title, :content, :excerpt]
   friendly_id :slug, use: :slugged
 
-  validates *Post.globalize_attribute_names, presence: true
+  validates :title_es, :content_es, :excerpt_es, presence: true
   validates :user, :category, :type, presence: true
   validates :slug, uniqueness: true
 
@@ -74,7 +74,7 @@ class Post < ApplicationRecord
   private
 
   def set_slug
-    return self.slug = self.title_en.to_s.parameterize if self.slug.blank?
+    return self.slug = self.title_es.to_s.parameterize if self.slug.blank?
     self.slug = self.slug.parameterize
   end
 
@@ -83,7 +83,7 @@ class Post < ApplicationRecord
   end  
 
   def update_slug
-    return self.slug = self.title_en.to_s.parameterize if self.slug.blank?
+    return self.slug = self.title_es.to_s.parameterize if self.slug.blank?
     self.slug = self.slug.parameterize
   end
 end

@@ -2,7 +2,7 @@ class Image < ApplicationRecord
   translates :title, :description
   globalize_accessors :locales => [:en, :es], :attributes => [:title, :description]
 
-  validates *Image.globalize_attribute_names, presence: true
+  validates :title_es, :description_es, presence: true
   validates :image, presence: true
 
   mount_uploader :image, ImageUploader

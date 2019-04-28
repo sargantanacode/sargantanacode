@@ -17,18 +17,6 @@
         <% end %>
       </ul>
       <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="langDropdown"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= t('.languages') %>
-          </a>
-          <div class="dropdown-menu m-0 rounded-0" aria-labelledby="langDropdown">
-            <%= link_to t('.english'), url_for(:locale => :en),
-                :class => "dropdown-item lang #{current_locale?(:en)}" %>
-            <%= link_to t('.spanish'), url_for(:locale => :es),
-                :class => "dropdown-item lang #{current_locale?(:es)}" %>
-          </div>
-        </li>
         <% unless user_signed_in? %>
           <li class="nav-item <%= active?(new_user_session_path) %>">
             <%= link_to t('.login'), new_user_session_path, :class => 'nav-link' %>
