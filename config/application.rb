@@ -33,7 +33,7 @@ module SargantanaCode
     config.time_zone = "Madrid"
 
     I18n.available_locales = [:en, :es]
-    I18n.default_locale = :en
+    I18n.default_locale = :es
 
     Akismet.api_key = ENV["AKISMET_API_KEY"]
     Akismet.app_url = ENV["AKISMET_APP_URL"]

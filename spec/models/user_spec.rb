@@ -50,6 +50,6 @@ RSpec.describe User, type: :model do
   end
 
   it 'can get translated enums' do
-    expect(admin.translated_role).to eq('Admin')
+    expect(admin.translated_role).to eq('Administrador')
   end
 end

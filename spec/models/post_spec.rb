@@ -42,8 +42,8 @@ RSpec.describe Post, type: :model do
     expect(post.slug).not_to be nil
   end
 
-  it 'has the same slug as its English title' do
-    expect(post.slug).to eq(post.title_en.parameterize)
+  it 'has the same slug as its title' do
+    expect(post.slug).to eq(post.title_es.parameterize)
   end
 
   it 'may have comments' do

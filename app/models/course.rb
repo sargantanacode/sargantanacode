@@ -10,7 +10,7 @@ class Course < ApplicationRecord
   globalize_accessors :locales => [:en, :es], :attributes => [:name, :description]
   friendly_id :slug, use: :slugged
 
-  validates *Course.globalize_attribute_names, presence: true
+  validates :name_es, :description_es, presence: true
   validates :image, :cover_image, presence: true
 
   mount_uploader :image, ImageUploader
@@ -29,12 +29,12 @@ class Course < ApplicationRecord
   private
 
   def set_slug
-    return self.slug = self.name_en.to_s.parameterize if self.slug.blank?
+    return self.slug = self.name_es.to_s.parameterize if self.slug.blank?
     self.slug = self.slug.parameterize
   end
 
   def update_slug
-    return self.slug = self.name_en.to_s.parameterize if self.slug.blank?
+    return self.slug = self.name_es.to_s.parameterize if self.slug.blank?
     self.slug = self.slug.parameterize
   end
 end
